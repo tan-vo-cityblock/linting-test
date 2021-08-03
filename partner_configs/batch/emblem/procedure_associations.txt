@@ -1,0 +1,33 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CB_COHORT_PROCASSOCIATION_EXTRACT%s_00.txt",
+  "partnerName": "emblem",
+  "tableName": "procedure_associations",
+  "delimiter": "|",
+  "dataFieldName": "procedure",
+  "header": "CLAIMNUMBER|SEQUENCENUMBER|PROCEDURECODE|PROCEDUREDATE|ICDVERSION10ORHIGHER|SITEID",
+  "fields": [
+    {
+      "name": "CLAIMNUMBER",
+      "required": true
+    },
+    {
+      "name": "SEQUENCENUMBER"
+    },
+    {
+      "name": "PROCEDURECODE"
+    },
+    {
+      "name": "PROCEDUREDATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "ICDVERSION10ORHIGHER"
+    },
+    {
+      "name": "SITEID"
+    }
+  ]
+}

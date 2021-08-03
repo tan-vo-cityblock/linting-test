@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: sms_message_labeling_input
+    description: "\n
+    Author: Marianne Hoogeveen\n
+    Purpose: Input query for historical sms message labeling
+    "
+    columns:
+      - name: messageId
+        tests:
+          - not_null
+          - unique
+      - name: sessionId
+      - name: conversationId
+      - name: externalMessageId
+      - name: patientId
+      - name: memberHomeMarketName
+      - name: language
+        description: Primary language that the member communicates in
+      - name: acuityScore
+        description: Member's acuity score
+      - name: userId
+      - name: userRole
+      - name: appointmentScheduledSameDay
+        description: Type of appointment the member has scheduled that day, if any
+      - name: direction
+        description: Direction of the message, either from member / external contact to user ("incoming") or from user to member ("outgoing")
+      - name: messageBody
+      - name: provider
+      - name: year
+      - name: week
+      - name: providerCreatedAt
+        tests:
+          - not_null
+      - name: createdAt
+      - name: updatedAt

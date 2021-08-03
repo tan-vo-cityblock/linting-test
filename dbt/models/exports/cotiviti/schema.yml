@@ -1,0 +1,196 @@
+version: 2
+
+models:
+
+  - name: cotiviti_diagnosis
+    description: "Author: Marianne Hoogeveen\n
+                  Purpose: File containing diagnosis data that can be queried by the Cotiviti labeling process"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - claimId
+            - lineNumber
+          severity: warn
+    columns:
+      - name: patientId
+      - name: claimId
+      - name: lineNumber
+      - name: dateFrom
+        tests:
+          - not_null:
+              severity: warn
+      - name: dateTo
+        tests:
+          - not_null:
+              severity: warn
+      - name: datePaid
+        tests:
+          - not_null:
+              severity: warn
+      - name: amountAllowed
+        tests:
+          - not_null:
+              severity: warn
+      - name: diagnosisCode1
+        tests:
+          - not_null:
+              severity: warn
+      - name: diagnosisCode2
+      - name: diagnosisCode3
+      - name: diagnosisCode4
+      - name: diagnosisCode5
+      - name: diagnosisCode6
+      - name: diagnosisCode7
+      - name: diagnosisCode8
+      - name: diagnosisCode9
+      - name: diagnosisCode10
+      - name: diagnosisCode11
+      - name: diagnosisCode12
+      - name: diagnosisCode13
+      - name: diagnosisCode14
+      - name: diagnosisCode15
+      - name: diagnosisCode16
+      - name: diagnosisCode17
+      - name: diagnosisCode18
+      - name: diagnosisCode19
+      - name: diagnosisCode20
+      - name: diagnosisCode21
+      - name: diagnosisCode22
+      - name: diagnosisCode23
+      - name: diagnosisCode24
+      - name: diagnosisCode25
+      - name: principalCodeset
+        description: In case the diagnosis codes have different codesets, this is the one from the principal diagnosis code.
+        tests:
+          - accepted_values:
+              values: ["ICD9Cm", "ICD10Cm"]
+              severity: warn
+      - name: icdVersion
+        description: ICD version of diagnosisCode1. 9 means ICD-9CM, and both 0 and 10 mean ICD-10CM, but 10 is used by default.
+        tests:
+          - accepted_values:
+              values: [0, 9, 10]
+              quote: false
+      - name: sourceDescription
+        tests:
+          - accepted_values:
+              values: ["Diagnostics, DME, Other", "Inpatient Facility", "Long Term Care, Other Facilities", "Outpatient / Clinicians"]
+          - not_null:
+              severity: warn
+      - name: source
+      - name: serviceLocationDescription
+        tests:
+          - accepted_values:
+              values: ["Emergency Department", "Inpatient Admission", "Long Term Care", "Other"]
+          - not_null:
+              severity: warn
+      - name: serviceLocation
+      - name: surgicalFlag
+        tests:
+          - accepted_values:
+              values: [0, 1]
+              quote: false
+          - not_null:
+              severity: warn
+
+  - name: cotiviti_freshness
+    description: "Author: Marianne Hoogeveen\n
+                  Purpose: Freshness of member and claims input data, by partner and claim type (Rx or other)"
+    columns:
+      - name: market
+      - name: partner
+      - name: isRx
+      - name: minDateMember
+      - name: minDateClaim
+      - name: maxDateMember
+      - name: maxDateClaim
+  
+  - name: cotiviti_member
+    description: "Author: Marianne Hoogeveen\n
+                  Purpose: File containing data that can be queried by the Cotiviti labeling process"
+    tests:
+      - unique:
+          column_name: "concat(patientId, validFrom)"
+      - dbt_utils.mutually_exclusive_ranges:
+          lower_bound_column: validFrom
+          upper_bound_column: coalesce(validTo, current_date())
+          partition_by: patientId
+          gaps: required
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+      - name: dateOfBirth
+        tests:
+          - not_null:
+              severity: warn
+      - name: sex
+        tests:
+          - accepted_values:
+              values: [F, M, U]
+              severity: warn
+          - not_null:
+              severity: warn
+      - name: currentHomeMarketName
+      - name: currentCity
+      - name: currentState
+      - name: currentIsVirtual
+      - name: currentEnrollmentStatus
+      - name: population
+      - name: commercialFlag
+        tests:
+          - accepted_values:
+              values: [0, 1]
+              quote: false
+              severity: warn
+      - name: medicareFlag
+        tests:
+          - accepted_values:
+              values: [0, 1]
+              quote: false
+              severity: warn
+      - name: medicaidFlag
+        tests:
+          - accepted_values:
+              values: [0, 1]
+              quote: false
+              severity: warn
+      - name: validFrom
+        tests:
+          - not_null:
+              severity: warn
+      - name: validTo
+        tests:
+          - not_null:
+              severity: warn
+
+  - name: cotiviti_pharmacy
+    description: "Author: Marianne Hoogeveen\n
+                  Purpose: File containing pharmacy data that can be queried by the Cotiviti labeling process"
+    columns:
+      - name: patientId
+      - name: claimId
+      - name: fillNumber
+      - name: filledOn
+        description: The date the prescription was filled
+        tests:
+          - not_null:
+              severity: warn
+      - name: daysSupply
+        description: Number of day's worth of drug supplied to the member. Negative value means the claim record is a reversal or an adjustment.
+        tests:
+          - not_null:
+              severity: warn
+      - name: ndc
+        description: National Drug Code
+        tests:
+          - not_null:
+              severity: warn
+      - name: amountAllowed
+        tests:
+          - not_null:
+              severity: warn
+      - name: claimLineStatus
+        tests:
+          - not_null:
+              severity: warn

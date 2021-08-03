@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="other-stimulant-dependence-not-in-remission", period="100 year", min_other_claims=1, icd_diagnoses=['F1520', 'F1522', 'F1523', 'F1524', 'F1525', 'F1526', 'F1527', 'F1528', 'F1529']) }}

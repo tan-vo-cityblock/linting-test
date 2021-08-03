@@ -1,0 +1,2 @@
+
+{{ condition_acuity(slug="hypertension-acuity", primary_condition_slug="hypertension", acuity_slug="bp-level", need_test_slug="needs-bp", need_test_slug_moderate_severe="needs-bp-4-month", critical_slug="hypertension-admission-30-day", severe_slug="hypertension-admission-4-month") }}

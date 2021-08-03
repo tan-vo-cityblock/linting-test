@@ -1,0 +1,2 @@
+LOB1|NMI|MbrFirstName|MbrLastName|MbrBirthDate|DateEff|CPTCode|TestCode|TestName|LabCode|ResultCode|ResultName|ResultUnits|ResultNum|ResultNum_RangeLow|ResultNum_RangeHigh|ResultLiteral|ResultLiteral_Range|AbnormalFlag|NationalOrderCode|NationalResultCode
+Alpha|M007|Bill|Nye|2019-01-30 00:00:00|2012-12-15 00:00:00||260|INVULNERABILITY CHECK|311|911|NO COMMENTS|miles per hour|333|12345678|1|3|IF ELSE AND OR < > = 10|PLAY|1231|12234

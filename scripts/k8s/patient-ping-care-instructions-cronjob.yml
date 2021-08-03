@@ -1,0 +1,29 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: patient-ping-roster-transfer
+spec:
+  schedule: "5 0 * * 0"
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 1800
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: patient-ping-roster-transfer
+              image: gcr.io/cityblock-data/mixer-scripts
+              command: ["./patient_ping_roster_transfer.rb"]
+              env:
+                - name: PATIENT_PING_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: patient-ping-export-credentials
+                      key: patient_ping_password
+                - name: GOOGLE_CLOUD_CREDENTIALS
+                  valueFrom:
+                    secretKeyRef:
+                      name: patient-ping-export-credentials
+                      key: key.json
+          restartPolicy: Never
+      backoffLimit: 10

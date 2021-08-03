@@ -1,0 +1,2 @@
+
+{{ assessment_answer(slug="two-plus-adls", min_answers=2, question_slug="do-you-need-help-with-any-of-these-activities", assessment_slug="activities-of-daily-living", excluded_answer_slugs=['none', 'no-response']) }}

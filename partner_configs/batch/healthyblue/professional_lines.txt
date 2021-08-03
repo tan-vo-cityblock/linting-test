@@ -1,0 +1,437 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "healthyblue/drop",
+  "fileNamePattern": "NCMT_MEDENCCLMPLN_BCBS_CB_%s",
+  "partnerName": "Healthy Blue",
+  "tableName": "professional_lines",
+  "delimiter": "|",
+  "datasource": "bcbsNC",
+  "header": "Transaction_Control_Number|Line_Number|Claim_Header_Status_Code|Line_Status_Code|Claim_Frequency_Code|Procedure_Code|Procedure_Modifier_01|Procedure_Modifier_02|Procedure_Modifier_03|Procedure_Modifier_04|Description|Unit_or_Basis_for_Measurement_Code|Service_Unit_Count|Place_of_Service_Code|Diagnosis_Code_Pointer_01|Diagnosis_Code_Pointer_02|Diagnosis_Code_Pointer_03|Diagnosis_Code_Pointer_04|Emergency_Indicator|EPSDT_Indicator|Family_Planning_Indicator|Procedure_Code2|Unit_or_Basis_of_Measurement_Code|Length_of_Medical_Necessity|DME_Rental_Price|DME_Purchase_Price|Rental_Unit_Price_Indicator|Unit_or_Basis_for_Measurement_Code2|Patient_Weight|Ambulance_Transport_Reason_Code|Unit_or_Basis_for_Measurement_Code3|Transport_Distance|Round_Trip_Purpose_Description|Stretcher_Purpose_Description|Certification_Type_Code|Unit_or_Basis_for_Measurement_Code4|Durable_Medical_Equipment_Duration|Service_Date|Prescription_Date|Begin_Therapy_Date|Last_Seen_Date|Test_Performed_Date|Shipped_Date|Last_XRay_Date|Initial_Treatment_Date|Quantity|Quantity2|Mammography_Certification_Number|Clinical_Laboratory_Improvement_Amendment_Number|Referring_CLIA_Number|Immunization_Batch_Number|Reference_Identification|Reference_Identification2|Purchased_Service_Provider_Identifier|Procedure_Code3|Unit_or_Basis_for_Measurement_Code5|Repriced_Approved_Service_Unit_Count|Reject_Reason_Code|Policy_Compliance_Code|Exception_Code|National_Drug_Code|National_Drug_Unit_Count|Unit_or_Basis_For_Measurement_Code6|Prescription_Number|Rendering_Provider_Last_or_Organization_Name|Rendering_Provider_First_Name|Rendering_Provider_Middle_Name|Rendering_Provider_Name_Suffix|Rendering_Provider_Identifier|Provider_Taxonomy_Code|Rendering_Provider_Secondary_Identifier|Purchased_Service_Primary_Identifier|Purchased_Service_Provider_Secondary_Identifier|Reference_Identification3|Laboratory_or_Facility_Name|Identification_Code_Qualifier|Laboratory_or_Facility_Primary_Identifier|Laboratory_or_Facility_Address_Line|Laboratory_or_Facility_Address_Line2|Laboratory_or_Facility_City_Name|Laboratory_or_Facility_State_or_Province_Code|Laboratory_or_Facility_Postal_Zone_or_ZIP_Code|Service_Facility_Location_Country_Code|Country_Subdivision_Code|Service_Facility_Location_Secondary_Identifier|Supervising_Provider_Last_Name|Supervising_Provider_First_Name|Supervising_Provider_Middle_Name|Supervising_Provider_Name_Suffix|Supervising_Provider_Identifier|Supervising_Provider_Secondary_Identifier|Ordering_Provider_Last_Name|Ordering_Provider_First_Name|Ordering_Provider_Middle_Name|Ordering_Provider_Name_Suffix|Ordering_Provider_Identifier|Ordering_Provider_Address_Line|Ordering_Provider_Address_Line2|Ordering_Provider_City_Name|Ordering_Provider_State_Code|Ordering_Provider_Postal_Zone_or_Zip_Code|Country_Code|Country_Subdivision_Code2|Ordering_Provider_Secondary_Identifier|Referring_Provider_Last_Name|Referring_Provider_First_Name|Referring_Provider_Middle_Name|Referring_Provider_Name_Suffix|Referring_Provider_Identifier|Referring_Provider_Secondary_Identifier|Ambulance_PickUp_Address_Information|Ambulance_PickUp_Address_Information2|Ambulance_PickUp_City_Name|Ambulance_PickUp_State_or_Province_Code|Ambulance_PickUp_Postal_Zone_or_Zip_Code|Ambulance_PickUp_Country_Code|Ambulance_PickUp_Country_Subdivision_Code|Ambulance_Drop_Off_Address_Information|Ambulance_Drop_Off_Address_Information2|Ambulance_Drop_Off_City_Name|Ambulance_Drop_Off_State_or_Province_Code|Ambulance_Drop_Off_Postal_Zone_or_Zip_Code|Ambulance_Drop_Off_Country_Code|Ambulance_Drop_Off_Country_Subdivision_Code|In_Out_Network|Health_Plan|Benefit_Plan|Administrative_County_Code|Residence_County_Code|Eligibility_Code|Sub_Program_01|Sub_Program_02|Sub_Program_03|Sub_Program_04|Living_Arrangement_Code|Tribal_Code|Total_Claim_Line_Charge_Amount|Claim_Line_Allowed_Amount|Payers_Claim_Line_Payment_Amount",
+  "fields": [
+    {
+      "name": "Transaction_Control_Number",
+      "required": true
+    },
+    {
+      "name": "Line_Number"
+    },
+    {
+      "name": "Claim_Header_Status_Code"
+    },
+    {
+      "name": "Line_Status_Code"
+    },
+    {
+      "name": "Claim_Frequency_Code"
+    },
+    {
+      "name": "Procedure_Code"
+    },
+    {
+      "name": "Procedure_Modifier_01"
+    },
+    {
+      "name": "Procedure_Modifier_02"
+    },
+    {
+      "name": "Procedure_Modifier_03"
+    },
+    {
+      "name": "Procedure_Modifier_04"
+    },
+    {
+      "name": "Description"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code"
+    },
+    {
+      "name": "Service_Unit_Count"
+    },
+    {
+      "name": "Place_of_Service_Code"
+    },
+    {
+      "name": "Diagnosis_Code_Pointer_01"
+    },
+    {
+      "name": "Diagnosis_Code_Pointer_02"
+    },
+    {
+      "name": "Diagnosis_Code_Pointer_03"
+    },
+    {
+      "name": "Diagnosis_Code_Pointer_04"
+    },
+    {
+      "name": "Emergency_Indicator"
+    },
+    {
+      "name": "EPSDT_Indicator"
+    },
+    {
+      "name": "Family_Planning_Indicator"
+    },
+    {
+      "name": "Procedure_Code2"
+    },
+    {
+      "name": "Unit_or_Basis_of_Measurement_Code"
+    },
+    {
+      "name": "Length_of_Medical_Necessity"
+    },
+    {
+      "name": "DME_Rental_Price"
+    },
+    {
+      "name": "DME_Purchase_Price"
+    },
+    {
+      "name": "Rental_Unit_Price_Indicator"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code2"
+    },
+    {
+      "name": "Patient_Weight"
+    },
+    {
+      "name": "Ambulance_Transport_Reason_Code"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code3"
+    },
+    {
+      "name": "Transport_Distance"
+    },
+    {
+      "name": "Round_Trip_Purpose_Description"
+    },
+    {
+      "name": "Stretcher_Purpose_Description"
+    },
+    {
+      "name": "Certification_Type_Code"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code4"
+    },
+    {
+      "name": "Durable_Medical_Equipment_Duration"
+    },
+    {
+      "name": "Service_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Prescription_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Begin_Therapy_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Last_Seen_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Test_Performed_Date"
+    },
+    {
+      "name": "Shipped_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Last_XRay_Date"
+    },
+    {
+      "name": "Initial_Treatment_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Quantity"
+    },
+    {
+      "name": "Quantity2"
+    },
+    {
+      "name": "Mammography_Certification_Number"
+    },
+    {
+      "name": "Clinical_Laboratory_Improvement_Amendment_Number"
+    },
+    {
+      "name": "Referring_CLIA_Number"
+    },
+    {
+      "name": "Immunization_Batch_Number"
+    },
+    {
+      "name": "Reference_Identification"
+    },
+    {
+      "name": "Reference_Identification2"
+    },
+    {
+      "name": "Purchased_Service_Provider_Identifier"
+    },
+    {
+      "name": "Procedure_Code3"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code5"
+    },
+    {
+      "name": "Repriced_Approved_Service_Unit_Count"
+    },
+    {
+      "name": "Reject_Reason_Code"
+    },
+    {
+      "name": "Policy_Compliance_Code"
+    },
+    {
+      "name": "Exception_Code"
+    },
+    {
+      "name": "National_Drug_Code"
+    },
+    {
+      "name": "National_Drug_Unit_Count"
+    },
+    {
+      "name": "Unit_or_Basis_For_Measurement_Code6"
+    },
+    {
+      "name": "Prescription_Number"
+    },
+    {
+      "name": "Rendering_Provider_Last_or_Organization_Name"
+    },
+    {
+      "name": "Rendering_Provider_First_Name"
+    },
+    {
+      "name": "Rendering_Provider_Middle_Name"
+    },
+    {
+      "name": "Rendering_Provider_Name_Suffix"
+    },
+    {
+      "name": "Rendering_Provider_Identifier"
+    },
+    {
+      "name": "Provider_Taxonomy_Code"
+    },
+    {
+      "name": "Rendering_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Purchased_Service_Primary_Identifier"
+    },
+    {
+      "name": "Purchased_Service_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Reference_Identification3"
+    },
+    {
+      "name": "Laboratory_or_Facility_Name"
+    },
+    {
+      "name": "Identification_Code_Qualifier"
+    },
+    {
+      "name": "Laboratory_or_Facility_Primary_Identifier"
+    },
+    {
+      "name": "Laboratory_or_Facility_Address_Line"
+    },
+    {
+      "name": "Laboratory_or_Facility_Address_Line2"
+    },
+    {
+      "name": "Laboratory_or_Facility_City_Name"
+    },
+    {
+      "name": "Laboratory_or_Facility_State_or_Province_Code"
+    },
+    {
+      "name": "Laboratory_or_Facility_Postal_Zone_or_ZIP_Code"
+    },
+    {
+      "name": "Service_Facility_Location_Country_Code"
+    },
+    {
+      "name": "Country_Subdivision_Code"
+    },
+    {
+      "name": "Service_Facility_Location_Secondary_Identifier"
+    },
+    {
+      "name": "Supervising_Provider_Last_Name"
+    },
+    {
+      "name": "Supervising_Provider_First_Name"
+    },
+    {
+      "name": "Supervising_Provider_Middle_Name"
+    },
+    {
+      "name": "Supervising_Provider_Name_Suffix"
+    },
+    {
+      "name": "Supervising_Provider_Identifier"
+    },
+    {
+      "name": "Supervising_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Ordering_Provider_Last_Name"
+    },
+    {
+      "name": "Ordering_Provider_First_Name"
+    },
+    {
+      "name": "Ordering_Provider_Middle_Name"
+    },
+    {
+      "name": "Ordering_Provider_Name_Suffix"
+    },
+    {
+      "name": "Ordering_Provider_Identifier"
+    },
+    {
+      "name": "Ordering_Provider_Address_Line"
+    },
+    {
+      "name": "Ordering_Provider_Address_Line2"
+    },
+    {
+      "name": "Ordering_Provider_City_Name"
+    },
+    {
+      "name": "Ordering_Provider_State_Code"
+    },
+    {
+      "name": "Ordering_Provider_Postal_Zone_or_Zip_Code"
+    },
+    {
+      "name": "Country_Code"
+    },
+    {
+      "name": "Country_Subdivision_Code2"
+    },
+    {
+      "name": "Ordering_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Referring_Provider_Last_Name"
+    },
+    {
+      "name": "Referring_Provider_First_Name"
+    },
+    {
+      "name": "Referring_Provider_Middle_Name"
+    },
+    {
+      "name": "Referring_Provider_Name_Suffix"
+    },
+    {
+      "name": "Referring_Provider_Identifier"
+    },
+    {
+      "name": "Referring_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Ambulance_PickUp_Address_Information"
+    },
+    {
+      "name": "Ambulance_PickUp_Address_Information2"
+    },
+    {
+      "name": "Ambulance_PickUp_City_Name"
+    },
+    {
+      "name": "Ambulance_PickUp_State_or_Province_Code"
+    },
+    {
+      "name": "Ambulance_PickUp_Postal_Zone_or_Zip_Code"
+    },
+    {
+      "name": "Ambulance_PickUp_Country_Code"
+    },
+    {
+      "name": "Ambulance_PickUp_Country_Subdivision_Code"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Address_Information"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Address_Information2"
+    },
+    {
+      "name": "Ambulance_Drop_Off_City_Name"
+    },
+    {
+      "name": "Ambulance_Drop_Off_State_or_Province_Code"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Postal_Zone_or_Zip_Code"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Country_Code"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Country_Subdivision_Code"
+    },
+    {
+      "name": "In_Out_Network"
+    },
+    {
+      "name": "Health_Plan"
+    },
+    {
+      "name": "Benefit_Plan"
+    },
+    {
+      "name": "Administrative_County_Code"
+    },
+    {
+      "name": "Residence_County_Code"
+    },
+    {
+      "name": "Eligibility_Code"
+    },
+    {
+      "name": "Sub_Program_01"
+    },
+    {
+      "name": "Sub_Program_02"
+    },
+    {
+      "name": "Sub_Program_03"
+    },
+    {
+      "name": "Sub_Program_04"
+    },
+    {
+      "name": "Living_Arrangement_Code"
+    },
+    {
+      "name": "Tribal_Code"
+    },
+    {
+      "name": "Total_Claim_Line_Charge_Amount"
+    },
+    {
+      "name": "Claim_Line_Allowed_Amount"
+    },
+    {
+      "name": "Payers_Claim_Line_Payment_Amount"
+    }
+  ]
+}

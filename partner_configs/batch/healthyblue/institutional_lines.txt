@@ -1,0 +1,192 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "healthyblue/drop",
+  "fileNamePattern": "NCMT_MEDENCCLMILN_BCBS_CB_%s",
+  "partnerName": "Healthy Blue",
+  "tableName": "institutional_lines",
+  "delimiter": "|",
+  "datasource": "bcbsNC",
+  "header": "Transaction_Control_Number|Line_Number|Claim_Header_Status_Code|Line_Status_Code|Claim_Frequency_Code|Service_Line_Revenue_Code|Procedure_Code|Procedure_Modifier_01|Procedure_Modifier_02|Procedure_Modifier_03|Procedure_Modifier_04|Description|Unit_or_Basis_for_Measurement_Code|Service_Unit_Count|Service_Date|Line_Item_Control_Number|National_Drug_Code|National_Drug_Unit_Count|Code_Qualifier|Prescription_Number|Operating_Physician_Last_Name|Operating_Physician_First_Name|Operating_Physician_Middle_Name|Operating_Physician_Name_Suffix|Operating_Physician_Primary_Identifier|Operating_Physician_Secondary_Identifier|Other_Operating_Physician_Last_Name|Other_Operating_Physician_First_Name|Other_Operating_Physician_Middle_Name|Other_Operating_Physician_Name_Suffix|Other_Operating_Physician_Primary_Identifier|Other_Provider_Secondary_Identifier|Rendering_Provider_Last_Name|Rendering_Provider_First_Name|Rendering_Provider_Middle_Name|Rendering_Provider_Name_Suffix|Rendering_Provider_Identifier|Rendering_Provider_Secondary_Identifier|Referring_Provider_Last_Name|Referring_Provider_First_Name|Referring_Provider_Middle_Name|Referring_Provider_Name_Suffix|Referring_Provider_Identifier|Referring_Provider_Secondary_Identifier|In_or_Out_Network|Health_Plan|Benefit_Plan|Administrative_County_Code|Residence_County_Code|Eligibility_Code|Sub_Program_01|Sub_Program_02|Sub_Program_03|Sub_Program_04|Living_Arrangement_Code|Tribal_Code|Total_Claim_Line_Charge_Amount|Claim_Line_Allowed_Amount|Payers_Claim_Line_Payment_Amount",
+  "fields": [
+    {
+      "name": "Transaction_Control_Number",
+      "required": true
+    },
+    {
+      "name": "Line_Number"
+    },
+    {
+      "name": "Claim_Header_Status_Code"
+    },
+    {
+      "name": "Line_Status_Code"
+    },
+    {
+      "name": "Claim_Frequency_Code"
+    },
+    {
+      "name": "Service_Line_Revenue_Code"
+    },
+    {
+      "name": "Procedure_Code"
+    },
+    {
+      "name": "Procedure_Modifier_01"
+    },
+    {
+      "name": "Procedure_Modifier_02"
+    },
+    {
+      "name": "Procedure_Modifier_03"
+    },
+    {
+      "name": "Procedure_Modifier_04"
+    },
+    {
+      "name": "Description"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code"
+    },
+    {
+      "name": "Service_Unit_Count"
+    },
+    {
+      "name": "Service_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Line_Item_Control_Number"
+    },
+    {
+      "name": "National_Drug_Code"
+    },
+    {
+      "name": "National_Drug_Unit_Count"
+    },
+    {
+      "name": "Code_Qualifier"
+    },
+    {
+      "name": "Prescription_Number"
+    },
+    {
+      "name": "Operating_Physician_Last_Name"
+    },
+    {
+      "name": "Operating_Physician_First_Name"
+    },
+    {
+      "name": "Operating_Physician_Middle_Name"
+    },
+    {
+      "name": "Operating_Physician_Name_Suffix"
+    },
+    {
+      "name": "Operating_Physician_Primary_Identifier"
+    },
+    {
+      "name": "Operating_Physician_Secondary_Identifier"
+    },
+    {
+      "name": "Other_Operating_Physician_Last_Name"
+    },
+    {
+      "name": "Other_Operating_Physician_First_Name"
+    },
+    {
+      "name": "Other_Operating_Physician_Middle_Name"
+    },
+    {
+      "name": "Other_Operating_Physician_Name_Suffix"
+    },
+    {
+      "name": "Other_Operating_Physician_Primary_Identifier"
+    },
+    {
+      "name": "Other_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Rendering_Provider_Last_Name"
+    },
+    {
+      "name": "Rendering_Provider_First_Name"
+    },
+    {
+      "name": "Rendering_Provider_Middle_Name"
+    },
+    {
+      "name": "Rendering_Provider_Name_Suffix"
+    },
+    {
+      "name": "Rendering_Provider_Identifier"
+    },
+    {
+      "name": "Rendering_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Referring_Provider_Last_Name"
+    },
+    {
+      "name": "Referring_Provider_First_Name"
+    },
+    {
+      "name": "Referring_Provider_Middle_Name"
+    },
+    {
+      "name": "Referring_Provider_Name_Suffix"
+    },
+    {
+      "name": "Referring_Provider_Identifier"
+    },
+    {
+      "name": "Referring_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "In_or_Out_Network"
+    },
+    {
+      "name": "Health_Plan"
+    },
+    {
+      "name": "Benefit_Plan"
+    },
+    {
+      "name": "Administrative_County_Code"
+    },
+    {
+      "name": "Residence_County_Code"
+    },
+    {
+      "name": "Eligibility_Code"
+    },
+    {
+      "name": "Sub_Program_01"
+    },
+    {
+      "name": "Sub_Program_02"
+    },
+    {
+      "name": "Sub_Program_03"
+    },
+    {
+      "name": "Sub_Program_04"
+    },
+    {
+      "name": "Living_Arrangement_Code"
+    },
+    {
+      "name": "Tribal_Code"
+    },
+    {
+      "name": "Total_Claim_Line_Charge_Amount"
+    },
+    {
+      "name": "Claim_Line_Allowed_Amount"
+    },
+    {
+      "name": "Payers_Claim_Line_Payment_Amount"
+    }
+  ]
+}

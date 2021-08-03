@@ -1,0 +1,14 @@
+
+version: 2
+
+sources:
+
+  - name: covid_immunization_extracts
+    description: Immunization data by market
+    database: cityblock-data
+    schema: covid_immunization_extracts
+
+    tables:
+      - name: covid_vaccine_status_dc
+      - name: covid_vaccine_status_ma
+      - name: covid_vaccine_status_ny

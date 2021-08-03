@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: provider_gold_all_partners
+    description: Identify most recent provider name by id
+    columns:
+      - name: id
+        tests: 
+          - unique
+      - name: name
+        tests: 
+          - not_null

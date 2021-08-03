@@ -1,0 +1,138 @@
+version: 2
+
+models:
+
+  - name: outreach_prioritization
+    description: "title: Member list for prioritization based on impactable spend, outreach opportunities, savings opportunities, and SOON: ease of consent. |
+    author: dax@"
+    tests:
+      - equality_where:
+          compare_model: ref('member')
+          compare_columns:
+            - patientId
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+      - name: impactableSpendPMPM
+        description: PMPM calculation of impactable spend in latest 12 months of claims
+      - name: revenueCaptureSavingsPMPM
+        description: PMPM calculation of remaining revenue capture dollars (with deductions) for the calendar year divided by 12 months
+      - name: revenueCaptureSavings
+        description: Remaining revenue capture dollars (with deductions) for the calendar year
+      - name: coeffValue
+        description: Remaining risk score coefficient value (with deductions) for the calendar year
+      - name: medicalSavingsPMPM
+        description: PMPM calculation of savings associated with member's primary Care Pathway
+      - name: scaledImpactableSpendPMPM
+        description: impactableSpendPMPM rescaled to [0,1] scale using min-max scaling
+      - name: scaledRevenueCaptureSavingsPMPM
+        description: revenueCaptureSavingsPMPM rescaled to [0,1] scale using min-max scaling
+      - name: scaledMedicalSavingsPMPM
+        description: medicalSavingsPMPM rescaled to [0,1] scale using min-max scaling
+      - name: carePathway
+        description: Member's primary Care Pathway
+      - name: opportunityHours
+        description: Daytime hours (8am-7pm) during which member has not yet been outreached (or has in the past been successfully outreached)
+      - name: opportunityDays
+        description: Days of week (excl. Sun) on which member has not yet been outreached (or has in the past been successfully outreached)
+      - name: outreachCyclesReceived
+        description: Number of outreach cycles (three attempted contacts within a two week period) a member has received
+      - name: outreachCyclePriorityRankPerMarket
+        description: Member's outreach priority rank respective to their market
+      - name: assignedOS
+        description: Outreach Specialist assigned to outreach this member
+
+  - name: outreach_opportunities
+    description: "title: Member-level opportunities to guide future outreach attempts |
+    author: dax@"
+    tests:
+      - equality_where:
+          compare_model: ref('member')
+          compare_columns:
+            - patientId
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+      - name: opportunityHours
+        description: Daytime hours (8am-7pm) during which member has not yet been outreached (or has in the past been successfully outreached)
+      - name: opportunityDays
+        description: Days of week (excl. Sun) on which member has not yet been outreached (or has in the past been successfully outreached)
+
+  - name: impactable_spend
+    description: "title: Member-level impactable spend PMPM amount (based on paid amounts associated with avoidable IP/ED) |
+    author: dax@"
+    tests:
+      - equality_where:
+          compare_model: ref('member')
+          compare_columns:
+            - patientId
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+      - name: impactableSpend
+        description: Sum paid amounts across Paid/Encounter claims with ACS Inpatient or ACS ED flag in latest 12 months of claims
+      - name: memberMonths
+        description: Count eligible member months in latest 12 months of claims
+      - name: impactableSpendPMPM
+        description: PMPM calculation of impactable spend in latest 12 months of claims
+
+  - name: next_outreach_after_hie_event
+    description: >
+        Finds the next outreach after each hie event.
+        Calculates the number of days between when Cityblock receives an hie event and when we next reach out.
+        The level of detail is one hie event per member per row.
+    columns:
+      - name: outreach_id
+      - name: outreach_id
+      - name: outreach_date
+      - name: outreach_user_id
+      - name: outreach_modality
+      - name: outreach_attempt_username
+        description: the user's name who completed the next outreach after an hie event
+      - name: date_cityblock_receieved_hie_event
+        description: the date Cityblock received the hie event from a partner. This could be the same as a cohort go-live date if the event happened before the start of a membership.
+      - name: hie_facility_type
+        description: the type of facility the hie event occured in
+      - name: hie_facility_name
+        description: the name of the facility the hie event occurred in
+      - name: days_between_received_hie_date_and_outreach
+        description: days between receiving the hie event and the next outreach
+
+  - name: engageable_events_hie
+    description: "title: latest HIE/prior auth hospitalization (IP/ED/Obs) events per member |
+    author: dax@"
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+      - name: eventId
+        description: unique ID for the admission or discharge event
+      - name: eventGroupId
+        description: unique ID for the hospitalization
+      - name: eventSource
+        description: HIE or prior auth, events received from both sources retain only the HIE record
+      - name: eventType
+        description: Admit or discharge
+      - name: visitType
+        description: Inpatient, Emergency, Observation (currently excluding other events)
+      - name: facilityType
+        description: facility type if available
+      - name: readmissionFlag
+        description: indicates whether event is a readmission
+      - name: eventAt
+        description: datetime when event occurred
+      - name: eventReceivedAt
+        description: datetime when event ping was received
+
+  - name: Outreach_cycles
+    description: "title: number of successful outreach attempts in each quarter |
+    author: Ash-lipsitz"
+    columns:
+      - name: outreach_cycles_0_30_days
+        description: The number of successful outreach cycles a member has completed in their first 30 days. A successful outreach cycle is defined as 3+ outreaches within a 14-day period. Therefore, members can have up to two successful outreach cycles in their first 30 days. The successive fields track the number of successful outreach cycles members see in other time periods during their first 360 days since their go-live date.

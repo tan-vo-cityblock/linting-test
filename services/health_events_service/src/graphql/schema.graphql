@@ -1,0 +1,8 @@
+extend type HieEvent @key(fields: "messageId") {
+  messageId: String @external
+}
+
+type HieMessageSignal @key(fields: "messageId") {
+  messageId: String
+  isReadmission: Boolean
+}

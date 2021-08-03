@@ -1,0 +1,78 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-microsoft-contrib/recommended",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib"], // not using `rules` directory from commons as there is no GraphQL usage
+  "rules": {
+    // SECTION: Rules where we disagree with tslint:recommended
+    "curly": false, // Enable one line if statements
+    "triple-equals": true,
+    "ordered-imports": [
+      true,
+      {
+        "named-imports-order": "lowercase-first"
+      }
+    ],
+    "variable-name": [true, "ban-keywords", "allow-pascal-case"],
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "only-arrow-functions": [true, "allow-named-functions"],
+    "arrow-return-shorthand": false,
+    // diabled: var requires are needed for webpack
+    "no-var-requires": false,
+    // SECTION: New rules that we add beyond tslint:recommended
+    "no-angle-bracket-type-assertion": true,
+    "interface-over-type-literal": true,
+    "no-string-throw": true,
+    "prefer-const": true,
+    "no-for-in-array": true,
+    "no-inferred-empty-object-type": true,
+    "promise-function-async": true,
+    "no-floating-promises": true,
+    "no-return-await": true,
+    // Prefer T[] to Array<T>, but allow Array<{complex type}>.
+    "array-type": [true, "array-simple"],
+    "no-console": [true, "log"],
+    "object-literal-shorthand": true,
+    "no-unnecessary-callback-wrapper": true,
+    "no-unnecessary-type-assertion": true,
+    "cyclomatic-complexity": true,
+    "radix": true,
+    "no-invalid-template-strings": true,
+    // SECTION: Areas where we disagree with tslint-microsoft-contrib/recommended
+    "import-name": false,
+    "export-name": false,
+    "function-name": false,
+    "non-literal-fs-path": false, // TODO: Ideally want to fix
+    "no-relative-imports": false, // would like to use absolute imports
+    "prefer-type-cast": false, // would rather use const enum than the type cast feature
+    "max-func-body-length": false, // checked with cyclomatic complexity
+    "no-suspicious-comment": false,
+    "prefer-array-literal": false,
+    "mocha-no-side-effect-code": false,
+    "no-http-string": false,
+    "no-backbone-get-set-outside-model": false, // incorrectly flags our code
+    "no-single-line-block-comment": false,
+    "react-this-binding-issue": false,
+    "use-simple-attributes": false,
+    "insecure-random": false, // random is only used in tests
+    "react-a11y-event-has-role": false,
+    "react-a11y-input-elements": false,
+    "react-a11y-props": false,
+    "react-a11y-required": false,
+    "react-a11y-role": false,
+    "react-a11y-anchors": false,
+    "react-a11y-accessible-headings": false,
+    "react-a11y-role-has-required-aria-props": false,
+    "react-a11y-role-supports-aria-props": false,
+    "react-a11y-no-onchange": false,
+    "react-a11y-img-has-alt": false,
+    // Where we disagree with tslint-react
+    "jsx-boolean-value": false,
+    "jsx-no-lambda": false, // would like to re-enable this one
+    "jsx-use-translation-function": false, // would like to enable this one but requires significant work in Builder
+    "member-ordering": false
+  }
+}

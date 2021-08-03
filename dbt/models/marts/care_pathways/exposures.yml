@@ -1,0 +1,15 @@
+version: 2
+
+exposures:
+  - name: mrt_care_pathway_historical_assignment_all
+    type: dashboard
+    maturity: medium
+    url: https://cityblock.looker.com/explore/care_pathways/mrt_care_pathway_expanded
+    description: Historical pathway suggestion Explore
+
+    depends_on:
+      - ref('mrt_care_pathway_historical_assignment_all')
+
+    owner:
+      name: Caitlin Dugan
+      email: caitlin.dugan@cityblock.com

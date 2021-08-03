@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="sedative-hypnotic-anxiolytic-dependence-not-in-remission", period="100 year", min_other_claims=1, icd_diagnoses=['F1320', 'F1322', 'F1323', 'F1324', 'F1325', 'F1326', 'F1327', 'F1328', 'F1329']) }}

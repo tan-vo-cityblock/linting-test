@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="gestational-diabetes-ever", period="100 year", icd_diagnoses=['O244', 'O2441', 'O24410', 'O24414', 'O24415', 'O24419', 'O2442', 'O24420', 'O24424', 'O24425', 'O24429', 'O2443', 'O24430', 'O24434', 'O24435', 'O24439']) }}

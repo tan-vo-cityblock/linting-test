@@ -1,0 +1,40 @@
+
+version: 2
+
+models:
+  - name: src_cityblock_providers
+    description: Internal roster with provider NPI and credentialing status
+    columns:
+      - name: name
+        tests:
+          - unique
+        severity: warn
+        description: Full name in (Last, First) format
+      - name: lastName
+        description: Last name, extracted from 'name' field
+      - name: firstName
+        description: First name, extracted from 'name' field
+      - name: overallStatus
+        description: Credentialing and licensing status
+      - name: npi
+        description: National Provider Identifier
+      - name: cityblockEmail
+        description: Cityblock provider email address
+      - name: providerOrBHS
+        description: Indicator whether the provider is a Clinician or BHS
+      - name: activeInMarket
+        description: Indicates whether a provider is active in any market (true) or terminated (false)
+
+  - name: src_reference_ccs_dx_icd10cm
+    description: Removes period characters and whitespace from `multi_ccs_lvl_2` field
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "multi_ccs_lvl_2 = replace(multi_ccs_lvl_2, '.', '')"
+      - dbt_utils.expression_is_true:
+          expression: "multi_ccs_lvl_2 != ' '"
+
+  - name: src_reference_snomed_to_icd10
+    description: Casts SNOMED code field to string and renames, removes period characters from `mapTarget` field
+    columns:
+      - name: snomedCode
+      - name: mapTarget

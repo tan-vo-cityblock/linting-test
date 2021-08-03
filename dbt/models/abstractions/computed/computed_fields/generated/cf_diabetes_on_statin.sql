@@ -1,0 +1,2 @@
+
+{{ medication_presence(slug="diabetes-on-statin", min_female_age=40, min_male_age=40, max_age=75, medication_slug="on-statin", condition_slugs=['has-diabetes'], excluded_condition_slugs=['cvd', 'pregnancy', 'ivf', 'estrogen-agonists', 'esrd', 'cirrhosis', 'muscular-pain-and-disease']) }}

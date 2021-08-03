@@ -1,0 +1,126 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "healthyblue/drop",
+  "fileNamePattern": "NCMT_RXENCHD_BCBS_CB_%s",
+  "partnerName": "Healthy Blue",
+  "tableName": "pharmacy_header",
+  "delimiter": "|",
+  "indexJoinField": "Patient_ID",
+  "datasource": "bcbsNC",
+  "header": "Transaction Control Number|Transaction Count|Claim Header Status Code|Date of Service|Transaction Code|Service Provider ID|Patient ID|Patient Date Of Birth|Patient Gender Code|Patient Pregnancy Indicator|Diagnosis Code 01|Diagnosis Code 02|Diagnosis Code 03|Diagnosis Code 04|Diagnosis Code 05|Date of Receipt|Date of Adjudication|Date of Payment|Billing Provider In/Out Network|Living Region Code|Health Plan|Benefit Plan|Administrative County Code|Residence County Code|Eligibility Code|Family Planning Indicator|Sub Program 01|Sub Program 02|Sub Program 03|Sub Program 04|Living Arrangement Code|Tribal Code|Total Claim Charge Amount|Claim Allowed Amount|Payers Claim Payment Amount",
+  "fields": [
+    {
+      "name": "Transaction_Control_Number",
+      "required": true
+    },
+    {
+      "name": "Transaction_Count"
+    },
+    {
+      "name": "Claim_Header_Status_Code"
+    },
+    {
+      "name": "Date_of_Service",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Transaction_Code"
+    },
+    {
+      "name": "Service_Provider_ID"
+    },
+    {
+      "name": "Patient_ID",
+      "required": true
+    },
+    {
+      "name": "Patient_Date_Of_Birth",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Patient_Gender_Code"
+    },
+    {
+      "name": "Patient_Pregnancy_Indicator"
+    },
+    {
+      "name": "Diagnosis_Code_01"
+    },
+    {
+      "name": "Diagnosis_Code_02"
+    },
+    {
+      "name": "Diagnosis_Code_03"
+    },
+    {
+      "name": "Diagnosis_Code_04"
+    },
+    {
+      "name": "Diagnosis_Code_05"
+    },
+    {
+      "name": "Date_of_Receipt",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Date_of_Adjudication",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Date_of_Payment",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Billing_Provider_In_or_Out_Network"
+    },
+    {
+      "name": "Living_Region_Code"
+    },
+    {
+      "name": "Health_Plan"
+    },
+    {
+      "name": "Benefit_Plan"
+    },
+    {
+      "name": "Administrative_County_Code"
+    },
+    {
+      "name": "Residence_County_Code"
+    },
+    {
+      "name": "Eligibility_Code"
+    },
+    {
+      "name": "Family_Planning_Indicator"
+    },
+    {
+      "name": "Sub_Program_01"
+    },
+    {
+      "name": "Sub_Program_02"
+    },
+    {
+      "name": "Sub_Program_03"
+    },
+    {
+      "name": "Sub_Program_04"
+    },
+    {
+      "name": "Living_Arrangement_Code"
+    },
+    {
+      "name": "Tribal_Code"
+    },
+    {
+      "name": "Total_Claim_Charge_Amount"
+    },
+    {
+      "name": "Claim_Allowed_Amount"
+    },
+    {
+      "name": "Payers_Claim_Payment_Amount"
+    }
+  ]
+}

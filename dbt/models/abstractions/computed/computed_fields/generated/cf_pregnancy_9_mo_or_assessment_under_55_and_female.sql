@@ -1,0 +1,2 @@
+
+{{ boolean_evidence(slug="pregnancy-9-mo-or-assessment-under-55-and-female", all_conditions=True, condition_slugs=['pregnancy-9-mo-or-assessment', 'female-members'], excluded_condition_slugs=['age-55-or-older']) }}

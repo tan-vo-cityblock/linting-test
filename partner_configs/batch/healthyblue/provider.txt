@@ -1,0 +1,49 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "healthyblue/drop",
+  "fileNamePattern": "CB_NPI_Data_%s",
+  "partnerName": "Healthy Blue",
+  "tableName": "provider",
+  "delimiter": ",",
+  "datasource": "bcbsNC",
+  "header": "NPI,NPIEntityType,FullName,FirstName,LastName,TaxonomyCode,NPIPhysicalAddress1,NPIPhysicalAddress2,NPIPhysicalCity,NPIPhysicalState,NPIPhysicalPostalCode,Zip_Code",
+  "fields": [
+    {
+      "name": "NPI"
+    },
+    {
+      "name": "NPIEntityType"
+    },
+    {
+      "name": "FullName"
+    },
+    {
+      "name": "FirstName"
+    },
+    {
+      "name": "LastName"
+    },
+    {
+      "name": "TaxonomyCode"
+    },
+    {
+      "name": "NPIPhysicalAddress1"
+    },
+    {
+      "name": "NPIPhysicalAddress2"
+    },
+    {
+      "name": "NPIPhysicalCity"
+    },
+    {
+      "name": "NPIPhysicalState"
+    },
+    {
+      "name": "NPIPhysicalPostalCode"
+    },
+    {
+      "name": "Zip_Code"
+    }
+  ]
+}

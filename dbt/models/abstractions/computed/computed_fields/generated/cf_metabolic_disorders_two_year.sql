@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="metabolic-disorders-two-year", period="2 year", icd_diagnoses=['E70%', 'E71%', 'E72%', 'E73%', 'E74%', 'E75%', 'E76%', 'E77%', 'E78%', 'E79%', 'E80%', 'E83%', 'E84%', 'E85%', 'E86%', 'E87%', 'E88%', 'Z8639']) }}

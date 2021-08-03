@@ -1,0 +1,30 @@
+
+version: 2
+
+models:
+  - name: abs_lob_emblem
+    description: Identifies line-of-business values by member-month
+    tests:
+      - unique:
+          column_name: "concat(patientId, spanFromDate)"
+    columns:
+      - name: patientId
+        tests: 
+          - not_null
+      - name: spanFromDate
+      - name: lineOfBusiness1
+      - name: lineOfBusiness2
+
+  - name: abs_medical_union
+    description: Combines facility, professional, and pharmacy abstractions with capitation flags
+    tests:
+      - unique:
+          column_name: "concat(claimId, lineNumber)"
+          severity: warn
+    columns:
+      - name: resultsInInpatientFlag
+        description: >
+          Indicates claim lines associated with unplanned admissions,
+          based on the presence of both emergency department and acute inpatient services.
+        tests:
+          - not_null

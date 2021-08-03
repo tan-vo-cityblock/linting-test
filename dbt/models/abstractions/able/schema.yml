@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: hcc_gaps
+    description: "List of all attributed members and all HCC gaps and statuses"
+
+  - name: hedis_gaps
+    description: "List of all attributed members and all Hedis gaps and statuses"
+
+  - name: hts_quality_targets
+    description: "Hub Team Success targets for quality-related metrics"
+
+  - name: cdc_composite
+    description: "Calculate CDC composite measure based on Able results"
+    

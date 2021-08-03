@@ -1,0 +1,118 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CB_VIC_MEMBERENROLL_EXTRACT%s_00.txt",
+  "partnerName": "emblem",
+  "tableName": "member_enroll",
+  "indexJoinField": "MEMBERID",
+  "delimiter": "|",
+  "header": "MEMBERID|MEMBER_QUAL|EFF_DATE|TERM_DATE|TERM_RSN|SUBSCRIBER_ID|SUBSCRIBER_QUAL|RELATION|GRP_ID|PRIMARYCAREPHYSICIANNUMBER|ACO_ID|MED_HOME_ID|TIER|CONTRACT|BEN_PKG_ID|PROD_TYPE|MM_UNITS|RX_UNITS|DN_UNITS|VS_UNITS|_USER_COVERAGE_IND_01_|_USER_COVERAGE_IND_02_|_USER_COVERAGE_IND_03_|_USER_COVERAGE_IND_04_|MEM_STAT|ENR_PRIMARY|MEDICAID_PART_B_BUYIN|MEDICARE_BASIS|MEDICAID_BASIS|PAYER_TYPE|EN_DATA_SRC|MEMBER_CONTRACT_ORIGIN|MEDICAL_CENTER_NUMBER|PCPLOCATIONSUFFIX",
+  "fields": [
+    {
+      "name": "MEMBERID",
+      "required": true
+    },
+    {
+      "name": "MEMBER_QUAL"
+    },
+    {
+      "name": "EFF_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "TERM_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "TERM_RSN"
+    },
+    {
+      "name": "SUBSCRIBER_ID"
+    },
+    {
+      "name": "SUBSCRIBER_QUAL"
+    },
+    {
+      "name": "RELATION"
+    },
+    {
+      "name": "GRP_ID"
+    },
+    {
+      "name": "PRIMARYCAREPHYSICIANNUMBER"
+    },
+    {
+      "name": "ACO_ID"
+    },
+    {
+      "name": "MED_HOME_ID"
+    },
+    {
+      "name": "TIER"
+    },
+    {
+      "name": "CONTRACT"
+    },
+    {
+      "name": "BEN_PKG_ID"
+    },
+    {
+      "name": "PROD_TYPE"
+    },
+    {
+      "name": "MM_UNITS"
+    },
+    {
+      "name": "RX_UNITS"
+    },
+    {
+      "name": "DN_UNITS"
+    },
+    {
+      "name": "VS_UNITS"
+    },
+    {
+      "name": "_USER_COVERAGE_IND_01_"
+    },
+    {
+      "name": "_USER_COVERAGE_IND_02_"
+    },
+    {
+      "name": "_USER_COVERAGE_IND_03_"
+    },
+    {
+      "name": "_USER_COVERAGE_IND_04_"
+    },
+    {
+      "name": "MEM_STAT"
+    },
+    {
+      "name": "ENR_PRIMARY"
+    },
+    {
+      "name": "MEDICAID_PART_B_BUYIN"
+    },
+    {
+      "name": "MEDICARE_BASIS"
+    },
+    {
+      "name": "MEDICAID_BASIS"
+    },
+    {
+      "name": "PAYER_TYPE"
+    },
+    {
+      "name": "EN_DATA_SRC"
+    },
+    {
+      "name": "MEMBER_CONTRACT_ORIGIN"
+    },
+    {
+      "name": "MEDICAL_CENTER_NUMBER"
+    },
+    {
+      "name": "PCPLOCATIONSUFFIX"
+    }
+  ]
+}

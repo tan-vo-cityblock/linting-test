@@ -1,0 +1,316 @@
+{
+    "fileType": "csv",
+    "sourceBucket": "cbh_sftp_drop",
+    "prefixDir": "tufts_production/drop",
+    "fileNamePattern": "CBH_%s_State.txt",
+    "partnerName": "tufts",
+    "tableName": "MassHealth",
+    "indexJoinField": "Mem_Id",
+    "datasource": "tufts",
+    "delimiter": "|",
+    "header": "Mem_Id|DOB|GenderAge|Prov_ID|Spec_Code|ID_MEDICAID|PLAN_ID|CDE_FORM_TYPE|CDE_CLM_TYPE|DOS_FROM_DT|DOS_TO_DT|REMIT_DT|ID_PROV_BILLING|NPI_BILLING|NAME_PROV_BILLING|CDE_PROV_TYPE_BILLING|CDE_TAXONOMY_BILLING|CDE_AGENCY_BILLING|ID_PROV_SERVICING|NPI_SERVICING|NAME_PROV_SERVICING|CDE_PROV_TYPE_SERVICING|CDE_TAXONOMY_SERVICING|ID_PROV_REFERRING|NPI_REFERRING|NAME_PROV_REFERRING|CDE_PROV_TYPE_REFERRING|CDE_TAXONOMY_REFERRING|ID_PROV_PRESCRIBING|ID_PROV_PRESCRIBING_TYPE|CDE_PROC|CDE_PROC_MOD|CDE_PROC_MOD_2|CDE_PROC_MOD_3|CDE_PROC_MOD_4|CDE_REVENUE|CDE_PROC_ICD9_1|CDE_PROC_ICD9_2|CDE_PROC_ICD9_3|CDE_PROC_ICD9_4|CDE_PROC_ICD9_5|CDE_PROC_ICD9_6|CDE_PROC_ICD9_7|CDE_PROC_ICD9_8|CDE_PROC_ICD9_9|CDE_PLACE_OF_SERVICE|CDE_TYPE_OF_BILL|CDE_BILL_FREQ|CDE_ADMIT_SOURCE|CDE_ADMIT_TYPE|CDE_PATIENT_STATUS|CDE_DIAG_1|CDE_DIAG_2|CDE_DIAG_3|CDE_DIAG_4|CDE_DIAG_5|CDE_DIAG_6|CDE_DIAG_7|CDE_DIAG_8|CDE_DIAG_9|CDE_DIAG_10|CDE_DIAG_11|CDE_DIAG_12|CDE_DIAG_13|CDE_DIAG_14|CDE_DIAG_15|CDE_DIAG_16|CDE_DIAG_17|CDE_DIAG_18|CDE_DIAG_19|CDE_DIAG_20|CDE_DIAG_21|CDE_DIAG_22|CDE_DIAG_23|CDE_DIAG_24|CDE_DIAG_25|CDE_DIAG_26|CDE_DRG|CDE_NDC|NUM_DAY_SUPPLY|QTY_REFILL|DSC_THERAP_CLS_SPEC|IND_OTC|NAM_GENERIC|QTY_UNITS_BILLED|QTY_UNITS_ALLOWED|AMT_BILLED|AMT_PAID|AMT_PAID_MCARE|SERVICE|NUM_ICN|NUM_DTL|NUM_LOGICAL_CLAIM|WH_FROM_DT|CLAIM_STATUS|Load_Date|Diag_ICD_Version|Surg_Proc_ICD_version",
+    "fields": [
+      {
+        "name": "Mem_Id",
+        "required": true
+      },
+      {
+        "name": "DOB",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "GenderAge"
+      },
+      {
+        "name": "Prov_ID"
+      },
+      {
+        "name": "Spec_Code"
+      },
+      {
+        "name": "ID_MEDICAID"
+      },
+      {
+        "name": "PLAN_ID"
+      },
+      {
+        "name": "CDE_FORM_TYPE"
+      },
+      {
+        "name": "CDE_CLM_TYPE"
+      },
+      {
+        "name": "DOS_FROM_DT",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "DOS_TO_DT",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "REMIT_DT",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "ID_PROV_BILLING"
+      },
+      {
+        "name": "NPI_BILLING"
+      },
+      {
+        "name": "NAME_PROV_BILLING"
+      },
+      {
+        "name": "CDE_PROV_TYPE_BILLING"
+      },
+      {
+        "name": "CDE_TAXONOMY_BILLING"
+      },
+      {
+        "name": "CDE_AGENCY_BILLING"
+      },
+      {
+        "name": "ID_PROV_SERVICING"
+      },
+      {
+        "name": "NPI_SERVICING"
+      },
+      {
+        "name": "NAME_PROV_SERVICING"
+      },
+      {
+        "name": "CDE_PROV_TYPE_SERVICING"
+      },
+      {
+        "name": "CDE_TAXONOMY_SERVICING"
+      },
+      {
+        "name": "ID_PROV_REFERRING"
+      },
+      {
+        "name": "NPI_REFERRING"
+      },
+      {
+        "name": "NAME_PROV_REFERRING"
+      },
+      {
+        "name": "CDE_PROV_TYPE_REFERRING"
+      },
+      {
+        "name": "CDE_TAXONOMY_REFERRING"
+      },
+      {
+        "name": "ID_PROV_PRESCRIBING"
+      },
+      {
+        "name": "ID_PROV_PRESCRIBING_TYPE"
+      },
+      {
+        "name": "CDE_PROC"
+      },
+      {
+        "name": "CDE_PROC_MOD"
+      },
+      {
+        "name": "CDE_PROC_MOD_2"
+      },
+      {
+        "name": "CDE_PROC_MOD_3"
+      },
+      {
+        "name": "CDE_PROC_MOD_4"
+      },
+      {
+        "name": "CDE_REVENUE"
+      },
+      {
+        "name": "CDE_PROC_ICD9_1"
+      },
+      {
+        "name": "CDE_PROC_ICD9_2"
+      },
+      {
+        "name": "CDE_PROC_ICD9_3"
+      },
+      {
+        "name": "CDE_PROC_ICD9_4"
+      },
+      {
+        "name": "CDE_PROC_ICD9_5"
+      },
+      {
+        "name": "CDE_PROC_ICD9_6"
+      },
+      {
+        "name": "CDE_PROC_ICD9_7"
+      },
+      {
+        "name": "CDE_PROC_ICD9_8"
+      },
+      {
+        "name": "CDE_PROC_ICD9_9"
+      },
+      {
+        "name": "CDE_PLACE_OF_SERVICE"
+      },
+      {
+        "name": "CDE_TYPE_OF_BILL"
+      },
+      {
+        "name": "CDE_BILL_FREQ"
+      },
+      {
+        "name": "CDE_ADMIT_SOURCE"
+      },
+      {
+        "name": "CDE_ADMIT_TYPE"
+      },
+      {
+        "name": "CDE_PATIENT_STATUS"
+      },
+      {
+        "name": "CDE_DIAG_1"
+      },
+      {
+        "name": "CDE_DIAG_2"
+      },
+      {
+        "name": "CDE_DIAG_3"
+      },
+      {
+        "name": "CDE_DIAG_4"
+      },
+      {
+        "name": "CDE_DIAG_5"
+      },
+      {
+        "name": "CDE_DIAG_6"
+      },
+      {
+        "name": "CDE_DIAG_7"
+      },
+      {
+        "name": "CDE_DIAG_8"
+      },
+      {
+        "name": "CDE_DIAG_9"
+      },
+      {
+        "name": "CDE_DIAG_10"
+      },
+      {
+        "name": "CDE_DIAG_11"
+      },
+      {
+        "name": "CDE_DIAG_12"
+      },
+      {
+        "name": "CDE_DIAG_13"
+      },
+      {
+        "name": "CDE_DIAG_14"
+      },
+      {
+        "name": "CDE_DIAG_15"
+      },
+      {
+        "name": "CDE_DIAG_16"
+      },
+      {
+        "name": "CDE_DIAG_17"
+      },
+      {
+        "name": "CDE_DIAG_18"
+      },
+      {
+        "name": "CDE_DIAG_19"
+      },
+      {
+        "name": "CDE_DIAG_20"
+      },
+      {
+        "name": "CDE_DIAG_21"
+      },
+      {
+        "name": "CDE_DIAG_22"
+      },
+      {
+       "name": "CDE_DIAG_23"
+      },
+      {
+        "name": "CDE_DIAG_24"
+      },
+      {
+        "name": "CDE_DIAG_25"
+      },
+      {
+        "name": "CDE_DIAG_26"
+      },
+      {
+        "name": "CDE_DRG"
+      },
+      {
+        "name": "CDE_NDC"
+      },
+      {
+        "name": "NUM_DAY_SUPPLY"
+      },
+      {
+        "name": "QTY_REFILL"
+      },
+      {
+        "name": "DSC_THERAP_CLS_SPEC"
+      },
+      {
+        "name": "IND_OTC"
+      },
+      {
+        "name": "NAM_GENERIC"
+      },
+      {
+        "name": "QTY_UNITS_BILLED"
+      },
+      {
+        "name": "QTY_UNITS_ALLOWED"
+      },
+      {
+        "name": "AMT_BILLED"
+      },
+      {
+        "name": "AMT_PAID"
+      },
+      {
+        "name": "AMT_PAID_MCARE"
+      },
+      {
+        "name": "SERVICE"
+      },
+      {
+        "name": "NUM_ICN"
+      },
+      {
+        "name": "NUM_DTL"
+      },
+      {
+        "name": "NUM_LOGICAL_CLAIM",
+        "required": true
+      },
+      {
+        "name": "WH_FROM_DT"
+      },
+      {
+        "name": "CLAIM_STATUS"
+      },
+      {
+        "name": "Load_Date",
+        "required": true,
+        "fieldType": "DATE"
+      },
+      {
+        "name": "Diag_ICD_Version"
+      },
+      {
+        "name": "Surg_Proc_ICD_version"
+      }
+    ]
+}

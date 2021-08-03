@@ -1,0 +1,2 @@
+
+{{ sdoh_presence(slug="food-insecurity", optional_question_answer_list=[['what-have-you-or-family-members-been-unable-to-get-when-really-needed', ['food']], ['worried-food-would-run-out-before-more-money', ['yes', 'no-response']], ['did-food-run-out-before-more-money', ['yes', 'no-response']]]) }}

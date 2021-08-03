@@ -1,0 +1,50 @@
+steps:
+  - name: "gcr.io/cloud-builders/gcloud"
+    id: "Pull application.conf from Secret Manager"
+    entrypoint: bash
+    args:
+      - "-c"
+      - >-
+        gcloud secrets versions access latest --secret=scio-jobs-application-conf --project=cbh-secrets > /workspace/scio-jobs/src/main/resources/application.conf
+  - name: "gcr.io/$PROJECT_ID/scala-sbt"
+    id: "Clean and pack scio-jobs"
+    dir: "scio-jobs"
+    env:
+      - JAVA_OPTS=-Xmx6G -Xss35m
+      - LC_ALL=en_US.UTF-8
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US.UTF-8
+    args: ["-Dbigquery.project=$PROJECT_ID", "set test in assembly := {}", "clean", "assembly", "pack"]
+  - name: "gcr.io/cloud-builders/docker"
+    id: "Build scio-jobs docker image from cache"
+    dir: "scio-jobs"
+    env:
+      - JAVA_OPTS=-Xmx6G -Xss35m
+      - LC_ALL=en_US.UTF-8
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US.UTF-8
+    args: [
+      "build",
+      "--tag=gcr.io/$PROJECT_ID/mixer_scio_jobs:latest",
+      "--tag=gcr.io/$PROJECT_ID/mixer_scio_jobs:$SHORT_SHA",
+      "."]
+  - name: "gcr.io/cloud-builders/gcloud"
+    id: "Build flex template for Clinical Summary Refresher"
+    entrypoint: bash
+    args:
+      - "-c"
+      - >-
+        gcloud dataflow flex-template build gs://cityblock-data-dataflow-temp/templates/clinical-summary-refresher.json
+        --sdk-language "JAVA"
+        --flex-template-base-image JAVA8
+        --jar=/workspace/scio-jobs/target/scala-2.12/scio-jobs.jar
+        --image-gcr-path=gcr.io/cityblock-data/clinical-summary-refresher-template
+        --env FLEX_TEMPLATE_JAVA_MAIN_CLASS="cityblock.aggregators.jobs.ClinicalSummaryRefresher"
+images: [
+  "gcr.io/$PROJECT_ID/mixer_scio_jobs:latest",
+  "gcr.io/$PROJECT_ID/mixer_scio_jobs:$SHORT_SHA",
+]
+timeout: 1200s
+logsBucket: gs://cbh-cloud-build-logs/build-scio-container
+options:
+  machineType: "N1_HIGHCPU_32"

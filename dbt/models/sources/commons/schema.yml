@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: src_builder_question_assessment_screening_tool
+    description: Adds `isAssociatedWithMds` flag to source table, indicating questions included in MDS across all other assessments.
+    columns:
+      - name: isAssociatedWithMds
+        tests:
+          - not_null
+
+  - name: src_commons_event
+    description: >
+      Corrects for source table duplication by creating a unique identifier based on `body`, `type`, and `createdAt`,
+      then selecting unique values
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: body
+      - name: type
+      - name: createdAt

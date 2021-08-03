@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+
+  - name: hub_team_success
+    description: Quality-related targets from Hub Team Success
+    database: cityblock-analytics
+    schema: uploads
+
+    tables:
+      - name: hts_quality_targets

@@ -1,0 +1,75 @@
+{
+  "extends": ["tslint:recommended"],
+  "rulesDirectory": ["node_modules/tslint-microsoft-contrib", "rules"],
+  "rules": {
+    // Rules where we disagree with tslint:recommended
+    "curly": false,
+    "quotemark": false, // handled by prettier
+    "indent": [true, "spaces"],
+    "check-is-allowed": true, // our custom rule to check if we run isAllowed in GraphQL resolvers
+    "check-model-variable": true, // our custom rule to check that each model has "hasPHI" boolean class variable
+    "triple-equals": true,
+    "max-line-length": false, // handeled by prettier
+    "ordered-imports": [
+      true,
+      {
+        "named-imports-order": "lowercase-first" // aka Nehabetical
+      }
+    ],
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "object-literal-key-quotes": [true, "as-needed"],
+    "variable-name": [true, "ban-keywords", "allow-pascal-case"],
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    // no parens required around one param lambdas.
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "only-arrow-functions": [true, "allow-named-functions"],
+    "arrow-return-shorthand": false,
+    // New rules that we add beyond tslint:recommended
+    "no-angle-bracket-type-assertion": true,
+    "interface-over-type-literal": true,
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "never",
+        "asyncArrow": "always",
+        "constructor": "never",
+        "method": "never",
+        "named": "never"
+      }
+    ],
+    "import-spacing": true,
+    "no-string-throw": true,
+    "prefer-const": true,
+    "no-for-in-array": true,
+    // disabled: we have been unable to change the code in such a way that makes this rule happy.
+    //           it's responsible for the "put it on its own line" linting error.
+    "no-void-expression": false,
+    "no-inferred-empty-object-type": true,
+    "promise-function-async": true,
+    // Prefer T[] to Array<T>, but allow Array<{complex type}>.
+    "array-type": [true, "array-simple"],
+    "no-console": [true, "log"],
+    "object-literal-shorthand": true,
+    "no-unnecessary-callback-wrapper": true,
+    "no-unnecessary-type-assertion": true,
+    "cyclomatic-complexity": true,
+    "radix": true,
+    "no-invalid-template-strings": true,
+    // Secuity rules from tslint-microsoft-contrib
+    "no-banned-terms": true,
+    "no-delete-expression": true,
+    "no-document-domain": true,
+    "no-disable-auto-sanitization": true,
+    "no-duplicate-parameter-names": true,
+    "no-exec-script": true,
+    "no-function-constructor-with-string-args": true,
+    "no-octal-literal": true,
+    "no-reserved-keywords": false, // incorrectly flags method names
+    "no-string-based-set-immediate": true,
+    "no-string-based-set-interval": true,
+    "no-string-based-set-timeout": true,
+    "no-eval": true,
+    "no-return-await": true
+  }
+}

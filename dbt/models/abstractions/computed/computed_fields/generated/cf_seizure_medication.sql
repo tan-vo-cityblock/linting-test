@@ -1,0 +1,2 @@
+
+{{ medication_evidence(slug="seizure-medication", ingredients=['biston%', 'calepsin%', 'carbamazepine%', 'carbatrol%', 'convulex%', 'depakene%', 'depakine enteric%', 'epitol%', 'equetro%', 'finlepsin%', 'lamictal%', 'lamotrigine%', 'orfiril%', 'oxcarbazepine%', 'sirtal%', 'sodium valproate%', 'stavzor%', 'stazepine%', 'tegretol%', 'telesmin%', 'timonil%', 'trileptal%', 'valproate sodium%', 'valproic acid%']) }}

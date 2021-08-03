@@ -1,0 +1,104 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CB_VIC_MEMBERDEMO_EXTRACT%s_00.txt",
+  "partnerName": "emblem",
+  "tableName": "member_demographics",
+  "delimiter": "|",
+  "indexJoinField": "MEMBER_ID",
+  "dataFieldName": "demographic",
+  "header": "MEM_START_DATE|MEM_END_DATE|MEMBER_ID|MEMBER_QUAL|PERSON_ID|MEM_GENDER|MEM_SSN|MEM_LNAME|MEM_FNAME|MEM_MNAME|MEM_DOB|MEM_DOD|MEM_MEDICARE|MEM_ADDR1|MEM_ADDR2|MEM_CITY|MEM_COUNTY|MEM_STATE|MEM_ZIP|MEM_EMAIL|MEM_PHONE|MEM_RACE|MEM_ETHNICITY|MEM_LANGUAGE|MEM_DATA_SRC|HIRE_DATE|NMI|MARITALSTATUS",
+  "fields": [
+    {
+      "name": "MEM_START_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "MEM_END_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "MEMBER_ID",
+      "required": true
+    },
+    {
+      "name": "MEMBER_QUAL"
+    },
+    {
+      "name": "PERSON_ID"
+    },
+    {
+      "name": "MEM_GENDER"
+    },
+    {
+      "name": "MEM_SSN"
+    },
+    {
+      "name": "MEM_LNAME"
+    },
+    {
+      "name": "MEM_FNAME"
+    },
+    {
+      "name": "MEM_MNAME"
+    },
+    {
+      "name": "MEM_DOB",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "MEM_DOD",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "MEM_MEDICARE"
+    },
+    {
+      "name": "MEM_ADDR1"
+    },
+    {
+      "name": "MEM_ADDR2"
+    },
+    {
+      "name": "MEM_CITY"
+    },
+    {
+      "name": "COUNTY"
+    },
+    {
+      "name": "MEM_STATE"
+    },
+    {
+      "name": "MEM_ZIP"
+    },
+    {
+      "name": "MEM_EMAIL"
+    },
+    {
+      "name": "MEM_PHONE"
+    },
+    {
+      "name": "MEM_RACE"
+    },
+    {
+      "name": "MEM_ETHNICITY"
+    },
+    {
+      "name": "MEM_LANGUAGE"
+    },
+    {
+      "name": "MEM_DATA_SRC"
+    },
+    {
+      "name": "HIRE_DATE"
+    },
+    {
+      "name": "NMI",
+      "required": true
+    },
+    {
+      "name": "MARITALSTATUS"
+    }
+  ]
+}

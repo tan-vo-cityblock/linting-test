@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="hallucinogen-dependence-not-in-remission", period="100 year", min_other_claims=1, icd_diagnoses=['F1620', 'F1622', 'F1623', 'F1624', 'F1625', 'F1626', 'F1627', 'F1628', 'F1629']) }}

@@ -1,0 +1,120 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CORP_CITYBLOCK_MULTI_EMPGRP_EDL_FM01_TEST_20210305082558.txt",
+  "partnerName": "emblem",
+  "tableName": "employer_group_v2",
+  "delimiter": "|",
+  "header": "EDM_EMPL_GROUP_KEY|ACCOUNT_NAME|PARNT_GRP_ID|PARNT_GRP_NAME|GRP_ID|GRP_NAME|GRP_TAX_ID|GRP_TYPE|GRP_TYPE_DESC|SUBGROUP_ID|SUBGROUP_NAME|ORIG_EFFECTIVE_DT|GRP_TERM_DT|ADR_LN_1|ADR_LN_2|ADR_LN_3|CITY|ST_CD|ST_CD_LBL|ZIP_CD|PHON_NBR|PHON_EXTN|TOT_EMP_CNT|BUS_UNIT_ID|BUS_UNIT_DESC|EH_EMPLOYEE_FLAG|TOTAL_CNTRACT_CNT|TOT_ELIGIBLE_EMP_CNT|BKR_AGCY_NM|BKR_AGCY_GEN_ID|BKR_AGCY_MSTR_ID|BKR_AGCY_SLS_ID|GRP_RENEW_MMYY|GRP_REINSTATE_DT|PARENT_COMPANY_CD",
+  "fields": [
+    {
+      "name": "EDM_EMPL_GROUP_KEY"
+    },
+    {
+      "name": "ACCOUNT_NAME"
+    },
+    {
+      "name": "PARNT_GRP_ID"
+    },
+    {
+      "name": "PARNT_GRP_NAME"
+    },
+    {
+      "name": "GRP_ID"
+    },
+    {
+      "name": "GRP_NAME"
+    },
+    {
+      "name": "GRP_TAX_ID"
+    },
+    {
+      "name": "GRP_TYPE"
+    },
+    {
+      "name": "GRP_TYPE_DESC"
+    },
+    {
+      "name": "SUBGROUP_ID"
+    },
+    {
+      "name": "SUBGROUP_NAME"
+    },
+    {
+      "name": "ORIG_EFFECTIVE_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "GRP_TERM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "ADR_LN_1"
+    },
+    {
+      "name": "ADR_LN_2"
+    },
+    {
+      "name": "ADR_LN_3"
+    },
+    {
+      "name": "CITY"
+    },
+    {
+      "name": "ST_CD"
+    },
+    {
+      "name": "ST_CD_LBL"
+    },
+    {
+      "name": "ZIP_CD"
+    },
+    {
+      "name": "PHON_NBR"
+    },
+    {
+      "name": "PHON_EXTN"
+    },
+    {
+      "name": "TOT_EMP_CNT"
+    },
+    {
+      "name": "BUS_UNIT_ID"
+    },
+    {
+      "name": "BUS_UNIT_DESC"
+    },
+    {
+      "name": "EH_EMPLOYEE_FLAG"
+    },
+    {
+      "name": "TOTAL_CNTRACT_CNT"
+    },
+    {
+      "name": "TOT_ELIGIBLE_EMP_CNT"
+    },
+    {
+      "name": "BKR_AGCY_NM"
+    },
+    {
+      "name": "BKR_AGCY_GEN_ID"
+    },
+    {
+      "name": "BKR_AGCY_MSTR_ID"
+    },
+    {
+      "name": "BKR_AGCY_SLS_ID"
+    },
+    {
+      "name": "GRP_RENEW_MMYY"
+    },
+    {
+      "name": "GRP_REINSTATE_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "PARENT_COMPANY_CD"
+    }
+  ]
+}

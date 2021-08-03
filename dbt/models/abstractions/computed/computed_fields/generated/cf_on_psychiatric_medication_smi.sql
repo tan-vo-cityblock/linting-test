@@ -1,0 +1,2 @@
+
+{{ boolean_evidence(slug="on-psychiatric-medication-smi", condition_slugs=['mood-stabilizers-not-seizure-medication', 'on-psychiatric-medication-high-strength', 'seizure-medication-not-seizure-disorder'], excluded_condition_slugs=['dementia']) }}

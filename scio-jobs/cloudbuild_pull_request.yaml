@@ -1,0 +1,21 @@
+steps:
+  - name: "gcr.io/$PROJECT_ID/scala-sbt"
+    dir: "scio-jobs"
+    env:
+      - JAVA_OPTS=-Xmx6G -Xss35m
+      - LC_ALL=en_US.UTF-8
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US.UTF-8
+    args: ["-Dbigquery.project=$PROJECT_ID", "set test in assembly := {}", "clean", "compile", "assembly"]
+  - name: "gcr.io/$PROJECT_ID/scala-sbt"
+    dir: "scio-jobs"
+    env:
+      - JAVA_OPTS=-Xmx6G -Xss35m
+      - LC_ALL=en_US.UTF-8
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US.UTF-8
+    args: ["-Dbigquery.project=$PROJECT_ID", "testOnly -- -l com.cityblock.tags.Ignored"]
+timeout: 1800s
+logsBucket: gs://cbh-cloud-build-logs/scio-pull-request
+options:
+  machineType: "N1_HIGHCPU_32"

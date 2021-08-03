@@ -1,0 +1,238 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "CCI_CITYBLOCK_MULTI_REVECLM_EDL_FM01_PROD_%s",
+  "partnerName": "connecticare",
+  "tableName": "FacetsFacilityProcCodes_med",
+  "delimiter": "|",
+  "header": "ext_file_ind|siteid|claimjuliannum|claimnumsourceind|claimnumdocnum|claimnumlinenum|seqnum|revenuecode|proccode|proccodemod1|proccodemod2|revenueunits|servicedate|revenuecharges|revenueapproved|revncovamt|actioncode|revenuescheduled|volumediscount|revpos|revtos|explodeind|wasexplodedind|revenueallowed|revenuereviewed|revreimburseind|formlocator49|natlusefiller1|natlusefiller2|revbdcamt|contractrate|discpct|discamt|adjudamt|revdisccatg|claimnumber|ascapgcode|modifierpercent|eoccode|apcproc|aoeerror|papcpaystat|papcpay|papccopay|papclid|papclioutpay|aeeerrnum|revstatus|revlineext|revpreauth|revlvlcarenbr|revpreauthcpt|revpricingnum|revsubstpaycde|lastsrchdpreauth|correspondcode|allowedamount|amountapproved|copay|coinsuranceamt|deductible|penaltyamount|allowedamountadj|amountapprovedadj|copayadj|coinsuranceamtadj|deductibleadj|penaltyamountadj|eoccodeadj|allowedamountorig|amountapprovedorig|copayorig|coinsuranceamtorig|deductibleorig|penaltyamountorig",
+  "fields": [
+    {
+      "name": "ext_file_ind"
+    },
+    {
+      "name": "siteid"
+    },
+    {
+      "name": "claimjuliannum"
+    },
+    {
+      "name": "claimnumsourceind"
+    },
+    {
+      "name": "claimnumdocnum"
+    },
+    {
+      "name": "claimnumlinenum"
+    },
+    {
+      "name": "seqnum"
+    },
+    {
+      "name": "revenuecode"
+    },
+    {
+      "name": "proccode"
+    },
+    {
+      "name": "proccodemod1"
+    },
+    {
+      "name": "proccodemod2"
+    },
+    {
+      "name": "revenueunits"
+    },
+    {
+      "name": "servicedate",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "revenuecharges"
+    },
+    {
+      "name": "revenueapproved"
+    },
+    {
+      "name": "revncovamt"
+    },
+    {
+      "name": "actioncode"
+    },
+    {
+      "name": "revenuescheduled"
+    },
+    {
+      "name": "volumediscount"
+    },
+    {
+      "name": "revpos"
+    },
+    {
+      "name": "revtos"
+    },
+    {
+      "name": "explodeind"
+    },
+    {
+      "name": "wasexplodedind"
+    },
+    {
+      "name": "revenueallowed"
+    },
+    {
+      "name": "revenuereviewed"
+    },
+    {
+      "name": "revreimburseind"
+    },
+    {
+      "name": "formlocator49"
+    },
+    {
+      "name": "natlusefiller1"
+    },
+    {
+      "name": "natlusefiller2"
+    },
+    {
+      "name": "revbdcamt"
+    },
+    {
+      "name": "contractrate"
+    },
+    {
+      "name": "discpct"
+    },
+    {
+      "name": "discamt"
+    },
+    {
+      "name": "adjudamt"
+    },
+    {
+      "name": "revdisccatg"
+    },
+    {
+      "name": "claimnumber"
+    },
+    {
+      "name": "ascapgcode"
+    },
+    {
+      "name": "modifierpercent"
+    },
+    {
+      "name": "eoccode"
+    },
+    {
+      "name": "apcproc"
+    },
+    {
+      "name": "aoeerror"
+    },
+    {
+      "name": "papcpaystat"
+    },
+    {
+      "name": "papcpay"
+    },
+    {
+      "name": "papccopay"
+    },
+    {
+      "name": "papclid"
+    },
+    {
+      "name": "papclioutpay"
+    },
+    {
+      "name": "aeeerrnum"
+    },
+    {
+      "name": "revstatus"
+    },
+    {
+      "name": "revlineext"
+    },
+    {
+      "name": "revpreauth"
+    },
+    {
+      "name": "revlvlcarenbr"
+    },
+    {
+      "name": "revpreauthcpt"
+    },
+    {
+      "name": "revpricingnum"
+    },
+    {
+      "name": "revsubstpaycde"
+    },
+    {
+      "name": "lastsrchdpreauth"
+    },
+    {
+      "name": "correspondcode"
+    },
+    {
+      "name": "allowedamount"
+    },
+    {
+      "name": "amountapproved"
+    },
+    {
+      "name": "copay"
+    },
+    {
+      "name": "coinsuranceamt"
+    },
+    {
+      "name": "deductible"
+    },
+    {
+      "name": "penaltyamount"
+    },
+    {
+      "name": "allowedamountadj"
+    },
+    {
+      "name": "amountapprovedadj"
+    },
+    {
+      "name": "copayadj"
+    },
+    {
+      "name": "coinsuranceamtadj"
+    },
+    {
+      "name": "deductibleadj"
+    },
+    {
+      "name": "penaltyamountadj"
+    },
+    {
+      "name": "eoccodeadj"
+    },
+    {
+      "name": "allowedamountorig"
+    },
+    {
+      "name": "amountapprovedorig"
+    },
+    {
+      "name": "copayorig"
+    },
+    {
+      "name": "coinsuranceamtorig"
+    },
+    {
+      "name": "deductibleorig"
+    },
+    {
+      "name": "penaltyamountorig"
+    }
+  ]
+}

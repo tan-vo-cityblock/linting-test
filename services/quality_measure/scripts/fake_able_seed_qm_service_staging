@@ -1,0 +1,44 @@
+#!/bin/bash
+# script for refreshing Quality Measure Staging db table `member_measure` with masked able data.
+# Args: able_results_date
+# Returns: deletes all rows in `member_measure` table and re-populates table by posting masked able member measures
+
+set -euo pipefail
+
+NORMAL="\0033[0m"
+GREEN="\0033[32m"
+
+function info {
+    echo -e $GREEN"["$0"] [INFO] $@"$NORMAL
+}
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+STAGING_DIR=~/temp_qm_staging
+ABLE_API_KEY_FILE=api_key.able
+ABLE_RESULT_DATE=$1
+
+mkdir -p $STAGING_DIR
+
+info "Entering $SCRIPT_DIR"
+pushd $SCRIPT_DIR
+
+info "Pulling staging-qm-service-api-key-able from secret manager and saving in $STAGING_DIR/$ABLE_API_KEY_FILE"
+source ../../../scripts/secret_manager/pull_secret.sh staging-qm-service-api-key-able \
+$STAGING_DIR/$ABLE_API_KEY_FILE
+
+ABLE_API_KEY=$(cat $STAGING_DIR/$ABLE_API_KEY_FILE)
+
+info "Running python script mixer/containers/ablehealth/fake_able_seed_qm_service_staging.py"
+python \
+../../../containers/ablehealth/fake_able_seed_qm_service_staging.py \
+--fake-able-result-date=$ABLE_RESULT_DATE \
+--qm-svc-env=staging \
+--qm-svc-api-key=$ABLE_API_KEY \
+--project=cityblock-orchestration
+
+rm $STAGING_DIR/$ABLE_API_KEY_FILE
+info "Deleted secrets in directory $STAGING_DIR"
+
+info "Leaving $SCRIPT_DIR"
+popd
+info "Successfully seeded Staging QM Service with fake Able Data"

@@ -1,0 +1,48 @@
+
+version: 2
+
+models:
+  - name: src_member
+    description: Baseline view containing identifiers for our valid members
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+      - name: cbhId
+      - name: cohortId
+      - name: cohortName
+      - name: cohortGoLiveDate
+      - name: partnerId
+      - name: partnerName
+      - name: mrnId
+      - name: mrn
+      - name: createdAt
+
+  - name: src_member_insurance
+    description: Crosswalk of external identifiers to Cityblock member identifiers, limited to current records
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "deletedAt is null"
+
+  - name: src_member_demographics
+    description: Current record of demographic characteristics by member
+    columns:
+      - name: memberId
+        tests:
+          - not_null
+          - unique
+      - name: dateOfBirth
+        tests:
+          - not_null
+      - name: dateOfDemise
+      - name: sex
+
+  - name: src_member_phone
+    description: Removes parentheses, hyphens, and spaces from `phone` field
+    columns:
+      - name: phone
+        tests:
+          - accepted_length:
+              column_length: 10
+              severity: warn

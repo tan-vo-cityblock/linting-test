@@ -1,0 +1,316 @@
+{
+    "fileType": "csv",
+    "sourceBucket": "cbh_sftp_drop",
+    "prefixDir": "tufts_production/drop",
+    "fileNamePattern": "CBUNIFY_%s_RXCLAIM.txt",
+    "partnerName": "tufts",
+    "tableName": "PharmacyClaim",
+    "indexJoinField": "Carrier_Specific_Unique_Member_ID",
+    "datasource": "tufts",
+    "delimiter": "*",
+    "header": "Submitter*Plan ID*Insurance Type Code*Payer Claim Control Number*Line Counter*Version Number*Insured Group or Policy Number*Filler1*Plan Specific Contract Number*Member Suffix or Sequence Number*Filler2*Individual Relationship Code*Member Gender*Member Date of Birth*Filler3*Member_State*Member ZIP Code*Date Service Approved*Pharmacy Number*Pharmacy Tax ID Number*Pharmacy Name*National Pharmacy ID Number*Pharmacy Location City*Pharmacy Location State*Pharmacy ZIP Code*Pharmacy Country Code*Claim Status*Drug Code*Drug Name*New Prescription or Refill*Generic Drug Indicator*Dispense as Written Code*Compound Drug Indicator*Date Prescription Filled*Quantity Dispensed*Days Supply*Charge Amount*Paid Amount*Ingredient Cost*Postage Amount Claimed*Dispensing Fee*Copay Amount*Coinsurance Amount*Deductible Amount*Prescribing Provider ID*Prescribing Physician First Name*Prescribing Physician Middle Name*Prescribing Physician Last Name*Prescribing Physician DEA Number*Prescribing Physician NPI*Prescribing Physician Plan Number*Prescribing Physician License Number*Prescribing Physician Street Address*Prescribing Physician Street Address 2*Prescribing Physician City*Prescribing Physician State*Prescribing Physician Zip*Product ID Number*Mail Order pharmacy*Script number*Recipient PCP ID*Single/Multiple Source Indicator*Filler5*Billing Provider Tax ID Number*Paid Date*Date Prescription Written*Coordination of Benefits/TPL Liability Amount*Other Insurance Paid Amount*Medicare Paid Amount*Allowed amount*Member Self Pay Amount*Rebate Indicator*State Sales Tax*Delegated Benefit Administrator Organization ID*Formulary Code*Route of Administration*Drug Unit of Measure*Filler6*Filler7*Filler8*Filler9*Filler10*Filler11*Carrier Specific Unique Member ID*Carrier Specific Unique Subscriber ID*Filler12*Claim Line Type*Former Claim Number*Medicare Indicator*Pregnancy Indicator*Diagnosis*ICD Indicator*Denied Flag*Denial Reason*Payment Arrangement Type*Filler13*APCD ID Code*Claim_Line_Paid_Flag*Record Type",
+    "fields": [
+      {
+        "name": "Submitter" 
+      },
+      {
+        "name": "Plan_ID"
+      },
+      {
+        "name": "Insurance_Type_Code"
+      },
+      {
+        "name": "Payer_Claim_Control_Number"
+      },
+      {
+        "name": "Line_Counter"
+      },
+      {
+        "name": "Version_Number"
+      },
+      {
+        "name": "Insured_Group_or_Policy_Number"
+      },
+      {
+        "name": "Filler1"
+      },
+      {
+        "name": "Plan_Specific_Contract_Number"
+      },
+      {
+        "name": "Member_Suffix_or_Sequence_Number"
+      },
+      {
+        "name": "Filler2"
+      },
+      {
+        "name": "Individual_Relationship_Code"
+      },
+      {
+        "name": "Member_Gender"
+      },
+      {
+        "name": "Member_Date_of_Birth"
+      },
+      {
+        "name": "Filler3"
+      },
+      {
+        "name": "Member_State"
+      },
+      {
+        "name": "Member_ZIP_Code"
+      },
+      {
+        "name": "Date_Service_Approved"
+      },
+      {
+        "name": "Pharmacy_Number"
+      },
+      {
+        "name": "Pharmacy_Tax_ID_Number"
+      },
+      {
+        "name": "Pharmacy_Name"
+      },
+      {
+        "name": "National_Pharmacy_ID_Number"
+      },
+      {
+        "name": "Pharmacy_Location_City"
+      },
+      {
+        "name": "Pharmacy_Location_State"
+      },
+      {
+        "name": "Pharmacy_ZIP_Code"
+      },
+      {
+        "name": "Pharmacy_Country_Code"
+      },
+      {
+        "name": "Claim_Status"
+      },
+      {
+        "name": "Drug_Code"
+      },
+      {
+        "name": "Drug_Name"
+      },
+      {
+        "name": "New_Prescription_or_Refill"
+      },
+      {
+        "name": "Generic_Drug_Indicator"
+      },
+      {
+        "name": "Dispense_as_Written_Code"
+      },
+      {
+        "name": "Compound_Drug_Indicator"
+      },
+      {
+        "name": "Date_Prescription_Filled",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "Quantity_Dispensed"
+      },
+      {
+        "name": "Days_Supply"
+      },
+      {
+        "name": "Charge_Amount"
+      },
+      {
+        "name": "Paid_Amount"
+      },
+      {
+        "name": "Ingredient_Cost"
+      },
+      {
+        "name": "Postage_Amount_Claimed"
+      },
+      {
+        "name": "Dispensing_Fee"
+      },
+      {
+        "name": "Copay_Amount"
+      },
+      {
+        "name": "Coinsurance_Amount"
+      },
+      {
+        "name": "Deductible_Amount"
+      },
+      {
+        "name": "Prescribing_Provider_ID"
+      },
+      {
+        "name": "Prescribing_Physician_First_Name"
+      },
+      {
+        "name": "Prescribing_Physician_Middle_Name"
+      },
+      {
+        "name": "Prescribing_Physician_Last_Name"
+      },
+      {
+        "name": "Prescribing_Physician_DEA_Number"
+      },
+      {
+        "name": "Prescribing_Physician_NPI"
+      },
+      {
+        "name": "Prescribing_Physician_Plan_Number"
+      },
+      {
+        "name": "Prescribing_Physician_License_Number"
+      },
+      {
+        "name": "Prescribing_Physician_Street_Address"
+      },
+      {
+        "name": "Prescribing_Physician_Street_Address_2"
+      },
+      {
+        "name": "Prescribing_Physician_City"
+      },
+      {
+        "name": "Prescribing_Physician_State"
+      },
+      {
+        "name": "Prescribing_Physician_Zip"
+      },
+      {
+        "name": "Product_ID_Number"
+      },
+      {
+        "name": "Mail_Order_pharmacy"
+      },
+      {
+        "name": "Script_number",
+        "required": true
+      },
+      {
+        "name": "Recipient_PCP_ID"
+      },
+      {
+        "name": "Single_or_Multiple_Source_Indicator"
+      },
+      {
+        "name": "Filler5"
+      },
+      {
+        "name": "Billing_Provider_Tax_ID_Number"
+      }, 
+      {
+        "name": "Paid_Date",
+        "fieldType": "DATE"
+
+      },
+      {
+        "name": "Date_Prescription_Written"
+      },
+      {
+        "name": "Coordination_of_Benefits_or_TPL_Liability_Amount"
+      },
+      {
+        "name": "Other_Insurance_Paid_Amount"
+      },
+      {
+        "name": "Medicare_Paid_Amount"
+      },
+      {
+        "name": "Allowed_amount"
+      },
+      {
+        "name": "Member_Self_Pay_Amount"
+      },
+      {
+        "name": "Rebate_Indicator"
+      },
+      {
+        "name": "State_Sales_Tax"
+      },
+      {
+        "name": "Delegated_Benefit_Administrator_Organization_ID"
+      },
+      {
+        "name": "Formulary_Code"
+      },
+      {
+        "name": "Route_of_Administration"
+      },
+      {
+        "name": "Drug_Unit_of_Measure"
+      },
+      {
+        "name": "Filler6"
+      },
+      {
+        "name": "Filler7"
+      },
+      {
+        "name": "Filler8"
+      },
+      {
+        "name": "Filler9"
+      },
+      {
+        "name": "Filler10"
+      },
+      {
+        "name": "Filler11"
+      },
+      {
+        "name": "Carrier_Specific_Unique_Member_ID",
+        "required": true
+      },
+      {
+        "name": "Carrier_Specific_Unique_Subscriber_ID"
+      },
+      {
+        "name": "Filler12"
+      },
+      {
+        "name": "Claim_Line_Type"
+      },
+      {
+        "name": "Former_Claim_Number"
+      },
+      {
+        "name": "Medicare_Indicator"
+      },
+      {
+        "name": "Pregnancy_Indicator"
+      },
+      {
+        "name": "Diagnosis"
+      },
+      {
+        "name": "ICD_Indicator"
+      },
+      {
+        "name": "Denied_Flag"
+      },
+      {
+        "name": "Denial_Reason"
+      },
+      {
+        "name": "Payment_Arrangement_Type"
+      },
+      {
+        "name": "Filler13"
+      },
+      {
+        "name": "APCD_ID_Code"
+      },
+      {
+        "name": "Claim_Line_Paid_Flag"
+      },
+      {
+        "name": "Record_Type"
+      }
+    ]
+}

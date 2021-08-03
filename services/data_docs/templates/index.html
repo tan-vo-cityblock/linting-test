@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style>
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.container {
+  height: 100vh;
+  position: relative;
+  display:flex;
+  flex-direction:column;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon-16x16.ico') }}">
+<head>
+<body>
+<h2>Cityblock Data Docs</h2>
+    <div class="container">
+        <div class="center">
+            <p>
+            <a href="{{ url_for('data_docs', path='ge/data_docs/index.html') }}">
+                <img src="{{url_for('static', filename='ge_logo.png')}}" alt="Clickable GE logo"/>
+            </a>
+            </p>
+            <br>
+            <br>
+            <br>
+            <p>
+            <a href="{{ url_for('data_docs', path='dbt_docs/index.html') }}">
+                <img src="{{url_for('static', filename='dbt_logo.png')}}" alt="Clickable DBT logo"/>
+            </a>
+            </p>
+        </div>
+    </div>
+<body>
+<html>

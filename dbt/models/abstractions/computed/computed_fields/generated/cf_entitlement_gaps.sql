@@ -1,0 +1,2 @@
+
+{{ sdoh_presence(slug="entitlement-gaps", optional_question_answer_list=[['what-benefits-or-assistance-do-you-receive-to-help-with-the-cost-of-your-basic-needs', ['other']], ['benefits-insurance-plan-not-covered-that-would-improve-care', ['yes']], ['why-do-you-miss-doses-of-your-medications', ['difficulty-obtaining-medications', 'cost']]]) }}

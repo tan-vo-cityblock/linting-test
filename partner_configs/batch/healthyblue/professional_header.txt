@@ -1,0 +1,503 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "healthyblue/drop",
+  "fileNamePattern": "NCMT_MEDENCCLMPHD_BCBS_CB_%s",
+  "partnerName": "Healthy Blue",
+  "tableName": "professional_header",
+  "delimiter": "|",
+  "indexJoinField": "Subscriber_Primary_Identifier",
+  "datasource": "bcbsNC",
+  "header": "Transaction_Control_Number|Transaction_Count|Claim_Header_Status_Code|Provider_Taxonomy_Code|Billing_Provider_Last_or_Organizational_Name|Billing_Provider_First_Name|Billing_Provider_Middle_Name|Billing_Provider_Name_Suffix|Billing_Provider_Identifier|Billing_Provider_Address_Line1|Billing_Provider_Address_Line2|Billing_Provider_City_Name|Billing_Provider_State_or_Province_Code|Billing_Provider_Postal_Zone_or_Zip_Code|Billing_Provider_Country_Code|Billing_Provider_Contact_Name|Subscriber_Group_or_Policy_Number|Subscriber_Group_Name|Insurance_Type_Code|Insured_Individual_Death_Date|Patient_Weight|Pregnancy_Indicator|Subscriber_Last_Name|Subscriber_First_Name|Subscriber_Middle_Name_or_Initial|Subscriber_Name_Suffix|Subscriber_Primary_Identifier|Subscriber_Address_Line1|Subscriber_Address_Line2|Subscriber_City_Name|Subscriber_State_Code|Subscriber_Postal_Zone_or_Zip_Code|Subscriber_Country_Code|Country_Subdivision_Code1|Subscribers_Birth_Date|Subscriber_Gender_Code|Name1|Communication_Number1|Communication_Number2|Patient_Control_Number|Claim_Frequency_Code|Related_Causes_Code1|Related_Causes_Code2|Auto_Accident_State_or_Province_Code|Country_Code1|Special_Program_Indicator|Delay_Reason_Code|Onset_of_Current_Illness_or_Injury_Date|Initial_Treatment_Date|Last_Seen_Date|Acute_Manifestation_Date|Accident_Date|Last_Menstrual_Period_Date|Last_X-ray_Date|Hearing_and_Vision_Prescription_Date|Disability_From_Date|Disability_End_Date|Initial_Disability_Start_Date|Initial_Disability_End_Date|Last_Worked_Date|Work_Return_Date|Related_Hospitalization_Admission_Date|Related_Hospitalization_Discharge_Date|Assumed_or_Relinquished_Care_Date|Date_the_patient_first_consulted_the_service_provider_for_this_condition|Referral_Number|Prior_Authorization|Claim_Original_Reference_Number|Clinical_Laboratory_Improvement_Amendment_Number|Medical_Record_Number|Care_Plan_Oversight_Number|Unit_or_Basis_for_Measurement_Code1|Line_Patient_Weight|Ambulance_Transport_Reason_Code|Unit_or_Basis_for_Measurement_Code2|Transport_Distance|Round_Trip_Purpose_Description|Stretcher_Purpose_Description|Patient_Condition_Code|Patient_Condition_Description1|Patient_Condition_Description2|Diagnosis_Code_01|Diagnosis_Code_02|Diagnosis_Code_03|Diagnosis_Code_04|Diagnosis_Code_05|Diagnosis_Code_06|Diagnosis_Code_07|Diagnosis_Code_08|Diagnosis_Code_09|Diagnosis_Code_10|Diagnosis_Code_11|Diagnosis_Code_12|Condition_Code_01|Condition_Code_02|Condition_Code_03|Condition_Code_04|Condition_Code_05|Condition_Code_06|Condition_Code_07|Condition_Code_08|Condition_Code_09|Condition_Code_10|Condition_Code_11|Condition_Code_12|Administration_Common_Procedural_Coding_System|Administration_Common_Procedural_Coding_System_Principal_Procedure|Referring_Provider_Last_Name|Referring_Provider_First_Name|Referring_Provider_Middle_Name|Referring_Provider_Name_Suffix|Referring_Provider_Identifier|Referring_Provider_Secondary_Identifier|Rendering_Provider_Last_or_Organization_Name|Rendering_Provider_First_Name|Rendering_Provider_Middle_Name|Rendering_Provider_Name_Suffix|Rendering_Provider_Identifier|Provider_Taxonomy_Code_Rendering|Rendering_Provider_Secondary_Identifier|Laboratory_or_Facility_Name|Laboratory_or_Facility_Primary_Identifier|Laboratory_or_Facility_Address_Line1|Laboratory_or_Facility_Address_Line2|Laboratory_or_Facility_City_Name|Laboratory_or_Facility_State_or_Province_Code|Laboratory_or_Facility_Postal_Zone_or_Zip_code|Country_Code2|Country_Subdivision_Code2|Laboratory_or_Facility_Secondary_Identifier|Name2|Communication_Number3|Communication_Number4|Supervising_Provider_Last_Name|Supervising_Provider_First_Name|Supervising_Provider_Middle_Name|Supervising_Provider_Name_Suffix|Supervising_Provider_Identifier|Supervising_Provider_Secondary_Identifier|Ambulance_Pick_Up_Address_Information1|Ambulance_Pick_Up_Address_Information2|Ambulance_Pick_Up_City_Name|Ambulance_Pick_Up_State_or_Province_Code|Ambulance_Pick_Up_Postal_Zone_or_Zip_Code|Ambulance_Pick_Up_Country_Code|Ambulance_Pick_Up_Country_Subdivision_Code|Name_Last_or_Organization_Name|Ambulance_Drop_Off_Address_Information1|Ambulance_Drop_Off_Address_Information2|Ambulance_Drop_Off_City_Name|Ambulance_Drop_Off_State_or_Province_Code|Ambulance_Drop_Off_Postal_Zone_or_Zip_Code|Ambulance_Drop_Off_Country_Code|Ambulance_Drop_Off_Country_Subdivision_Code|Date_of_Receipt|Date_of_Adjudication|Date_of_Payment|Billing_Provider_In_or_Out_Network|Living_Region_Code|Total_Claim_Charge_Amount|Claim_Allowed_Amount|Payers_Claim_Payment_Amount",
+  "fields": [
+    {
+      "name": "Transaction_Control_Number",
+      "required": true
+    },
+    {
+      "name": "Transaction_Count"
+    },
+    {
+      "name": "Claim_Header_Status_Code"
+    },
+    {
+      "name": "Provider_Taxonomy_Code"
+    },
+    {
+      "name": "Billing_Provider_Last_or_Organizational_Name"
+    },
+    {
+      "name": "Billing_Provider_First_Name"
+    },
+    {
+      "name": "Billing_Provider_Middle_Name"
+    },
+    {
+      "name": "Billing_Provider_Name_Suffix"
+    },
+    {
+      "name": "Billing_Provider_Identifier"
+    },
+    {
+      "name": "Billing_Provider_Address_Line1"
+    },
+    {
+      "name": "Billing_Provider_Address_Line2"
+    },
+    {
+      "name": "Billing_Provider_City_Name"
+    },
+    {
+      "name": "Billing_Provider_State_or_Province_Code"
+    },
+    {
+      "name": "Billing_Provider_Postal_Zone_or_Zip_Code"
+    },
+    {
+      "name": "Billing_Provider_Country_Code"
+    },
+    {
+      "name": "Billing_Provider_Contact_Name"
+    },
+    {
+      "name": "Subscriber_Group_or_Policy_Number"
+    },
+    {
+      "name": "Subscriber_Group_Name"
+    },
+    {
+      "name": "Insurance_Type_Code"
+    },
+    {
+      "name": "Insured_Individual_Death_Date"
+    },
+    {
+      "name": "Patient_Weight"
+    },
+    {
+      "name": "Pregnancy_Indicator"
+    },
+    {
+      "name": "Subscriber_Last_Name"
+    },
+    {
+      "name": "Subscriber_First_Name"
+    },
+    {
+      "name": "Subscriber_Middle_Name_or_Initial"
+    },
+    {
+      "name": "Subscriber_Name_Suffix"
+    },
+    {
+      "name": "Subscriber_Primary_Identifier",
+      "required": true
+    },
+    {
+      "name": "Subscriber_Address_Line1"
+    },
+    {
+      "name": "Subscriber_Address_Line2"
+    },
+    {
+      "name": "Subscriber_City_Name"
+    },
+    {
+      "name": "Subscriber_State_Code"
+    },
+    {
+      "name": "Subscriber_Postal_Zone_or_Zip_Code"
+    },
+    {
+      "name": "Subscriber_Country_Code"
+    },
+    {
+      "name": "Country_Subdivision_Code1"
+    },
+    {
+      "name": "Subscribers_Birth_Date"
+    },
+    {
+      "name": "Subscriber_Gender_Code"
+    },
+    {
+      "name": "Name1"
+    },
+    {
+      "name": "Communication_Number1"
+    },
+    {
+      "name": "Communication_Number2"
+    },
+    {
+      "name": "Patient_Control_Number"
+    },
+    {
+      "name": "Claim_Frequency_Code"
+    },
+    {
+      "name": "Related_Causes_Code1"
+    },
+    {
+      "name": "Related_Causes_Code2"
+    },
+    {
+      "name": "Auto_Accident_State_or_Province_Code"
+    },
+    {
+      "name": "Country_Code1"
+    },
+    {
+      "name": "Special_Program_Indicator"
+    },
+    {
+      "name": "Delay_Reason_Code"
+    },
+    {
+      "name": "Onset_of_Current_Illness_or_Injury_Date"
+    },
+    {
+      "name": "Initial_Treatment_Date"
+    },
+    {
+      "name": "Last_Seen_Date"
+    },
+    {
+      "name": "Acute_Manifestation_Date"
+    },
+    {
+      "name": "Accident_Date"
+    },
+    {
+      "name": "Last_Menstrual_Period_Date"
+    },
+    {
+      "name": "Last_X_ray_Date"
+    },
+    {
+      "name": "Hearing_and_Vision_Prescription_Date"
+    },
+    {
+      "name": "Disability_From_Date"
+    },
+    {
+      "name": "Disability_End_Date"
+    },
+    {
+      "name": "Initial_Disability_Start_Date"
+    },
+    {
+      "name": "Initial_Disability_End_Date"
+    },
+    {
+      "name": "Last_Worked_Date"
+    },
+    {
+      "name": "Work_Return_Date"
+    },
+    {
+      "name": "Related_Hospitalization_Admission_Date"
+    },
+    {
+      "name": "Related_Hospitalization_Discharge_Date"
+    },
+    {
+      "name": "Assumed_or_Relinquished_Care_Date"
+    },
+    {
+      "name": "Date_the_patient_first_consulted_the_service_provider_for_this_condition"
+    },
+    {
+      "name": "Referral_Number"
+    },
+    {
+      "name": "Prior_Authorization"
+    },
+    {
+      "name": "Claim_Original_Reference_Number"
+    },
+    {
+      "name": "Clinical_Laboratory_Improvement_Amendment_Number"
+    },
+    {
+      "name": "Medical_Record_Number"
+    },
+    {
+      "name": "Care_Plan_Oversight_Number"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code1"
+    },
+    {
+      "name": "Line_Patient_Weight"
+    },
+    {
+      "name": "Ambulance_Transport_Reason_Code"
+    },
+    {
+      "name": "Unit_or_Basis_for_Measurement_Code2"
+    },
+    {
+      "name": "Transport_Distance"
+    },
+    {
+      "name": "Round_Trip_Purpose_Description"
+    },
+    {
+      "name": "Stretcher_Purpose_Description"
+    },
+    {
+      "name": "Patient_Condition_Code"
+    },
+    {
+      "name": "Patient_Condition_Description1"
+    },
+    {
+      "name": "Patient_Condition_Description2"
+    },
+    {
+      "name": "Diagnosis_Code_01"
+    },
+    {
+      "name": "Diagnosis_Code_02"
+    },
+    {
+      "name": "Diagnosis_Code_03"
+    },
+    {
+      "name": "Diagnosis_Code_04"
+    },
+    {
+      "name": "Diagnosis_Code_05"
+    },
+    {
+      "name": "Diagnosis_Code_06"
+    },
+    {
+      "name": "Diagnosis_Code_07"
+    },
+    {
+      "name": "Diagnosis_Code_08"
+    },
+    {
+      "name": "Diagnosis_Code_09"
+    },
+    {
+      "name": "Diagnosis_Code_10"
+    },
+    {
+      "name": "Diagnosis_Code_11"
+    },
+    {
+      "name": "Diagnosis_Code_12"
+    },
+    {
+      "name": "Condition_Code_01"
+    },
+    {
+      "name": "Condition_Code_02"
+    },
+    {
+      "name": "Condition_Code_03"
+    },
+    {
+      "name": "Condition_Code_04"
+    },
+    {
+      "name": "Condition_Code_05"
+    },
+    {
+      "name": "Condition_Code_06"
+    },
+    {
+      "name": "Condition_Code_07"
+    },
+    {
+      "name": "Condition_Code_08"
+    },
+    {
+      "name": "Condition_Code_09"
+    },
+    {
+      "name": "Condition_Code_10"
+    },
+    {
+      "name": "Condition_Code_11"
+    },
+    {
+      "name": "Condition_Code_12"
+    },
+    {
+      "name": "Administration_Common_Procedural_Coding_System"
+    },
+    {
+      "name": "Administration_Common_Procedural_Coding_System_Principal_Procedure"
+    },
+    {
+      "name": "Referring_Provider_Last_Name"
+    },
+    {
+      "name": "Referring_Provider_First_Name"
+    },
+    {
+      "name": "Referring_Provider_Middle_Name"
+    },
+    {
+      "name": "Referring_Provider_Name_Suffix"
+    },
+    {
+      "name": "Referring_Provider_Identifier"
+    },
+    {
+      "name": "Referring_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Rendering_Provider_Last_or_Organization_Name"
+    },
+    {
+      "name": "Rendering_Provider_First_Name"
+    },
+    {
+      "name": "Rendering_Provider_Middle_Name"
+    },
+    {
+      "name": "Rendering_Provider_Name_Suffix"
+    },
+    {
+      "name": "Rendering_Provider_Identifier"
+    },
+    {
+      "name": "Provider_Taxonomy_Code_Rendering"
+    },
+    {
+      "name": "Rendering_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Laboratory_or_Facility_Name"
+    },
+    {
+      "name": "Laboratory_or_Facility_Primary_Identifier"
+    },
+    {
+      "name": "Laboratory_or_Facility_Address_Line1"
+    },
+    {
+      "name": "Laboratory_or_Facility_Address_Line2"
+    },
+    {
+      "name": "Laboratory_or_Facility_City_Name"
+    },
+    {
+      "name": "Laboratory_or_Facility_State_or_Province_Code"
+    },
+    {
+      "name": "Laboratory_or_Facility_Postal_Zone_or_Zip_code"
+    },
+    {
+      "name": "Country_Code2"
+    },
+    {
+      "name": "Country_Subdivision_Code2"
+    },
+    {
+      "name": "Laboratory_or_Facility_Secondary_Identifier"
+    },
+    {
+      "name": "Name2"
+    },
+    {
+      "name": "Communication_Number3"
+    },
+    {
+      "name": "Communication_Number4"
+    },
+    {
+      "name": "Supervising_Provider_Last_Name"
+    },
+    {
+      "name": "Supervising_Provider_First_Name"
+    },
+    {
+      "name": "Supervising_Provider_Middle_Name"
+    },
+    {
+      "name": "Supervising_Provider_Name_Suffix"
+    },
+    {
+      "name": "Supervising_Provider_Identifier"
+    },
+    {
+      "name": "Supervising_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Ambulance_Pick_Up_Address_Information1"
+    },
+    {
+      "name": "Ambulance_Pick_Up_Address_Information2"
+    },
+    {
+      "name": "Ambulance_Pick_Up_City_Name"
+    },
+    {
+      "name": "Ambulance_Pick_Up_State_or_Province_Code"
+    },
+    {
+      "name": "Ambulance_Pick_Up_Postal_Zone_or_Zip_Code"
+    },
+    {
+      "name": "Ambulance_Pick_Up_Country_Code"
+    },
+    {
+      "name": "Ambulance_Pick_Up_Country_Subdivision_Code"
+    },
+    {
+      "name": "Name_Last_or_Organization_Name"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Address_Information1"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Address_Information2"
+    },
+    {
+      "name": "Ambulance_Drop_Off_City_Name"
+    },
+    {
+      "name": "Ambulance_Drop_Off_State_or_Province_Code"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Postal_Zone_or_Zip_Code"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Country_Code"
+    },
+    {
+      "name": "Ambulance_Drop_Off_Country_Subdivision_Code"
+    },
+    {
+      "name": "Date_of_Receipt"
+    },
+    {
+      "name": "Date_of_Adjudication"
+    },
+    {
+      "name": "Date_of_Payment",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Billing_Provider_In_or_Out_Network"
+    },
+    {
+      "name": "Living_Region_Code"
+    },
+    {
+      "name": "Total_Claim_Charge_Amount"
+    },
+    {
+      "name": "Claim_Allowed_Amount"
+    },
+    {
+      "name": "Payers_Claim_Payment_Amount"
+    }
+  ]
+}

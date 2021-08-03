@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: abs_care_pathway_fields__flattened
+    description: Flattens `evaluatedResource` record for computed field results used in pathway suggestions
+    columns:
+      - name: id
+        description: Unique identifier, based on `patientId`, `pathwaySlug`, `fieldSlug`, `fieldLevel`, and `evaluatedResourceId`
+        tests:
+          - unique
+          - not_null
+      - name: patientId
+        tests:
+          - not_null
+      - name: pathwaySlug
+        tests:
+          - not_null
+      - name: fieldSlug
+        tests:
+          - not_null
+      - name: fieldType
+        tests:
+          - not_null
+      - name: fieldLevel
+        tests:
+          - not_null
+      - name: evaluatedResourceId
+      - name: evaluatedResourceKey
+      - name: evaluatedResourceModel

@@ -1,0 +1,6 @@
+
+version: 2
+
+models:
+  - name: xpt_care_pathway_assignment_commons
+    description: Exclude base-care-model assignments from ingestion

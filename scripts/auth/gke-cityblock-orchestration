@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PROD_CLUSTER=us-east4-prod-airflow-d4e023bb-gke
+TEST_CLUSTER=us-east4-cityblock-composer-cdc9ecc8-gke
+
+gcloud container clusters get-credentials $PROD_CLUSTER --zone us-east4-a --project=cityblock-orchestration
+gcloud container clusters get-credentials $TEST_CLUSTER --zone us-east4-a --project=cityblock-orchestration

@@ -1,0 +1,20 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/mixer-scripts:latest || exit 0
+    timeout: 300s
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/mixer-scripts:latest",
+      "-t", "gcr.io/$PROJECT_ID/mixer-scripts:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/mixer-scripts:latest',
+      "."
+    ]
+    dir: "scripts"
+
+images: ["gcr.io/$PROJECT_ID/mixer-scripts:latest", "gcr.io/$PROJECT_ID/mixer-scripts:$SHORT_SHA"]
+logsBucket: gs://cbh-cloud-build-logs/build-scripts-container

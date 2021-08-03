@@ -1,0 +1,10 @@
+
+version: 2
+
+sources:
+  - name: care_pathways
+    description: Member lists for specific pathways
+    database: cityblock-analytics
+    schema: src_care_pathways
+    tables:
+      - name: src_housing_pathway

@@ -1,0 +1,23 @@
+version: 2
+
+seeds:
+  - name: dta_delivery_model_fields
+    description: Lists fields used in delivery model assignment, along with their weights
+    columns:
+      - name: field
+        tests:
+          - unique
+          - not_null
+      - name: weight
+        test:
+          - not_null
+  - name: dta_delivery_model_market_proportions
+    description: Desired proportion of members in community delivery model by market. Note that the North Carolina market is treated as a special case for model assignment and so the community proportion is set to 0%
+    columns:
+      - name: marketName
+        tests:
+          - unique
+          - not_null
+      - name: communityProportion
+        tests:
+          - not_null

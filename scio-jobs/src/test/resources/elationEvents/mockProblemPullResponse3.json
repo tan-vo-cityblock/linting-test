@@ -1,0 +1,38 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": "https://sandbox.elationemr.com/api/2.0/problems/?limit=1&offset=1&patient=151523299033089",
+  "results": [
+    {
+      "id": 90946601003,
+      "description": "Diabetes and Obese",
+      "status": "Controlled",
+      "synopsis": "Combo diabetes and obesity.",
+      "start_date": "2019-03-26",
+      "resolved_date": null,
+      "dx": [
+        {
+          "icd9": [
+            "250.00"
+          ],
+          "icd10": [
+            "E11.9"
+          ],
+          "snomed": "73211009"
+        },
+        {
+          "icd9": [
+            "278.00"
+          ],
+          "icd10": [
+            "E66.9"
+          ],
+          "snomed": "414916001"
+        }
+      ],
+      "patient": 151523299033089,
+      "created_date": "2019-03-27T19:43:33Z",
+      "deleted_date": null
+    }
+  ]
+}

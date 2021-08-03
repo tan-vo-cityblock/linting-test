@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="inhalant-dependence-not-in-remission", period="100 year", min_other_claims=1, icd_diagnoses=['F1820', 'F1822', 'F1823', 'F1824', 'F1825', 'F1826', 'F1827', 'F1828', 'F1829']) }}

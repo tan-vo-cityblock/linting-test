@@ -1,0 +1,405 @@
+# the commons data source
+
+version: 2
+
+sources:
+
+  - name: common_patient_index_cache
+    description: DEPRECATED NOV 2019 The common schema was previously used for gating our patients with a negative cohort
+    database: cityblock-data
+    schema: common
+
+    tables:
+      - name: patient_index_cache
+
+  - name: mrt_commons_docker
+    description: Docker jobs outputting into Commons Abstractions, mainly by Jordan Ryda
+    database: cityblock-analytics
+    schema: mrt_commons
+
+    tables:
+      - name: sms_session_metadata
+      - name: telecom
+
+  - name: commons
+    description: Commons data mirrored nightly. Maintained by product-eng team.
+    database: cbh-db-mirror-prod
+    schema: commons_mirror
+
+    tables:
+      - name: address
+
+      - name: appointment
+
+      - name: assessment
+
+      - name: baseline_assessment_completion
+
+      - name: builder_question
+
+      - name: builder_question_assessment_screening_tool
+
+      - name: builder_risk_area
+        description: Risk areas are now known as pathways, and correspond to goal labels.
+
+      - name: builder_risk_area_group
+
+      - name: builder_screening_tool
+
+      - name: care_team
+
+      - name: clinic
+
+      - name: clinic_pod
+
+      - name: clinic_pod_member
+        tests:
+          - unique:
+              column_name: "concat(userId, createdAt)"
+
+      - name: cohort
+
+      - name: computed_patient_status
+
+      - name: email
+
+      - name: event
+
+      - name: event_attendee
+
+      - name: goal
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: patientId
+            tests:
+              - not_null
+          - name: title
+            tests:
+              - not_null
+          - name: description
+          - name: createdAt
+            tests:
+              - not_null
+          - name: updatedAt
+          - name: deletedAt
+          - name: createdById
+            tests:
+              - not_null
+          - name: dueAt
+            description: Date on which the goal is due.
+          - name: completedAt
+          - name: completedById
+          - name: isLegacy
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [false, true]
+                  quote: false
+          - name: rank
+            description: Used to determine order in which goals are to be displayed on the member's page in Commons.
+            tests:
+              - not_null:
+                  severity: warn
+
+          - name: label
+            description: Display name associated with riskAreaSlug
+
+          - name: riskAreaSlug
+
+      - name: goal_comment
+        identifier: goal_comment_transformed
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: goalId
+            tests:
+              - not_null
+          - name: createdAt
+            tests:
+              - not_null
+          - name: updatedAt
+          - name: deletedAt
+          - name: createdById
+            tests:
+              - not_null
+          - name: text
+
+      - name: goal_suggestion
+        description: Legacy table.
+
+      - name: goal_suggestion_template
+        description: Legacy table.
+
+      - name: hie_event
+
+      - name: market
+
+      - name: note
+        identifier: note_transformed
+
+      - name: note_revision
+        identifier: note_revision_transformed
+
+      - name: outreach_attempt
+
+      - name: partner
+
+      - name: partner_clinic
+
+      - name: patient
+
+      - name: patient_acuity
+
+      - name: patient_address
+
+      - name: patient_answer
+
+      - name: patient_attribute
+
+      - name: patient_contact
+
+      - name: patient_contact_phone
+
+      - name: patient_delivery_model
+
+      - name: patient_disenrollment
+
+      - name: patient_document
+
+      - name: patient_external_organization
+
+      - name: patient_external_provider
+
+      - name: patient_goal
+        description: Legacy table.
+
+      - name: patient_health_summary
+
+      - name: patient_info
+
+      - name: patient_info_history
+
+      - name: patient_phone
+
+      - name: patient_risk_area_group_acuity
+
+      - name: patient_screening_tool_submission
+
+      - name: patient_siu_event
+
+      - name: patient_state
+
+      - name: phone
+
+      - name: phone_call
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: userId
+            tests:
+              - not_null
+          - name: contactNumber
+            tests:
+              - not_null
+          - name: patientId
+          - name: direction
+            tests:
+              - not_null
+          - name: duration
+            tests:
+              - not_null
+          - name: callStatus
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [abandoned, busy, canceled, completed, failed, incoming, missed, no-answer, outgoing, voicemail]
+                  severity: warn
+          - name: providerPayload
+            tests:
+              - not_null
+          - name: deletedAt
+          - name: createdAt
+          - name: updatedAt
+          - name: callId
+            tests:
+              - not_null
+          - name: providerCreatedAt
+            tests:
+              - not_null
+          - name: twilioUpdatedAt
+          - name: provider
+            tests:
+              - accepted_values:
+                  values: [dialpad, direct, twilio]
+                  severity: warn
+          - name: device
+            tests:
+              - accepted_values:
+                  values: [android, desktop_app, forwarding_number, iphone, web]
+                  severity: warn
+          - name: callReceiver
+            tests:
+              - accepted_values:
+                  values: [department, user]
+                  severity: warn
+          - name: isTransferredToVoicemail
+            tests:
+              - accepted_values:
+                  values: [false, true]
+                  quote: false
+          - name: isTransferredToClinic
+            tests:
+              - accepted_values:
+                  values: [false, true]
+                  quote: false
+
+      - name: recommended_patient_acuity
+
+      - name: risk_area_assessment_submission
+
+      - name: screening_tool
+
+      - name: sms_message
+        columns:
+          - name: id
+            tests:
+              - not_null
+              - unique
+          - name: userId
+            tests:
+              - not_null
+          - name: body
+            tests:
+              - not_null
+          - name: deletedAt
+          - name: createdAt
+          - name: updatedAt
+          - name: patientId
+          - name: contactNumber
+            tests:
+              - not_null
+          - name: providerPayload
+          - name: direction
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [fromUser, toUser]
+          - name: mediaUrls
+          - name: messageId
+          - name: provider
+          - name: providerCreatedAt
+
+      - name: task
+        description: All historical states of a task, where every time a task state changes, the previous state is soft-deleted and a new row is added.
+        columns:
+          - name: id
+            description: This ID is actually a task state ID, and changes every time the state of a task changes.
+            tests:
+              - not_null
+              - unique
+          - name: createdById
+            tests:
+              - not_null
+          - name: title
+          - name: patientId
+            tests:
+              - not_null
+          - name: assignedToId
+          - name: completedById
+          - name: dueAt
+            description: Date on which the task is due.
+          - name: completedAt
+          - name: deletedAt
+          - name: createdAt
+            tests:
+              - not_null
+          - name: updatedAt
+          - name: goalGroupId
+            description: The ID of the goal the task is associated with, if any.
+          - name: groupId
+            description: This is the ID of the task.
+            tests:
+              - not_null
+          - name: isMemberSelfManagement
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [false, true]
+                  quote: false
+          - name: isLegacy
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [false, true]
+                  quote: false
+          - name: rank
+          - name: noteDraftGroupId
+          - name: isDraft
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [false, true]
+                  quote: false
+          - name: isUrgent
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [false, true]
+                  quote: false
+
+      - name: task_comment
+        description: Legacy table. Will be recreated.
+
+      - name: task_event
+        description: Legacy table.
+
+      - name: task_follower
+        description: Legacy table. Will be recreated.
+
+      - name: task_label
+
+      - name: task_suggestion
+        description: Legacy table.
+
+      - name: task_template
+        description: Legacy table.
+
+      - name: timeline_event
+
+      - name: user
+
+      - name: user_clinic
+
+      - name: __TABLES__
+
+  - name: legacy
+    description: Legacy member interactions, preserved for addition to active model
+    database: cityblock-analytics
+    schema: abs_deprecated
+
+    tables:
+      - name: member_interactions_legacy_unused
+
+
+  - name: quality_measure_mirror
+    description: Quality data from the QM service
+    database: cbh-db-mirror-prod
+    schema: quality_measure_mirror
+
+    tables:
+      - name: member_measure
+
+      - name: measure
+
+      - name: member_measure_source
+
+      - name: member_measure_status
+
+      - name: market_measure

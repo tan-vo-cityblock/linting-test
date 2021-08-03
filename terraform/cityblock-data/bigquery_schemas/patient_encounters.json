@@ -1,0 +1,334 @@
+[
+  {
+    "mode": "REQUIRED",
+    "name": "messageId",
+    "type": "STRING"
+  },
+  {
+    "name": "insertedAt",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "isStreaming",
+    "type": "BOOLEAN"
+  },
+  {
+    "fields": [
+      {
+        "name": "patientId",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "externalId",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REQUIRED",
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "commonId",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REQUIRED",
+        "name": "source",
+        "type": "RECORD"
+      }
+    ],
+    "mode": "REQUIRED",
+    "name": "patient",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "STRING"
+          },
+          {
+            "name": "idType",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "identifiers",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REQUIRED",
+            "name": "code",
+            "type": "STRING"
+          },
+          {
+            "name": "codeSystem",
+            "type": "STRING"
+          },
+          {
+            "name": "codeSystemName",
+            "type": "STRING"
+          },
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REQUIRED",
+        "name": "type",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REQUIRED",
+            "name": "raw",
+            "type": "STRING"
+          },
+          {
+            "name": "instant",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "date",
+            "type": "DATE"
+          }
+        ],
+        "name": "dateTime",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REQUIRED",
+            "name": "raw",
+            "type": "STRING"
+          },
+          {
+            "name": "instant",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "date",
+            "type": "DATE"
+          }
+        ],
+        "name": "endDateTime",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "name": "id",
+                "type": "STRING"
+              },
+              {
+                "name": "idType",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "identifiers",
+            "type": "RECORD"
+          },
+          {
+            "name": "firstName",
+            "type": "STRING"
+          },
+          {
+            "name": "lastName",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "credentials",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "name": "street1",
+                "type": "STRING"
+              },
+              {
+                "name": "street2",
+                "type": "STRING"
+              },
+              {
+                "name": "city",
+                "type": "STRING"
+              },
+              {
+                "name": "state",
+                "type": "STRING"
+              },
+              {
+                "name": "zip",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REQUIRED",
+            "name": "address",
+            "type": "RECORD"
+          },
+          {
+            "name": "phone",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "name": "code",
+                "type": "STRING"
+              },
+              {
+                "name": "codeSystem",
+                "type": "STRING"
+              },
+              {
+                "name": "codeSystemName",
+                "type": "STRING"
+              },
+              {
+                "name": "name",
+                "type": "STRING"
+              }
+            ],
+            "name": "role",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "providers",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "name": "street1",
+                "type": "STRING"
+              },
+              {
+                "name": "street2",
+                "type": "STRING"
+              },
+              {
+                "name": "city",
+                "type": "STRING"
+              },
+              {
+                "name": "state",
+                "type": "STRING"
+              },
+              {
+                "name": "zip",
+                "type": "STRING"
+              }
+            ],
+            "name": "address",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "name": "code",
+                "type": "STRING"
+              },
+              {
+                "name": "codeSystem",
+                "type": "STRING"
+              },
+              {
+                "name": "codeSystemName",
+                "type": "STRING"
+              },
+              {
+                "name": "name",
+                "type": "STRING"
+              }
+            ],
+            "name": "type",
+            "type": "RECORD"
+          },
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "locations",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "name": "code",
+            "type": "STRING"
+          },
+          {
+            "name": "codeSystem",
+            "type": "STRING"
+          },
+          {
+            "name": "codeSystemName",
+            "type": "STRING"
+          },
+          {
+            "name": "name",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "diagnoses",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "name": "code",
+            "type": "STRING"
+          },
+          {
+            "name": "codeSystem",
+            "type": "STRING"
+          },
+          {
+            "name": "codeSystemName",
+            "type": "STRING"
+          },
+          {
+            "name": "name",
+            "type": "STRING"
+          },
+          {
+            "name": "notes",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "reasons",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "draft",
+        "type": "BOOLEAN"
+      }
+    ],
+    "mode": "REQUIRED",
+    "name": "encounter",
+    "type": "RECORD"
+  }
+]

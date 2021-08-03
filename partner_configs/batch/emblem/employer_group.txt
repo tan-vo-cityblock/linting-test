@@ -1,0 +1,106 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CB_COHORT_EMPLOYERGROUPACCOUNT%s.txt",
+  "partnerName": "emblem",
+  "tableName": "employer_group",
+  "delimiter": "|",
+  "header": "GRP_START_DATE|GRP_END_DATE|GRP_ID|GRP_NAME|GRP_SIC|GRP_NAICS|GRP_TYPE|GRP_RENEW_MTH|GRP_EFF_DATE|GRP_TERM_DATE|GRP_BROKER_ID|GRP_ELIG_LAG|GRP_CONTACT|GRP_ADDR1|GRP_ADDR2|GRP_CITY|GRP_STATE|GRP_ZIP|GRP_PHONE|_GRP_LVL_01_|_GRP_LVL_02_|_GRP_LVL_03_|GRP_DATA_SRC|TYPEOFBUSINESS|GROUPCOUNTY|EMPLOYERGROUPMODIFIER|DIVISIONID|TOTALEMPLOYEE|EMPLOYERTIN|MARKETSEGMENTGROUPTYPECODE",
+  "fields": [
+    {
+      "name": "GRP_START_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "GRP_END_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "GRP_ID"
+    },
+    {
+      "name": "GRP_NAME"
+    },
+    {
+      "name": "GRP_SIC"
+    },
+    {
+      "name": "GRP_NAICS"
+    },
+    {
+      "name": "GRP_TYPE"
+    },
+    {
+      "name": "GRP_RENEW_MTH"
+    },
+    {
+      "name": "GRP_EFF_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "GRP_TERM_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "GRP_BROKER_ID"
+    },
+    {
+      "name": "GRP_ELIG_LAG"
+    },
+    {
+      "name": "GRP_CONTACT"
+    },
+    {
+      "name": "GRP_ADDR1"
+    },
+    {
+      "name": "GRP_ADDR2"
+    },
+    {
+      "name": "GRP_CITY"
+    },
+    {
+      "name": "GRP_STATE"
+    },
+    {
+      "name": "GRP_ZIP"
+    },
+    {
+      "name": "GRP_PHONE"
+    },
+    {
+      "name": "_GRP_LVL_01_"
+    },
+    {
+      "name": "_GRP_LVL_02_"
+    },
+    {
+      "name": "_GRP_LVL_03_"
+    },
+    {
+      "name": "GRP_DATA_SRC"
+    },
+    {
+      "name": "TYPEOFBUSINESS"
+    },
+    {
+      "name": "GROUPCOUNTY"
+    },
+    {
+      "name": "EMPLOYERGROUPMODIFIER"
+    },
+    {
+      "name": "DIVISIONID"
+    },
+    {
+      "name": "TOTALEMPLOYEE"
+    },
+    {
+      "name": "EMPLOYERTIN"
+    },
+    {
+      "name": "MARKETSEGMENTGROUPTYPECODE"
+    }
+  ]
+}

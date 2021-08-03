@@ -1,0 +1,215 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "cardinal/drop",
+  "fileNamePattern": "BHClaims_Cardinal_CBH_ F_%s.TXT",
+  "partnerName": "cardinal",
+  "tableName": "behavioral_health",
+  "delimiter": ",",
+  "indexJoinField": "MemberID",
+  "datasource": "cardinal",
+  "header": "ClaimID,LineOfBusiness,SubLineOfBusiness,ServiceLineNumber,MemberID,PaidDate,AdmissionType,AdmitDate,DischargeStatus,DischargeDate,RenderingProviderID,RenderingProviderNPI,TypeOfBill,PlaceOfService,ClaimStatus,COBStatus,PrincipalDiagnosis,POAFlag,Diagnosis2,POAFlag2,Diagnosis3,POAFlag3,Diagnosis4,POAFlag4,Diagnosis5,POAFlag5,Diagnosis6,POAFlag6,Diagnosis7,POAFlag7,Diagnosis8,POAFlag8,Diagnosis9,POAFlag9,Diagnosis10,POAFlag10,Diagnosis11,POAFlag11,Diagnosis12,POAFlag12,Diagnosis13,POAFlag13,RevenueCode,ProcedureCode,ProcedureMod1,ProcedureMod2,ProcedureMod3,ProcedureMod4,DateOfServiceFrom,DateOfServiceTo,Quantity,Charges,AllowedAmount,Payment,PrepaidAmount,Copayment,CoInsurance,Deductible,BillingProviderID,BillingProviderNPI,ContractNumber,AdmissionSource,AuthorizationID,CreateDate,Cardinal ID",
+  "fields": [
+    {
+      "name": "ClaimID",
+      "required": true
+    },
+    {
+      "name": "LineOfBusiness"
+    },
+    {
+      "name": "SubLineOfBusiness"
+    },
+    {
+      "name": "ServiceLineNumber"
+    },
+    {
+      "name": "MemberID"
+    },
+    {
+      "name": "PaidDate",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "AdmissionType"
+    },
+    {
+      "name": "AdmitDate",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "DischargeStatus"
+    },
+    {
+      "name": "DischargeDate",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "RenderingProviderID"
+    },
+    {
+      "name": "RenderingProviderNPI"
+    },
+    {
+      "name": "TypeOfBill"
+    },
+    {
+      "name": "PlaceOfService"
+    },
+    {
+      "name": "ClaimStatus"
+    },
+    {
+      "name": "COBStatus"
+    },
+    {
+      "name": "PrincipalDiagnosis"
+    },
+    {
+      "name": "POAFlag"
+    },
+    {
+      "name": "Diagnosis2"
+    },
+    {
+      "name": "POAFlag2"
+    },
+    {
+      "name": "Diagnosis3"
+    },
+    {
+      "name": "POAFlag3"
+    },
+    {
+      "name": "Diagnosis4"
+    },
+    {
+      "name": "POAFlag4"
+    },
+    {
+      "name": "Diagnosis5"
+    },
+    {
+      "name": "POAFlag5"
+    },
+    {
+      "name": "Diagnosis6"
+    },
+    {
+      "name": "POAFlag6"
+    },
+    {
+      "name": "Diagnosis7"
+    },
+    {
+      "name": "POAFlag7"
+    },
+    {
+      "name": "Diagnosis8"
+    },
+    {
+      "name": "POAFlag8"
+    },
+    {
+      "name": "Diagnosis9"
+    },
+    {
+      "name": "POAFlag9"
+    },
+    {
+      "name": "Diagnosis10"
+    },
+    {
+      "name": "POAFlag10"
+    },
+    {
+      "name": "Diagnosis11"
+    },
+    {
+      "name": "POAFlag11"
+    },
+    {
+      "name": "Diagnosis12"
+    },
+    {
+      "name": "POAFlag12"
+    },
+    {
+      "name": "Diagnosis13"
+    },
+    {
+      "name": "POAFlag13"
+    },
+    {
+      "name": "RevenueCode"
+    },
+    {
+      "name": "ProcedureCode"
+    },
+    {
+      "name": "ProcedureMod1"
+    },
+    {
+      "name": "ProcedureMod2"
+    },
+    {
+      "name": "ProcedureMod3"
+    },
+    {
+      "name": "ProcedureMod4"
+    },
+    {
+      "name": "DateOfServiceFrom",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "DateOfServiceTo",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Quantity"
+    },
+    {
+      "name": "Charges"
+    },
+    {
+      "name": "AllowedAmount"
+    },
+    {
+      "name": "Payment"
+    },
+    {
+      "name": "PrepaidAmount"
+    },
+    {
+      "name": "Copayment"
+    },
+    {
+      "name": "CoInsurance"
+    },
+    {
+      "name": "Deductible"
+    },
+    {
+      "name": "BillingProviderID"
+    },
+    {
+      "name": "BillingProviderNPI"
+    },
+    {
+      "name": "ContractNumber"
+    },
+    {
+      "name": "AdmissionSource"
+    },
+    {
+      "name": "AuthorizationID"
+    },
+    {
+      "name": "CreateDate"
+    },
+    {
+      "name": "Cardinal_ID"
+    }
+  ]
+}

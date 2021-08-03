@@ -1,0 +1,223 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CB_COHORT_PROVIDER%s.txt",
+  "partnerName": "emblem",
+  "tableName": "providers",
+  "delimiter": "\\*~\\*",
+  "dataFieldName": "provider",
+  "header": "PROV_START_DATE*~*PROV_END_DATE*~*PROV_ID*~*PROV_TYPE*~*PROV_NPI*~*PROV_TIN*~*PROV_TAXONOMY*~*PROV_LIC*~*PROV_MEDICAID*~*PROV_DEA*~*PROV_NET_FLAG*~*PROV_PAR_FLAG*~*PROV_LNAME*~*PROV_FNAME*~*PROV_MNAME*~*PROV_GENDER*~*PROV_DOB*~*PROV_EMAIL*~*PROV_CLINIC_ID*~*PROV_CLINIC_NAME*~*PROV_CLINIC_ADDR*~*PROV_CLINIC_ADDR2*~*PROV_CLINIC_CITY*~*PROV_CLINIC_STATE*~*PROV_CLINIC_ZIP*~*PROV_MAILING_ADDR*~*PROV_MAILING_ADDR2*~*PROV_MAILING_CITY*~*PROV_MAILING_STATE*~*PROV_MAILING_ZIP*~*PROV_PHONE*~*PROV_GRP_ID*~*PROV_GRP_NAME*~*PROV_GRP_MAILING_ADDR*~*PROV_GRP_MAILING_ADDR2*~*PROV_GRP_MAILING_CITY*~*PROV_GRP_MAILING_STATE*~*PROV_GRP_MAILING_ZIP*~*PROV_GRP_PHONE*~*PROV_GRP_EMAIL*~*PROV_SPEC_CODE*~*PROV_SPEC_DESC*~*PROV_SPEC_CODE2*~*PROV_SPEC_DESC2*~*PROV_SPEC_CODE3*~*PROV_SPEC_DESC3*~*PROV_PCP_FLAG*~*PROV_OB_FLAG*~*PROV_MH_FLAG*~*PROV_EYE_FLAG*~*PROV_DEN_FLAG*~*PROV_NEP_FLAG*~*PROV_CD_FLAG*~*PROV_NP_FLAG*~*PROV_PA_FLAG*~*PROV_RX_FLAG*~*PROV_GROUP_IPA_NAME*~*PROV_GROUP_ACO_NAME*~*PROV_DATA_SRC*~*PROV_SRC_COMMON_ID*~*PROV_CW_PRIORITY*~*PROVIDER_LOCATOR*~*PROV_ATTRIB*~*PROV_DOMESTIC*~*PROV_LOC*~*MEDICARECCN*~*MCRBNO*~*UPINNO*~*PROVMAILPHONE",
+  "fields": [
+    {
+      "name": "PROV_START_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "PROV_END_DATE",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "PROV_ID",
+      "required": true
+    },
+    {
+      "name": "PROV_TYPE"
+    },
+    {
+      "name": "PROV_NPI"
+    },
+    {
+      "name": "PROV_TIN"
+    },
+    {
+      "name": "PROV_TAXONOMY"
+    },
+    {
+      "name": "PROV_LIC"
+    },
+    {
+      "name": "PROV_MEDICAID"
+    },
+    {
+      "name": "PROV_DEA"
+    },
+    {
+      "name": "PROV_NET_FLAG"
+    },
+    {
+      "name": "PROV_PAR_FLAG"
+    },
+    {
+      "name": "PROV_LNAME"
+    },
+    {
+      "name": "PROV_FNAME"
+    },
+    {
+      "name": "PROV_MNAME"
+    },
+    {
+      "name": "PROV_GENDER"
+    },
+    {
+      "name": "PROV_DOB"
+    },
+    {
+      "name": "PROV_EMAIL"
+    },
+    {
+      "name": "PROV_CLINIC_ID"
+    },
+    {
+      "name": "PROV_CLINIC_NAME"
+    },
+    {
+      "name": "PROV_CLINIC_ADDR"
+    },
+    {
+      "name": "PROV_CLINIC_ADDR2"
+    },
+    {
+      "name": "PROV_CLINIC_CITY"
+    },
+    {
+      "name": "PROV_CLINIC_STATE"
+    },
+    {
+      "name": "PROV_CLINIC_ZIP"
+    },
+    {
+      "name": "PROV_MAILING_ADDR"
+    },
+    {
+      "name": "PROV_MAILING_ADDR2"
+    },
+    {
+      "name": "PROV_MAILING_CITY"
+    },
+    {
+      "name": "PROV_MAILING_STATE"
+    },
+    {
+      "name": "PROV_MAILING_ZIP"
+    },
+    {
+      "name": "PROV_PHONE"
+    },
+    {
+      "name": "PROV_GRP_ID"
+    },
+    {
+      "name": "PROV_GRP_NAME"
+    },
+    {
+      "name": "PROV_GRP_MAILING_ADDR"
+    },
+    {
+      "name": "PROV_GRP_MAILING_ADDR2"
+    },
+    {
+      "name": "PROV_GRP_MAILING_CITY"
+    },
+    {
+      "name": "PROV_GRP_MAILING_STATE"
+    },
+    {
+      "name": "PROV_GRP_MAILING_ZIP"
+    },
+    {
+      "name": "PROV_GRP_PHONE"
+    },
+    {
+      "name": "PROV_GRP_EMAIL"
+    },
+    {
+      "name": "PROV_SPEC_CODE"
+    },
+    {
+      "name": "PROV_SPEC_DESC"
+    },
+    {
+      "name": "PROV_SPEC_CODE2"
+    },
+    {
+      "name": "PROV_SPEC_DESC2"
+    },
+    {
+      "name": "PROV_SPEC_CODE3"
+    },
+    {
+      "name": "PROV_SPEC_DESC3"
+    },
+    {
+      "name": "PROV_PCP_FLAG"
+    },
+    {
+      "name": "PROV_OB_FLAG"
+    },
+    {
+      "name": "PROV_MH_FLAG"
+    },
+    {
+      "name": "PROV_EYE_FLAG"
+    },
+    {
+      "name": "PROV_DEN_FLAG"
+    },
+    {
+      "name": "PROV_NEP_FLAG"
+    },
+    {
+      "name": "PROV_CD_FLAG"
+    },
+    {
+      "name": "PROV_NP_FLAG"
+    },
+    {
+      "name": "PROV_PA_FLAG"
+    },
+    {
+      "name": "PROV_RX_FLAG"
+    },
+    {
+      "name": "PROV_GROUP_IPA_NAME"
+    },
+    {
+      "name": "PROV_GROUP_ACO_NAME"
+    },
+    {
+      "name": "PROV_DATA_SRC"
+    },
+    {
+      "name": "PROV_SRC_COMMON_ID"
+    },
+    {
+      "name": "PROV_CW_PRIORITY"
+    },
+    {
+      "name": "PROVIDER_LOCATOR"
+    },
+    {
+      "name": "PROV_ATTRIB"
+    },
+    {
+      "name": "PROV_DOMESTIC"
+    },
+    {
+      "name": "PROV_LOC"
+    },
+    {
+      "name": "MEDICARECCN"
+    },
+    {
+      "name": "MCRBNO"
+    },
+    {
+      "name": "UPINNO"
+    },
+    {
+      "name": "PROVMAILPHONE"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "Visit": {
+    "VisitNumber": "0123456",
+    "VisitDateTime": "2018-08-14T14:35:00.000Z",
+    "Extensions": {
+      "discharge-date-time": {
+        "url": "https://api.redoxengine.com/extensions/discharge-date-time",
+        "dateTime": null
+      }
+    },
+    "AccountNumber": null
+  },
+  "Patient": {
+    "Notes": [],
+    "Identifiers": [
+      {
+        "IDType": "Cityblock MRN",
+        "ID": "012345"
+      }
+    ],
+    "Demographics": {
+      "Sex": "Male",
+      "SSN": "000-00-0000",
+      "Race": "White",
+      "PhoneNumber": {
+        "Office": null,
+        "Mobile": null,
+        "Home": null
+      },
+      "MiddleName": null,
+      "MaritalStatus": "Single",
+      "LastName": "Smith",
+      "Language": null,
+      "IsHispanic": null,
+      "IsDeceased": null,
+      "FirstName": "Bob",
+      "EmailAddresses": [],
+      "DeathDateTime": null,
+      "DOB": "1943-01-01",
+      "Citizenship": [],
+      "Address": {
+        "ZIP": "10001",
+        "StreetAddress": "1 Main St",
+        "State": "NY",
+        "County": "Manhattan",
+        "Country": "USA",
+        "City": "Springfield"
+      }
+    }
+  },
+  "Orders": [],
+  "Note": {
+    "Status": "Authentiated",
+    "ServiceDateTime": null,
+    "Provider": {
+      "PhoneNumber": {
+        "Office": null
+      },
+      "Location": {
+        "Type": null,
+        "Room": null,
+        "Facility": null,
+        "Department": null
+      },
+      "LastName": null,
+      "IDType": null,
+      "ID": "12345",
+      "FirstName": null,
+      "Credentials": [],
+      "Address": {
+        "ZIP": null,
+        "StreetAddress": null,
+        "State": null,
+        "County": null,
+        "Country": null,
+        "City": null
+      }
+    },
+    "Notifications": [],
+    "FileName": "Cityblock CCD Push",
+    "FileContents": "John Snow (CITYBLOCK MRN: 19999abc-a999-111b-cb12-abd11111111) was admitted to INTERBORO King's Landing (MRN: 9999999) -- Admission on 2018-08-10 14:35:00 -- Event type ED Admit and -- Discharged on 2018-07-02 15:10:00 --",
+    "DocumentationDateTime": null,
+    "DocumentType": "IA",
+    "DocumentID": "NYU",
+    "ContentType": "Plain Text",
+    "Components": [
+      {
+        "Value": "Discharged",
+        "Name": "Event Type",
+        "ID": "Event Type",
+        "Comments": null
+      },
+      {
+        "Value": "Cityblock CCD Push",
+        "Name": "Program Name",
+        "ID": "Program Name",
+        "Comments": null
+      },
+      {
+        "Value": "G000.0^A diagnosis^ICD-10-CM",
+        "ID": "diagnosis",
+        "Name": "diagnosis",
+        "Comments": "G000.0^A diagnosis^ICD-10-CM"
+      },
+      {
+        "Value": null,
+        "Name": "Visit Type",
+        "ID": "Visit Type",
+        "Comments": null
+      },
+      {
+        "ID": "diagnosis",
+        "Name": "diagnosis",
+        "Value": "F123.0^Other specified stuff^ICD-10-CM",
+        "Comments": "F123.0^Other specified stuff^ICD-10-CM"
+      },
+      {
+        "Value": "06",
+        "Name": "dischargeDisposition",
+        "ID": "dischargeDisposition",
+        "Comments": null
+      }
+    ],
+    "Availability": "Available",
+    "Authenticator": {
+      "PhoneNumber": {
+        "Office": null
+      },
+      "Location": {
+        "Type": null,
+        "Room": null,
+        "Facility": null,
+        "Department": null
+      },
+      "LastName": null,
+      "IDType": null,
+      "ID": null,
+      "FirstName": null,
+      "Credentials": [],
+      "Address": {
+        "ZIP": null,
+        "StreetAddress": null,
+        "State": null,
+        "County": null,
+        "Country": null,
+        "City": null
+      }
+    }
+  },
+  "Meta": {
+    "Transmission": {
+      "ID": 1234567
+    },
+    "Test": false,
+    "Source": {
+      "Name": "Healthix HL7 Source (p)",
+      "ID": "ceecc756-1f32-4417-92fa-93f616f64f45"
+    },
+    "Message": {
+      "ID": 1234567
+    },
+    "FacilityCode": null,
+    "EventType": "New",
+    "EventDateTime": "2018-08-13T01:01:00.000Z",
+    "Destinations": [
+      {
+        "Name": "Cityblock Destination (p)",
+        "ID": "0123456-12345566-123114142"
+      }
+    ],
+    "DataModel": "Notes"
+  }
+}

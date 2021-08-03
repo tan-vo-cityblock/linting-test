@@ -1,0 +1,37 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CB_VIC_DIAGASSOCIATION_EXTRACT%s_00.txt",
+  "partnerName": "emblem",
+  "tableName": "diagnosis_associations",
+  "dataFieldName": "diagnosis",
+  "delimiter": "|",
+  "header": "CLAIMNUMBER|SEQUENCENUMBER|DIAGNOSISCODE|ICD10_OR_HIGHER|CLAIMTYPE|SITEID|DIAGCODEFORMATTED",
+  "fields": [
+    {
+      "name": "CLAIMNUMBER",
+      "required": true
+    },
+    {
+      "name": "SEQUENCENUMBER"
+    },
+    {
+      "name": "DIAGNOSISCODE"
+    },
+    {
+      "name": "ICD10_OR_HIGHER",
+      "fieldType": "BOOLEAN",
+      "required": true
+    },
+    {
+      "name": "CLAIMTYPE"
+    },
+    {
+      "name": "SITEID"
+    },
+    {
+      "name": "DIAGCODEFORMATTED"
+    }
+  ]
+}

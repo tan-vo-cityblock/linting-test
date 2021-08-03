@@ -1,0 +1,81 @@
+{
+  "id": 91143209000,
+  "patient": 151523299033089,
+  "custom_title": "Point-of-Care Labs",
+  "report_type": "Lab",
+  "requisition_number": null,
+  "tags": [
+  ],
+  "reported_date": null,
+  "last_collected_date": null,
+  "reviewed_by": null,
+  "grids": [
+    {
+      "accession_number": "_el8_d4e9691a-8fd9-4927-84b8-4fc96d08b299",
+      "resulted_date": "2019-04-18T18:24:00Z",
+      "collected_date": "2019-04-18T18:24:00Z",
+      "status": "FINAL",
+      "note": "",
+      "results": [
+        {
+          "status": "FINAL",
+          "value": "10",
+          "value_type": "Numeric",
+          "text": "",
+          "note": "",
+          "reference_min": "9.1",
+          "reference_max": "12",
+          "units": "sec",
+          "is_abnormal": false,
+          "abnormal_flag": "",
+          "test": {
+            "code": "elation-ptinr-prothrombin-time",
+            "name": "Prothrombin Time",
+            "loinc": "5902-2"
+          },
+          "test_category": {
+            "value": "elation-ptinr",
+            "description": "PT/INR"
+          }
+        },
+        {
+          "status": "FINAL",
+          "value": "1.0",
+          "value_type": "Numeric",
+          "text": "",
+          "note": "",
+          "reference_min": "0.1",
+          "reference_max": "1.2",
+          "units": null,
+          "is_abnormal": false,
+          "abnormal_flag": "",
+          "test": {
+            "code": "elation-ptinr-inr",
+            "name": "INR",
+            "loinc": "6301-6"
+          },
+          "test_category": {
+            "value": "elation-ptinr",
+            "description": "PT/INR"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "document" : "https://app.elationemr.com/api/2.0/reports/164381812064296/printable"
+    }
+  ],
+  "files": [
+  ],
+  "practice": 145331296403460,
+  "physician": 150679616754852,
+  "document_date": "2019-04-18T18:24:00Z",
+  "chart_date": "2019-04-18T18:24:35Z",
+  "signed_date": "2019-04-18T18:24:35Z",
+  "signed_by": 89838714882,
+  "created_date": "2019-04-18T18:24:33Z",
+  "deleted_date": null,
+  "printable_view": "https://sandbox.elationemr.com/api/2.0/reports/91143209000/printable"
+}

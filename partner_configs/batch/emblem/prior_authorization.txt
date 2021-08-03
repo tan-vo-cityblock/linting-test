@@ -1,0 +1,215 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CORP_CITYBLOCK_MULTI_PAUNIRPT_CAE_F_D_PROD_%s",
+  "partnerName": "emblem",
+  "tableName": "prior_authorization",
+  "delimiter": "\t",
+  "indexJoinField": "Pt_ID",
+  "header": "Case#\tPt ID\tPt First Name\tPt Last Name\tAge\tDOB\tLOB Product\tLOB Category\tLOB Detail\tClient ID\tClient Name\tPlan ID\tGrp Num\tPCP NPI\tPCP Name\tProgram Code\tProgram Desc\tProgram Begin Dt\tProgram End Dt\tCM Case Manager\tFac NPI\tFac Name\tFac Address\tFac City\tFac State\tFac Zip\tFac Phone\tDX Code DX Desc\tTreating Prov NPI\tTreating Prov Name\tMed Grp ID\tMed Grp Name\tPAR/Non PAR\tCase Type\tCare Type\tCase Source\tDelegate System\tCase Age\tCase Status\tCase Priority\tStage\tAdmit Dt\tDisch Dt\tApp Los\tAct Los\tVariance\tDeny\tPxc Code\tRequest Recvd Dt\tRequest Recvd Time\tPlace of Service\tService Type\tService Line status\tService Status Desc\tService Start Dt\tService End Dt\tAprv Units\tDeny Units\tUnit Type\tInpt/Outpt\tReason\tCreate Dt\tCreated By\tLast Updated\tLast Updated By\tBusiness Unit",
+  "fields": [
+    {
+      "name": "CaseNumber"
+    },
+    {
+      "name": "Pt_ID",
+      "required": true
+    },
+    {
+      "name": "Pt_First_Name"
+    },
+    {
+      "name": "Pt_Last_Name"
+    },
+    {
+      "name": "Age"
+    },
+    {
+      "name": "DOB"
+    },
+    {
+      "name": "LOB_Product"
+    },
+    {
+      "name": "LOB_Category"
+    },
+    {
+      "name": "LOB_Detail"
+    },
+    {
+      "name": "Client_ID"
+    },
+    {
+      "name": "Client_Name"
+    },
+    {
+      "name": "Plan_ID"
+    },
+    {
+      "name": "Grp_Num"
+    },
+    {
+      "name": "PCP_NPI"
+    },
+    {
+      "name": "PCP_Name"
+    },
+    {
+      "name": "Program_Code"
+    },
+    {
+      "name": "Program_Desc"
+    },
+    {
+      "name": "Program_Begin_Dt"
+    },
+    {
+      "name": "Program_End_Dt"
+    },
+    {
+      "name": "CM_Case_Manager"
+    },
+    {
+      "name": "Fac_NPI"
+    },
+    {
+      "name": "Fac_Name"
+    },
+    {
+      "name": "Fac_Address"
+    },
+    {
+      "name": "Fac_City"
+    },
+    {
+      "name": "Fac_State"
+    },
+    {
+      "name": "Fac_Zip"
+    },
+    {
+      "name": "Fac_Phone"
+    },
+    {
+      "name": "DX_Code_DX_Desc"
+    },
+    {
+      "name": "Treating_Prov_NPI"
+    },
+    {
+      "name": "Treating_Prov_Name"
+    },
+    {
+      "name": "Med_Grp_ID"
+    },
+    {
+      "name": "Med_Grp_Name"
+    },
+    {
+      "name": "PAR_or_Non_PAR"
+    },
+    {
+      "name": "Case_Type"
+    },
+    {
+      "name": "Care_Type"
+    },
+    {
+      "name": "Case_Source"
+    },
+    {
+      "name": "Delegate_System"
+    },
+    {
+      "name": "Case_Age"
+    },
+    {
+      "name": "Case_Status"
+    },
+    {
+      "name": "Case_Priority"
+    },
+    {
+      "name": "Stage"
+    },
+    {
+      "name": "Admit_Dt",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Disch_Dt",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "App_Los"
+    },
+    {
+      "name": "Act_Los"
+    },
+    {
+      "name": "Variance"
+    },
+    {
+      "name": "Deny"
+    },
+    {
+      "name": "Pxc_Code"
+    },
+    {
+      "name": "Request_Recvd_Dt"
+    },
+    {
+      "name": "Request_Recvd_Time"
+    },
+    {
+      "name": "Place_of_Service"
+    },
+    {
+      "name": "Service_Type"
+    },
+    {
+      "name": "Service_Line_status"
+    },
+    {
+      "name": "Service_Status_Desc"
+    },
+    {
+      "name": "Service_Start_Dt"
+    },
+    {
+      "name": "Service_End_Dt"
+    },
+    {
+      "name": "Aprv_Units"
+    },
+    {
+      "name": "Deny_Units"
+    },
+    {
+      "name": "Unit_Type"
+    },
+    {
+      "name": "Inpt_or_Outpt"
+    },
+    {
+      "name": "Reason"
+    },
+    {
+      "name": "Create_Dt",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Created_By"
+    },
+    {
+      "name": "Last_Updated"
+    },
+    {
+      "name": "Last_Updated_By"
+    },
+    {
+      "name": "Business_Unit"
+    }
+  ]
+}

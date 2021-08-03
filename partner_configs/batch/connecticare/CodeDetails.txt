@@ -1,0 +1,25 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "CodeDetails_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "CodeDetails",
+  "delimiter": "|",
+  "createIds": false,
+  "header": "CodeSet|Code|CodeDescription",
+  "fields": [
+    {
+      "name": "CodeSet",
+      "required": true
+    },
+    {
+      "name": "Code",
+      "required": true
+    },
+    {
+      "name": "CodeDescription",
+      "required": true
+    }
+  ]
+}

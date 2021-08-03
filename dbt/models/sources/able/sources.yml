@@ -1,0 +1,16 @@
+
+# the medical data source
+
+version: 2
+
+sources:
+
+  - name: able
+    description: Set of results from able health
+    database: cityblock-data
+    schema: ablehealth_results
+
+    tables:
+      - name: measure_results
+      - name: risk_scores
+      - name: risk_suspects

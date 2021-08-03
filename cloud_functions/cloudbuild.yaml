@@ -1,0 +1,6 @@
+steps:
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["functions", "deploy", "${_FXN_NAME}", "--region", "${_FXN_REGION}", "--source", "${_FXN_SOURCE}"]
+timeout: 120s
+logsBucket: gs://cbh-cloud-build-logs/deploy-elation-hook
+# TODO: turn logs location into subsitution 

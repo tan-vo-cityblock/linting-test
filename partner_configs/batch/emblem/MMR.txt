@@ -1,0 +1,327 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CITYBLOCK_MMR_%s.txt",
+  "delimiter": ",",
+  "partnerName": "emblem",
+  "indexJoinField": "HIC_Number",
+  "tableName": "MMR",
+  "header": "Plan,Run date,Report date,HIC Number,Surname,First Name,Sex,Birth Date,Age Group,SOC,Out of Area,Part A Indicator,Part B Indicator,Hospice,ESRD,Aged/Disabled MSP,Institutional,Nursing Home,Medicare Bene Medicaid Stat Flag,LTI Flag,Medicaid Indicator,PIP-DCG Category,Default Factor Indicator,Risk Adj Factor A,Risk Adj Factor B,Months Adj Part A,Months Adj Part B,Adj Reason,Payment Start,Payment End,Demo Pay Adj Rate A,Demo Pay Adj Rate B,Risk Adjustor Rate A,Risk Adjustor Rate B,Low Income Subsidy Premium Amt,ESRD MSP Flag,Medication Therapy Management,Medicaid,Risk Adj Age Group,Previous Disable Ratio,De Minimis,Bene Dual PartD Enroll Stat Flag,Plan Benefit Package Id,Race Code,RA Factor Type Code,Frailty Indicator,Original Reason Entitlement Cd,Lag Indicator,Segment ID,Enrollment Source,EGHP Flag,Part C Basic Prem - Pt A Amt,Part C Basic Prem - Pt B Amt,Rebate Pt A Cost Share Reduction,Rebate Pt B Cost Share Reduction,Rebate Other Pt A Suppl Benefits,Rebate Other Pt B Suppl Benefits,Rebate Pt B Prem Reduc-Pt A Amt,Rebate Pt B Prem Reduc-Pt B Amt,Rebate Pt D Suppl Bene-Pt A Amt,Rebate Pt D Suppl Bene-Pt B Amt,Total Pt A MA Payment,Total Pt B MA Payment,Total,Part D RA Factor,Part D Low Income Indicator,Part D Low Income Multiplier,Part D Long Term Institution Ind,Part D Long Term Institution Mul,Rebate Pt D Basic Prem Reduction,Part D Basic Prem Amt,Part D Direct Subsidy Pymnt Amt,Reinsurance Subsidy Amt,LIS Cost Sharing Amt,Total Part D Payment,Number of Pymnt Adj Mnths Pt D,PACE Premium Add - On,PACE Cost Sharing Add - On,Part C Frailty Score Factor,MSP Factor,MSP Reduction - Adj Amt- Prt A,MSP Reduction - Adj Amt- Prt B,Medicaid Dual Status Code,Part D Coverage Gap Discount Amt,Part D RA Factor Type,Default Part D Risk Factor Code,Part A Monthly Payment Rate,Part B Monthly Payment Rate,Part D Monthly Payment Rate,Cleanup ID",
+  "datasource": "medicareNY",
+  "fields": [
+    {
+      "name": "Plan"
+    },
+    {
+      "name": "Run_date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Report_date"
+    },
+    {
+      "name": "HIC_Number"
+    },
+    {
+      "name": "Surname"
+    },
+    {
+      "name": "First_Name"
+    },
+    {
+      "name": "Sex"
+    },
+    {
+      "name": "Birth_Date"
+    },
+    {
+      "name": "Age_Group"
+    },
+    {
+      "name": "SOC"
+    },
+    {
+      "name": "Out_of_Area"
+    },
+    {
+      "name": "Part_A_Indicator"
+    },
+    {
+      "name": "Part_B_Indicator"
+    },
+    {
+      "name": "Hospice"
+    },
+    {
+      "name": "ESRD"
+    },
+    {
+      "name": "Aged_or_Disabled_MSP"
+    },
+    {
+      "name": "Institutional"
+    },
+    {
+      "name": "Nursing_Home"
+    },
+    {
+      "name": "Medicare_Bene_Medicaid_Stat_Flag"
+    },
+    {
+      "name": "LTI_Flag"
+    },
+    {
+      "name": "Medicaid_Indicator"
+    },
+    {
+      "name": "PIP_DCG_Category"
+    },
+    {
+      "name": "Default_Factor_Indicator"
+    },
+    {
+      "name": "Risk_Adj_Factor_A",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Risk_Adj_Factor_B",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Months_Adj_Part_A"
+    },
+    {
+      "name": "Months_Adj_Part_B"
+    },
+    {
+      "name": "Adj_Reason"
+    },
+    {
+      "name": "Payment_Start"
+    },
+    {
+      "name": "Payment_End"
+    },
+    {
+      "name": "Demo_Pay_Adj_Rate_A",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Demo_Pay_Adj_Rate_B",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Risk_Adjustor_Rate_A",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Risk_Adjustor_Rate_B",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Low_Income_Subsidy_Premium_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "ESRD_MSP_Flag"
+    },
+    {
+      "name": "Medication_Therapy_Management",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Medicaid"
+    },
+    {
+      "name": "Risk_Adj_Age_Group"
+    },
+    {
+      "name": "Previous_Disable_Ratio",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "De_Minimis"
+    },
+    {
+      "name": "Bene_Dual_PartD_Enroll_Stat_Flag"
+    },
+    {
+      "name": "Plan_Benefit_Package_Id"
+    },
+    {
+      "name": "Race_Code"
+    },
+    {
+      "name": "RA_Factor_Type_Code"
+    },
+    {
+      "name": "Frailty_Indicator"
+    },
+    {
+      "name": "Original_Reason_Entitlement_Cd"
+    },
+    {
+      "name": "Lag_Indicator"
+    },
+    {
+      "name": "Segment_ID"
+    },
+    {
+      "name": "Enrollment_Source"
+    },
+    {
+      "name": "EGHP_Flag"
+    },
+    {
+      "name": "Part_C_Basic_Prem___Pt_A_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_C_Basic_Prem___Pt_B_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Pt_A_Cost_Share_Reduction",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Pt_B_Cost_Share_Reduction",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Other_Pt_A_Suppl_Benefits",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Other_Pt_B_Suppl_Benefits",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Pt_B_Prem_Reduc_Pt_A_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Pt_B_Prem_Reduc_Pt_B_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Pt_D_Suppl_Bene_Pt_A_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Pt_D_Suppl_Bene_Pt_B_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Total_Pt_A_MA_Payment",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Total_Pt_B_MA_Payment",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Total",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_D_RA_Factor",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_D_Low_Income_Indicator"
+    },
+    {
+      "name": "Part_D_Low_Income_Multiplier",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_D_Long_Term_Institution_Ind"
+    },
+    {
+      "name": "Part_D_Long_Term_Institution_Mul",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Rebate_Pt_D_Basic_Prem_Reduction",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_D_Basic_Prem_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_D_Direct_Subsidy_Pymnt_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Reinsurance_Subsidy_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "LIS_Cost_Sharing_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Total_Part_D_Payment",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Number_of_Pymnt_Adj_Mnths_Pt_D",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "PACE_Premium_Add___On",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "PACE_Cost_Sharing_Add___On",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_C_Frailty_Score_Factor",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "MSP_Factor",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "MSP_Reduction___Adj_Amt__Prt_A",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "MSP_Reduction___Adj_Amt__Prt_B",
+       "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Medicaid_Dual_Status_Code"
+    },
+    {
+      "name": "Part_D_Coverage_Gap_Discount_Amt",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_D_RA_Factor_Type"
+    },
+    {
+      "name": "Default_Part_D_Risk_Factor_Code"
+    },
+    {
+      "name": "Part_A_Monthly_Payment_Rate",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_B_Monthly_Payment_Rate",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Part_D_Monthly_Payment_Rate",
+      "fieldType": "NUMERIC"
+    },
+    {
+      "name": "Cleanup_ID"
+    }
+  ]
+}  

@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/gsutil'
+  dir: 'cloud_composer'
+  args: ['-m', 'rsync', '-d', '-r', 'dags', '${_COMPOSER_BUCKET}/dags']
+- name: 'gcr.io/cloud-builders/gsutil'
+  dir: 'cloud_composer'
+  args: ['-m', 'rsync', '-d', '-r', 'plugins', '${_COMPOSER_BUCKET}/plugins']

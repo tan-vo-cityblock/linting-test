@@ -1,0 +1,38 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "ControlTotals_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "ControlTotals",
+  "delimiter": "|",
+  "createIds": false,
+  "header": "Partnership_Current|LOB|RunDate|TableName|Recs|AmtAllow",
+  "fields": [
+    {
+      "name": "Partnership_Current"
+    },
+    {
+      "name": "LOB",
+      "required": true
+    },
+    {
+      "name": "RunDate",
+      "fieldType": "DATE",
+      "required": true
+    },
+    {
+      "name": "TableName",
+      "required": true
+    },
+    {
+      "name": "Recs",
+      "fieldType": "INTEGER",
+      "required": true
+    },
+    {
+      "name": "AmtAllow",
+      "required": true
+    }
+  ]
+}

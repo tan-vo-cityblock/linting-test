@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "REQUIRED",
+    "name": "event_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "source",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hmac",
+    "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "payload",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "published_at_source",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "inserted_at",
+    "type": "TIMESTAMP"
+  }
+]

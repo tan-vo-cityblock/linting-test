@@ -1,0 +1,2 @@
+
+{{ bp_level(slug="bp-level", mild_min=140, mild_min_2=90, moderate_min=160, moderate_min_2=100, severe_min=180, severe_min_2=120, stable_cpt="G8783", stable_cpt_1="G8752", stable_cpt_2="G8754", vitals_code="8480-6", vitals_code_2="8462-4") }}

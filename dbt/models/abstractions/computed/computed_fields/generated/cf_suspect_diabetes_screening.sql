@@ -1,0 +1,2 @@
+
+{{ risk_suspect(slug="suspect-diabetes-screening", condition_negative_result="stable", min_female_age=40, min_male_age=40, max_age=70, period="12 month", vitals_code="39156-5", min_vitals_value=25, condition_slugs=['a-1-c-level']) }}

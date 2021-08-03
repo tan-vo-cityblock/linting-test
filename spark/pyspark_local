@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source util.sh
+source .env
+
+if [[ ! $PYENV_VIRTUAL_ENV =~ .*3\.6\.5/envs/env-spark ]]; then
+    error "Cannot run $0 outside of the env-spark virtualenv"
+    exit 1
+fi
+
+env PYTHONSTARTUP=startup.py CBH_SPARK_LOCAL=1 \
+  pyspark \
+  --packages $CBH_SPARK_PACKAGES
+

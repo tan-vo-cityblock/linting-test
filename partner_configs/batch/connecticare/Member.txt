@@ -1,0 +1,95 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "Member_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "Member",
+  "delimiter": "|",
+  "indexJoinField": "NMI",
+  "dataFieldName": "member",
+  "header": "Partnership_Current|ApplyMo|LOB1|LOB2|NMI|NMI_Sub|First_Name|Last_Name|Gender|DateBirth|Age|PCP_Num|PCP_AffNum|PCP_NPI|PCP_TIN|ContractClass|GrpNum|DivNum|BenPack|Address1|Address2|City|County|State|Zip|Phone1",
+  "fields": [
+    {
+      "name": "Partnership_Current"
+    },
+    {
+      "name": "ApplyMo",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "LOB1"
+    },
+    {
+      "name": "LOB2"
+    },
+    {
+      "name": "NMI",
+      "required": true
+    },
+    {
+      "name": "NMI_Sub"
+    },
+    {
+      "name": "First_Name"
+    },
+    {
+      "name": "Last_Name"
+    },
+    {
+      "name": "Gender"
+    },
+    {
+      "name": "DateBirth",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Age"
+    },
+    {
+      "name": "PCP_Num"
+    },
+    {
+      "name": "PCP_AffNum"
+    },
+    {
+      "name": "PCP_NPI"
+    },
+    {
+      "name": "PCP_TIN"
+    },
+    {
+      "name": "ContractClass"
+    },
+    {
+      "name": "GrpNum"
+    },
+    {
+      "name": "DivNum"
+    },
+    {
+      "name": "BenPack"
+    },
+    {
+      "name": "Address1"
+    },
+    {
+      "name": "Address2"
+    },
+    {
+      "name": "City"
+    },
+    {
+      "name": "County"
+    },
+    {
+      "name": "State"
+    },
+    {
+      "name": "Zip"
+    },
+    {
+      "name": "Phone1"
+    }
+  ]
+}

@@ -1,0 +1,586 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CORP_CITYBLOCK_MULTI_FACEXTN_EDL_CM01_TEST_20210305090141.txt",
+  "partnerName": "emblem",
+  "tableName": "facility_ext_v2",
+  "delimiter": "|",
+  "header": "CLAIM_ID|DIAG_CD_ADMITTING|DIAG_CD_PRIMARY|DIAG_CD_SECONDARY|DIAG_CD_TERTIARY|DIAG_CD_04|DIAG_CD_05|DIAG_CD_06|DIAG_CD_07|DIAG_CD_08|DIAG_CD_09|DIAG_CD_10|DIAG_CD_11|DIAG_CD_12|DIAG_CD_13|DIAG_CD_14|DIAG_CD_15|DIAG_CD_16|DIAG_CD_17|DIAG_CD_18|DIAG_CD_19|DIAG_CD_20|DIAG_CD_21|DIAG_CD_22|DIAG_CD_23|DIAG_CD_24|DIAG_CD_25|DIAG_ECI_01|DIAG_ECI_02|DIAG_ECI_03|DIAG_ECI_04|DIAG_ECI_05|DIAG_ECI_06|DIAG_ECI_07|DIAG_ECI_08|DIAG_RFV_01|DIAG_RFV_02|DIAG_RFV_03|POA_IND_PRIMARY|POA_IND_SECONDARY|POA_IND_TERTIARY|POA_IND_04|POA_IND_05|POA_IND_06|POA_IND_07|POA_IND_08|POA_IND_09|POA_IND_10|POA_IND_11|POA_IND_12|POA_IND_13|POA_IND_14|POA_IND_15|POA_IND_16|POA_IND_17|POA_IND_18|POA_IND_19|POA_IND_20|POA_IND_21|POA_IND_22|POA_IND_23|POA_IND_24|POA_IND_25|POA_IND_ECI_01|POA_IND_ECI_02|POA_IND_ECI_03|POA_IND_ECI_04|POA_IND_ECI_05|POA_IND_ECI_06|POA_IND_ECI_07|POA_IND_ECI_08|POA_IND_RFV_01|POA_IND_RFV_02|POA_IND_RFV_03|PROC_CD_PRINCIPAL|PROC_CD_SECONDARY|PROC_CD_TERTIARY|PROC_CD_04|PROC_CD_05|PROC_CD_06|PROC_CD_07|PROC_CD_08|PROC_CD_09|PROC_CD_10|PROC_CD_11|PROC_CD_12|PROC_CD_13|PROC_CD_14|PROC_CD_15|PROC_CD_16|PROC_CD_17|PROC_CD_18|PROC_CD_19|PROC_CD_20|PROC_CD_21|PROC_CD_22|PROC_CD_23|PROC_CD_24|PROC_CD_25|OCCUR_CD_01|OCC_CD_01_FROM_DT|OCC_CD_01_TO_DT|OCCUR_CD_02|OCC_CD_02_FROM_DT|OCC_CD_02_TO_DT|OCCUR_CD_03|OCC_CD_03_FROM_DT|OCC_CD_03_TO_DT|OCCUR_CD_04|OCC_CD_04_FROM_DT|OCC_CD_04_TO_DT|OCCUR_CD_05|OCC_CD_05_FROM_DT|OCC_CD_05_TO_DT|OCCUR_CD_06|OCC_CD_06_FROM_DT|OCC_CD_06_TO_DT|OCCUR_CD_07|OCC_CD_07_FROM_DT|OCC_CD_07_TO_DT|OCCUR_CD_08|OCC_CD_08_FROM_DT|OCC_CD_08_TO_DT|OCCUR_CD_09|OCC_CD_09_FROM_DT|OCC_CD_09_TO_DT|OCCUR_CD_10|OCC_CD_10_FROM_DT|OCC_CD_10_TO_DT|OCCUR_CD_11|OCC_CD_11_FROM_DT|OCC_CD_11_TO_DT|OCCUR_CD_12|OCC_CD_12_FROM_DT|OCC_CD_12_TO_DT|OCCUR_CD_13|OCC_CD_13_FROM_DT|OCC_CD_13_TO_DT|OCCUR_CD_14|OCC_CD_14_FROM_DT|OCC_CD_14_TO_DT|OCCUR_CD_15|OCC_CD_15_FROM_DT|OCC_CD_15_TO_DT|VALUE_CD_01|VALUE_01|VALUE_CD_02|VALUE_02|VALUE_CD_03|VALUE_03|VALUE_CD_04|VALUE_04|VALUE_CD_05|VALUE_05|VALUE_CD_06|VALUE_06|VALUE_CD_07|VALUE_07|VALUE_CD_08|VALUE_08|VALUE_CD_09|VALUE_09|VALUE_CD_10|VALUE_10|VALUE_CD_11|VALUE_11|VALUE_CD_12|VALUE_12|COND_CD_01|COND_CD_02|COND_CD_03|COND_CD_04|COND_CD_05|COND_CD_06|COND_CD_07|COND_CD_08|COND_CD_09|COND_CD_10|COND_CD_11|COND_CD_12|ICD_VERSION",
+  "fields": [
+    {
+      "name": "CLAIM_ID",
+      "required": true
+    },
+    {
+      "name": "DIAG_CD_ADMITTING"
+    },
+    {
+      "name": "DIAG_CD_PRIMARY"
+    },
+    {
+      "name": "DIAG_CD_SECONDARY"
+    },
+    {
+      "name": "DIAG_CD_TERTIARY"
+    },
+    {
+      "name": "DIAG_CD_04"
+    },
+    {
+      "name": "DIAG_CD_05"
+    },
+    {
+      "name": "DIAG_CD_06"
+    },
+    {
+      "name": "DIAG_CD_07"
+    },
+    {
+      "name": "DIAG_CD_08"
+    },
+    {
+      "name": "DIAG_CD_09"
+    },
+    {
+      "name": "DIAG_CD_10"
+    },
+    {
+      "name": "DIAG_CD_11"
+    },
+    {
+      "name": "DIAG_CD_12"
+    },
+    {
+      "name": "DIAG_CD_13"
+    },
+    {
+      "name": "DIAG_CD_14"
+    },
+    {
+      "name": "DIAG_CD_15"
+    },
+    {
+      "name": "DIAG_CD_16"
+    },
+    {
+      "name": "DIAG_CD_17"
+    },
+    {
+      "name": "DIAG_CD_18"
+    },
+    {
+      "name": "DIAG_CD_19"
+    },
+    {
+      "name": "DIAG_CD_20"
+    },
+    {
+      "name": "DIAG_CD_21"
+    },
+    {
+      "name": "DIAG_CD_22"
+    },
+    {
+      "name": "DIAG_CD_23"
+    },
+    {
+      "name": "DIAG_CD_24"
+    },
+    {
+      "name": "DIAG_CD_25"
+    },
+    {
+      "name": "DIAG_ECI_01"
+    },
+    {
+      "name": "DIAG_ECI_02"
+    },
+    {
+      "name": "DIAG_ECI_03"
+    },
+    {
+      "name": "DIAG_ECI_04"
+    },
+    {
+      "name": "DIAG_ECI_05"
+    },
+    {
+      "name": "DIAG_ECI_06"
+    },
+    {
+      "name": "DIAG_ECI_07"
+    },
+    {
+      "name": "DIAG_ECI_08"
+    },
+    {
+      "name": "DIAG_RFV_01"
+    },
+    {
+      "name": "DIAG_RFV_02"
+    },
+    {
+      "name": "DIAG_RFV_03"
+    },
+    {
+      "name": "POA_IND_PRIMARY"
+    },
+    {
+      "name": "POA_IND_SECONDARY"
+    },
+    {
+      "name": "POA_IND_TERTIARY"
+    },
+    {
+      "name": "POA_IND_04"
+    },
+    {
+      "name": "POA_IND_05"
+    },
+    {
+      "name": "POA_IND_06"
+    },
+    {
+      "name": "POA_IND_07"
+    },
+    {
+      "name": "POA_IND_08"
+    },
+    {
+      "name": "POA_IND_09"
+    },
+    {
+      "name": "POA_IND_10"
+    },
+    {
+      "name": "POA_IND_11"
+    },
+    {
+      "name": "POA_IND_12"
+    },
+    {
+      "name": "POA_IND_13"
+    },
+    {
+      "name": "POA_IND_14"
+    },
+    {
+      "name": "POA_IND_15"
+    },
+    {
+      "name": "POA_IND_16"
+    },
+    {
+      "name": "POA_IND_17"
+    },
+    {
+      "name": "POA_IND_18"
+    },
+    {
+      "name": "POA_IND_19"
+    },
+    {
+      "name": "POA_IND_20"
+    },
+    {
+      "name": "POA_IND_21"
+    },
+    {
+      "name": "POA_IND_22"
+    },
+    {
+      "name": "POA_IND_23"
+    },
+    {
+      "name": "POA_IND_24"
+    },
+    {
+      "name": "POA_IND_25"
+    },
+    {
+      "name": "POA_IND_ECI_01"
+    },
+    {
+      "name": "POA_IND_ECI_02"
+    },
+    {
+      "name": "POA_IND_ECI_03"
+    },
+    {
+      "name": "POA_IND_ECI_04"
+    },
+    {
+      "name": "POA_IND_ECI_05"
+    },
+    {
+      "name": "POA_IND_ECI_06"
+    },
+    {
+      "name": "POA_IND_ECI_07"
+    },
+    {
+      "name": "POA_IND_ECI_08"
+    },
+    {
+      "name": "POA_IND_RFV_01"
+    },
+    {
+      "name": "POA_IND_RFV_02"
+    },
+    {
+      "name": "POA_IND_RFV_03"
+    },
+    {
+      "name": "PROC_CD_PRINCIPAL"
+    },
+    {
+      "name": "PROC_CD_SECONDARY"
+    },
+    {
+      "name": "PROC_CD_TERTIARY"
+    },
+    {
+      "name": "PROC_CD_04"
+    },
+    {
+      "name": "PROC_CD_05"
+    },
+    {
+      "name": "PROC_CD_06"
+    },
+    {
+      "name": "PROC_CD_07"
+    },
+    {
+      "name": "PROC_CD_08"
+    },
+    {
+      "name": "PROC_CD_09"
+    },
+    {
+      "name": "PROC_CD_10"
+    },
+    {
+      "name": "PROC_CD_11"
+    },
+    {
+      "name": "PROC_CD_12"
+    },
+    {
+      "name": "PROC_CD_13"
+    },
+    {
+      "name": "PROC_CD_14"
+    },
+    {
+      "name": "PROC_CD_15"
+    },
+    {
+      "name": "PROC_CD_16"
+    },
+    {
+      "name": "PROC_CD_17"
+    },
+    {
+      "name": "PROC_CD_18"
+    },
+    {
+      "name": "PROC_CD_19"
+    },
+    {
+      "name": "PROC_CD_20"
+    },
+    {
+      "name": "PROC_CD_21"
+    },
+    {
+      "name": "PROC_CD_22"
+    },
+    {
+      "name": "PROC_CD_23"
+    },
+    {
+      "name": "PROC_CD_24"
+    },
+    {
+      "name": "PROC_CD_25"
+    },
+    {
+      "name": "OCCUR_CD_01"
+    },
+    {
+      "name": "OCC_CD_01_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_01_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_02"
+    },
+    {
+      "name": "OCC_CD_02_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_02_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_03"
+    },
+    {
+      "name": "OCC_CD_03_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_03_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_04"
+    },
+    {
+      "name": "OCC_CD_04_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_04_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_05"
+    },
+    {
+      "name": "OCC_CD_05_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_05_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_06"
+    },
+    {
+      "name": "OCC_CD_06_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_06_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_07"
+    },
+    {
+      "name": "OCC_CD_07_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_07_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_08"
+    },
+    {
+      "name": "OCC_CD_08_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_08_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_09"
+    },
+    {
+      "name": "OCC_CD_09_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_09_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_10"
+    },
+    {
+      "name": "OCC_CD_10_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_10_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_11"
+    },
+    {
+      "name": "OCC_CD_11_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_11_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_12"
+    },
+    {
+      "name": "OCC_CD_12_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_12_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_13"
+    },
+    {
+      "name": "OCC_CD_13_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_13_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_14"
+    },
+    {
+      "name": "OCC_CD_14_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_14_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCCUR_CD_15"
+    },
+    {
+      "name": "OCC_CD_15_FROM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "OCC_CD_15_TO_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "VALUE_CD_01"
+    },
+    {
+      "name": "VALUE_01"
+    },
+    {
+      "name": "VALUE_CD_02"
+    },
+    {
+      "name": "VALUE_02"
+    },
+    {
+      "name": "VALUE_CD_03"
+    },
+    {
+      "name": "VALUE_03"
+    },
+    {
+      "name": "VALUE_CD_04"
+    },
+    {
+      "name": "VALUE_04"
+    },
+    {
+      "name": "VALUE_CD_05"
+    },
+    {
+      "name": "VALUE_05"
+    },
+    {
+      "name": "VALUE_CD_06"
+    },
+    {
+      "name": "VALUE_06"
+    },
+    {
+      "name": "VALUE_CD_07"
+    },
+    {
+      "name": "VALUE_07"
+    },
+    {
+      "name": "VALUE_CD_08"
+    },
+    {
+      "name": "VALUE_08"
+    },
+    {
+      "name": "VALUE_CD_09"
+    },
+    {
+      "name": "VALUE_09"
+    },
+    {
+      "name": "VALUE_CD_10"
+    },
+    {
+      "name": "VALUE_10"
+    },
+    {
+      "name": "VALUE_CD_11"
+    },
+    {
+      "name": "VALUE_11"
+    },
+    {
+      "name": "VALUE_CD_12"
+    },
+    {
+      "name": "VALUE_12"
+    },
+    {
+      "name": "COND_CD_01"
+    },
+    {
+      "name": "COND_CD_02"
+    },
+    {
+      "name": "COND_CD_03"
+    },
+    {
+      "name": "COND_CD_04"
+    },
+    {
+      "name": "COND_CD_05"
+    },
+    {
+      "name": "COND_CD_06"
+    },
+    {
+      "name": "COND_CD_07"
+    },
+    {
+      "name": "COND_CD_08"
+    },
+    {
+      "name": "COND_CD_09"
+    },
+    {
+      "name": "COND_CD_10"
+    },
+    {
+      "name": "COND_CD_11"
+    },
+    {
+      "name": "COND_CD_12"
+    },
+    {
+      "name": "ICD_VERSION"
+    }
+  ]
+}

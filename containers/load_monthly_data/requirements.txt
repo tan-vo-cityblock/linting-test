@@ -1,0 +1,5 @@
+google-cloud-storage
+google-cloud-bigquery==1.23.0
+
+pytest
+mock

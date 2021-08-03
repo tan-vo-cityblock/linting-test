@@ -1,0 +1,25 @@
+
+version: 2
+
+models:
+  - name: src_elation_appointment_latest
+    description: >
+      Casts identifier fields as strings to facilitate downstream joins,
+      removes appointments without member identifier and deleted appointments
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: mrn
+        tests:
+          - not_null
+
+  - name: src_elation_user_latest
+    description: >
+      Cleans `email` field, concatenates first and last names into `fullName` field,
+      and adds `commonsUserId` based on email address
+    columns:
+      - name: email
+      - name: fullName
+      - name: commonsUserId

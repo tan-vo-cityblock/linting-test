@@ -1,0 +1,41 @@
+
+# all risk data sources
+
+version: 2
+
+sources:
+
+  - name: abs_risk
+    description: abs_risk is an abstraction source used to feed downstream mrt tables
+    database: cityblock-analytics
+    schema: abs_risk
+    tables:
+      - name: opptys_rogers_dashboard_temp     
+      - name: opptys_tufts_temp     
+      - name: opptys_emblem_digital_temp
+      - name: prospective_review
+      - name: risk_supplemental_2020_emblem
+      - name: risk_supplemental_2020_tufts
+      - name: risk_supplemental_2020_cci
+
+  - name: computed_candidates
+    description: Crosswalk from candidate algorithms to diagnosis code and category
+    database: cityblock-analytics
+    schema: uploads
+    tables:
+      - name: computed_candidate_mapping     
+
+  - name: emblem_covid_risk_members
+    description: List of members flagged by Emblem as at risk for COVID complications
+    database: reference-data-199919
+    schema: payers
+    tables:
+      - name: emblem_covid_members
+
+  - name: src_risk
+    description: List of members with ML suspects
+    database: cityblock-analytics
+    schema: src_risk
+    tables:
+      - name: model_output
+      - name: model_output_static

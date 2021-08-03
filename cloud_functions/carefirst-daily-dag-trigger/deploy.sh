@@ -1,0 +1,1 @@
+gcloud functions deploy carefirst-daily-dag-trigger --region=us-east4
