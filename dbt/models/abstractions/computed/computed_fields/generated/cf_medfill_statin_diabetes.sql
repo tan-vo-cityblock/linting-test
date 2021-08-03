@@ -1,2 +1,0 @@
-
-{{ medication_fill(slug="medfill-statin-diabetes", min_female_age=40, min_male_age=40, max_age=75, condition_slugs=['has-diabetes'], excluded_condition_slugs=['cvd'], hedis_medication_list=['High and Moderate-Intensity Statin Medications', 'Low-Intensity Statin Medications']) }}

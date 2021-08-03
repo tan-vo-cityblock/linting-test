@@ -1,2 +1,0 @@
-
-{{ boolean_fields(slug="complex-care-management-one-required", member_table="cf_age_85_or_older", member_table_type="ref", condition_slugs=['age-85-or-older', 'ed-visits-three', 'ip-bh-admits-two', 'paid-amount-eighteen-thousand-medical', 'polypharmacy-chronic', 'spinal-cord-disorders-hcc-two-years', 'unstable-housing-assessment-one-year', 'comprehensive-assessment-ccm']) }}

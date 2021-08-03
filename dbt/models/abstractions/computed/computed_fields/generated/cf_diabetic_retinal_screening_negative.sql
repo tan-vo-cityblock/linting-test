@@ -1,2 +1,0 @@
-
-{{ diagnoses_and_procedures(slug="diabetic-retinal-screening-negative", value_set_name="Diabetic Retinal Screening Negative", value_set_join_column="procedureCode", calendar_year=True, use_any=True) }}

@@ -1,2 +1,0 @@
-
-{{ diagnosis_evidence(slug="history-of-opiates", period="1 year", period_op="<", min_other_claims=1, icd_diagnoses=['F111%', 'F112%', 'T400X1A', 'T400X2A', 'T400X3A', 'T400X4A', 'T401X1A', 'T401X2A', 'T401X3A', 'T401X4A', 'T403X1A', 'T403X2A', 'T403X3A', 'T403X4A', 'T402X1A', 'T402X2A', 'T402X3A', 'T402X4A', 'T404X1A', 'T404X2A', 'T404X3A', 'T404X4A', 'T40601A', 'T40602A', 'T40603A', 'T40604A', 'T40691A', 'T40692A', 'T40693A', 'T40694A', 'T403X5A']) }}

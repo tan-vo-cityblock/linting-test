@@ -1,2 +1,0 @@
-
-{{ medication_presence(slug="cvd-on-high-mod-statin", min_female_age=40, min_male_age=21, max_age=75, medication_slug="on-high-mod-statin", condition_slugs=['cvd'], excluded_condition_slugs=['pregnancy', 'ivf', 'estrogen-agonists', 'esrd', 'cirrhosis', 'muscular-pain-and-disease']) }}

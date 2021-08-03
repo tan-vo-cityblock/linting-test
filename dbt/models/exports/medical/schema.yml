@@ -1,5 +1,0 @@
-version: 2
-
-models:
-  - name: xpt_medical_appointment_tracker
-    description: Lists past and future appointments for consented and enrolled Emblem virtual members

@@ -1,2 +1,0 @@
-
-{{ other_fields(slug="covid-risk-level", slug_value_list=[['age-80-or-older-w-one-covid-risk-factor', 'critical'], ['age-60-or-older-w-two-covid-risk-factors', 'critical'], ['age-18-or-older-w-one-covid-risk-factor-critical', 'critical'], ['age-18-or-older-w-active-cancer-and-chemo', 'critical'], ['covid-members-forced-critical', 'critical'], ['age-50-or-older-w-one-covid-risk-factor', 'severe'], ['covid-members-forced-severe', 'severe'], ['age-18-or-older-w-one-covid-risk-factor-younger', 'severe']], else_value="non-severe") }}

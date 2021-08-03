@@ -1,6 +1,0 @@
-wheel==0.34.2
-pypandoc==1.4
-py4j==0.10.7
-pyspark==2.4.7
-numpy
-pandas

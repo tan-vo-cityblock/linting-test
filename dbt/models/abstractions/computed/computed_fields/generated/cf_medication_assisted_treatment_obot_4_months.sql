@@ -1,2 +1,0 @@
-
-{{ medication_evidence(slug="medication-assisted-treatment-obot-4-months", period="4 month", period_op=">", ingredients=['acamprosate%', 'antabuse%', 'brixadi%', 'bunavail%', 'buprenorphine%', 'buvidal%', 'campral%', 'cizdol%', 'depade%', 'disulfiram%', 'naltrexone%', 'revia%', 'sublocade%', 'suboxone%', 'subutex%', 'vivitrol%', 'zubsolv%']) }}

@@ -1,5 +1,0 @@
-google-cloud-storage==1.35.1
-google-cloud-bigquery==2.7.0
-google-cloud-pubsub==2.2.0
-zenpy==2.0.24
-pytz==2020.1

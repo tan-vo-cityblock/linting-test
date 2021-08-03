@@ -1,2 +1,0 @@
-
-{{ diagnoses_and_procedures(slug="dementia", period="3 YEAR", icd_diagnoses=['F0150', 'F0151', 'F0280', 'F0281', 'F0390', 'F0391', 'F04', 'G138', 'F05', 'F061', 'F068', 'G300', 'G301', 'G308', 'G309', 'G311', 'G312', 'G3101', 'G3109', 'G94', 'R4181']) }}

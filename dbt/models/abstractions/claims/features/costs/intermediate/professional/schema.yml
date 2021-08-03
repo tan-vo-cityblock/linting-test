@@ -1,8 +1,0 @@
-
-version: 2
-
-models:
-  - name: stg_professional_costs_categories_base
-    tests:
-      - unique:
-          column_name: "concat(claimId, lineId)"

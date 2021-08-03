@@ -1,2 +1,0 @@
-
-{{ sdoh_presence(slug="self-efficacy", optional_question_answer_list=[['confident-can-decide-between-seeing-doctor-and-self-care', ['no']], ['i-have-set-some-definite-goals-to-improve-my-health', ['disagree', 'strongly-disagree']], ['i-have-been-able-to-meet-the-goals-i-set-for-myself-to-improve-my-health', ['disagree', 'strongly-disagree']], ['i-am-actively-working-to-improve-my-health', ['disagree', 'strongly-disagree']], ['i-feel-that-i-am-in-control-of-how-and-what-i-learn-about-my-health', ['disagree', 'strongly-disagree']]]) }}

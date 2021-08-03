@@ -1,4 +1,0 @@
-cron:
-  - description: 'keep service warm (app engine instance running)'
-    url: '/keep_warm'
-    schedule: every 5 minutes
