@@ -1,5 +1,0 @@
-#!/bin/bash
-
-CLUSTER_NAME=airflow
-
-gcloud container clusters get-credentials $CLUSTER_NAME --zone us-east1-b --project=cityblock-data

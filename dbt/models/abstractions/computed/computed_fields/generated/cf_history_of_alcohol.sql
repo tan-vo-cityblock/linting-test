@@ -1,2 +1,0 @@
-
-{{ diagnosis_evidence(slug="history-of-alcohol", period="1 year", period_op="<", min_other_claims=1, excluded_icd_diagnoses=['Z7151'], excluded_snomed_codes=['197321007', '7339009', '45912004'], icd_diagnoses=['F10%', 'G621', 'I426', 'K2920', 'K2921', 'K70%', 'T510X1A', 'T510X2A', 'T510X3A', 'T510X4A', 'Z7141'], procedure_codes=['HZ2ZZZZ', 'HZ30ZZZ', 'HZ31ZZZ', 'HZ32ZZZ', 'HZ33ZZZ', 'HZ34ZZZ', 'HZ35ZZZ', 'HZ36ZZZ', 'HZ37ZZZ', 'HZ38ZZZ', 'HZ39ZZZ', 'HZ3BZZZ', 'HZ40ZZZ', 'HZ93ZZZ', 'HZ96ZZZ']) }}

@@ -1,2 +1,0 @@
-
-{{ diagnoses_and_procedures(slug="cannabis-dependence-not-in-remission", period="100 year", min_other_claims=1, icd_diagnoses=['F1220', 'F1222', 'F1223', 'F1224', 'F1225', 'F1226', 'F1227', 'F1228', 'F1229']) }}

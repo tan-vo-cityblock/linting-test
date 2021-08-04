@@ -1,2 +1,0 @@
-
-{{ diagnosis_evidence(slug="substance-use-disorder-counseling", period="1 year", procedure_codes=['G2086', 'G2087', 'G2088', 'H0004', 'H0005', 'H0007', 'H0015', 'H0038', 'H1011', 'H2011', 'H2012', 'H2014', 'H2019', 'H2020', 'H2035', 'H2036', 'T1006', 'T1012']) }}

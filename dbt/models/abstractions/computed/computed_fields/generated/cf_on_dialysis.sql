@@ -1,2 +1,0 @@
-
-{{ diagnoses_and_procedures(slug="on-dialysis", min_inpatient_claims=10000000, min_other_claims=1, min_unique_days=2, procedure_codes=['90935', '90937', '90999', '90945', '90947', '90966', '90960', '90970']) }}

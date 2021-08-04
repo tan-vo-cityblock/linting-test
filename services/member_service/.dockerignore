@@ -1,8 +1,0 @@
-.dockerignore
-.gcloudignore
-.git
-node_modules
-Dockerfile
-npm-debug.log
-**/__tests__/*
-*.env

@@ -1,9 +1,0 @@
-
-version: 2
-
-models:
-  - name: ftr_professional_inpatient_overlap_flags
-    description: Flag professional claim lines for overlap with inpatient stays by subcategory
-    tests:
-      - unique:
-          column_name: "concat(claimId, lineId)"

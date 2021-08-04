@@ -1,2 +1,0 @@
-
-{{ diagnoses_and_procedures(slug="cocaine-dependence-not-in-remission", period="100 year", min_other_claims=1, icd_diagnoses=['F1420', 'F1422', 'F1423', 'F1424', 'F1425', 'F1426', 'F1427', 'F1428', 'F1429']) }}

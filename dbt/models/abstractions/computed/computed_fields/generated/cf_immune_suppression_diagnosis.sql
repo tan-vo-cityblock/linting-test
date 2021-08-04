@@ -1,2 +1,0 @@
-
-{{ diagnoses_and_procedures(slug="immune-suppression-diagnosis", period_op=">=", calendar_year=True, hccs=['35'], icd_diagnoses=['M32%', 'L40%', 'M05%', 'M06%', 'K50%', 'G35%', 'Z94%', 'D80%', 'D81%', 'D82%', 'D83%', 'D86%']) }}

@@ -1,2 +1,0 @@
-
-{{ diagnoses_and_procedures(slug="other-psychoactive-substance-dependence-not-in-remission", period="100 year", min_other_claims=1, icd_diagnoses=['F1920', 'F1922', 'F1923', 'F1924', 'F1925', 'F1926', 'F1927', 'F1928', 'F1929']) }}

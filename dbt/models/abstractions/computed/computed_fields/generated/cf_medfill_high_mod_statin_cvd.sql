@@ -1,2 +1,0 @@
-
-{{ medication_fill(slug="medfill-high-mod-statin-cvd", min_female_age=40, min_male_age=21, max_age=75, condition_slugs=['cvd'], hedis_medication_list=['High and Moderate-Intensity Statin Medications']) }}

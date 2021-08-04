@@ -1,4 +1,0 @@
-# Function dependencies, for example:
-# package>=version
-google-cloud-storage==1.18.0
-google-cloud-pubsub==0.45.0

@@ -1,1 +1,0 @@
-gcloud functions call carefirst-daily-dag-trigger --region=us-east4 --data='{"name": "carefirst/drop/CBH_CAREFIRST_MEMBERMONTH_EXTRACT_20210406.txt"}'

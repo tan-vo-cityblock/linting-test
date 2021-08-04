@@ -1,7 +1,0 @@
--Dfile.encoding=UTF8
--Xss36M
--Xms2G
--Xmx8G
--XX:+CMSClassUnloadingEnabled
--XX:+UseConcMarkSweepGC
--XX:ReservedCodeCacheSize=512m

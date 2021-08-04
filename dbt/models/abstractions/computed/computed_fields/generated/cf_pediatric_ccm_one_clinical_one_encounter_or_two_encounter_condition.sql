@@ -1,2 +1,0 @@
-
-{{ boolean_evidence(slug="pediatric-ccm-one-clinical-one-encounter-or-two-encounter-condition", condition_slugs=['one-pediatric-ccm-clinical-and-one-encounter-condition', 'two-pediatric-ccm-encounter-condition']) }}

@@ -1,2 +1,0 @@
-
-{{ risk_factors(slug="covid-risk-factors-younger", slug_list=['cad-cvd-ever', 'asthma-uncontrolled', 'homelessness', 'autonomic-dysfunction', 'aspiration-pneumonia', 'heart-failure-severe', 'esrd-narrow']) }}
