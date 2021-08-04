@@ -1,0 +1,129 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "cardinal/drop",
+  "fileNamePattern": "cardinal_drop_Provider_Medicaid_CBH_F_20210519",
+  "partnerName": "cardinal",
+  "tableName": "provider",
+  "delimiter": ",",
+  "header": "ProviderID,NPI,DEA,ProviderName,FedTaxID,HospitalAffiliation,SpecialityCode,Speciality,TaxonomyCode,Taxonomy,FacilityPhone,FacilityFax,WebSite,ContractStatusCode,ContractStatus,ContractTypeCode,ContractType,EntityTypeCode,EntityType,AvailabilityStatusCode,AvailabilityStatus,Address1,Address2,City,State,ZipCode,County,MailAddress1,MailAddress2,MailCity,MailState,MailZipCode,MailCounty,BillAddress1,BillAddress2,BillCity,BillState,BillZipCode,BillCounty",
+  "fields": [
+    {
+      "name": "ProviderID"
+    },
+    {
+      "name": "NPI"
+    },
+    {
+      "name": "DEA"
+    },
+    {
+      "name": "ProviderName"
+    },
+    {
+      "name": "FedTaxID"
+    },
+    {
+      "name": "HospitalAffiliation"
+    },
+    {
+      "name": "SpecialityCode"
+    },
+    {
+      "name": "Speciality"
+    },
+    {
+      "name": "TaxonomyCode"
+    },
+    {
+      "name": "Taxonomy"
+    },
+    {
+      "name": "FacilityPhone"
+    },
+    {
+      "name": "FacilityFax"
+    },
+    {
+      "name": "WebSite"
+    },
+    {
+      "name": "ContractStatusCode"
+    },
+    {
+      "name": "ContractStatus"
+    },
+    {
+      "name": "ContractTypeCode"
+    },
+    {
+      "name": "ContractType"
+    },
+    {
+      "name": "EntityTypeCode"
+    },
+    {
+      "name": "EntityType"
+    },
+    {
+      "name": "AvailabilityStatusCode"
+    },
+    {
+      "name": "AvailabilityStatus"
+    },
+    {
+      "name": "Address1"
+    },
+    {
+      "name": "Address2"
+    },
+    {
+      "name": "City"
+    },
+    {
+      "name": "State"
+    },
+    {
+      "name": "ZipCode"
+    },
+    {
+      "name": "County"
+    },
+    {
+      "name": "MailAddress1"
+    },
+    {
+      "name": "MailAddress2"
+    },
+    {
+      "name": "MailCity"
+    },
+    {
+      "name": "MailState"
+    },
+    {
+      "name": "MailZipCode"
+    },
+    {
+      "name": "MailCounty"
+    },
+    {
+      "name": "BillAddress1"
+    },
+    {
+      "name": "BillAddress2"
+    },
+    {
+      "name": "BillCity"
+    },
+    {
+      "name": "BillState"
+    },
+    {
+      "name": "BillZipCode"
+    },
+    {
+      "name": "BillCounty"
+    }
+  ]
+}

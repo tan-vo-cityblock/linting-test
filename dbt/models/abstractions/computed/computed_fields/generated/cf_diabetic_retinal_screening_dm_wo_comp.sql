@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="diabetic-retinal-screening-dm-wo-comp", value_set_name="Diabetic Retinal Screening", value_set_join_column="procedureCode", period_op="=", calendar_year=True, use_any=True, icd_diagnoses=['E109', 'E119', 'E139'], provider_specialty_codes=['18', '41']) }}

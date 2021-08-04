@@ -1,0 +1,11 @@
+
+version: 2
+
+sources:
+  - name: medical_economics
+    description: Reference tables used for medical economic calculations
+    database: cityblock-analytics
+    schema: medical_economics
+
+    tables:
+      - name: cost_cat_mapping

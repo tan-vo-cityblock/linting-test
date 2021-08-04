@@ -1,0 +1,2 @@
+
+{{ sdoh_presence(slug="safe-stable-housing", optional_question_answer_list=[['do-you-have-housing', ['no']], ['where-have-you-lived-most-in-the-past-2-months', ['anywhere-outside', 'hospital', 'hotel-motel', 'homeless-shelter', 'staying-with-family-or-friends']], ['are-you-worried-that-you-may-not-have-stable-housing-in-the-next-two-months', ['yes']], ['current-access-to-toilet-cooking-bed-enough-heat-or-ac', ['no-toilet', 'no-enough-heat-in-the-winter', 'no-enough-a-c-in-summer', 'no-a-bed-to-sleep-on']]]) }}

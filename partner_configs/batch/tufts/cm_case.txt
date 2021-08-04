@@ -1,0 +1,61 @@
+{
+    "fileType": "csv",
+    "sourceBucket": "cbh_sftp_drop",
+    "prefixDir": "tufts_production/drop",
+    "fileNamePattern": "CITYBLOCK_CM_CASE_2021-06-01T10-08-59-073",
+    "partnerName": "tufts",
+    "tableName": "cm_case",
+    "indexJoinField": "MEMBER_ID_1",
+    "datasource": "tufts",
+    "delimiter": "~",
+    "header": "TRANS_TYPE~CASE_ID~MEMBER_ID_1~CASE_SEQ~CARE_PLAN_ID~CASE_TYPE~CASE_NAME~CASE_ACTIVE~CASE_STATUS~CASE_MANAGER_ID~CREATE_DATE~CREATE_BY~UPDATE_DATE~UPDATE_BY~IS_ASSIGNED",
+    "fields": [
+      {
+        "name": "TRANS_TYPE"
+      },
+      {
+        "name": "CASE_ID"
+      },
+      {
+        "name": "MEMBER_ID_1"
+      },
+      {
+        "name": "CASE_SEQ"
+      },
+      {
+        "name": "CARE_PLAN_ID"
+      },
+      {
+        "name": "CASE_TYPE"
+      },
+      {
+        "name": "CASE_NAME"
+      },
+      {
+        "name": "CASE_ACTIVE"
+      },
+      {
+        "name": "CASE_STATUS"
+      },
+      {
+        "name": "CASE_MANAGER_ID"
+      },
+      {
+        "name": "CREATE_DATE",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "CREATE_BY"
+      },
+      {
+        "name": "UPDATE_DATE",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "UPDATE_BY"
+      },
+      {
+        "name": "IS_ASSIGNED"
+      }
+    ]
+}

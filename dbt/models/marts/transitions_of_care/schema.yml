@@ -1,0 +1,55 @@
+version: 2
+
+models:
+
+  - name: mrt_toc_events
+    description: >
+      Removes events that occurred while member was disenrolled,
+      as well as duplicate events received from both HIE and prior authorization sources.
+
+      When an event is received from both sources, the HIE event is preserved,
+      and the prior authorization record removed.
+    tests:
+      - maximum_distinct_values:
+          columns_to_group: patientId, eventDate, visitType, eventType
+          column_to_count: patientVisitTypeEventId
+    columns:
+      - name: patientVisitTypeEventId
+      - name: eventSource
+      - name: patientId
+      - name: facilityType
+      - name: eventAt
+      - name: eventReceivedAt
+      - name: memberStateCategoryAtEventReceipt
+      - name: eventDate
+      - name: admissionFlag
+        description: "This flag indicates if an Inpatient Admit occurred"
+      - name: edFlag
+        description: "This flag indicates if an ED event occurred"
+      - name: labFlag
+        description: "This flag indicates if an event occurred at a lab identified by searching for locations like '%lab%', '%covid%', or '%bio%'"
+      - name: currentlyHospitalized
+        description: "This flag indicates if a member is currently hospitalized based on there being an Inpatient Admit event without a subsequent discharge event within 3-20 days"
+      - name: readmissionFlag
+        description: "This flag utilizes the admissionFlag to identify admissions that occurred within 30 days of a dishcarge for a given member"
+
+  - name: mrt_toc_followups_repeated
+    description: "\n
+    Author:  Katie Claiborne\n
+    Purpose: Create timeframe spine to allow for pivoting\n
+    "
+
+exposures:
+
+  - name: dah_daily
+    type: analysis
+    maturity: high
+    url: https://gitlab.cityblock.com/data/picasso/-/blob/master/medical_economics/AIR/days_at_facility/dah_daily.py
+    description: Script calculating member days at home
+
+    depends_on:
+      - ref('mrt_toc_events')
+
+    owner:
+      name: Katie Claiborne
+      email: katie.claiborne@cityblock.com

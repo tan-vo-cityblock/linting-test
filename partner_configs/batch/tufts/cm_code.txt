@@ -1,0 +1,42 @@
+{
+    "fileType": "csv",
+    "sourceBucket": "cbh_sftp_drop",
+    "prefixDir": "tufts_production/drop",
+    "fileNamePattern": "CITYBLOCK_CM_CODE_2021-06-01T10-08-59-073",
+    "partnerName": "tufts",
+    "tableName": "cm_code",
+    "datasource": "tufts",
+    "delimiter": "~",
+    "header": "TRANS_TYPE~CODE_ID~CODE_TYPE~CODE_ACTIVE~CODE_DESCRIPTION~CREATE_DATE~CREATE_BY~UPDATE_DATE~UPDATE_BY",
+    "fields": [
+      {
+        "name": "TRANS_TYPE"
+      },
+      {
+        "name": "CODE_ID"
+      },
+      {
+        "name": "CODE_TYPE"
+      },
+      {
+        "name": "CODE_ACTIVE"
+      },
+      {
+        "name": "CODE_DESCRIPTION"
+      },
+      {
+        "name": "CREATE_DATE",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "CREATE_BY"
+      },
+      {
+        "name": "UPDATE_DATE",
+        "fieldType": "DATE"
+      },
+      {
+        "name": "UPDATE_BY"
+      }
+    ]
+}

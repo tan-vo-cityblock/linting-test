@@ -1,0 +1,2 @@
+
+{{ condition_exclusions(slug="has-pre-diabetes-all", all_conditions_required=True, condition_slugs=['age-18-or-older', 'bmi-25-vitals-or-dx'], excluded_condition_slugs=['has-diabetes', 'pregnancy-9-mo']) }}

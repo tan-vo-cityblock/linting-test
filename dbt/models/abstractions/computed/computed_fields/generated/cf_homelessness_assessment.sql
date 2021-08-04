@@ -1,0 +1,2 @@
+
+{{ sdoh_presence(slug="homelessness-assessment", optional_question_answer_list=[['do-you-have-housing', ['no']], ['where-have-you-lived-most-in-the-past-2-months', ['anywhere-outside', 'homeless-shelter']], ['do-you-have-a-stable-place-to-stay-over-the-next-three-months', ['no']]]) }}

@@ -1,0 +1,24 @@
+# specific actuary data sources
+
+version: 2
+
+sources:
+
+  - name: hh_harp
+    description: health home harp member status data and reference tables
+    database: cityblock-actuary
+    schema: HH_HARP
+
+    tables:
+      - name: Health_Home_Status_*
+      - name: HARP_codes
+      - name: Incompatible_RE_Codes
+      - name: Incompatible_Medicaid_Coverage_Codes
+
+  - name: Settlement_CCI
+    description: Crosswalks to NMI numbers
+    database: cityblock-actuary
+    schema: Settlement_CCI
+
+    tables:
+      - name: NMI_MBI_Crosswalk

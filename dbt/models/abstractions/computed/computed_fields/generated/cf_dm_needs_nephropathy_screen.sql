@@ -1,0 +1,2 @@
+
+{{ test_absence(slug="dm-needs-nephropathy-screen", condition_slugs=['has-diabetes'], test_slugs=['ckd-stage-4', 'esrd-current', 'kidney-transplant', 'nephropathy-treatment', 'urine-protein-tests', 'ace-arbs']) }}

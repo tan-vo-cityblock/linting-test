@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: xpt_cci_top_down_list
+    description: ConnectiCare members to be disenrolled or reenrolled

@@ -1,0 +1,60 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 145331296403460,
+      "name": "Cityblock Health",
+      "address_line1": "76 Center Street",
+      "address_line2": "3rd Floor",
+      "city": "Waterbury",
+      "state": "CT",
+      "zip": "06702",
+      "timezone": "America/New_York",
+      "employers": [],
+      "physicians": [
+        150679616754852,
+        150145781071874,
+        150146237005826,
+        150217759457282,
+        150754856796162,
+        150943137398786,
+        150943349473282,
+        159713444626434
+      ],
+      "service_locations": [
+        {
+          "id": 145331296600311,
+          "name": "Cityblock Medical Practice CT, P.C.",
+          "is_primary": true,
+          "address_line1": "76 Center Street",
+          "address_line2": "3rd Floor",
+          "city": "Waterbury",
+          "state": "CT",
+          "zip": "06702",
+          "phone": "2035184566",
+          "fax": "2034135618",
+          "place_of_service": "Office",
+          "created_date": "2019-01-16T21:32:00Z",
+          "deleted_date": null
+        },
+        {
+          "id": 145490464932087,
+          "name": "City Block Test Account",
+          "is_primary": false,
+          "address_line1": "1234 Elation Dr",
+          "address_line2": null,
+          "city": "San Francisco",
+          "state": "CA",
+          "zip": "94114",
+          "phone": null,
+          "fax": null,
+          "place_of_service": null,
+          "created_date": "2019-01-22T22:01:39Z",
+          "deleted_date": "2019-02-06T18:51:57Z"
+        }
+      ]
+    }
+  ]
+}

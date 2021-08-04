@@ -1,0 +1,2 @@
+
+{{ boolean_evidence(slug="substance-use-other-treatments", condition_slugs=['detox-treatment', 'substance-use-disorder-counseling', 'substance-use-disorder-rehab', 'substance-use-disorder-residential']) }}

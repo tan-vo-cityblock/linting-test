@@ -1,0 +1,29 @@
+{
+  "count": 3,
+  "next": "https://sandbox.elationemr.com/api/2.0/problems/?limit=1&offset=2&patient=151523299033089",
+  "previous": "https://sandbox.elationemr.com/api/2.0/problems/?limit=50&patient=151523299033089",
+  "results": [
+    {
+      "id": 90944634923,
+      "description": "Flu",
+      "status": "Resolved",
+      "synopsis": "Flu Test Problem",
+      "start_date": "2019-03-14",
+      "resolved_date": "2019-03-27",
+      "dx": [
+        {
+          "icd9": [
+            "487.1"
+          ],
+          "icd10": [
+            "J11.1"
+          ],
+          "snomed": "6142004"
+        }
+      ],
+      "patient": 151523299033089,
+      "created_date": "2019-03-27T19:33:01Z",
+      "deleted_date": null
+    }
+  ]
+}

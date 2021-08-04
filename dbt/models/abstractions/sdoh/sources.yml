@@ -1,0 +1,213 @@
+version: 2
+
+models:
+  - name: member_census_acs
+    description: "\n
+    Author: Dax Paramanathan\n
+    Purpose: 2018 ACS (American Community Survey) 5-year census data associated with Cityblock members based on their block group geographies."
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+      - name: addressId
+      - name: geoId
+      - name: acs_incomeHouseholdMedianValue
+        description: Median household income
+      - name: acs_incomePerPersonValue
+        description: Income per capita (person)
+      - name: acs_incomeOnRentPercent
+        description: Percent of income spent on rent
+      - name: acs_rentOver50PctIncomePercent
+        description: Percent of occupied housing units where tenant pays over 50% of income
+      - name: acs_rentUnder10PctIncomePercent
+        description: Percent of occupied housing units where tenant pays under 10% of income
+      - name: acs_rentMedianValue
+        description: Median rent
+      - name: acs_familyHouseholdPercent
+        description: Percent of households that are family households
+      - name: acs_housingUnitsOccupiedPercent
+        description: Percent of housing units that are occupied
+      - name: acs_housingUnitsRenterOccupiedPercent
+        description: Percent of occupied housing units that are renter-occupied
+      - name: acs_housingUnitsOwnerOccupiedPercent
+        description: Percent of occupied housing units that are owner-occupied
+      - name: acs_unemployedPercent
+        description: Percent of civilian labor force (age 16+) that is unemployed
+      - name: acs_raceWhiteAlonePercent
+        description: Percent of total pop that identifies as White non-Hispanic
+      - name: acs_raceBlackAlonePercent
+        description: Percent of total pop that identifies as Black non-Hispanic
+      - name: acs_raceAsianAlonePercent
+        description: Percent of total pop that identifies as Asian non-Hispanic
+      - name: acs_raceAmerIndianAlonePercent
+        description: Percent of total pop that identifies as American Indian
+      - name: acs_raceOtherRaceAlonePercent
+        description: Percent of total pop that identifies as Other Race
+      - name: acs_raceMultiRacialPercent
+        description: Percent of total pop that identifies as Two or More Races
+      - name: acs_ethnHispanicPercent
+        description: Percent of total pop that identifies as Hispanic/Latino
+      - name: acs_ethnNotHispanicPercent
+        description: Percent of total pop that identifies as non-Hispanic/Latino
+      - name: acs_genderFemalePercent
+        description: Percent of total pop that is female
+      - name: acs_genderMalePercent
+        description: Percent of total pop that is male
+      - name: acs_ageMedianValue
+        description: Median age
+      - name: acs_eduHighSchoolDiplomaOnlyPercent
+        description: Percent of people over age 25 with high school diploma only, no further degree
+      - name: acs_eduAssociatesDegreeOnlyPercent
+        description: Percent of people over age 25 with associate's degree only, no further degree
+      - name: acs_eduBachelorsDegreeOnlyPercent
+        description: Percent of people over age 25 with bachelor's degree only, no further degree
+      - name: acs_eduMastersDegreeOnlyPercent
+        description: Percent of people over age 25 with master's degree only, no further degree
+      - name: acs_commutePublicTransitPercent
+        description: Percent of commuting workers over age 16 who commute by public transportation
+      - name: acs_commuteUpTo10MinsPercent
+        description: Percent of commuting workers over age 16 who commute for 0-10 minutes to work
+      - name: acs_commuteMoreThan60MinsPercent
+        description: Percent of commuting workers over age 16 who commute for >60 minutes to work
+      - name: acs_averageCommuteTimePerWorker
+        description: Total minutes spent commuting by all commuting workers over age 16 divided by number of workers over age 16
+      - name: adi_areaDeprivationIndexPercent
+        description: Area Deprivation Index, shows where areas of deprivation and affluence exist within a community. The 17 ACS indicators incorporated into the ADI encompass income, education, employment, and housing conditions at the Census Block Group level. Reported as a percentile that is 0-100% with 50% indicating a "middle of the nation" percentile. A low ADI score indicates affluence or prosperity. A high ADI score is indicative of high levels of deprivation.
+      - name: acs_yearLastUpdated
+        description: Year this 5-year ACS data was released (hard-coded)
+      - name: adi_yearLastUpdated
+        description: ADI data last update year (more recent than acs_lastUpdated)
+  
+  - name: member_address_with_geopoint
+    description: "\n
+    Author: Dax Paramanathan\n
+    Purpose: Geopoint abstraction on Cityblock member address for use in abstractions requiring spatial joins."
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+      - name: addressId
+      - name: lat
+      - name: long
+      - name: geopoint
+        description: Single point BigQuery-native geography based on member address lat/long for use in spatial joins. Restricted to just active (non-deleted) addresses. One member may have multiple addresses.
+  
+  - name: member_air_quality
+    description: "\n
+    Author: Dax Paramanathan\n
+    Purpose: Environmental Protection Agency air quality data associated with Cityblock members based on their nearest measurement site."
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+      - name: addressId
+      - name: stateCode
+        description: The FIPS code of the state in which the monitor resides.
+      - name: countyCode
+        description: The FIPS code of the county in which the monitor resides.
+      - name: siteNum
+        description: A unique number within the county identifying the site.
+      - name: parameterCode
+        description: The AQS code corresponding to the parameter measured by the monitor.
+      - name: epa_meanAQI
+        description: Average of daily AQI measurements in latest 3 months of data.
+      - name: epa_meanPM25
+        description: Average of daily PM2.5 measurements in latest 3 months of data.
+      - name: epa_airQualityRating
+        description: Categorical rating of average AQI measurement based on US standard.
+      - name: epa_pm25Rating
+        description: Categorical rating of average PM2.5 measurement based on US standard.
+      - name: epa_dateLastMeasurement
+        description: Date of latest measurements (end date of 3 month period used for computing averages).
+      - name: epa_yearLastUpdated
+        description: Year of last measurement in 3 month period for computing averages.
+
+  - name: member_sdoh
+    description: "\n
+    Author: Dax Paramanathan\n
+    Purpose: Single SDOH source merging ACS census data and EPA air quality data."
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+      - name: addressId
+      - name: geoId
+      - name: acs_incomeHouseholdMedianValue
+        description: Median household income
+      - name: acs_incomePerPersonValue
+        description: Income per capita (person)
+      - name: acs_incomeOnRentPercent
+        description: Percent of income spent on rent
+      - name: acs_rentOver50PctIncomePercent
+        description: Percent of occupied housing units where tenant pays over 50% of income
+      - name: acs_rentUnder10PctIncomePercent
+        description: Percent of occupied housing units where tenant pays under 10% of income
+      - name: acs_rentMedianValue
+        description: Median rent
+      - name: acs_familyHouseholdPercent
+        description: Percent of households that are family households
+      - name: acs_housingUnitsOccupiedPercent
+        description: Percent of housing units that are occupied
+      - name: acs_housingUnitsRenterOccupiedPercent
+        description: Percent of occupied housing units that are renter-occupied
+      - name: acs_housingUnitsOwnerOccupiedPercent
+        description: Percent of occupied housing units that are owner-occupied
+      - name: acs_unemployedPercent
+        description: Percent of civilian labor force (age 16+) that is unemployed
+      - name: acs_raceWhiteAlonePercent
+        description: Percent of total pop that identifies as White non-Hispanic
+      - name: acs_raceBlackAlonePercent
+        description: Percent of total pop that identifies as Black non-Hispanic
+      - name: acs_raceAsianAlonePercent
+        description: Percent of total pop that identifies as Asian non-Hispanic
+      - name: acs_raceAmerIndianAlonePercent
+        description: Percent of total pop that identifies as American Indian
+      - name: acs_raceOtherRaceAlonePercent
+        description: Percent of total pop that identifies as Other Race
+      - name: acs_raceMultiRacialPercent
+        description: Percent of total pop that identifies as Two or More Races
+      - name: acs_ethnHispanicPercent
+        description: Percent of total pop that identifies as Hispanic/Latino
+      - name: acs_ethnNotHispanicPercent
+        description: Percent of total pop that identifies as non-Hispanic/Latino
+      - name: acs_genderFemalePercent
+        description: Percent of total pop that is female
+      - name: acs_genderMalePercent
+        description: Percent of total pop that is male
+      - name: acs_ageMedianValue
+        description: Median age
+      - name: acs_eduHighSchoolDiplomaOnlyPercent
+        description: Percent of people over age 25 with high school diploma only, no further degree
+      - name: acs_eduAssociatesDegreeOnlyPercent
+        description: Percent of people over age 25 with associate's degree only, no further degree
+      - name: acs_eduBachelorsDegreeOnlyPercent
+        description: Percent of people over age 25 with bachelor's degree only, no further degree
+      - name: acs_eduMastersDegreeOnlyPercent
+        description: Percent of people over age 25 with master's degree only, no further degree
+      - name: acs_commutePublicTransitPercent
+        description: Percent of commuting workers over age 16 who commute by public transportation
+      - name: acs_commuteUpTo10MinsPercent
+        description: Percent of commuting workers over age 16 who commute for 0-10 minutes to work
+      - name: acs_commuteMoreThan60MinsPercent
+        description: Percent of commuting workers over age 16 who commute for >60 minutes to work
+      - name: acs_averageCommuteTimePerWorker
+        description: Total minutes spent commuting by all commuting workers over age 16 divided by number of workers over age 16
+      - name: adi_areaDeprivationIndexPercent
+        description: Area Deprivation Index, shows where areas of deprivation and affluence exist within a community. The 17 ACS indicators incorporated into the ADI encompass income, education, employment, and housing conditions at the Census Block Group level. Reported as a percentile that is 0-100% with 50% indicating a "middle of the nation" percentile. A low ADI score indicates affluence or prosperity. A high ADI score is indicative of high levels of deprivation.
+      - name: epa_meanAQI
+        description: Average of daily AQI measurements in latest 3 months of data.
+      - name: epa_meanPM25
+        description: Average of daily PM2.5 measurements in latest 3 months of data.
+      - name: epa_airQualityRating
+        description: Categorical rating of average AQI measurement based on US standard.
+      - name: epa_pm25Rating
+        description: Categorical rating of average PM2.5 measurement based on US standard.
+      - name: acs_yearLastUpdated
+        description: Year this 5-year ACS data was released (hard-coded)
+      - name: adi_yearLastUpdated
+        description: ADI data last update year (more recent than acs_lastUpdated)
+      - name: epa_yearLastUpdated
+        description: Year of last measurement in 3 month period for computing averages.
+      - name: epa_dateLastMeasurement
+        description: Date of latest measurements (end date of 3 month period used for computing averages).
+    

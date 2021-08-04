@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: mrt_medical_chronic_condition_counts
+    description: >
+      Number of unique chronic conditions per member,
+      based on UMLS Clinical Classifications Software level 2 categories.
+    columns:
+      - name: patientId
+        tests:
+          - unique
+          - not_null
+      - name: chronicConditionCount
+        tests:
+          - not_null
+          
+  - name: mrt_medical_medication_counts
+    description: >
+      Number of unique NDCs appearing in pharmacy claims per member,
+      over a rolling twelve-month period.
+    columns:
+      - name: patientId
+        tests:
+          - unique
+          - not_null
+      - name: ndcCount
+        tests:
+          - not_null

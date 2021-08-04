@@ -1,0 +1,24 @@
+# For more information on how to configure this file, please see:
+# https://github.com/fishtown-analytics/dbt/blob/master/sample.profiles.yml
+
+# copy line 6 to line 16 into your own ~/.dbt/profile.yml file locally
+# this is a config file that should live outside of github
+dsa:
+  target: dev # sets the default target to "dev"
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: cbh-your-sandbox # change this to your Bigquery sandbox name
+      dataset: dbt_your_name # default name of dataset to output dbt runs if you fail to indicate a dataset in your configurations.
+      threads: 4 # the maximum number of paths through the graph dbt may work on at once – dbt recommends starting at 4.
+      timeout_seconds: 300
+      location: US
+    prod: # ignore this for your development account, kept here for data eng mainly
+      type: bigquery
+      method: oauth  # TODO want to do a service-account in production setting
+      project: cityblock-analytics
+      dataset: prod
+      threads: 4
+      timeout_seconds: 300
+      location: US

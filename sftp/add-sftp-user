@@ -1,0 +1,33 @@
+#!/bin/bash
+set -euo pipefail
+
+which jq > /dev/null
+if [ ! $? ]
+then
+    echo 'Please install jq.'
+    exit 1
+fi
+
+if [ $# -ne '1' ]
+then
+    echo 'usage: add-sftp-user <key>'
+    exit 1
+fi
+
+new_key=$1
+
+if [[ ! $new_key =~ [a-z_]+:[a-z_]*:::drop ]]
+then
+    echo Key format must be "<username>::::drop" for ssh/rsa users or \
+	 "<username>:<password>:::drop" for username/password users.
+    exit 1
+fi
+
+
+json=`kubectl get secret sftp-users -o json`
+sftp_users=`echo $json | jq -r '.data.SFTP_USERS' | base64 --decode`
+
+new_sftp_users_64=`echo $sftp_users' '$new_key | base64`
+new_json=`echo $json | jq '.data.SFTP_USERS |= "'$new_sftp_users_64'"'`
+
+echo $new_json | kubectl apply -f -

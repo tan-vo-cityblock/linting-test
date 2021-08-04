@@ -1,0 +1,11 @@
+#!/bin/bash
+# script for decrypting encrypted, base64 encoded secrets using GCP Cloud KMS.
+# Args: ring_name, key_name, path/to/secret.64.enc, path/to/secret
+# Returns: decrypted secret at path/to/secret
+
+base64 --decode $3 \
+| gcloud kms decrypt --location=us \
+--project=cbh-kms \
+--keyring=$1 --key=$2 \
+--plaintext-file=$4 \
+--ciphertext-file=-

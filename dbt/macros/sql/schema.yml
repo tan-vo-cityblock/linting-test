@@ -1,0 +1,21 @@
+version: 2
+
+macros:
+  - name: filter_for_lagged_window
+    description: Produces a `date_diff() between` expression to limit results to a specified date range
+    arguments:
+      - name: later_date
+        type: string
+        description: Later of two dates supplied to `date_diff` function. Default is `current_date`.
+      - name: earlier_date
+        type: string
+        description: Earlier of two dates supplied to `date_diff` function. Default is `monthFrom`.
+      - name: date_part
+        type: string
+        description: Date part supplied to `date_diff` function. Default is `month`.
+      - name: min_value
+        type: integer
+        description: Minimum date difference, supplied to `between` operator. Default is 3.
+      - name: max_value
+        type: integer
+        description: Maximum date difference, supplied to `between` operator. Default is 14.

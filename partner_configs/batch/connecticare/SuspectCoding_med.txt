@@ -1,0 +1,75 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "Cityblock_dt%s_Medicare_PROCESSED.csv",
+  "delimiter": ",",
+  "partnerName": "connecticare",
+  "tableName": "SuspectCodes_med",
+  "header": "nmi,lob,name,gender,dateOfBirth,riskScoreImpact,conditionCategoryCode,conditionCategoryDescription,underlyingDxCode,underlyingDxCodeDescription,riskAdjustmentModel,dateUploaded",
+  "fields": [
+    {
+      "description": "NMI [Member ID]",
+      "required": true,
+      "name": "nmi",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Line of Business for Member, from Perspective of Partner [Line of Business]",
+      "name": "lob",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member Name (Last, First, Middle Name) [Member Name]",
+      "name": "name",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member Gender [Gender]",
+      "name": "gender",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member Date of Birth [Date Of Birth]",
+      "name": "dateOfBirth",
+      "fieldType": "DATE"
+    },
+    {
+      "description": "Member risk score (0-1) [Gov Risk Factor]",
+      "name": "riskScoreImpact",
+      "fieldType": "FLOAT64"
+    },
+    {
+      "description": "Condition Code [HCC]",
+      "name": "conditionCategoryCode",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Condition Code Description [HCC Description]",
+      "name": "conditionCategoryDescription",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Underlying Diagnosis Code [Diagnosis Code]",
+      "name": "underlyingDxCode",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Underlying Diagnosis Code [Diagnosis Code Description]",
+      "name": "underlyingDxCodeDescription",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Risk adjustment model backfilled from filename",
+      "required": true,
+      "name": "riskAdjustmentModel",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "File name timestamp from partner",
+      "required": true,
+      "name": "dateUploaded",
+      "fieldType": "STRING"
+    }
+  ]
+}

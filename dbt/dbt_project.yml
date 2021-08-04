@@ -1,0 +1,505 @@
+
+# Name your package! Package names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'cityblockdbt'
+version: '2.0'
+
+config-version: 2
+
+vars:
+  cf_member_table: "{{ ref('src_member') }}"
+  payer_list: ["emblem", "emblem_virtual", "cci", "tufts", "carefirst", "cardinal", "healthy_blue"]
+  cm_reporting_claims_date_ytd: "date(current_date)"
+  cm_reporting_claims_date_monthly: "date(current_date)"
+  cm_reporting_claims_date_quarterly: "date(current_date)"
+  hh_billing_date: "date(current_date)"
+
+  workflow_configs:
+
+          [
+
+            {
+              'markets': 'ny_ct',
+              'market_op': '!='
+            },
+
+            {
+              'markets': 'ma',
+              'market_op': '='
+            }
+
+          ]
+
+  community_slug: 'community'
+  virtual_slug: 'virtualIntegratedCare'
+  delivery_model_screens:
+    [
+      'topTwoHccsIncludeDementia',
+      'hasEvidenceOfDialysis',
+      'topTwoHccsIncludeParkinsonsOrHuntingtons',
+      'topTwoHccsIncludeQuadraplegiaOrParaplegiaOrAmputationOrHemiplegia',
+      'hasEvidenceOfAdvancedIllness',
+      'hasZeroMedicalCostInPriorYearOrNoClaimsHistory',
+      'hasEvidenceOfCcm'
+    ]
+
+  encounter_configs:
+    [
+      {
+        'flag_prefix': 'edService',
+        'count_root': 'EdVisit'
+      },
+      {
+        'flag_prefix': 'acsEd',
+        'count_root': 'AcsEdVisit'
+      },
+      {
+        'flag_prefix': 'acuteInpatientCategory',
+        'count_root': 'InpatientAdmit'
+      },
+      {
+        'flag_prefix': 'resultsInInpatient',
+        'count_root': 'UnplannedInpatientAdmit'
+      },
+      {
+        'flag_prefix': 'acsInpatient',
+        'count_root': 'AcsInpatient'
+      },
+      {
+        'flag_prefix': 'readmission',
+        'count_root': 'Readmission'
+      }
+    ]
+
+  supported_pathway_field_levels: [1,2,3,4]
+
+# This setting configures which "profile" dbt uses for this project. Profiles contain
+# database connection information, and should be configured in the  ~/.dbt/profiles.yml file
+
+profile: 'dsa'
+
+# These configurations specify where dbt should look for different types of files.
+# The `source-paths` config, for example, states that source models can be found
+# in the "models/" directory. You probably won't need to change these!
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+    - "target"
+    - "dbt_modules"
+
+# Run these commands on each run start and end to log the results of the run
+on-run-start:
+    - "create table if not exists dbt.audit_dbt_results
+    (node STRING, status STRING, execution_time NUMERIC, time DATETIME)"
+on-run-end:
+    - "insert into dbt.audit_dbt_results
+    (node, status, execution_time, time) values {{ run_results_values(results) }}"
+# You can define configurations for models in the `source-paths` directory here.
+# Using these configurations, you can enable or disable models, change how they
+# are materialized, and more!
+
+# # In this example config, we tell dbt to build all models in the example/ directory
+# # as views (the default). These settings can be overridden in the individual model files
+# # using the `{{ config(...) }}` macro.
+
+models:
+  cityblockdbt:
+    +persist_docs:
+      relation: true
+      columns: true
+
+    # Building blocks we use over and over again
+    abstractions:
+      able:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_able
+        +materialized: view
+
+      care_pathways:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_care_pathways
+        +materialized: table
+        +tags: ["weekly"]
+
+      care_team_audit:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_care_team_audit
+        +materialized: view
+
+      carefirst_reports:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_carefirst_reports
+        +materialized: table
+
+      claims:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_claims
+        +materialized: table
+
+      cm_delegation_ytd:
+        +materialized: table
+
+        cm_delegation_sql_tables_ytd:
+          +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+          +schema: abs_cm_delegation_sql_tables_ytd
+
+        cm_delegation_reports_ytd:
+          +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+          +schema: abs_cm_delegation_reports_ytd
+
+      cm_delegation_monthly:
+        +materialized: table
+
+        cm_delegation_sql_tables_monthly:
+          +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+          +schema: abs_cm_delegation_sql_tables_monthly
+
+        cm_delegation_reports_monthly:
+          +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+          +schema: abs_cm_delegation_reports_monthly
+
+      cm_delegation_quarterly:
+        +materialized: table
+
+        cm_delegation_sql_tables_quarterly:
+          +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+          +schema: abs_cm_delegation_sql_tables_quarterly
+
+        cm_delegation_reports_quarterly:
+          +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+          +schema: abs_cm_delegation_reports_quarterly
+
+      cms_revenue:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_cms_revenue
+        +materialized: table
+
+      commons:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_commons
+        +materialized: view
+
+      computed:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_computed
+        +materialized: table
+
+      cotiviti:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_cotiviti
+        +materialized: view
+
+      events:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_events
+        +materialized: view
+
+      health_home_billing_reports:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_health_home_billing_reports
+        +materialized: table
+
+      health_home_billing_sql_tables:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_health_home_billing_sql_tables
+        +materialized: table
+
+      medical:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_medical
+        +materialized: table
+
+      member:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_member
+        +materialized: table
+
+      member_programs:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_member_programs
+        +materialized: table
+
+      notes:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_notes
+        +materialized: table
+
+      payer:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_payer
+        +materialized: table
+
+      prior_auth:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_prior_auth
+        +materialized: incremental
+
+      reference:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_reference
+        +materialized: table
+
+      risk:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_risk
+        +materialized: table
+
+      risk_cdps:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_risk_cdps
+        +materialized: table
+
+      quality:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_quality
+        +materialized: table
+
+      self_service:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_self_service
+        +materialized: table
+
+      sdoh:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_sdoh
+        +materialized: table
+
+      surveys:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_surveys
+        +materialized: view
+
+      transitions_of_care:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: abs_transitions_of_care
+        +materialized: table
+
+    # Queries used as input to other data products
+    exports:
+      actuary:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: xpt_actuary
+        +materialized: table
+
+      care_management:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: xpt_care_management
+        +materialized: table
+
+      care_pathways:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: xpt_care_pathways
+        +materialized: table
+        +tags: ["weekly"]
+
+      cotiviti:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: xpt_cotiviti
+        +materialized: view
+
+      medical:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: xpt_medical
+        +materialized: table
+
+      member_360:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: xpt_member_360
+        +materialized: table
+
+      sms_labeling:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: xpt_sms_labeling
+        +materialized: view
+
+    # Core end users focused deliverables
+    marts:
+
+      actuary:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_actuary
+        +materialized: view
+
+      care_management:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_care_management
+        +materialized: table
+
+      care_pathways:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_care_pathways
+        +materialized: table
+        +tags: ["weekly"]
+
+        intermediate:
+          +materialized: incremental
+
+      claims:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_claims
+        +materialized: table
+
+      communications:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_communications
+        +materialized: table
+
+      commons:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_commons
+        +materialized: table
+
+      computed:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_computed
+        +materialized: table
+
+      cotiviti:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_cotiviti
+        +materialized: table
+
+      delivery_model:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_delivery_model
+        +materialized: table
+
+      elation:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_elation
+        +materialized: table
+
+
+      health_home:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_health_home
+        +materialized: table
+
+      medical:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_medical
+        +materialized: table
+
+      member:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_member
+        +materialized: table
+
+      outreach_prio:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_outreach_prio
+        +materialized: table
+
+      prior_auth:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_prior_auth
+        +materialized: table
+
+      risk:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_risk
+        +materialized: table
+
+      risk_cdps:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_risk_cdps
+        +materialized: table
+
+      sdoh:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_sdoh
+        +materialized: table
+
+      surveys:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_surveys
+        +materialized: table
+
+      transitions_of_care:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: mrt_transitions_of_care
+        +materialized: table
+
+    # All raw source data with minimal casting and renaming
+    sources:
+      care_pathways:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_care_pathways
+        +materialized: view
+
+      commons:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_commons
+        +materialized: view
+
+      date:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_date
+        +materialized: view
+
+      elation:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_elation
+        +materialized: view
+
+      loinc:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_loinc
+        +materialized: view
+
+      medical:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_medical
+        +materialized: view
+
+      member:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_member
+        +materialized: view
+
+      payer:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_payer
+        +materialized: view
+
+      prior_auth:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_prior_auth
+        +materialized: view
+
+      reference:
+        +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+        +schema: src_reference
+        +materialized: table
+
+seeds:
+  cityblockdbt:
+    enabled: true
+
+    claims:
+      +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+      +schema: dta_claims
+
+      pcp_attribution_codes:
+        +column_types:
+          code: string
+
+    care_pathways:
+      +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+      +schema: dta_care_pathways
+      +tags: ["weekly"]
+
+    delivery_model:
+      +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+      +schema: dta_delivery_model
+
+    medical:
+      +database: "{{ env_var('CITYBLOCK_ANALYTICS') }}"
+      +schema: dta_medical

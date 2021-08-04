@@ -1,0 +1,2 @@
+
+{{ medication_evidence(slug="mood-stabilizers-not-seizure-medication", ingredients=['camcolit%', 'depakote%', 'divalproex sodium%', 'epival%', 'ergenyl chrono%', 'eskalith%', 'lithium carbonate%', 'lithobid%', 'sedalit%', 'topamax%', 'topiramate%']) }}

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: src_prior_auth_gold_all_partners
+    description: Combines all gold shards for available partners
+    columns:
+      - name: receivedDate
+        description: Parses receipt date based on table suffix
+        tests:
+          - not_null

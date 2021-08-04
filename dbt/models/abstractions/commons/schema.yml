@@ -1,0 +1,197 @@
+version: 2
+
+models:
+  - name: abs_commons_member_market_clinic
+    description: Intermediate abstraction gathering member market and clinic names
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+      - name: memberId
+      - name: patientHomeMarketId
+      - name: patientHomeMarketName
+      - name: patientHomeClinicId
+      - name: patientHomeClinicName
+      
+  - name: abs_commons_note_text
+    description: Selects latest text for eventGroupId
+    columns:
+      - name: eventGroupId
+        tests:
+          - unique
+      - name: text
+
+  - name: abs_event_attendee
+    description: "\n
+    Author:  Katie Claiborne\n
+    Purpose: List attendees by eventGroupId\n
+    "
+    columns:
+      - name: eventGroupId
+        tests:
+          - unique
+      - name: attendees
+
+  - name: abs_member_interaction_types
+    description: "\n
+    Author:  Katie Claiborne\n
+    Purpose: Pivot interaction flags to classify type and status\n
+    "
+    tests:
+      - unique:
+          column_name: "concat(progressNoteGroupId, interactionType, interactionStatus)"
+    columns:
+      - name: progressNoteGroupId
+      - name: interactionType
+        tests:
+          - accepted_values:
+              values: ['tend', 'connection', 'in person visit', 'toc connection', 'toc in person visit']
+      - name: interactionStatus
+        tests:
+          - accepted_values:
+              values: ['attempt', 'success']
+  
+  - name: essential_tools
+    description: "\n
+    Author: Katie Claiborne\n
+    Purpose: Identify earliest member start and completion times for Essentials domain\n
+    "
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "minEssentialsCompletedAt > minEssentialsStartedAt"
+          condition: "minEssentialsCompletedAt is not null"
+          
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+
+      - name: minEssentialsStartedAt
+        description: Earliest member answer created for any tool within Essentials domain
+        tests: 
+          - not_null
+
+      - name: minEssentialsCompletedAt
+        description: Earliest completion of all tools within Essentials domain
+
+  - name: master_member_patient_state
+    description: "\n
+    Author: Andy Seiden\n
+    Purpose: Reshape commons_mirror.patient_state table to fit with master_member table, by grabbing each member's currentState on the last day of every month, and creating one row per member per month"
+
+  - name: member_index_member_management
+    description: "\n
+    Author: Andy Seiden\n
+    Purpose: View of the member index mirror in a similar shape to the old patient_index_cache, containing all or most of the fields we would expect in one view."
+
+  - name: member_potential_alternative_contact_number
+    description: "\n
+    Author: Marianne Hoogeveen
+    Purpose: Identify potential alternative contact numbers for members using sms message data."
+    tests:
+      - unique:
+          column_name: "concat(memberId, alternativeContactNumber)"
+    columns:
+      - name: memberId
+        tests:
+          - not_null
+          - relationships:
+              to: ref('member')
+              field: patientId
+              severity: warn
+      - name: memberFirstName
+        tests:
+          - not_null:
+              severity: warn
+      - name: memberLastName
+        tests:
+          - not_null:
+              severity: warn
+      - name: alternativeContactNumber
+        description: Contact number that is not yet associated with a member in Commons.
+        tests:
+          - not_null
+      - name: introductionCount
+        description: Number of messages from this number that contain a self-introduction with member's first name, such as 'Hi, I'm Bob'.
+        tests:
+          - not_null
+      - name: firstNameMatchCount
+        description: Number of messages from this number in which the member's first name was found.
+        tests:
+          - not_null
+      - name: lastNameMatchCount
+        description: Number of messages from this number in which the member's last name was found.
+        tests:
+          - not_null
+      - name: fullNameMatchCount
+        description: Number of messages from this number in which the member's full name was found.
+        tests:
+          - not_null
+      - name: familyIntroductionCount
+        description: Number of messages from this number that contain a self-introduction and a family title, such as mom, dad, daughter, son, etc.
+        tests:
+          - not_null
+      - name: potentialConversationCount
+        description: Number of instances where an sms message of this number was sent or received between two messages of the care team to or from the member.
+        tests:
+          - not_null
+      - name: avgTimeToNextMessageMinutes
+        description: Average time of consecutive same-direction messages between care team and member which indicates the likelihood of the conversation time matching being a coincidence.
+
+  - name: patient_attribute_member_types
+    description: "\n
+    Author: Mina Yi\n
+    Purpose: Intermediate abstraction to surface new Commons features as fields\n
+    "
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+      - name: isNoLongerInterested
+        description: Member is no longer interested
+        tests:
+          - not_null
+      - name: isLostContact
+        description: Lost contact with member
+        tests:
+          - not_null
+      - name: hasDeclinedAssessments
+        description: Member declined to answer assessments
+        tests:
+          - not_null
+      - name: hasDeclinedActionPlan
+        description: Member declined to collaborate on Action Plan
+        tests:
+          - not_null
+      - name: LostContactAt
+        description: the time when we lost contact with member
+      - name: NoLongerInterestedAt
+        desciption: the time when a member is no longer interested
+      - name: DeclinedAssessmentsAt
+        description: the time when a member declined to answer assessments
+      - name: DeclinedActionPlanAt
+        description: the time a member declined to collaborate on Action Plan
+
+  - name: patient_document_types
+    description: "\n
+    Author: Mina Yi\n
+    Purpose: Intermediate distinct member-level abstraction to dynamically flag and create fields for
+    earliest and latest dates for different patient document type submissions\n
+    "
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('src_member')
+              field: patientId
+      - name: hasPlanOfCareAttestation
+        description: Member has a plan of care attestation
+      - name: earliestPlanOfCareAttestationAt
+        description: Earliest documented plan of care attestation
+      - name: latestPlanOfCareAttestationAt
+        description: Latest documented plan of care attestation

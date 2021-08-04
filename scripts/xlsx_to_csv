@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import sys
+import xlrd
+import csv
+
+if len(sys.argv) != 3:
+    print("""
+    usage: ./xlsx_to_csv <path> <sheet>
+           ./xlsx_to_csv <path> --list-sheets
+    """)
+    exit(1)
+
+path = sys.argv[1]
+sheet = sys.argv[2]
+
+if sheet == '--list-sheets':
+    with xlrd.open_workbook(path) as wb:
+        print(','.join([s.name for s in wb.sheets()]))
+        exit(0)
+
+with xlrd.open_workbook(path) as wb:
+    sh = wb.sheet_by_name(sheet)
+    wr = csv.writer(sys.stdout)
+    for i in range(sh.nrows):
+        wr.writerow(sh.row_values(i))
+        

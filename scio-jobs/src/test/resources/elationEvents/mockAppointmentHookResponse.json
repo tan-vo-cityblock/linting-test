@@ -1,0 +1,27 @@
+{
+  "event_id": 4667986,
+  "action": "saved",
+  "resource": "appointments",
+  "data": {
+    "status": {
+      "status": "Cancelled",
+      "status_date": "2020-05-04T17:26:57Z",
+      "room": null
+    },
+    "physician": 150679616754852,
+    "last_modified_date": "2020-05-04T17:26:57Z",
+    "patient": 151523299033089,
+    "description": "headache",
+    "practice": 145331296403460,
+    "time_slot_status": null,
+    "reason": "Est Routine Visit - Office",
+    "scheduled_date": "2019-04-04T19:30:00Z",
+    "created_date": "2019-04-04T17:26:02Z",
+    "duration": 60,
+    "deleted_date": null,
+    "time_slot_type": "appointment",
+    "recurring_event_schedule": null,
+    "id": 159927140352090,
+    "metadata": null
+  }
+}

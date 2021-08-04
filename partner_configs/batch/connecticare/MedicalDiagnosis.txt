@@ -1,0 +1,26 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "MedicalDiagnosis_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "MedicalDiagnosis",
+  "delimiter": "|",
+  "dataFieldName": "diagnosis",
+  "header": "ClmNum|DiagCategory|DiagCd|ICD_Indicator",
+  "fields": [
+    {
+      "name": "ClmNum",
+      "required": true
+    },
+    {
+      "name": "DiagCategory"
+    },
+    {
+      "name": "DiagCd"
+    },
+    {
+      "name": "ICD_Indicator"
+    }
+  ]
+}

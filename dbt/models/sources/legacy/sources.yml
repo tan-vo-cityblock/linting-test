@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+
+  - name: legacy
+    description: Legacy data needed to supplement current version of Commons data model
+    database: cityblock-analytics
+    schema: legacy
+
+    tables:
+      - name: member_interactions

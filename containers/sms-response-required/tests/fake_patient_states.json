@@ -1,0 +1,32 @@
+[
+  {
+    "patient_id": "o9r3n6lik2-fake",
+    "current_state": "attributed",
+    "state_created_at": 1596150809000
+  },
+  {
+    "patient_id": "u2j0l7aeeb-fake",
+    "current_state": "assigned",
+    "state_created_at": 1530442824000
+  },
+  {
+    "patient_id": "u2j0l7aeeb-fake",
+    "current_state": "attributed",
+    "state_created_at": 1530236602000
+  },
+  {
+    "patient_id": "u2j0l7aeeb-fake",
+    "current_state": "contact_attempted",
+    "state_created_at": 1530717716000
+  },
+  {
+    "patient_id": "u2j0l7aeeb-fake",
+    "current_state": "disenrolled",
+    "state_created_at": 1553013468000
+  },
+  {
+    "patient_id": "u2j0l7aeeb-fake",
+    "current_state": "reached",
+    "state_created_at": 1542049049000
+  }
+]

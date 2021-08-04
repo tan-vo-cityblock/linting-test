@@ -1,0 +1,252 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CORP_CITYBLOCK_MULTI_PHRMCLM_EDL_CM01_TEST_20210305085950.txt",
+  "partnerName": "emblem",
+  "tableName": "pharmacy_v2",
+  "delimiter": "|",
+  "indexJoinField": "MBR_ID",
+  "header": "UNIQUE_PERSON_ID|PARENT_COMPANY_CD|CLM_NBR|CYCL_END_DT|CLM_TYP_CD|RX_NBR|BILD_DT|PRCS_DT|ADJUD_DT|RX_DT|ORIG_DSPN_DT|FILL_DT|NATL_DRG_CD|DRG_NM|QTY|SUPP_DY_CNT|REFILL_NBR|DAW_IND|DSAGE_CD|DRG_STGH_DESC|FMLRY_CD|HIER_NGRDNT_CD|AMRCN_HOSP_FMLRY_SVC_CD|GENC_CD_NBR_CD|GENC_PROD_ID_CD|GENC_NM|STEP_THPY_IND|GRP_DRG_NM|PICA_IND|FED_DRG_CLAS_CD|ORIG_CD|TIER_CD|BRND_CD|RX_ML_OR_RTL_CD|MBR_ID|MBR_LST_NM|MBR_FRST_NM|MBR_MIDL_NM|MBR_BRTH_DT|MBR_AGE|MBR_GNDR_CD|EMPR_GRP_ID|BENE_PLN_ID|PRIR_AUTH_CD|RELN_CD|PAT_LOCN_CD|PAYEE_CHK_NM|PAYEE_CHK_ADR_LN|PAYEE_CHK_CITY|PAYEE_ST_CD|PAYEE_ZIP_CD|PAYEE_ZIP_EXTN|PRVD_ID|PHSYN_NM|PHARM_NATONAL_PRVD_ID|PHARM_SVC_TYP_CD|PHARM_QLFR_CD|PHARM_NABP_ID|FLL_BENE_PLN_ID|ADJM_REAS_TYP_CD|ADM_FEE_AMT|CLM_AMT|CLM_ADM_FEE_AMT|MAX_ALW_CST_AMT|PD_NGRDNT_CST_AMT|COINS_AMT|DEDBL_AMT|COPAY_AMT|APRV_CLM_FEE_AMT|CALC_BILG_COPAY_AMT|COB_AMT|UCR_AMT|VACC_ADM_AMT|SLS_TAX_AMT|WHSL_ACQS_CST_AMT|AVG_WHSL_PRC_AMT|TIER_COPAY_NBR",
+  "fields": [
+    {
+      "name": "UNIQUE_PERSON_ID"
+    },
+    {
+      "name": "PARENT_COMPANY_CD"
+    },
+    {
+      "name": "CLM_NBR"
+    },
+    {
+      "name": "CYCL_END_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "CLM_TYP_CD"
+    },
+    {
+      "name": "RX_NBR"
+    },
+    {
+      "name": "BILD_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "PRCS_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "ADJUD_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "RX_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "ORIG_DSPN_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "FILL_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "NATL_DRG_CD"
+    },
+    {
+      "name": "DRG_NM"
+    },
+    {
+      "name": "QTY"
+    },
+    {
+      "name": "SUPP_DY_CNT"
+    },
+    {
+      "name": "REFILL_NBR"
+    },
+    {
+      "name": "DAW_IND"
+    },
+    {
+      "name": "DSAGE_CD"
+    },
+    {
+      "name": "DRG_STGH_DESC"
+    },
+    {
+      "name": "FMLRY_CD"
+    },
+    {
+      "name": "HIER_NGRDNT_CD"
+    },
+    {
+      "name": "AMRCN_HOSP_FMLRY_SVC_CD"
+    },
+    {
+      "name": "GENC_CD_NBR_CD"
+    },
+    {
+      "name": "GENC_PROD_ID_CD"
+    },
+    {
+      "name": "GENC_NM"
+    },
+    {
+      "name": "STEP_THPY_IND"
+    },
+    {
+      "name": "GRP_DRG_NM"
+    },
+    {
+      "name": "PICA_IND"
+    },
+    {
+      "name": "FED_DRG_CLAS_CD"
+    },
+    {
+      "name": "ORIG_CD"
+    },
+    {
+      "name": "TIER_CD"
+    },
+    {
+      "name": "BRND_CD"
+    },
+    {
+      "name": "RX_ML_OR_RTL_CD"
+    },
+    {
+      "name": "MBR_ID"
+    },
+    {
+      "name": "MBR_LST_NM"
+    },
+    {
+      "name": "MBR_FRST_NM"
+    },
+    {
+      "name": "MBR_MIDL_NM"
+    },
+    {
+      "name": "MBR_BRTH_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "MBR_AGE"
+    },
+    {
+      "name": "MBR_GNDR_CD"
+    },
+    {
+      "name": "EMPR_GRP_ID"
+    },
+    {
+      "name": "BENE_PLN_ID"
+    },
+    {
+      "name": "PRIR_AUTH_CD"
+    },
+    {
+      "name": "RELN_CD"
+    },
+    {
+      "name": "PAT_LOCN_CD"
+    },
+    {
+      "name": "PAYEE_CHK_NM"
+    },
+    {
+      "name": "PAYEE_CHK_ADR_LN"
+    },
+    {
+      "name": "PAYEE_CHK_CITY"
+    },
+    {
+      "name": "PAYEE_ST_CD"
+    },
+    {
+      "name": "PAYEE_ZIP_CD"
+    },
+    {
+      "name": "PAYEE_ZIP_EXTN"
+    },
+    {
+      "name": "PRVD_ID"
+    },
+    {
+      "name": "PHSYN_NM"
+    },
+    {
+      "name": "PHARM_NATONAL_PRVD_ID"
+    },
+    {
+      "name": "PHARM_SVC_TYP_CD"
+    },
+    {
+      "name": "PHARM_QLFR_CD"
+    },
+    {
+      "name": "PHARM_NABP_ID"
+    },
+    {
+      "name": "FLL_BENE_PLN_ID"
+    },
+    {
+      "name": "ADJM_REAS_TYP_CD"
+    },
+    {
+      "name": "ADM_FEE_AMT"
+    },
+    {
+      "name": "CLM_AMT"
+    },
+    {
+      "name": "CLM_ADM_FEE_AMT"
+    },
+    {
+      "name": "MAX_ALW_CST_AMT"
+    },
+    {
+      "name": "PD_NGRDNT_CST_AMT"
+    },
+    {
+      "name": "COINS_AMT"
+    },
+    {
+      "name": "DEDBL_AMT"
+    },
+    {
+      "name": "COPAY_AMT"
+    },
+    {
+      "name": "APRV_CLM_FEE_AMT"
+    },
+    {
+      "name": "CALC_BILG_COPAY_AMT"
+    },
+    {
+      "name": "COB_AMT"
+    },
+    {
+      "name": "UCR_AMT"
+    },
+    {
+      "name": "VACC_ADM_AMT"
+    },
+    {
+      "name": "SLS_TAX_AMT"
+    },
+    {
+      "name": "WHSL_ACQS_CST_AMT"
+    },
+    {
+      "name": "AVG_WHSL_PRC_AMT"
+    },
+    {
+      "name": "TIER_COPAY_NBR"
+    }
+  ]
+}

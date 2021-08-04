@@ -1,0 +1,2 @@
+
+{{ boolean_evidence(slug="substance-use-disorder", condition_slugs=['current-substance-use-not-treatments', 'history-of-alcohol', 'history-of-opiates', 'history-of-other-substances', 'recently-discontinued-substance-use-treatments', 'substance-use-disorder-treatments', 'substance-assessment-scores', 'substance-abuse-assessment']) }}

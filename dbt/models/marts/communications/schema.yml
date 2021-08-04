@@ -1,0 +1,243 @@
+version: 2
+
+models:
+
+  - name: incoming_phone_call_response_times
+    description: "title: Response times for all incoming phone calls |
+    author: marianne@"
+    tests:
+      - equality_where:
+          compare_model: ref('phone_call')
+          compare_columns:
+            - userId
+            - patientId
+            - contactNumber
+            - providerCreatedAt
+          compare_model_condition: "direction = 'incoming'"
+    columns:
+      - name: callId
+        tests:
+          - not_null
+          - unique
+      - name: userId
+      - name: patientId
+      - name: contactNumber
+      - name: earliestResponseCallId
+      - name: earliestResponseMessageId
+      - name: earliestResponseUserId
+      - name: earliestResponseTimeSeconds
+      - name: earliestResponseType
+        tests:
+          - accepted_values:
+              values: ['sms_message', 'phone_call']
+      - name: earliestResponseDirection
+        tests:
+          - accepted_values:
+              values: [incoming, outgoing]
+      - name: earliestResponseCallStatus
+      - name: earliestSameUserResponseCallId
+      - name: earliestSameUserResponseMessageId
+      - name: earliestSameUserResponseTimeSeconds
+      - name: earliestSameUserResponseType
+        tests:
+          - accepted_values:
+              values: ['sms_message', 'phone_call']
+      - name: earliestSameUserResponseDirection
+        tests:
+          - accepted_values:
+              values: [incoming, outgoing]
+      - name: earliestSameUserResponseCallStatus
+      - name: providerCreatedAt
+        description: Timestamp at which phone provider created the call record. Can be interpreted as the time the call was placed.
+      - name: earliestResponseAt
+      - name: earliestSameUserResponseAt
+
+  - name: incoming_sms_message_response_times
+    description: "title: Response times for all incoming sms messages |
+    author: marianne@
+    "
+    tests:
+      - equality_where:
+          compare_model: ref('sms_message')
+          compare_columns:
+            - userId
+            - patientId
+            - contactNumber
+            - providerCreatedAt
+          compare_model_condition: "direction = 'incoming'"
+    columns:
+      - name: id
+        description: Cityblock's identifier for the incoming sms message
+        tests:
+          - not_null
+          - unique:
+              severity: warn
+      - name: userId
+        description: ID of the user who received the incoming sms message
+      - name: patientId
+      - name: contactNumber
+        description: Phone number from which the incoming sms message was sent
+      - name: providerCreatedAt
+        description: Time when the call record was made by the provider (assumed to be the time the message was sent)
+      - name: earliestResponseId
+        description: Cityblock's identifier for the earliest message sent / call attempted / call picked up by any Citylbock user to the same member or number from which the incoming sms message was received
+      - name: earliestResponseUserId
+        description: User ID of the first care team member who has contact with the member or phone number after the incoming sms message
+      - name: earliestResponseType
+        description: Type of earliest contact that is counted as a response
+        tests:
+          - accepted_values:
+              values: ['phone_call', 'sms_message']
+      - name: earliestResponseDirection
+        description: Direction of earliest contact that we count as a response. May be outgoing, or incoming if it is a call to the care team that was picked up.
+        tests:
+          - accepted_values:
+              values: [incoming, outgoing]
+      - name: earliestResponseSentAt
+        description: Time at which the earliest contact took place between member or phone number from which incoming message was received, and any Cityblock user
+      - name: earliestResponseTimeSeconds
+        description: Time in seconds between the incoming sms message and the earliest contact that we count as a response.
+      - name: earliestSameUserResponseId
+        description: Cityblock's identifier for the earliest message sent / call attempted / call picked up after the incoming sms message by the same user who received it
+      - name: earliestSameUserResponseType
+        tests:
+          - accepted_values:
+              values: ['phone_call', 'sms_message']
+      - name: earliestSameUserResponseDirection
+        tests:
+          - accepted_values:
+              values: [incoming, outgoing]
+      - name: earliestSameUserResponseSentAt
+      - name: earliestSameUserResponseTimeSeconds
+        description: Time in seconds between the incoming sms message and the earliest contact that we count as a response from the same user who received the incoming message.
+
+  - name: member_comms_info
+    description: "title: member list for Karuna (external) |
+    author: dax@ |
+    runtime: daily"
+
+  - name: phone_call
+    description: "\n
+    Author: Marianne Hoogeveen\n
+    Purpose: All phone calls to and from our members, after resolving some missing patientIds"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: externalCallId
+      - name: userId
+      - name: patientId
+      - name: callId
+      - name: contactNumber
+      - name: initialCallReceiver
+        tests:
+          - accepted_values:
+              values: ['user', 'department', 'field team', 'virtual hub']
+              severity: warn
+      - name: finalCallReceiver
+        tests:
+          - accepted_values:
+              values: ['user', 'department', 'field team', 'virtual hub']
+              severity: warn
+      - name: direction
+        tests:
+          - accepted_values:
+              values: ['incoming', 'outgoing']
+              severity: warn
+      - name: duration
+      - name: callStatus
+        tests:
+          - accepted_values:
+              values: ['completed', 'missed', 'canceled', 'failed']
+              severity: warn
+      - name: missedReason
+        description: Optional reason why the call was not answered
+        tests:
+          - accepted_values:
+              values: ['busy', 'no-answer', 'voicemail', 'abandoned']
+              severity: warn
+      - name: isTransferredToVoicemail
+      - name: isTransferredToAnsweringService
+      - name: isTransferredToClinic
+      - name: isTransferredToVirtualHub
+        description: Indicates whether a call was (automatically) transferred to the Virtual Hub, only for Karuna
+      - name: isTransferredToFieldTeam
+        description: Indicates whether a call was transferred from the Virtual Hub using Talkdesk, assumed to be to a field team member
+      - name: device
+      - name: provider
+        tests:
+          - accepted_values:
+              values: ['dialpad', 'direct', 'karuna', 'twilio']
+              severity: warn
+      - name: providerCreatedAt
+        description: Time when the call record was made by the provider (assumed to be the time the call was made)
+      - name: providerUpdatedAt
+        description: Only has a value for Twilio calls
+      - name: deletedAt
+      - name: createdAt
+      - name: updatedAt
+
+  - name: sms_message
+    description: "\n
+    Author: Marianne Hoogeveen\n
+    Purpose: All sms messages sent to our care teams, with some missing patientIds resolved"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: userId
+      - name: patientId
+      - name: externalMessageId
+      - name: contactNumber
+      - name: direction
+        tests:
+          - accepted_values:
+              values: ['incoming', 'outgoing']
+              severity: warn
+      - name: body
+      - name: mediaUrls
+      - name: provider
+      - name: providerCreatedAt
+        description: Time when the call record was made by the provider (assumed to be the time the message was sent)
+      - name: createdAt
+      - name: updatedAt
+      - name: deletedAt
+
+  - name: sms_session_conversation
+    description: "\n
+    Author: Marianne Hoogeveen\n
+    Purpose: Bridge table linking sms messages to sms sessions and conversations for messages to and from known users.
+    Messages are grouped into:
+    * sessions: same-direction messages occurring within 200 seconds of each other, and
+    * conversations: bi-directional messages occurring within 24 hours of each other
+
+    This table only contains rows for messages that have a userId and providerCreatedAt
+    If patientId is not null, sessions and conversations are determined as between a user and a member
+    If patientId is null, sessions and conversations are determined as between a user and a contactNumber"
+    tests:
+      - equality_where:
+          compare_model: ref('sms_message')
+          compare_columns:
+            - userId
+            - patientId
+            - contactNumber
+            - direction
+            - providerCreatedAt
+          compare_model_condition: "userId is not null and providerCreatedAt is not null"
+    columns:
+      - name: messageId
+        description: Primary key of sms_message table
+        tests:
+          - not_null
+          - unique
+      - name: sessionId
+        description: A session is a series of messages sent by one person to another with each messages sent within 200 seconds of the last one
+      - name: conversationId
+        description: A conversation is a series of messages exchanged between two persons with each message sent within 24 hours of the last one
+      - name: userId
+      - name: patientId
+      - name: contactNumber
+      - name: direction
+      - name: providerCreatedAt

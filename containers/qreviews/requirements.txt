@@ -1,0 +1,2 @@
+google-cloud-bigquery==1.21.0
+requests==v2.22.0

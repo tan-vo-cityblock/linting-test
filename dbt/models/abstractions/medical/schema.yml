@@ -1,0 +1,37 @@
+version: 2
+
+models:
+
+  - name: abs_elation_referrals
+    description: "\n
+    Author: Andy Seiden\n
+    Purpose: Normalize EHR referrals made by CBH staff to external providers and services (note: only includes Elation currently)\n
+    "
+  
+  - name: abs_elation_medication_orders
+    description: "\n
+    Author: Andy Seiden\n
+    Purpose: Normalize EHR prescriptions (medication orders) made by CBH staff (note: only includes Elation currently)\n
+    "
+
+  - name: abs_member_months
+    description: "\n
+    Author: Katie Claiborne\n
+    Purpose: Gather member eligibility months across partners\n
+    "
+
+  - name: lab_results
+    description: >
+      Author: Katie Claiborne
+      Purpose: Combine lab results from partner claims and EHR
+
+    columns:
+      - name: loincName
+        description: '{{ doc("loinc__long_common_name") }}'
+
+  - name: vitals
+    description: "\n
+    Author: Katie Claiborne\n
+    Purpose: Process results from patient_vital_signs\n
+    "
+

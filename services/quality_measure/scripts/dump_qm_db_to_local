@@ -1,0 +1,27 @@
+#!/bin/bash
+# script for copying qm service staging or prod database to local machine.
+# Args: env
+# Returns: local copy of qm service [env] database
+
+STAGING_DIR=~/temp_qm_staging
+DUMP_NAME=qm-$1-dump
+GCS_DUMP=gs://cbh-quality-measure-service-$1/database/$DUMP_NAME.gz
+DB_NAME=quality_measure
+
+mkdir -p STAGING_DIR
+
+dropdb $DB_NAME || true \
+&& echo Dropped local $DB_NAME database$'\n' \
+&& createdb $DB_NAME \
+&& echo Created local $DB_NAME database$'\n' \
+&& gcloud sql export sql services $GCS_DUMP \
+--project=cbh-services-$1 \
+--database=$DB_NAME \
+&& echo Exported cloud sql $DB_NAME $1 database to GCS at $GCS_DUMP$'\n' \
+&& gsutil cp $GCS_DUMP - \
+| gunzip > $STAGING_DIR/$DUMP_NAME \
+&& echo Copied dump file from GCS to local $STAGING_DIR/$DUMP_NAME$'\n' \
+&& psql $DB_NAME < $STAGING_DIR/$DUMP_NAME \
+&& echo $'\n'Loaded dump file into local $DB_NAME $1 database$'\n' \
+&& rm $STAGING_DIR/$DUMP_NAME \
+&& echo Deleted local dump file $STAGING_DIR/$DUMP_NAME

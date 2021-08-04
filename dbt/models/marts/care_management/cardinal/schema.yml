@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: nc_cardinal_outreach_engagement_kpis
+    description: "title: Cardinal KPIs report  |
+    author: Alankrita Ghosh|
+    runtime: daily"

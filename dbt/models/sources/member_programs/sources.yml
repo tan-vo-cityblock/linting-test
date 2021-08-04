@@ -1,0 +1,13 @@
+
+version: 2
+
+sources:
+
+  - name: member_programs
+    description: Maps of members to programs
+    database: cityblock-analytics
+    schema: src_member_programs
+
+    tables:
+      - name: src_outreach_prioritization
+      - name: sct_member_reviewed_list

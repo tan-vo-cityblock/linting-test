@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: abs_member_phones
+    description: Latest record for a given member phone
+    columns:
+      - name: id
+        description: Unique identifier, based on `memberId` and `phone`
+        tests:
+          - unique
+          - not_null
+      - name: source
+        description: >
+          Indicates whether member phone came from Commons or the member service.
+          If a member phone appears in both sources, only the Commons record is preserved here.
+        tests:
+          - accepted_values:
+              values: ['commons', 'service']
+      - name: memberId
+      - name: phone
+        description: Ten-digit phone number
+      - name: phoneType
+        description: Type of phone (home, mobile, etc)
+      - name: isPrimaryPhone
+        description: >
+          Indicates whether phone is member's primary.
+          In Commons, users may mark a single phone as primary for a member.
+          In the member service, primary phones appear with a `phoneType` value of "main".
+        tests:
+          - not_null
+      - name: createdAt
+        description: Time at which member phone record was created

@@ -1,0 +1,7 @@
+# Environments
+dev/env
+*.iml
+airflow.cfg
+airflow.db
+logs/
+unittests.cfg

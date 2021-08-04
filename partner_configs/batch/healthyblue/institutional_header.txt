@@ -1,0 +1,1386 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "healthyblue/drop",
+  "fileNamePattern": "NCMT_MEDENCCLMIHD_BCBS_CB_%s",
+  "partnerName": "Healthy Blue",
+  "tableName": "institutional_header",
+  "delimiter": "|",
+  "indexJoinField": "Subscriber_Primary_Identifier",
+  "datasource": "bcbsNC",
+  "header": "Transaction_Control_Number|Transaction_Count|Claim_Header_Status_Code|Provider_Taxonomy_Code|Billing_Provider_Last_or_Organizational_Name|Billing_Provider_Identifier|Billing_Provider_Address_Line|Billing_Provider_Address_Line2|Billing_Provider_City_Name|Billing_Provider_State_or_Province_Code|Billing_Provider_Postal_Zone_or_ZIP_Code|Country_Code_Billing|Billing_Provider_Tax_Identification_Number|Subscriber_Last_Name|Subscriber_First_Name|Subscriber_Middle_Name|Subscriber_Name_Suffix|Identification_Code_Qualifier|Subscriber_Primary_Identifier|Subscriber_Address_Line|Subscriber_Address_Line2|Subscriber_City_Name|Subscriber_State_Code|Subscriber_Postal_Zone_or_ZIP_Code|Country_Code_Subscriber|Country_Subdivision_Code|Subscriber_Birth_Date|Subscriber_Gender_Code|Patient_Account_Number|Facility_Type_Code|Facility_Code_Qualifier|Claim_Frequency_Code|Assignment_or_Plan_Participation_Code|Benefits_Assignment_Certification_Indicator|Release_of_Information_Code|Delay_Reason_Code|Discharge_Time|Statement_From_Date|Statement_To_Date|Admission_Date|Admission_Hour|Admission_Type_Code|Admission_Source_Code|Patient_Status_Code|Referral_Number|Prior_Authorization_Number|Payer_Claim_Control_Number|Auto_Accident_State_or_Province_Code|Medical_Record_Number|Demonstration_Project_Identifier|Reference_Identification_Qualifier|Peer_Review_Authorization_Number|Fixed_Format_Information|Note_Reference_Code|Claim_Note_Text|Note_Reference_Code2|Billing_Note_Text|EPSDT_Screening_referral_information|Condition_Indicator|Condition_Indicator2|Condition_Indicator3|Principal_Diagnosis_Code|Present_on_Admission_Indicator|Admitting_Diagnosis_Code|Patient_Reason_for_Visit_01|Patient_Reason_for_Visit_02|Patient_Reason_for_Visit_03|External_Cause_of_Injury_Code_01|Present_on_Admission_Indicator_01_External|External_Cause_of_Injury_Code_02|Present_on_Admission_Indicator_02_External|External_Cause_of_Injury_Code_03|Present_on_Admission_Indicator_03_External|External_Cause_of_Injury_Code_04|Present_on_Admission_Indicator_04_External|External_Cause_of_Injury_Code_05|Present_on_Admission_Indicator_05_External|External_Cause_of_Injury_Code_06|Present_on_Admission_Indicator_06_External|External_Cause_of_Injury_Code_07|Present_on_Admission_Indicator_07_External|External_Cause_of_Injury_Code_08|Present_on_Admission_Indicator_08_External|External_Cause_of_Injury_Code_09|Present_on_Admission_Indicator_09_External|External_Cause_of_Injury_Code_10|Present_on_Admission_Indicator_10_External|External_Cause_of_Injury_Code_11|Present_on_Admission_Indicator_11_External|External_Cause_of_Injury_Code_12|Present_on_Admission_Indicator_12_External|Diagnosis_Related_Group_DRG_Code|Other_Diagnosis_01|Present_on_Admission_Indicator_01_Other|Other_Diagnosis_02|Present_on_Admission_Indicator_02_Other|Other_Diagnosis_03|Present_on_Admission_Indicator_03_Other|Other_Diagnosis_04|Present_on_Admission_Indicator_04_Other|Other_Diagnosis_05|Present_on_Admission_Indicator_05_Other|Other_Diagnosis_06|Present_on_Admission_Indicator_06_Other|Other_Diagnosis_07|Present_on_Admission_Indicator_07_Other|Other_Diagnosis_08|Present_on_Admission_Indicator_08_Other|Other_Diagnosis_09|Present_on_Admission_Indicator_09_Other|Other_Diagnosis_10|Present_on_Admission_Indicator_10_Other|Other_Diagnosis_11|Present_on_Admission_Indicator_11_Other|Other_Diagnosis_12|Present_on_Admission_Indicator_12_Other|Other_Diagnosis_13|Present_on_Admission_Indicator_13_Other|Other_Diagnosis_14|Present_on_Admission_Indicator_14_Other|Other_Diagnosis_15|Present_on_Admission_Indicator_15_Other|Other_Diagnosis_16|Present_on_Admission_Indicator_16_Other|Other_Diagnosis_17|Present_on_Admission_Indicator_17_Other|Other_Diagnosis_18|Present_on_Admission_Indicator_18_Other|Other_Diagnosis_19|Present_on_Admission_Indicator_19_Other|Other_Diagnosis_20|Present_on_Admission_Indicator_20_Other|Other_Diagnosis_21|Present_on_Admission_Indicator_21_Other|Other_Diagnosis_22|Present_on_Admission_Indicator_22_Other|Other_Diagnosis_23|Present_on_Admission_Indicator_23_Other|Other_Diagnosis_24|Present_on_Admission_Indicator_24_Other|Principal_Procedure_Code|Principal_Procedure_Date|Procedure_Code_01|Procedure_Date_01|Procedure_Code_02|Procedure_Date_02|Procedure_Code_03|Procedure_Date_03|Procedure_Code_04|Procedure_Date_04|Procedure_Code_05|Procedure_Date_05|Procedure_Code_06|Procedure_Date_06|Procedure_Code_07|Procedure_Date_07|Procedure_Code_08|Procedure_Date_08|Procedure_Code_09|Procedure_Date_09|Procedure_Code_10|Procedure_Date_10|Procedure_Code_11|Procedure_Date_11|Procedure_Code_12|Procedure_Date_12|Procedure_Code_13|Procedure_Date_13|Procedure_Code_14|Procedure_Date_14|Procedure_Code_15|Procedure_Date_15|Procedure_Code_16|Procedure_Date_16|Procedure_Code_17|Procedure_Date_17|Procedure_Code_18|Procedure_Date_18|Procedure_Code_19|Procedure_Date_19|Procedure_Code_20|Procedure_Date_20|Procedure_Code_21|Procedure_Date_21|Procedure_Code_22|Procedure_Date_22|Procedure_Code_23|Procedure_Date_23|Procedure_Code_24|Procedure_Date_24|Occurrence_Span_Code_01|Occurrence_Span_Code_Begin_Date_01|Occurrence_Span_Code_Endn_Date_01|Occurrence_Span_Code_02|Occurrence_Span_Code_Begin_Date_02|Occurrence_Span_Code_Endn_Date_02|Occurrence_Span_Code_03|Occurrence_Span_Code_Begin_Date_03|Occurrence_Span_Code_Endn_Date_03|Occurrence_Span_Code_04|Occurrence_Span_Code_Begin_Date_04|Occurrence_Span_Code_Endn_Date_04|Occurrence_Span_Code_05|Occurrence_Span_Code_Begin_Date_05|Occurrence_Span_Code_Endn_Date_05|Occurrence_Span_Code_06|Occurrence_Span_Code_Begin_Date_06|Occurrence_Span_Code_Endn_Date_06|Occurrence_Span_Code_07|Occurrence_Span_Code_Begin_Date_07|Occurrence_Span_Code_Endn_Date_07|Occurrence_Span_Code_08|Occurrence_Span_Code_Begin_Date_08|Occurrence_Span_Code_Endn_Date_08|Occurrence_Span_Code_09|Occurrence_Span_Code_Begin_Date_09|Occurrence_Span_Code_Endn_Date_09|Occurrence_Span_Code_10|Occurrence_Span_Code_Begin_Date_10|Occurrence_Span_Code_Endn_Date_10|Occurrence_Span_Code_11|Occurrence_Span_Code_Begin_Date_11|Occurrence_Span_Code_Endn_Date_11|Occurrence_Span_Code_12|Occurrence_Span_Code_Begin_Date_12|Occurrence_Span_Code_Endn_Date_12|Occurrence_Span_Code_13|Occurrence_Span_Code_Begin_Date_13|Occurrence_Span_Code_Endn_Date_13|Occurrence_Span_Code_14|Occurrence_Span_Code_Begin_Date_14|Occurrence_Span_Code_Endn_Date_14|Occurrence_Span_Code_15|Occurrence_Span_Code_Begin_Date_15|Occurrence_Span_Code_Endn_Date_15|Occurrence_Span_Code_16|Occurrence_Span_Code_Begin_Date_16|Occurrence_Span_Code_Endn_Date_16|Occurrence_Span_Code_17|Occurrence_Span_Code_Begin_Date_17|Occurrence_Span_Code_Endn_Date_17|Occurrence_Span_Code_18|Occurrence_Span_Code_Begin_Date_18|Occurrence_Span_Code_Endn_Date_18|Occurrence_Span_Code_19|Occurrence_Span_Code_Begin_Date_19|Occurrence_Span_Code_Endn_Date_19|Occurrence_Span_Code_20|Occurrence_Span_Code_Begin_Date_20|Occurrence_Span_Code_Endn_Date_20|Occurrence_Span_Code_21|Occurrence_Span_Code_Begin_Date_21|Occurrence_Span_Code_Endn_Date_21|Occurrence_Span_Code_22|Occurrence_Span_Code_Begin_Date_22|Occurrence_Span_Code_Endn_Date_22|Occurrence_Span_Code_23|Occurrence_Span_Code_Begin_Date_23|Occurrence_Span_Code_Endn_Date_23|Occurrence_Span_Code_24|Occurrence_Span_Code_Begin_Date_24|Occurrence_Span_Code_Endn_Date_24|Occurrence_Code_01|Occurrence_Code_Date_01|Occurrence_Code_02|Occurrence_Code_Date_02|Occurrence_Code_03|Occurrence_Code_Date_03|Occurrence_Code_04|Occurrence_Code_Date_04|Occurrence_Code_05|Occurrence_Code_Date_05|Occurrence_Code_06|Occurrence_Code_Date_06|Occurrence_Code_07|Occurrence_Code_Date_07|Occurrence_Code_08|Occurrence_Code_Date_08|Occurrence_Code_09|Occurrence_Code_Date_09|Occurrence_Code_10|Occurrence_Code_Date_10|Occurrence_Code_11|Occurrence_Code_Date_11|Occurrence_Code_12|Occurrence_Code_Date_12|Occurrence_Code_13|Occurrence_Code_Date_13|Occurrence_Code_14|Occurrence_Code_Date_14|Occurrence_Code_15|Occurrence_Code_Date_15|Occurrence_Code_16|Occurrence_Code_Date_16|Occurrence_Code_17|Occurrence_Code_Date_17|Occurrence_Code_18|Occurrence_Code_Date_18|Occurrence_Code_19|Occurrence_Code_Date_19|Occurrence_Code_20|Occurrence_Code_Date_20|Occurrence_Code_21|Occurrence_Code_Date_21|Occurrence_Code_22|Occurrence_Code_Date_22|Occurrence_Code_23|Occurrence_Code_Date_23|Occurrence_Code_24|Occurrence_Code_Date_24|Value_Code_01|Value_Code_Amount_01|Value_Code_02|Value_Code_Amount_02|Value_Code_03|Value_Code_Amount_03|Value_Code_04|Value_Code_Amount_04|Value_Code_05|Value_Code_Amount_05|Value_Code_06|Value_Code_Amount_06|Value_Code_07|Value_Code_Amount_07|Value_Code_08|Value_Code_Amount_08|Value_Code_09|Value_Code_Amount_09|Value_Code_10|Value_Code_Amount_10|Value_Code_11|Value_Code_Amount_11|Value_Code_12|Value_Code_Amount_12|Value_Code_13|Value_Code_Amount_13|Value_Code_14|Value_Code_Amount_14|Value_Code_15|Value_Code_Amount_15|Value_Code_16|Value_Code_Amount_16|Value_Code_17|Value_Code_Amount_17|Value_Code_18|Value_Code_Amount_18|Value_Code_19|Value_Code_Amount_19|Value_Code_20|Value_Code_Amount_20|Value_Code_21|Value_Code_Amount_21|Value_Code_22|Value_Code_Amount_22|Value_Code_23|Value_Code_Amount_23|Value_Code_24|Value_Code_Amount_24|Condition_Code_01|Condition_Code_02|Condition_Code_03|Condition_Code_04|Condition_Code_05|Condition_Code_06|Condition_Code_07|Condition_Code_08|Condition_Code_09|Condition_Code_10|Condition_Code_11|Condition_Code_12|Condition_Code_13|Condition_Code_14|Condition_Code_15|Condition_Code_16|Condition_Code_17|Condition_Code_18|Condition_Code_19|Condition_Code_20|Condition_Code_21|Condition_Code_22|Condition_Code_23|Condition_Code_24|Treatment_Code_01|Treatment_Code_02|Treatment_Code_03|Treatment_Code_04|Treatment_Code_05|Treatment_Code_06|Treatment_Code_07|Treatment_Code_08|Treatment_Code_09|Treatment_Code_10|Treatment_Code_11|Treatment_Code_12|Treatment_Code_13|Treatment_Code_14|Treatment_Code_15|Treatment_Code_16|Treatment_Code_17|Treatment_Code_18|Treatment_Code_19|Treatment_Code_20|Treatment_Code_21|Treatment_Code_22|Treatment_Code_23|Treatment_Code_24|Attending_Provider_Last_Name|Attending_Provider_First_Name|Attending_Provider_Middle_Name_or_Initial|Attending_Provider_Name_Suffix|Attending_Provider_Primary_Identifier|Provider_Taxonomy_Code_Attending|Attending_Provider_Secondary_Identifier|Operating_Physician_Last_Name|Operating_Physician_First_Name|Operating_Physician_Middle_Name|Operating_Physician_Name_Suffix|Operating_Physician_Primary_Identifier|Operating_Physician_Secondary_Identifier|Other_Operating_Physician_Last_Name|Other_Operating_Physician_First_Name|Other_Operating_Physician_Middle_Name|Other_Operating_Physician_Name_Suffix|Other_Operating_Physician_Identifier|Other_Provider_Secondary_Identifier|Rendering_Provider_Last_Name|Rendering_Provider_First_Name|Rendering_Provider_Middle_Name|Rendering_Provider_Name_Suffix|Rendering_Provider_Identifier|Rendering_Provider_Secondary_Identifier|Laboratory_or_Facility_Name|Laboratory_or_Facility_Primary_Identifier|Laboratory_or_Facility_Address_Line|Laboratory_or_Facility_Address_Line2|Laboratory_or_Facility_City_Name|Laboratory_or_Facility_State_or_Province_Code|Laboratory_or_Facility_Postal_Zone_or_ZIP_Code|Country_Code_Lab|Laboratory_or_Facility_Secondary_Identifier|Referring_Provider_Last_Name|Referring_Provider_First_Name|Referring_Provider_Middle_Name|Referring_Provider_Name_Suffix|Referring_Provider_Identifier|Referring_Provider_Secondary_Identifier|Date_of_Receipt|Date_of_Adjudication|Date_of_Payment|Billing_Provider_In_or_Out_Network|Living_Region_Code|totalClaimChargeAmount|claimAllowedAmount|payersClaimPaymentAmount",
+  "fields": [
+    {
+      "name": "Transaction_Control_Number",
+      "required": true
+    },
+    {
+      "name": "Transaction_Count"
+    },
+    {
+      "name": "Claim_Header_Status_Code"
+    },
+    {
+      "name": "Provider_Taxonomy_Code"
+    },
+    {
+      "name": "Billing_Provider_Last_or_Organizational_Name"
+    },
+    {
+      "name": "Billing_Provider_Identifier"
+    },
+    {
+      "name": "Billing_Provider_Address_Line"
+    },
+    {
+      "name": "Billing_Provider_Address_Line2"
+    },
+    {
+      "name": "Billing_Provider_City_Name"
+    },
+    {
+      "name": "Billing_Provider_State_or_Province_Code"
+    },
+    {
+      "name": "Billing_Provider_Postal_Zone_or_ZIP_Code"
+    },
+    {
+      "name": "Country_Code_Billing"
+    },
+    {
+      "name": "Billing_Provider_Tax_Identification_Number"
+    },
+    {
+      "name": "Subscriber_Last_Name"
+    },
+    {
+      "name": "Subscriber_First_Name"
+    },
+    {
+      "name": "Subscriber_Middle_Name"
+    },
+    {
+      "name": "Subscriber_Name_Suffix"
+    },
+    {
+      "name": "Identification_Code_Qualifier"
+    },
+    {
+      "name": "Subscriber_Primary_Identifier",
+      "required": true
+    },
+    {
+      "name": "Subscriber_Address_Line"
+    },
+    {
+      "name": "Subscriber_Address_Line2"
+    },
+    {
+      "name": "Subscriber_City_Name"
+    },
+    {
+      "name": "Subscriber_State_Code"
+    },
+    {
+      "name": "Subscriber_Postal_Zone_or_ZIP_Code"
+    },
+    {
+      "name": "Country_Code_Subscriber"
+    },
+    {
+      "name": "Country_Subdivision_Code"
+    },
+    {
+      "name": "Subscriber_Birth_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Subscriber_Gender_Code"
+    },
+    {
+      "name": "Patient_Account_Number"
+    },
+    {
+      "name": "Facility_Type_Code"
+    },
+    {
+      "name": "Facility_Code_Qualifier"
+    },
+    {
+      "name": "Claim_Frequency_Code"
+    },
+    {
+      "name": "Assignment_or_Plan_Participation_Code"
+    },
+    {
+      "name": "Benefits_Assignment_Certification_Indicator"
+    },
+    {
+      "name": "Release_of_Information_Code"
+    },
+    {
+      "name": "Delay_Reason_Code"
+    },
+    {
+      "name": "Discharge_Time"
+    },
+    {
+      "name": "Statement_From_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Statement_To_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Admission_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Admission_Hour"
+    },
+    {
+      "name": "Admission_Type_Code"
+    },
+    {
+      "name": "Admission_Source_Code"
+    },
+    {
+      "name": "Patient_Status_Code"
+    },
+    {
+      "name": "Referral_Number"
+    },
+    {
+      "name": "Prior_Authorization_Number"
+    },
+    {
+      "name": "Payer_Claim_Control_Number"
+    },
+    {
+      "name": "Auto_Accident_State_or_Province_Code"
+    },
+    {
+      "name": "Medical_Record_Number"
+    },
+    {
+      "name": "Demonstration_Project_Identifier"
+    },
+    {
+      "name": "Reference_Identification_Qualifier"
+    },
+    {
+      "name": "Peer_Review_Authorization_Number"
+    },
+    {
+      "name": "Fixed_Format_Information"
+    },
+    {
+      "name": "Note_Reference_Code"
+    },
+    {
+      "name": "Claim_Note_Text"
+    },
+    {
+      "name": "Note_Reference_Code2"
+    },
+    {
+      "name": "Billing_Note_Text"
+    },
+    {
+      "name": "EPSDT_Screening_referral_information"
+    },
+    {
+      "name": "Condition_Indicator"
+    },
+    {
+      "name": "Condition_Indicator2"
+    },
+    {
+      "name": "Condition_Indicator3"
+    },
+    {
+      "name": "Principal_Diagnosis_Code"
+    },
+    {
+      "name": "Present_on_Admission_Indicator"
+    },
+    {
+      "name": "Admitting_Diagnosis_Code"
+    },
+    {
+      "name": "Patient_Reason_for_Visit_01"
+    },
+    {
+      "name": "Patient_Reason_for_Visit_02"
+    },
+    {
+      "name": "Patient_Reason_for_Visit_03"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_01"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_01_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_02"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_02_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_03"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_03_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_04"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_04_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_05"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_05_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_06"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_06_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_07"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_07_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_08"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_08_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_09"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_09_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_10"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_10_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_11"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_11_External"
+    },
+    {
+      "name": "External_Cause_of_Injury_Code_12"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_12_External"
+    },
+    {
+      "name": "Diagnosis_Related_Group_DRG_Code"
+    },
+    {
+      "name": "Other_Diagnosis_01"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_01_Other"
+    },
+    {
+      "name": "Other_Diagnosis_02"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_02_Other"
+    },
+    {
+      "name": "Other_Diagnosis_03"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_03_Other"
+    },
+    {
+      "name": "Other_Diagnosis_04"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_04_Other"
+    },
+    {
+      "name": "Other_Diagnosis_05"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_05_Other"
+    },
+    {
+      "name": "Other_Diagnosis_06"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_06_Other"
+    },
+    {
+      "name": "Other_Diagnosis_07"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_07_Other"
+    },
+    {
+      "name": "Other_Diagnosis_08"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_08_Other"
+    },
+    {
+      "name": "Other_Diagnosis_09"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_09_Other"
+    },
+    {
+      "name": "Other_Diagnosis_10"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_10_Other"
+    },
+    {
+      "name": "Other_Diagnosis_11"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_11_Other"
+    },
+    {
+      "name": "Other_Diagnosis_12"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_12_Other"
+    },
+    {
+      "name": "Other_Diagnosis_13"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_13_Other"
+    },
+    {
+      "name": "Other_Diagnosis_14"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_14_Other"
+    },
+    {
+      "name": "Other_Diagnosis_15"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_15_Other"
+    },
+    {
+      "name": "Other_Diagnosis_16"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_16_Other"
+    },
+    {
+      "name": "Other_Diagnosis_17"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_17_Other"
+    },
+    {
+      "name": "Other_Diagnosis_18"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_18_Other"
+    },
+    {
+      "name": "Other_Diagnosis_19"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_19_Other"
+    },
+    {
+      "name": "Other_Diagnosis_20"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_20_Other"
+    },
+    {
+      "name": "Other_Diagnosis_21"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_21_Other"
+    },
+    {
+      "name": "Other_Diagnosis_22"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_22_Other"
+    },
+    {
+      "name": "Other_Diagnosis_23"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_23_Other"
+    },
+    {
+      "name": "Other_Diagnosis_24"
+    },
+    {
+      "name": "Present_on_Admission_Indicator_24_Other"
+    },
+    {
+      "name": "Principal_Procedure_Code"
+    },
+    {
+      "name": "Principal_Procedure_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Procedure_Code_01"
+    },
+    {
+      "name": "Procedure_Date_01"
+    },
+    {
+      "name": "Procedure_Code_02"
+    },
+    {
+      "name": "Procedure_Date_02"
+    },
+    {
+      "name": "Procedure_Code_03"
+    },
+    {
+      "name": "Procedure_Date_03"
+    },
+    {
+      "name": "Procedure_Code_04"
+    },
+    {
+      "name": "Procedure_Date_04"
+    },
+    {
+      "name": "Procedure_Code_05"
+    },
+    {
+      "name": "Procedure_Date_05"
+    },
+    {
+      "name": "Procedure_Code_06"
+    },
+    {
+      "name": "Procedure_Date_06"
+    },
+    {
+      "name": "Procedure_Code_07"
+    },
+    {
+      "name": "Procedure_Date_07"
+    },
+    {
+      "name": "Procedure_Code_08"
+    },
+    {
+      "name": "Procedure_Date_08"
+    },
+    {
+      "name": "Procedure_Code_09"
+    },
+    {
+      "name": "Procedure_Date_09"
+    },
+    {
+      "name": "Procedure_Code_10"
+    },
+    {
+      "name": "Procedure_Date_10"
+    },
+    {
+      "name": "Procedure_Code_11"
+    },
+    {
+      "name": "Procedure_Date_11"
+    },
+    {
+      "name": "Procedure_Code_12"
+    },
+    {
+      "name": "Procedure_Date_12"
+    },
+    {
+      "name": "Procedure_Code_13"
+    },
+    {
+      "name": "Procedure_Date_13"
+    },
+    {
+      "name": "Procedure_Code_14"
+    },
+    {
+      "name": "Procedure_Date_14"
+    },
+    {
+      "name": "Procedure_Code_15"
+    },
+    {
+      "name": "Procedure_Date_15"
+    },
+    {
+      "name": "Procedure_Code_16"
+    },
+    {
+      "name": "Procedure_Date_16"
+    },
+    {
+      "name": "Procedure_Code_17"
+    },
+    {
+      "name": "Procedure_Date_17"
+    },
+    {
+      "name": "Procedure_Code_18"
+    },
+    {
+      "name": "Procedure_Date_18"
+    },
+    {
+      "name": "Procedure_Code_19"
+    },
+    {
+      "name": "Procedure_Date_19"
+    },
+    {
+      "name": "Procedure_Code_20"
+    },
+    {
+      "name": "Procedure_Date_20"
+    },
+    {
+      "name": "Procedure_Code_21"
+    },
+    {
+      "name": "Procedure_Date_21"
+    },
+    {
+      "name": "Procedure_Code_22"
+    },
+    {
+      "name": "Procedure_Date_22"
+    },
+    {
+      "name": "Procedure_Code_23"
+    },
+    {
+      "name": "Procedure_Date_23"
+    },
+    {
+      "name": "Procedure_Code_24"
+    },
+    {
+      "name": "Procedure_Date_24"
+    },
+    {
+      "name": "Occurrence_Span_Code_01"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_01"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_01"
+    },
+    {
+      "name": "Occurrence_Span_Code_02"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_02"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_02"
+    },
+    {
+      "name": "Occurrence_Span_Code_03"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_03"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_03"
+    },
+    {
+      "name": "Occurrence_Span_Code_04"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_04"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_04"
+    },
+    {
+      "name": "Occurrence_Span_Code_05"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_05"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_05"
+    },
+    {
+      "name": "Occurrence_Span_Code_06"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_06"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_06"
+    },
+    {
+      "name": "Occurrence_Span_Code_07"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_07"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_07"
+    },
+    {
+      "name": "Occurrence_Span_Code_08"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_08"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_08"
+    },
+    {
+      "name": "Occurrence_Span_Code_09"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_09"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_09"
+    },
+    {
+      "name": "Occurrence_Span_Code_10"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_10"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_10"
+    },
+    {
+      "name": "Occurrence_Span_Code_11"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_11"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_11"
+    },
+    {
+      "name": "Occurrence_Span_Code_12"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_12"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_12"
+    },
+    {
+      "name": "Occurrence_Span_Code_13"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_13"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_13"
+    },
+    {
+      "name": "Occurrence_Span_Code_14"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_14"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_14"
+    },
+    {
+      "name": "Occurrence_Span_Code_15"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_15"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_15"
+    },
+    {
+      "name": "Occurrence_Span_Code_16"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_16"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_16"
+    },
+    {
+      "name": "Occurrence_Span_Code_17"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_17"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_17"
+    },
+    {
+      "name": "Occurrence_Span_Code_18"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_18"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_18"
+    },
+    {
+      "name": "Occurrence_Span_Code_19"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_19"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_19"
+    },
+    {
+      "name": "Occurrence_Span_Code_20"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_20"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_20"
+    },
+    {
+      "name": "Occurrence_Span_Code_21"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_21"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_21"
+    },
+    {
+      "name": "Occurrence_Span_Code_22"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_22"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_22"
+    },
+    {
+      "name": "Occurrence_Span_Code_23"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_23"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_23"
+    },
+    {
+      "name": "Occurrence_Span_Code_24"
+    },
+    {
+      "name": "Occurrence_Span_Code_Begin_Date_24"
+    },
+    {
+      "name": "Occurrence_Span_Code_Endn_Date_24"
+    },
+    {
+      "name": "Occurrence_Code_01"
+    },
+    {
+      "name": "Occurrence_Code_Date_01"
+    },
+    {
+      "name": "Occurrence_Code_02"
+    },
+    {
+      "name": "Occurrence_Code_Date_02"
+    },
+    {
+      "name": "Occurrence_Code_03"
+    },
+    {
+      "name": "Occurrence_Code_Date_03"
+    },
+    {
+      "name": "Occurrence_Code_04"
+    },
+    {
+      "name": "Occurrence_Code_Date_04"
+    },
+    {
+      "name": "Occurrence_Code_05"
+    },
+    {
+      "name": "Occurrence_Code_Date_05"
+    },
+    {
+      "name": "Occurrence_Code_06"
+    },
+    {
+      "name": "Occurrence_Code_Date_06"
+    },
+    {
+      "name": "Occurrence_Code_07"
+    },
+    {
+      "name": "Occurrence_Code_Date_07"
+    },
+    {
+      "name": "Occurrence_Code_08"
+    },
+    {
+      "name": "Occurrence_Code_Date_08"
+    },
+    {
+      "name": "Occurrence_Code_09"
+    },
+    {
+      "name": "Occurrence_Code_Date_09"
+    },
+    {
+      "name": "Occurrence_Code_10"
+    },
+    {
+      "name": "Occurrence_Code_Date_10"
+    },
+    {
+      "name": "Occurrence_Code_11"
+    },
+    {
+      "name": "Occurrence_Code_Date_11"
+    },
+    {
+      "name": "Occurrence_Code_12"
+    },
+    {
+      "name": "Occurrence_Code_Date_12"
+    },
+    {
+      "name": "Occurrence_Code_13"
+    },
+    {
+      "name": "Occurrence_Code_Date_13"
+    },
+    {
+      "name": "Occurrence_Code_14"
+    },
+    {
+      "name": "Occurrence_Code_Date_14"
+    },
+    {
+      "name": "Occurrence_Code_15"
+    },
+    {
+      "name": "Occurrence_Code_Date_15"
+    },
+    {
+      "name": "Occurrence_Code_16"
+    },
+    {
+      "name": "Occurrence_Code_Date_16"
+    },
+    {
+      "name": "Occurrence_Code_17"
+    },
+    {
+      "name": "Occurrence_Code_Date_17"
+    },
+    {
+      "name": "Occurrence_Code_18"
+    },
+    {
+      "name": "Occurrence_Code_Date_18"
+    },
+    {
+      "name": "Occurrence_Code_19"
+    },
+    {
+      "name": "Occurrence_Code_Date_19"
+    },
+    {
+      "name": "Occurrence_Code_20"
+    },
+    {
+      "name": "Occurrence_Code_Date_20"
+    },
+    {
+      "name": "Occurrence_Code_21"
+    },
+    {
+      "name": "Occurrence_Code_Date_21"
+    },
+    {
+      "name": "Occurrence_Code_22"
+    },
+    {
+      "name": "Occurrence_Code_Date_22"
+    },
+    {
+      "name": "Occurrence_Code_23"
+    },
+    {
+      "name": "Occurrence_Code_Date_23"
+    },
+    {
+      "name": "Occurrence_Code_24"
+    },
+    {
+      "name": "Occurrence_Code_Date_24"
+    },
+    {
+      "name": "Value_Code_01"
+    },
+    {
+      "name": "Value_Code_Amount_01"
+    },
+    {
+      "name": "Value_Code_02"
+    },
+    {
+      "name": "Value_Code_Amount_02"
+    },
+    {
+      "name": "Value_Code_03"
+    },
+    {
+      "name": "Value_Code_Amount_03"
+    },
+    {
+      "name": "Value_Code_04"
+    },
+    {
+      "name": "Value_Code_Amount_04"
+    },
+    {
+      "name": "Value_Code_05"
+    },
+    {
+      "name": "Value_Code_Amount_05"
+    },
+    {
+      "name": "Value_Code_06"
+    },
+    {
+      "name": "Value_Code_Amount_06"
+    },
+    {
+      "name": "Value_Code_07"
+    },
+    {
+      "name": "Value_Code_Amount_07"
+    },
+    {
+      "name": "Value_Code_08"
+    },
+    {
+      "name": "Value_Code_Amount_08"
+    },
+    {
+      "name": "Value_Code_09"
+    },
+    {
+      "name": "Value_Code_Amount_09"
+    },
+    {
+      "name": "Value_Code_10"
+    },
+    {
+      "name": "Value_Code_Amount_10"
+    },
+    {
+      "name": "Value_Code_11"
+    },
+    {
+      "name": "Value_Code_Amount_11"
+    },
+    {
+      "name": "Value_Code_12"
+    },
+    {
+      "name": "Value_Code_Amount_12"
+    },
+    {
+      "name": "Value_Code_13"
+    },
+    {
+      "name": "Value_Code_Amount_13"
+    },
+    {
+      "name": "Value_Code_14"
+    },
+    {
+      "name": "Value_Code_Amount_14"
+    },
+    {
+      "name": "Value_Code_15"
+    },
+    {
+      "name": "Value_Code_Amount_15"
+    },
+    {
+      "name": "Value_Code_16"
+    },
+    {
+      "name": "Value_Code_Amount_16"
+    },
+    {
+      "name": "Value_Code_17"
+    },
+    {
+      "name": "Value_Code_Amount_17"
+    },
+    {
+      "name": "Value_Code_18"
+    },
+    {
+      "name": "Value_Code_Amount_18"
+    },
+    {
+      "name": "Value_Code_19"
+    },
+    {
+      "name": "Value_Code_Amount_19"
+    },
+    {
+      "name": "Value_Code_20"
+    },
+    {
+      "name": "Value_Code_Amount_20"
+    },
+    {
+      "name": "Value_Code_21"
+    },
+    {
+      "name": "Value_Code_Amount_21"
+    },
+    {
+      "name": "Value_Code_22"
+    },
+    {
+      "name": "Value_Code_Amount_22"
+    },
+    {
+      "name": "Value_Code_23"
+    },
+    {
+      "name": "Value_Code_Amount_23"
+    },
+    {
+      "name": "Value_Code_24"
+    },
+    {
+      "name": "Value_Code_Amount_24"
+    },
+    {
+      "name": "Condition_Code_01"
+    },
+    {
+      "name": "Condition_Code_02"
+    },
+    {
+      "name": "Condition_Code_03"
+    },
+    {
+      "name": "Condition_Code_04"
+    },
+    {
+      "name": "Condition_Code_05"
+    },
+    {
+      "name": "Condition_Code_06"
+    },
+    {
+      "name": "Condition_Code_07"
+    },
+    {
+      "name": "Condition_Code_08"
+    },
+    {
+      "name": "Condition_Code_09"
+    },
+    {
+      "name": "Condition_Code_10"
+    },
+    {
+      "name": "Condition_Code_11"
+    },
+    {
+      "name": "Condition_Code_12"
+    },
+    {
+      "name": "Condition_Code_13"
+    },
+    {
+      "name": "Condition_Code_14"
+    },
+    {
+      "name": "Condition_Code_15"
+    },
+    {
+      "name": "Condition_Code_16"
+    },
+    {
+      "name": "Condition_Code_17"
+    },
+    {
+      "name": "Condition_Code_18"
+    },
+    {
+      "name": "Condition_Code_19"
+    },
+    {
+      "name": "Condition_Code_20"
+    },
+    {
+      "name": "Condition_Code_21"
+    },
+    {
+      "name": "Condition_Code_22"
+    },
+    {
+      "name": "Condition_Code_23"
+    },
+    {
+      "name": "Condition_Code_24"
+    },
+    {
+      "name": "Treatment_Code_01"
+    },
+    {
+      "name": "Treatment_Code_02"
+    },
+    {
+      "name": "Treatment_Code_03"
+    },
+    {
+      "name": "Treatment_Code_04"
+    },
+    {
+      "name": "Treatment_Code_05"
+    },
+    {
+      "name": "Treatment_Code_06"
+    },
+    {
+      "name": "Treatment_Code_07"
+    },
+    {
+      "name": "Treatment_Code_08"
+    },
+    {
+      "name": "Treatment_Code_09"
+    },
+    {
+      "name": "Treatment_Code_10"
+    },
+    {
+      "name": "Treatment_Code_11"
+    },
+    {
+      "name": "Treatment_Code_12"
+    },
+    {
+      "name": "Treatment_Code_13"
+    },
+    {
+      "name": "Treatment_Code_14"
+    },
+    {
+      "name": "Treatment_Code_15"
+    },
+    {
+      "name": "Treatment_Code_16"
+    },
+    {
+      "name": "Treatment_Code_17"
+    },
+    {
+      "name": "Treatment_Code_18"
+    },
+    {
+      "name": "Treatment_Code_19"
+    },
+    {
+      "name": "Treatment_Code_20"
+    },
+    {
+      "name": "Treatment_Code_21"
+    },
+    {
+      "name": "Treatment_Code_22"
+    },
+    {
+      "name": "Treatment_Code_23"
+    },
+    {
+      "name": "Treatment_Code_24"
+    },
+    {
+      "name": "Attending_Provider_Last_Name"
+    },
+    {
+      "name": "Attending_Provider_First_Name"
+    },
+    {
+      "name": "Attending_Provider_Middle_Name_or_Initial"
+    },
+    {
+      "name": "Attending_Provider_Name_Suffix"
+    },
+    {
+      "name": "Attending_Provider_Primary_Identifier"
+    },
+    {
+      "name": "Provider_Taxonomy_Code_Attending"
+    },
+    {
+      "name": "Attending_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Operating_Physician_Last_Name"
+    },
+    {
+      "name": "Operating_Physician_First_Name"
+    },
+    {
+      "name": "Operating_Physician_Middle_Name"
+    },
+    {
+      "name": "Operating_Physician_Name_Suffix"
+    },
+    {
+      "name": "Operating_Physician_Primary_Identifier"
+    },
+    {
+      "name": "Operating_Physician_Secondary_Identifier"
+    },
+    {
+      "name": "Other_Operating_Physician_Last_Name"
+    },
+    {
+      "name": "Other_Operating_Physician_First_Name"
+    },
+    {
+      "name": "Other_Operating_Physician_Middle_Name"
+    },
+    {
+      "name": "Other_Operating_Physician_Name_Suffix"
+    },
+    {
+      "name": "Other_Operating_Physician_Identifier"
+    },
+    {
+      "name": "Other_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Rendering_Provider_Last_Name"
+    },
+    {
+      "name": "Rendering_Provider_First_Name"
+    },
+    {
+      "name": "Rendering_Provider_Middle_Name"
+    },
+    {
+      "name": "Rendering_Provider_Name_Suffix"
+    },
+    {
+      "name": "Rendering_Provider_Identifier"
+    },
+    {
+      "name": "Rendering_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Laboratory_or_Facility_Name"
+    },
+    {
+      "name": "Laboratory_or_Facility_Primary_Identifier"
+    },
+    {
+      "name": "Laboratory_or_Facility_Address_Line"
+    },
+    {
+      "name": "Laboratory_or_Facility_Address_Line2"
+    },
+    {
+      "name": "Laboratory_or_Facility_City_Name"
+    },
+    {
+      "name": "Laboratory_or_Facility_State_or_Province_Code"
+    },
+    {
+      "name": "Laboratory_or_Facility_Postal_Zone_or_ZIP_Code"
+    },
+    {
+      "name": "Country_Code_Lab"
+    },
+    {
+      "name": "Laboratory_or_Facility_Secondary_Identifier"
+    },
+    {
+      "name": "Referring_Provider_Last_Name"
+    },
+    {
+      "name": "Referring_Provider_First_Name"
+    },
+    {
+      "name": "Referring_Provider_Middle_Name"
+    },
+    {
+      "name": "Referring_Provider_Name_Suffix"
+    },
+    {
+      "name": "Referring_Provider_Identifier"
+    },
+    {
+      "name": "Referring_Provider_Secondary_Identifier"
+    },
+    {
+      "name": "Date_of_Receipt",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Date_of_Adjudication",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Date_of_Payment",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Billing_Provider_In_or_Out_Network"
+    },
+    {
+      "name": "Living_Region_Code"
+    },
+    {
+      "name": "totalClaimChargeAmount"
+    },
+    {
+      "name": "claimAllowedAmount"
+    },
+    {
+      "name": "payersClaimPaymentAmount"
+    }
+  ]
+}

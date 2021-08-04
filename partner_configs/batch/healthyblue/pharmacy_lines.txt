@@ -1,0 +1,117 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "healthyblue/drop",
+  "fileNamePattern": "NCMT_RXENCLN_BCBS_CB_%s",
+  "partnerName": "Healthy Blue",
+  "tableName": "pharmacy_lines",
+  "delimiter": "|",
+  "datasource": "bcbsNC",
+  "header": "Transaction_Control_Number|Line_Number|Claim_Header_Status_Code|Line_Status_Code|Prescription_Number|Product_Service_Or_NDC_Code|Associated_Prescription_Service_Number|Associated_Prescription_Service_Date|Quantity_Dispensed|Fill_Number|Days_Supply|Compound_Code|Dispense_As_Written_or_Product_Selection_Code|Prescription_Written_Date|Unit_Dose_Indicator|Originally_Prescribed_Product_Service_Code|Level_Of_Service|Priori_Authorization_Number_Submitted|Dispensing_Status|Compound_Type|Prescribing_Provider_NPI|Prescribing_Provider_Last_Name|Prescribing_Provider_Phone_Number|Prescribing_Provider_First_Name|Prescribing_Provider_Address|Prescribing_Provider_City|Prescribing_Provider_State|Prescribing_Provider_Zip_Or_Postal_Code|Compound_Product_Or_NDC_Code|Compound_Ingredient_Basis_Of_Cost_Determination|Compound_Ingredient_Modifier_Code_Count|Total_Claim_Charge_Amount|Claim_Allowed_Amount|Payers_Claim_Payment_Amount",
+  "fields": [
+    {
+      "name": "Transaction_Control_Number",
+      "required": true
+    },
+    {
+      "name": "Line_Number"
+    },
+    {
+      "name": "Claim_Header_Status_Code"
+    },
+    {
+      "name": "Line_Status_Code"
+    },
+    {
+      "name": "Prescription_Number"
+    },
+    {
+      "name": "Product_Service_Or_NDC_Code"
+    },
+    {
+      "name": "Associated_Prescription_Service_Number"
+    },
+    {
+      "name": "Associated_Prescription_Service_Date"
+    },
+    {
+      "name": "Quantity_Dispensed"
+    },
+    {
+      "name": "Fill_Number"
+    },
+    {
+      "name": "Days_Supply"
+    },
+    {
+      "name": "Compound_Code"
+    },
+    {
+      "name": "Dispense_As_Written_or_Product_Selection_Code"
+    },
+    {
+      "name": "Prescription_Written_Date",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Unit_Dose_Indicator"
+    },
+    {
+      "name": "Originally_Prescribed_Product_Service_Code"
+    },
+    {
+      "name": "Level_Of_Service"
+    },
+    {
+      "name": "Priori_Authorization_Number_Submitted"
+    },
+    {
+      "name": "Dispensing_Status"
+    },
+    {
+      "name": "Compound_Type"
+    },
+    {
+      "name": "Prescribing_Provider_NPI"
+    },
+    {
+      "name": "Prescribing_Provider_Last_Name"
+    },
+    {
+      "name": "Prescribing_Provider_Phone_Number"
+    },
+    {
+      "name": "Prescribing_Provider_First_Name"
+    },
+    {
+      "name": "Prescribing_Provider_Address"
+    },
+    {
+      "name": "Prescribing_Provider_City"
+    },
+    {
+      "name": "Prescribing_Provider_State"
+    },
+    {
+      "name": "Prescribing_Provider_Zip_Or_Postal_Code"
+    },
+    {
+      "name": "Compound_Product_Or_NDC_Code"
+    },
+    {
+      "name": "Compound_Ingredient_Basis_Of_Cost_Determination"
+    },
+    {
+      "name": "Compound_Ingredient_Modifier_Code_Count"
+    },
+    {
+      "name": "Total_Claim_Charge_Amount"
+    },
+    {
+      "name": "Claim_Allowed_Amount"
+    },
+    {
+      "name": "Payers_Claim_Payment_Amount"
+    }
+  ]
+}

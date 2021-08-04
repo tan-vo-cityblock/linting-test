@@ -1,0 +1,243 @@
+
+# all reference data sources
+
+version: 2
+
+sources:
+
+  - name: abs_ref
+    description: Abs Reference Data
+    database: cityblock-analytics
+    schema: abs_reference
+
+    tables:
+      - name: abs_rxnorm_ndc_crosswalk
+
+  - name: cityblock_providers
+    description: List of cityblock providers by market
+    database: cityblock-analytics
+    schema: src_reference
+
+    tables:
+      - name: src_cityblock_providers_ct
+        tests:
+          - unique:
+              column_name: NPI
+              severity: warn
+      - name: src_cityblock_providers_ny
+        tests:
+          - unique:
+              column_name: NPI
+              severity: warn
+      - name: src_cityblock_providers_dc
+        tests:
+          - unique:
+              column_name: NPI
+              severity: warn
+      - name: src_cityblock_providers_oh
+        tests:
+          - unique:
+              column_name: NPI
+              severity: warn
+      - name: src_cityblock_providers_la
+        tests:
+          - unique:
+              column_name: NPI
+              severity: warn
+      - name: src_cityblock_providers_ma
+        tests:
+          - unique:
+              column_name: NPI
+              severity: warn
+      - name: src_cityblock_providers_term
+        tests:
+          - unique:
+              column_name: NPI
+              severity: warn
+
+  - name: codesets
+    description: Reference data
+    database: reference-data-199919
+    schema: codesets
+
+    tables:
+      - name: actuary_condition_codes
+      - name: CCI_NMI
+      - name: cci_icd10cm
+      - name: ccs_dx_icd10cm
+      - name: cms_icd10_descriptions
+      - name: hcc_2020
+      - name: hcc_acute_exclusion
+      - name: hcpcs
+      - name: hcpcs_full
+      - name: HCC_coeff_xwalk_v24
+      - name: hcc_coefficient_values
+      - name: hcc_hierarchies_xwalk
+      - name: hcc_lookback_periods
+      - name: hcc_rollup_2020
+      - name: icd10cm
+      - name: ICD10toHCCcrosswalk
+      - name: nucc_specialty_taxonomy_181
+      - name: payment_hcc_counts
+      - name: place_of_service
+      - name: revenue_codes
+      - name: ub04_bill_type
+      - name: ub04_discharge_status
+      - name: RASpecialtiesAcceptable
+      - name: risk_cpt_hcpcs_yr
+      - name: risk_hcc_coeffs
+      - name: risk_hcc_descript
+      - name: DemoFactorsMedAdvan
+        identifier: 2020DemoFactorsMedAdvan
+      - name: InteractionFactorsMedAdvan
+      - name: taxonomy_medicare_specialties
+
+  - name: hedis_codesets
+    description: Hedis Reference data
+    database: reference-data-199919
+    schema: hedis
+
+    tables:
+      - name: able_measure_name_ref
+      - name: vsd_value_set_to_code
+      - name: mld_med_list_to_ndc
+      - name: mld_med_list_to_ndc_2020
+      - name: cbh_metric_med_list
+      - name: cbh_metric_excluded_class
+      - name: cbh_metric_condition_slug
+
+  - name: code_maps
+    description: Reference code maps
+    database: reference-data-199919
+    schema: code_maps
+
+    tables:
+      - name: ndc_to_cf_map
+      - name: snomed_to_icd10
+      - name: icd9ToIcd10Pcs
+      - name: HCC_Groups_2020_v24
+
+  - name: claims_mappings
+    description: Claims mapping created for cu transformations
+    database: reference-data-199919
+    schema: claims_mappings
+
+    tables:
+      - name: cu_rev_codes
+      - name: cu_cpt_hcpcs
+      - name: cu_cpt_hcpcs_health_home
+      - name: cu_drg_codes
+      - name: cu_prvdr_spec_codes
+      - name: cu_pos_codes
+      - name: cu_dsch_stat_codes
+      - name: cu_type_of_bill
+      - name: cu_icd10_px_codes
+      - name: cu_icd10_dx_codes
+      - name: cu_rev_codes_room_board
+      - name: cu_partb_drugs
+      - name: cu_outpt_rev_codes
+      - name: cu_outpt_rev_codes_health_home
+      - name: provider_code_to_category
+      - name: code_to_nyu_asc_patched
+      - name: icdPcsSurg
+
+  - name: claims_descriptions
+    description: Claims descriptions created for claims self service
+    database: reference-data-199919
+    schema: claims_descriptions
+
+    tables:
+      - name: cpt_hcpcs_lo_cu_v1
+      - name: rev_codes_lo
+      - name: icd10_px_codes_lo
+      - name: prvdr_spec_codes_lo
+      - name: pos_codes_lo
+      - name: dsch_stat_codes_lo
+
+  - name: cdps
+    description: Codesets for the cdps risk adjustment algorithm
+    database: reference-data-199919
+    schema: cdps
+
+    tables:
+      - name: cdps_cat_descriptions
+      - name: cdps_cat_information
+      - name: cdps_group_order
+      - name: cdps_maps
+      - name: cdps_weights
+
+  - name: facility
+    description: Reference for HIE facilities
+    database: reference-data-199919
+    schema: facility
+
+    tables:
+      - name: facility_map
+
+  - name: ref_hcci
+    description: Codesets from HCCI
+    database: reference-data-199919
+    schema: ref_hcci
+
+    tables:
+      - name: ref_hcci_section_44
+
+
+  - name: nppes
+    description: Nppes Provider Data
+    database: reference-data-199919
+    schema: nppes
+
+    tables:
+      - name: npidata_20190512
+      - name: npidata_20210411
+
+  - name: rxnorm
+    description: Bigquery public Rxnorm tables. Note these omit several source vocabularies including ATC
+    database: bigquery-public-data
+    schema: nlm_rxnorm
+
+    tables:
+      - name: rxnrel_current
+      - name: rxnconso_current
+      - name: rxnsat_current
+
+  - name: geo_census_blockgroups
+    description: Bigquery public blockgroup geographies
+    database: bigquery-public-data
+    schema: geo_census_blockgroups
+
+    tables:
+      - name: us_blockgroups_national
+
+  - name: census_bureau_acs
+    description: Bigquery public ACS (American Community Survey) data
+    database: bigquery-public-data
+    schema: census_bureau_acs
+
+    tables:
+      - name: blockgroup_2018_5yr
+
+  - name: epa_historical_air_quality
+    description: Environmental Protection Agency (EPA) Air Quality data
+    database: bigquery-public-data
+    schema: epa_historical_air_quality
+
+    tables:
+      - name: pm25_frm_daily_summary
+
+  - name: broadstreet_adi
+    description: Broadstreet Area Deprivation Index
+    database: bigquery-public-data
+    schema: broadstreet_adi
+
+    tables:
+      - name: area_deprivation_index_by_census_block_group
+
+  - name: uploads
+    description: Data Analytics adhoc uploaded reference tables
+    database: cityblock-analytics
+    schema: uploads
+
+    tables:
+      - name: dc_medicaid_fee_schedule_cpt_hcpcs_mod_20201001

@@ -1,0 +1,2 @@
+
+{{ boolean_fields(slug="unstable-housing-assessment-one-year", all_conditions=True, condition_slugs=['acs-ip-or-unplanned-admits-two-or-acs-ed-visits-two', 'paid-amount-twelve-thousand-acute', 'unsafe-or-unstable-housing-one-year']) }}

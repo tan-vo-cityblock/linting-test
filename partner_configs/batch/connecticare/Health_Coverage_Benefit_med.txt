@@ -1,0 +1,173 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh-raw-transforms",
+  "prefixDir": "connecticare_facets/split_facets_files",
+  "fileNamePattern": "HealthCoverageBenefits_med_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "Health_Coverage_Benefit_med",
+  "delimiter": "|",
+  "header": "RecordType|Source_System_ID|Group_Level_1_ID|Group_Level_2_ID|Group_Level_3_ID|Subscriber_ID|Member_ID|Member_Suffix|Type|Benefit_Category|Embedded_Dental_Indicator|Embedded_Vision_Indicator|Embedded_Mental_Health_Indicator|Embedded_Pharmacy_Indicator|Benefit_ID|Product_Identifier|Family_Indicator|Eligibility_Type|Eligibility_Reason|Coverage_effective_date|Coverage_termination_date|Calendar_or_Contract_Year_Indicator|Eligibility_process_create_timestamp|Line_of_Business|Benefit_Description|Product_Description|Employer_Group_Type|Benefit_Option|Custom_ID_1|Custom_Val_1|Custom_Desc_1|Custom_ID_2|Custom_Val_2|Custom_Desc_2|Custom_ID_3|Custom_Val_3|Custom_Desc_3|Custom_ID_4|Custom_Val_4|Custom_Desc_4|Custom_ID_5|Custom_Val_5|Custom_Desc_5|Custom_ID_6|Custom_Val_6|Custom_Desc_6|Custom_ID_7|Custom_Val_7|Custom_Desc_7|Custom_ID_8|Custom_Val_8|Custom_Desc_8|_53",
+  "fields": [
+    {
+      "name": "RecordType"
+    },
+    {
+      "name": "Source_System_ID"
+    },
+    {
+      "name": "Group_Level_1_ID"
+    },
+    {
+      "name": "Group_Level_2_ID"  
+    },
+    {
+      "name": "Group_Level_3_ID"  
+    },
+    {
+      "name": "Subscriber_ID"
+    },
+    {
+      "name": "Member_ID",
+      "required": true
+
+    },
+    {
+      "name": "Member_Suffix"
+    },    
+    {
+      "name": "Type"
+    }, 
+    {
+      "name": "Benefit_Category"
+    },
+    {
+      "name": "Embedded_Dental_Indicator"
+    },
+    {
+      "name": "Embedded_Vision_Indicator"
+    },
+    {
+      "name": "Embedded_Mental_Health_Indicator"  
+    },
+    {
+      "name": "Embedded_Pharmacy_Indicator"  
+    },
+    {
+      "name": "Benefit_ID"
+    },
+    {
+      "name": "Product_Identifier"
+    },
+    {
+      "name": "Family_Indicator"
+    },    
+    {
+      "name": "Eligibility_Type"
+    },
+    {
+      "name": "Eligibility_Reason"
+    },    
+    {
+      "name": "Coverage_effective_date"
+    }, 
+    {
+      "name": "Coverage_termination_date"
+    },
+    {
+      "name": "Calendar_or_Contract_Year_Indicator"
+    },
+    {
+      "name": "Eligibility_process_create_timestamp"
+    },
+    {
+      "name": "Line_of_Business"  
+    },
+    {
+      "name": "Benefit_Description"  
+    },
+    {
+      "name": "Product_Description"
+    },
+    {
+      "name": "Employer_Group_Type"
+    },
+    {
+      "name": "Benefit_Option"
+    },    
+    {
+      "name": "Custom_ID_1"
+    },    
+    {
+      "name": "Custom_Val_1"
+    },   
+    {
+      "name": "Custom_Desc_1"
+    },
+    {
+      "name": "Custom_ID_2"
+    },
+    {
+      "name": "Custom_Val_2"
+    },
+    {
+      "name": "Custom_Desc_2"  
+    },
+    {
+      "name": "Custom_ID_3"  
+    },
+    {
+      "name": "Custom_Val_3"
+    },
+    {
+      "name": "Custom_Desc_3"
+    },
+    {
+      "name": "Custom_ID_4"  
+    },
+    {
+      "name": "Custom_Val_4"
+    },
+    {
+      "name": "Custom_Desc_4"
+    },
+    {
+      "name": "Custom_ID_5"
+    },
+    {
+      "name": "Custom_Val_5"  
+    },
+    {
+      "name": "Custom_Desc_5"  
+    },
+    {
+      "name": "Custom_ID_6"
+    },
+    {
+      "name": "Custom_Val_6"
+    },
+    {
+      "name": "Custom_Desc_6"
+    },    
+    {
+      "name": "Custom_ID_7"
+    },
+    {
+      "name": "Custom_Val_7"
+    },
+    {
+      "name": "Custom_Desc_7"  
+    },
+    {
+      "name": "Custom_ID_8"  
+    },
+    {
+      "name": "Custom_Val_8"
+    },
+    {
+      "name": "Custom_Desc_8"
+    },
+    {
+      "name": "_53"
+    }
+  ]
+}

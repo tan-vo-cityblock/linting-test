@@ -1,0 +1,15 @@
+
+version: 2
+
+models:
+  
+  - name: latest_rating_category
+    description: "\n
+    Author:  Andrew Seiden
+    Purpose: Identify latest rating category by member\n
+    "
+    columns:
+      - name: patientId
+        tests:
+          - unique
+      - name: category

@@ -1,0 +1,16 @@
+version: 2
+
+seeds:
+  - name: dta_medical_chronic_condition_exclusions
+    description: Diagnosis codes and groupers excluded from chronic condition counts
+
+  - name: dta_medical_mapped_note_types
+    description: Maps similar `noteType` values from various sources to shared `mappedType` values
+    columns:
+      - name: noteType
+        tests:
+          - unique
+          - not_null
+      - name: mappedType
+        tests:
+          - not_null

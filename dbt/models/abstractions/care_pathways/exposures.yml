@@ -1,0 +1,15 @@
+version: 2
+
+exposures:
+  - name: abs_care_pathway_dismissals
+    type: dashboard
+    maturity: low
+    url: https://cityblock.looker.com/explore/care_pathways/abs_care_pathway_dismissals
+    description: Pathway suggestion dismissal Explore, joining member and user information based on identifiers
+
+    depends_on:
+      - ref('abs_care_pathway_dismissals')
+
+    owner:
+      name: Katie Claiborne
+      email: katie.claiborne@cityblock.com

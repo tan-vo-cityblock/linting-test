@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: abs_toc_followups
+    description: "\n
+    Author:  Katie Claiborne\n
+    Purpose: Combine outreach attempts, member interactions, and screening tool submissions into common schema\n
+    "
+    columns:
+      - name: followUpId
+      - name: followUpSource
+      - name: patientId
+      - name: followUpUserId
+      - name: followUpAt
+      - name: followUpModality
+      - name: isTocFollowUp
+        description: Flag for follow-ups designated as transition-of-care
+      - name: followUpOutcome
+      - name: followUpType
+      - name: followUpRecipient

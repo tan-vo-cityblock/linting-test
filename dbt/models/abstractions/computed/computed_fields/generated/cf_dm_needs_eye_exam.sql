@@ -1,0 +1,2 @@
+
+{{ test_absence(slug="dm-needs-eye-exam", condition_slugs=['has-diabetes'], test_slugs=['diabetic-retinal-screening', 'diabetic-retinal-screening-dm-wo-comp', 'diabetic-retinal-screening-negative', 'diabetic-retinal-screening-negative-prior', 'diabetic-retinal-screening-w-eye-care-professional']) }}

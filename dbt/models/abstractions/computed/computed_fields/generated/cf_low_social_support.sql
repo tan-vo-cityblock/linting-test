@@ -1,0 +1,2 @@
+
+{{ sdoh_presence(slug="low-social-support", optional_question_answer_list=[['backup-contact-that-can-reach-you', ['no']], ['who-do-you-live-with', ['i-live-alone']], ['how-often-do-you-see-or-talk-to-people-that-that-you-care-about-and-feel-close-to', ['less-than-once-a-week']], ['how-often-stayed-inside-residence-because-health-problem', ['a-lot']], ['in-the-past-week-how-often-have-you-taken-part-in-social-religious-or-recreation-activities', ['none']], ['is-there-anyone-you-can-really-count-on-when-you-need-help', ['no']]]) }}

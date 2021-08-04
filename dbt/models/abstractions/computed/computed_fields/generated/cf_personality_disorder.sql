@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="personality-disorder", period="2 YEAR", icd_diagnoses=['F21', 'F340', 'F600', 'F601', 'F602', 'F603', 'F604', 'F605', 'F606', 'F607', 'F6081', 'F6089', 'F609', 'F6810', 'F6811', 'F6812', 'F6813', 'F69']) }}

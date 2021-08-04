@@ -1,0 +1,322 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/example:latest",
+      "-t", "gcr.io/$PROJECT_ID/example:$SHORT_SHA",
+       "."
+    ]
+    dir: "containers/example"
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    id: python-base-pull
+    entrypoint: "/bin/bash"
+    args:
+      - "-c"
+      - |
+        docker pull ${_IMAGE_PREFIX}/python-base:${_LATEST} || exit 0
+    waitFor: [-]
+  - name: "gcr.io/cloud-builders/docker"
+    id: python-base-build
+    args: [
+      "build",
+      "-t", "${_IMAGE_PREFIX}/python-base:${_LATEST}",
+      "-t", "${_IMAGE_PREFIX}/python-base:$SHORT_SHA",
+      '--cache-from', '${_IMAGE_PREFIX}/python-base:${_LATEST}',
+      "."
+    ]
+    dir: "containers/python-base"
+    waitFor:
+      - python-base-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: sms-response-required-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/sms-response-required:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/sms-response-required:latest",
+      "-t", "gcr.io/$PROJECT_ID/sms-response-required:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/sms-response-required:latest',
+      "."
+    ]
+    dir: "containers/sms-response-required"
+    waitFor:
+      - sms-response-required-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: load_monthly_data_pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/load_monthly_data:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/load_monthly_data:latest",
+      "-t", "gcr.io/$PROJECT_ID/load_monthly_data:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/load_monthly_data:latest',
+      "."
+    ]
+    dir: "containers/load_monthly_data"
+    waitFor:
+      - load_monthly_data_pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: ablehealth-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull ${_IMAGE_PREFIX}/ablehealth:${_LATEST} || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "${_IMAGE_PREFIX}/ablehealth:${_LATEST}",
+      "-t", "${_IMAGE_PREFIX}/ablehealth:$SHORT_SHA",
+      '--cache-from', "${_IMAGE_PREFIX}/ablehealth:${_LATEST}",
+      "."
+    ]
+    dir: "containers/ablehealth"
+    waitFor:
+      - python-base-build
+      - ablehealth-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: cloud-sql-to-bq-mirroring-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/cloud-sql-to-bq-mirroring:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/cloud-sql-to-bq-mirroring:latest",
+      "-t", "gcr.io/$PROJECT_ID/cloud-sql-to-bq-mirroring:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/cloud-sql-to-bq-mirroring:latest',
+      "."
+    ]
+    dir: "containers/cloud-sql-to-bq-mirroring"
+    waitFor:
+      - cloud-sql-to-bq-mirroring-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: commons-to-bq-mirroring-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/commons-to-bq-mirroring:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/commons-to-bq-mirroring:latest",
+      "-t", "gcr.io/$PROJECT_ID/commons-to-bq-mirroring:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/commons-to-bq-mirroring:latest',
+      "."
+    ]
+    dir: "containers/commons-to-bq-mirroring"
+    waitFor:
+      - commons-to-bq-mirroring-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: qreviews-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/qreviews:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/qreviews:latest",
+      "-t", "gcr.io/$PROJECT_ID/qreviews:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/qreviews:latest',
+      "."
+    ]
+    dir: "containers/qreviews"
+    waitFor:
+      - qreviews-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: commons-aptible-ssh-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/commons-aptible-ssh:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/commons-aptible-ssh:latest",
+      "-t", "gcr.io/$PROJECT_ID/commons-aptible-ssh:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/commons-aptible-ssh:latest',
+      "."
+    ]
+    dir: "containers/commons-aptible-ssh"
+    waitFor:
+      - commons-aptible-ssh-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: dbt-base-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/dbt-base:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/dbt-base:latest",
+      "-t", "gcr.io/$PROJECT_ID/dbt-base:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/dbt-base:latest',
+      "."
+    ]
+    dir: "containers/dbt-base"
+    waitFor:
+      - dbt-base-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: elation-utils-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/$PROJECT_ID/elation-utils:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "gcr.io/$PROJECT_ID/elation-utils:latest",
+      "-t", "gcr.io/$PROJECT_ID/elation-utils:$SHORT_SHA",
+      '--cache-from', 'gcr.io/$PROJECT_ID/elation-utils:latest',
+      "."
+    ]
+    dir: "containers/elation-utils"
+    waitFor:
+      - elation-utils-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: elation-to-s3-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull us.gcr.io/$PROJECT_ID/elation-to-s3:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "us.gcr.io/$PROJECT_ID/elation-to-s3:latest",
+      "-t", "us.gcr.io/$PROJECT_ID/elation-to-s3:$SHORT_SHA",
+      '--cache-from', 'us.gcr.io/$PROJECT_ID/elation-to-s3:latest',
+      "."
+    ]
+    dir: "containers/elation-to-s3"
+    waitFor:
+      - elation-to-s3-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: slo-tools-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull us.gcr.io/$PROJECT_ID/slo-tools:latest || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "us.gcr.io/$PROJECT_ID/slo-tools:latest",
+      "-t", "us.gcr.io/$PROJECT_ID/slo-tools:$SHORT_SHA",
+      '--cache-from', 'us.gcr.io/$PROJECT_ID/slo-tools:latest',
+      "."
+    ]
+    dir: "containers/slo-tools"
+    waitFor:
+      - slo-tools-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: zendesk-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull ${_IMAGE_PREFIX}/zendesk:${_LATEST} || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+      "build",
+      "-t", "${_IMAGE_PREFIX}/zendesk:${_LATEST}",
+      "-t", "${_IMAGE_PREFIX}/zendesk:$SHORT_SHA",
+      '--cache-from', "${_IMAGE_PREFIX}/zendesk:${_LATEST}",
+      "."
+    ]
+    dir: "containers/zendesk"
+    waitFor:
+      - python-base-build
+      - zendesk-pull
+  - name: "gcr.io/cloud-builders/docker"
+    id: draftjs-transformer-pull
+    entrypoint: "/bin/bash"
+    args:
+      - '-c'
+      - |
+        docker pull ${_IMAGE_PREFIX}/draftjs-transformer:${_LATEST} || exit 0
+    waitFor: ['-']
+  - name: "gcr.io/cloud-builders/docker"
+    id: draftjs-transformer-build
+    args: [
+      "build",
+      "-t", "${_IMAGE_PREFIX}/draftjs-transformer:${_LATEST}",
+      "-t", "${_IMAGE_PREFIX}/draftjs-transformer:$SHORT_SHA",
+      '--cache-from', "${_IMAGE_PREFIX}/draftjs-transformer:${_LATEST}",
+      "."
+    ]
+    dir: "containers/draftjs-transformer"
+    waitFor:
+      - draftjs-transformer-pull
+substitutions:
+  _IMAGE_PREFIX: us.gcr.io/cityblock-data
+  _LATEST: latest
+
+images: [
+  "gcr.io/$PROJECT_ID/example:latest",
+  "gcr.io/$PROJECT_ID/example:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/sms-response-required:latest",
+  "gcr.io/$PROJECT_ID/sms-response-required:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/load_monthly_data:latest",
+  "gcr.io/$PROJECT_ID/load_monthly_data:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/cloud-sql-to-bq-mirroring:latest",
+  "gcr.io/$PROJECT_ID/cloud-sql-to-bq-mirroring:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/commons-to-bq-mirroring:latest",
+  "gcr.io/$PROJECT_ID/commons-to-bq-mirroring:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/qreviews:latest",
+  "gcr.io/$PROJECT_ID/qreviews:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/commons-aptible-ssh:latest",
+  "gcr.io/$PROJECT_ID/commons-aptible-ssh:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/dbt-base:latest",
+  "gcr.io/$PROJECT_ID/dbt-base:$SHORT_SHA",
+  "gcr.io/$PROJECT_ID/elation-utils:latest",
+  "gcr.io/$PROJECT_ID/elation-utils:$SHORT_SHA",
+  "us.gcr.io/$PROJECT_ID/elation-to-s3:latest",
+  "us.gcr.io/$PROJECT_ID/elation-to-s3:$SHORT_SHA",
+  "us.gcr.io/$PROJECT_ID/slo-tools:latest",
+  "us.gcr.io/$PROJECT_ID/slo-tools:$SHORT_SHA",
+  "${_IMAGE_PREFIX}/python-base:${_LATEST}",
+  "${_IMAGE_PREFIX}/python-base:$SHORT_SHA",
+  "${_IMAGE_PREFIX}/ablehealth:${_LATEST}",
+  "${_IMAGE_PREFIX}/ablehealth:$SHORT_SHA",
+  "${_IMAGE_PREFIX}/zendesk:${_LATEST}",
+  "${_IMAGE_PREFIX}/zendesk:$SHORT_SHA",
+  "${_IMAGE_PREFIX}/draftjs-transformer:${_LATEST}",
+  "${_IMAGE_PREFIX}/draftjs-transformer:$SHORT_SHA",
+]
+options:
+  # helps with concurrency (more cores ~ more parallelization)
+  machineType: 'N1_HIGHCPU_8'
+# 60 minutes is a long enough time to build all these images
+timeout: 3600s
+logsBucket: gs://cbh-cloud-build-logs/container-building

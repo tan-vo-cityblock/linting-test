@@ -1,0 +1,2 @@
+
+{{ condition_acuity(slug="diabetes-a-1-c", primary_condition_slug="has-diabetes", acuity_slug="a-1-c-level", check_test_slug="check-a-1-c", need_test_slug="needs-a-1-c", need_test_value="need-a-1-c") }}

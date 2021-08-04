@@ -1,0 +1,112 @@
+{
+    "fileType": "csv",
+    "sourceBucket": "cbh_sftp_drop",
+    "prefixDir": "tufts_production/drop",
+    "fileNamePattern": "CBUNIFY_NEWADMITS_F_%s.txt",
+    "partnerName": "tufts",
+    "tableName": "NewAdmits",
+    "indexJoinField": "Member_ID",
+    "datasource": "tufts",
+    "delimiter": "\t",
+    "header": "Member_Name\tMember_ID\tDate_of_Birth\tBusiness\tRating_Category\tPCP_NPI\tPCP_Name\tPCP_Practice_Site\tAdmitting_Provider_Name\tAdmitting_Hospital\tInpatient_Notification_ID\tAdmit_Status\tAdmission_Type\tAdmission_Class_Name\tPrimary_Admission_Diag\tAdmission_Diagnosis_Description\tAdmitting_Procedure_Description\tAdmission_Date\tTotal_Auth_Days\tAuth_Thru_Date\tDDS_Affiliated\tDMH_Affliliated\tDCF_Affiliated\tDYS_Affiliated\tAdmissions_Last_6_Months\tClinical_Stratification_Score\tCARE_MANAGER\tAssigned_CP\tAdmission_Source\tACTUAL_DISCHARGE_DATE\tUNIFY_CASE_MANAGER",
+    "fields": [
+        {
+        "name": "Member_Name"
+	},
+        {
+        "name": "Member_ID",
+        "required": true
+	},
+        {
+        "name": "Date_of_Birth",
+	"fieldType": "DATE"
+	},
+        {
+        "name": "Business"
+	},
+        {
+        "name": "Rating_Category"
+	},
+        {
+        "name": "PCP_NPI"
+	},
+        {
+        "name": "PCP_Name"
+	},
+        {
+        "name": "PCP_Practice_Site"
+	},
+        {
+        "name": "Admitting_Provider_Name"
+	},
+        {
+        "name": "Admitting_Hospital"
+	},
+        {
+        "name": "Inpatient_Notification_ID"
+	},
+        {
+        "name": "Admit_Status"
+	},
+        {
+        "name": "Admission_Type"
+	},
+        {
+        "name": "Admission_Class_Name"
+	},
+        {
+        "name": "Primary_Admission_Diag"
+	},
+        {
+        "name": "Admission_Diagnosis_Description"
+	},
+        {
+        "name": "Admitting_Procedure_Description"
+	},
+        {
+        "name": "Admission_Date",
+	"fieldType": "DATE"
+	},
+        {
+        "name": "Total_Auth_Days"
+	},
+        {
+        "name": "Auth_Thru_Date",
+	"fieldType": "DATE"
+	},
+        {
+        "name": "DDS_Affiliated"
+	},
+        {
+        "name": "DMH_Affliliated"
+	},
+        {
+        "name": "DCF_Affiliated"
+	},
+        {
+        "name": "DYS_Affiliated"
+	},
+        {
+        "name": "Admissions_Last_6_Months"
+	},
+        {
+        "name": "Clinical_Stratification_Score"
+	},
+        {
+        "name": "CARE_MANAGER"
+	},
+        {
+        "name": "Assigned_CP"
+	},
+        {
+        "name": "Admission_Source"
+	},
+        {
+        "name": "ACTUAL_DISCHARGE_DATE",
+	"fieldType": "DATE"
+	},
+        {
+        "name": "UNIFY_CASE_MANAGER"
+	}
+    ]
+}

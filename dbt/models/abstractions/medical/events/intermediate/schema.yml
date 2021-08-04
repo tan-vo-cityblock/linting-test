@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_patient_hie_events
+    description: Stages member HIE events for transitions of care union
+    columns:
+      - name: id
+        description: Unique identifier based on combination of `patientId`, `visitId`, `eventType`, and `visitType`
+        tests:
+          - unique
+          - not_null
+      - name: eventSource
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['hie']
+      - name: patientId
+        tests:
+          - not_null
+      - name: visitId
+        tests:
+          - not_null
+      - name: facilityType
+      - name: visitType
+        tests:
+          - not_null
+      - name: eventType
+        tests:
+          - not_null
+      - name: locationName
+      - name: eventAt
+      - name: eventReceivedAt
+        tests:
+          - not_null
+      - name: dx
+      - name: covidLabResult
+
+  - name: stg_prior_auth_events
+    description: Stages member prior authorizations for transitions of care union
+    columns:
+      - name: id
+        description: Unique identifier based on combination of `patientId` and `authorizationId`
+        tests:
+          - unique
+          - not_null
+      - name: eventSource
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['prior auth']
+      - name: patientId
+      - name: visitId
+      - name: facilityType
+      - name: visitType
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Inpatient']
+      - name: eventType
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Admit']
+      - name: locationName
+      - name: eventAt
+      - name: eventReceivedAt
+      - name: dx
+      - name: covidLabResult

@@ -1,0 +1,205 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "Medical_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "Medical",
+  "delimiter": "|",
+  "indexJoinField": "NMI",
+  "dataFieldName": "medical",
+  "header": "Partnership_Current|NMI|NMI_Sub|LOB1|LOB2|Age|Gender|GrpNum|DivNum|BenPack|COCLevel1|COCLevel2|ClmNum|ClmServNum|ClaimType|PCP_Num|PCP_AffNum|PCP_NPI|PCP_TIN|ServProvNum|ServProvAffNum|ServProvNPI|ServProvTIN|ServProvSpec1|ServProvClass|ServProvCat|RefProvNum|RefProvAffNum|RefProvNPI|RefProvTIN|DateEff|DateEnd|DateAdmit|DateDischarge|DatePaid|Proc1|Proc1Type|Location|Modifer1|Modifier2|DRG|MDC|AdmitType|DischargeStatus|PaymentStatus_NetworkInOut|ERAvoid_Flag|InptFac_Acute_SubAcute|Qty|Days|AmtCharge|AmtAllow|AmtCoins|AmtCopay|AmtDeduct|AmtPay|Explain1|Explain2|Proc2|Proc2Type|BillTypeCd|CareCentrix",
+  "fields": [
+    {
+      "name": "Partnership_Current"
+    },
+    {
+      "name": "NMI",
+      "required": true
+    },
+    {
+      "name": "NMI_Sub"
+    },
+    {
+      "name": "LOB1"
+    },
+    {
+      "name": "LOB2"
+    },
+    {
+      "name": "Age"
+    },
+    {
+      "name": "Gender"
+    },
+    {
+      "name": "GrpNum"
+    },
+    {
+      "name": "DivNum"
+    },
+    {
+      "name": "BenPack"
+    },
+    {
+      "name": "COCLevel1"
+    },
+    {
+      "name": "COCLevel2"
+    },
+    {
+      "name": "ClmNum",
+      "required": true
+    },
+    {
+      "name": "ClmServNum",
+      "required": true
+    },
+    {
+      "name": "ClaimType"
+    },
+    {
+      "name": "PCP_Num"
+    },
+    {
+      "name": "PCP_AffNum"
+    },
+    {
+      "name": "PCP_NPI"
+    },
+    {
+      "name": "PCP_TIN"
+    },
+    {
+      "name": "ServProvNum"
+    },
+    {
+      "name": "ServProvAffNum"
+    },
+    {
+      "name": "ServProvNPI"
+    },
+    {
+      "name": "ServProvTIN"
+    },
+    {
+      "name": "ServProvSpec1"
+    },
+    {
+      "name": "ServProvClass"
+    },
+    {
+      "name": "ServProvCat"
+    },
+    {
+      "name": "RefProvNum"
+    },
+    {
+      "name": "RefProvAffNum"
+    },
+    {
+      "name": "RefProvNPI"
+    },
+    {
+      "name": "RefProvTIN"
+    },
+    {
+      "name": "DateEff",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "DateEnd",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "DateAdmit",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "DateDischarge",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "DatePaid",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "Proc1"
+    },
+    {
+      "name": "Proc1Type"
+    },
+    {
+      "name": "Location"
+    },
+    {
+      "name": "Modifer1"
+    },
+    {
+      "name": "Modifier2"
+    },
+    {
+      "name": "DRG"
+    },
+    {
+      "name": "MDC"
+    },
+    {
+      "name": "AdmitType"
+    },
+    {
+      "name": "DischargeStatus"
+    },
+    {
+      "name": "PaymentStatus_NetworkInOut"
+    },
+    {
+      "name": "ERAvoid_Flag"
+    },
+    {
+      "name": "InptFac_Acute_SubAcute"
+    },
+    {
+      "name": "Qty"
+    },
+    {
+      "name": "Days"
+    },
+    {
+      "name": "AmtCharge"
+    },
+    {
+      "name": "AmtAllow"
+    },
+    {
+      "name": "AmtCoins"
+    },
+    {
+      "name": "AmtCopay"
+    },
+    {
+      "name": "AmtDeduct"
+    },
+    {
+      "name": "AmtPay"
+    },
+    {
+      "name": "Explain1"
+    },
+    {
+      "name": "Explain2"
+    },
+    {
+      "name": "Proc2"
+    },
+    {
+      "name": "Proc2Type"
+    },
+    {
+      "name": "BillTypeCd"
+    },
+    {
+      "name": "CareCentrix"
+    }
+  ]
+}

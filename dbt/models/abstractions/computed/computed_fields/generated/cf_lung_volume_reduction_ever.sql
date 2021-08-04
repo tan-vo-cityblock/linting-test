@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="lung-volume-reduction-ever", period="100 year", procedure_codes=['32491', '32672', 'G0302', 'G0303', 'G0304', 'G0305', '0BBC0ZZ', '0BBC4ZZ', '0BBD0ZZ', '0BBD4ZZ', '0BBF0ZZ', '0BBF4ZZ', '0BBG0ZZ', '0BBG4ZZ', '0BBH0ZZ', '0BBH4ZZ', '0BBJ0ZZ', '0BBJ4ZZ', '0BBK0ZZ', '0BBK4ZZ', '0BBL0ZZ', '0BBL4ZZ', '0BBM0ZZ', '0BBM4ZZ']) }}

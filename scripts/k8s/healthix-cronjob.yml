@@ -1,0 +1,29 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: healthix-consent-transfer
+spec:
+  schedule: "5 0 * * *"
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 1800
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: healthix-consent-transfer
+              image: gcr.io/cityblock-data/mixer-scripts
+              command: ["./healthix_consent_transfer.rb"]
+              env:
+                - name: HEALTHIX_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: healthix-consent-export-credentials
+                      key: healthix_password
+                - name: GOOGLE_CLOUD_CREDENTIALS
+                  valueFrom:
+                    secretKeyRef:
+                      name: healthix-consent-export-credentials
+                      key: key.json
+          restartPolicy: Never
+      backoffLimit: 10

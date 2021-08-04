@@ -1,0 +1,93 @@
+
+version: 2
+
+models:
+  - name: xpt_complex_care_mgmt_all
+    description: "\n
+    Display input fields for Complex Care Management for all members, regardless of whether they met the criteria:\n
+    https://docs.google.com/document/d/1aYQBAhscahei99mbOIGdh_f1wxvn5O0bPtqMYYPoax0\n
+    "
+    columns:
+      - name: firstName
+      - name: lastName
+      - name: commonsId
+        tests:
+          - unique
+      - name: currentState
+      - name: consentDate
+      - name: cohortName
+      - name: partnerName
+      - name: marketName
+      - name: currentCareModel
+      - name: complex_care_management
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+      - name: complex_care_management_one_required
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+      - name: age_65_or_older
+      - name: ed_visits_three
+      - name: ip_bh_admits_two
+      - name: paid_amount_eighteen_thousand
+      - name: polypharmacy
+      - name: spinal_cord_disorders_hcc_two_years
+      - name: unstable_housing_assessment_one_year
+      - name: complex_care_management_two_required
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+      - name: hiv_aids_hcc_two_year
+      - name: dementia_w_comp_hcc_two_year
+      - name: parkinsons_or_huntingtons_hcc_two_year
+      - name: end_stage_liver_disease_cirrhosis_hcc_two_year
+      - name: stroke_hcc_two_year
+      - name: asthma_two_year
+      - name: specified_heart_arrhythmias_hcc_two_year
+      - name: heart_failure
+      - name: coronary_artery_disease
+      - name: ckd_esrd_hcc_two_year
+      - name: copd
+      - name: chronic_pancreatitis_hcc_two_year
+      - name: cystic_fibrosis_hcc_two_year
+      - name: als_cp_muscular_dystrophy_hcc_two_year
+      - name: multiple_sclerosis_hcc_two_year
+      - name: morbid_obesity_hcc_two_year
+      - name: has_diabetes
+      - name: cancer_hcc_two_year
+      - name: vascular_disease_hcc_two_year
+      - name: post_organ_transplant_hcc_two_year
+      - name: pressure_ulcer_stage_three_four_hcc_two_year
+      - name: respiratory_failure_hcc_two_year
+      - name: sickle_cell_disease_two_year
+      - name: severe_head_injury_hcc_two_year
+      - name: schizophrenia_hcc_two_year
+      - name: major_depressive_hcc_two_year
+      - name: substance_abuse_hcc_two_year
+
+  - name: xpt_complex_care_mgmt
+    description: "\n
+    Display input fields for members meeting Complex Care Management criteria, excludes disenrolled members and emblem medicaid virtual members:\n
+    https://docs.google.com/document/d/1aYQBAhscahei99mbOIGdh_f1wxvn5O0bPtqMYYPoax0\n
+    "
+    columns:
+      - name: commonsId
+        tests:
+          - unique
+      - name: currentState
+        description: Disenrolled members are excluded
+      - name: cohortName
+        description: Emblem virtual members are excluded
+      - name: complex_care_management
+        tests:
+          - accepted_values:
+              values: ['true']
+      - name: complex_care_management_one_required
+        tests:
+          - accepted_values:
+              values: ['true']
+      - name: complex_care_management_two_required
+        tests:
+          - accepted_values:
+              values: ['true']

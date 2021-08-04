@@ -1,0 +1,253 @@
+{
+  "InsurancesText": "",
+  "Insurances": [],
+  "Header": {
+    "Document": {
+      "Visit": {
+        "Location": {
+          "Facility": "CASTLE BLACK",
+          "Department": "CITYBLOCK SNOW",
+          "Room": "Cityblock Internal Med",
+          "Type": "Internal Medicine"
+        },
+        "VisitNumber": "230555555",
+        "EndDateTime": "2020-03-26T18:31:44.000Z",
+        "StartDateTime": "2020-03-26T16:56:02.000Z"
+      },
+      "ID": "1.2.840.114350.1.13.400.2.7.8.999999.15603440",
+      "Type": "Subsequent evaluation note",
+      "DateTime": "2020-05-14T19:49:58.000Z",
+      "Title": "Encounter Summary",
+      "Locale": "US"
+    },
+    "Patient": {
+      "Demographics": {
+        "MaritalStatus": "Single",
+        "Religion": "",
+        "Ethnicity": "Not hispanic or latino",
+        "Race": "Blue",
+        "Address": {
+          "County": "",
+          "ZIP": "11111",
+          "Country": "USA",
+          "State": "NY",
+          "City": "KINGDOM OF THE NORTH",
+          "StreetAddress": "1 SANZA PALACE"
+        },
+        "Sex": "Female",
+        "SSN": "",
+        "DOB": "1999-09-19",
+        "EmailAddresses": [
+          {
+            "Address": "test@gmail.com"
+          }
+        ],
+        "PhoneNumber": {
+          "Mobile": "+19998887777",
+          "Office": "",
+          "Home": "+19998887777"
+        },
+        "LastName": "Stark",
+        "FirstName": "Sanza"
+      },
+      "Identifiers": [
+        {
+          "IDType": "1.2.840.114350.1.13.444.2.7.3.688884.100",
+          "ID": "ACP9999999"
+        }
+      ]
+    }
+  },
+  "VitalSignsText": "",
+  "VitalSigns": [],
+  "SocialHistoryText": "<table><colgroup><col width=\"25%\" span=\"2\"/><col width=\"13%\"/><col width=\"12%\"/><col width=\"25%\"/></colgroup><thead><tr><th>Tobacco Use</th><th>Types</th><th>Packs/Day</th><th>Years Used</th><th>Date</th></tr></thead><tbody><tr><td>Former Smoker</td><td/><td>7</td><td>7</td><td/></tr><tr><td>Smokeless Tobacco: Former User</td><td/><td colspan=\"2\"/><td/></tr></tbody></table><table><colgroup><col width=\"25%\" span=\"4\"/></colgroup><thead><tr><th>Alcohol Use</th><th>Drinks/Week</th><th>oz/Week</th><th>Comments</th></tr></thead><tbody><tr><td ID=\"alcoholStatus\">No</td><td><paragraph>1 Glasses of wine</paragraph></td><td>1.0</td><td/></tr></tbody></table><table><colgroup><col width=\"50%\"/><col width=\"30%\"/><col width=\"20%\"/></colgroup><thead><tr><th>Education</th><th>Answer</th><th>Date Recorded</th></tr></thead><tbody><tr><td>What is the highest level of school you have completed or the highest degree you have received?</td><td>Some college, no degree</td><td>08/28/2018</td></tr></tbody></table><table><colgroup><col width=\"50%\"/><col width=\"30%\"/><col width=\"20%\"/></colgroup><thead><tr><th>Financial Resource Strain</th><th>Answer</th><th>Date Recorded</th></tr></thead><tbody><tr><td>How hard is it for you to pay for the very basics like food, housing, medical care, and heating?</td><td>Not hard at all</td><td>08/28/2018</td></tr></tbody></table><table><colgroup><col width=\"50%\"/><col width=\"30%\"/><col width=\"20%\"/></colgroup><thead><tr><th>Food Insecurity</th><th>Answer</th><th>Date Recorded</th></tr></thead><tbody><tr><td>Within the past 12 months, you worried that your food would run out before you got money to buy more.</td><td>Never true</td><td>08/28/2018</td></tr><tr><td>Within the past 12 months, the food you bought just didn't last and you didn't have money to get more.</td><td>Not asked</td><td/></tr></tbody></table><table><colgroup><col width=\"50%\"/><col width=\"30%\"/><col width=\"20%\"/></colgroup><thead><tr><th>Transportation Needs</th><th>Answer</th><th>Date Recorded</th></tr></thead><tbody><tr><td>In the past 12 months, has lack of transportation kept you from medical appointments or from getting medications?</td><td>No</td><td>08/28/2018</td></tr><tr><td>In the past 12 months, has lack of transportation kept you from meetings, work, or getting things needed for daily living?</td><td>Not asked</td><td/></tr></tbody></table><table><colgroup><col width=\"25%\"/><col width=\"75%\"/></colgroup><thead><tr><th>Sex Assigned at Birth</th><th>Date Recorded</th></tr></thead><tbody><tr ID=\"BirthSex7\"><td ID=\"BirthSex7Value\">Not on file</td><td/></tr></tbody></table><table><colgroup><col width=\"25%\" span=\"2\"/><col width=\"50%\"/></colgroup><thead><tr><th>Job Start Date</th><th>Occupation</th><th>Industry</th></tr></thead><tbody><tr><td>Not on file</td><td ID=\"sochist8\">Not on file</td><td ID=\"sochist9\">Not on file</td></tr></tbody></table><table><colgroup><col width=\"50%\"/><col width=\"25%\" span=\"2\"/></colgroup><thead><tr><th>Travel History</th><th>Travel Start</th><th>Travel End</th></tr></thead><tbody><tr><td>No recent travel history available.</td></tr></tbody></table><footnote ID=\"subTitle5\" styleCode=\"xSectionSubTitle\">documented as of this encounter</footnote>",
+  "SocialHistory": {
+    "TobaccoUse": [
+      {
+        "EndDate": "",
+        "StartDate": "2019-12-06",
+        "IsSmokingStatus": true,
+        "CodeSystemName": "SNOMED CT",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Former smoker",
+        "Code": "8517006"
+      }
+    ],
+    "Pregnancy": [],
+    "Observations": [
+      {
+        "EndDate": "",
+        "StartDate": "2019-12-06",
+        "Value": "",
+        "ValueText": "",
+        "CodeSystemName": "LOINC",
+        "CodeSystem": "2.16.840.1.113883.6.1",
+        "Name": "Cigarettes smoked current (pack per day) - Reported",
+        "Code": "8663-7"
+      },
+      {
+        "EndDate": "",
+        "StartDate": "2019-12-06",
+        "Value": "",
+        "ValueText": "",
+        "CodeSystemName": "SNOMED CT",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Cigarette pack-years",
+        "Code": "401201003"
+      },
+      {
+        "EndDate": "",
+        "StartDate": "2019-12-06",
+        "Value": "",
+        "ValueText": "",
+        "CodeSystemName": "SNOMED CT",
+        "CodeSystem": "2.16.840.1.113883.6.96",
+        "Name": "Alcohol intake",
+        "Code": "160573003"
+      }
+    ]
+  },
+  "ReviewOfSystemsText": "",
+  "ResultText": "",
+  "Results": [],
+  "ReasonForReferralText": "",
+  "ProceduresText": "",
+  "Procedures": {
+    "Services": [],
+    "Observations": [],
+    "Procedures": []
+  },
+  "ProblemsText": "",
+  "Problems": [],
+  "PlanOfCareText": "<table><caption>Upcoming Encounters</caption><colgroup><col width=\"10%\"/><col width=\"15%\"/><col width=\"25%\" span=\"3\"/></colgroup><thead><tr><th>Date</th><th>Type</th><th>Specialty</th><th>Care Team</th><th>Description</th></tr></thead><tbody><tr ID=\"encounter26\" styleCode=\"normRow\"><td>05/15/2020</td><td ID=\"encounter26type\">Office Visit</td><td ID=\"encounter26specialty\">Behavioral Health</td><td><paragraph styleCode=\"Bold\">Palace Meds, LCSW</paragraph><paragraph>1 Sansa Palace</paragraph><paragraph>Kingdom of the North, NY 11225</paragraph><paragraph>718-604-4800</paragraph><paragraph>718-604-4828 (Fax)</paragraph></td><td/></tr></tbody></table><footnote ID=\"subTitle25\" styleCode=\"xSectionSubTitle\">documented as of this encounter</footnote>",
+  "PlanOfCare": {
+    "MedicationAdministration": [],
+    "Services": [],
+    "Supplies": [],
+    "Encounters": [
+      {
+        "DateTime": "2020-05-15T18:00:00.000Z",
+        "Status": "",
+        "CodeSystemName": "ActCode",
+        "CodeSystem": "2.16.840.1.113883.5.4",
+        "Name": "Office Visit",
+        "Code": "AMB"
+      }
+    ],
+    "Procedures": [],
+    "Orders": []
+  },
+  "PhysicalExamText": "",
+  "ObjectiveText": "",
+  "MedicationsAdministeredText": "",
+  "MedicationsAdministered": [],
+  "MedicationsText": "",
+  "Medications": [],
+  "MedicalEquipmentText": "",
+  "MedicalEquipment": [],
+  "ImmunizationText": "",
+  "Immunizations": [],
+  "InterventionsText": "",
+  "InstructionsText": "",
+  "HistoryOfPresentIllnessText": "<list styleCode=\"TOC\"><item><caption>Stark, Sanza, NP - 03/26/2020 1:00 PM EDT</caption><paragraph><content styleCode=\"label\">Formatting of this note might be different from the original.</content><br/>CASTLE BLACK TELEHEALTH FOLLOW-UP NOTE <br/> <br/>Visit Date: 03/26/2020 <br/>History obtained from: informant: Patient<br/> <br/> <br/>CC: Cellulitis of left pinky fnger<br/> <br/>HPI:<br/>John Snow is a 25 year old male with has Reflex sympathetic dystrophy of upper extremity - follows w/ Dr.Davy 718-287-1000; Essential hypertension; Asthma; Morbid obesity (HCC); Cervical myelopathy (HCC); Displacement of cervical intervertebral disc without myelopathy; Neck pain; S/P laminectomy; Obstructive sleep apnea; Anemia; Anxiety; Prediabetes; Persistent depressive disorder with anxious distress, currently moderate; Exacerbation of asthma; Encounter for immunization; and Type 2 diabetes mellitus with complication, without long-term current use of insulin (HCC) on their problem list.<br/> <br/>John Snow is being seeing today for a follow up. Last week he was diagnosed and treated for cellulitis of left pinky finger. Patient is currently on day 10/10 of Keflex. He reports her swelling, redness, and pain have resolved. The discoloration around her cuticle is also gone, per patient. is almost resolved. John had one episode of fever early during abx course which he says has not repeated. <br/> <br/>Tamika K Day denies dizziness, blurred version, fever/chills, chest pain, palpitations, difficulty breathing, flu-like symptoms, abdominal pain, n/v/d, dysuria, hematuria, melena.<br/><br/>Past Medical History: <br/>Diagnosis Date <br/>• Asthma <br/>• Hypertension <br/>• RSD (reflex sympathetic dystrophy) <br/> <br/> <br/>Past Surgical History: <br/>Procedure Laterality Date <br/>• CESAREAN SECTION <br/>• SPINE SURGERY <br/> <br/>Social History <br/> <br/> <br/>Tobacco Use <br/>• Smoking status: Former Smoker <br/> Packs/day: 7.00 <br/> Years: 7.00 <br/> Pack years: 49.00 <br/>• Smokeless tobacco: Former User <br/>Substance Use Topics <br/>• Alcohol use: No <br/> Alcohol/week: 1.0 standard drinks <br/> Types: 1 Glasses of wine per week <br/> <br/> <br/>CURRENT MEDICATION LIST:<br/> <br/>Current Outpatient Medications on File Prior to Visit <br/>Medication Sig Dispense Refill <br/>• [EXPIRED] acetaminophen (TYLENOL) 325 MG tablet Take 1 tablet (325 mg total) by mouth every 4 (four) hours as needed for pain Max Daily Amount: 1,950 mg 30 tablet 0 <br/>• ADVAIR DISKUS 500-50 MCG/DOSE DISKUS Inhale 1 puff 2 (two) times a day Max Daily Amount: 2 puffs 1 each 3 <br/>• albuterol (PROVENTIL HFA;VENTOLIN HFA) 108 (90 Base) MCG/ACT inhaler Inhale 2 puffs 3 (three) times a day as needed for wheezing Max Daily Amount: 6 puffs 1 Inhaler 3 <br/>• albuterol (PROVENTIL) (2.5 MG/3ML) 0.083% nebulizer solution Take 3 mL (2.5 mg total) by nebulization every 4 (four) hours as needed for wheezing Max Daily Amount: 15 mg 75 mL 5 <br/>• amLODIPine (NORVASC) 10 MG tablet Take 1 tablet (10 mg total) by mouth daily Max Daily Amount: 10 mg 90 tablet 1 <br/>• baclofen (LIORESAL) 10 MG tablet Take 10 mg by mouth 3 (three) times a day <br/>• cephalexin (KEFLEX) 500 MG capsule Take 1 capsule (500 mg total) by mouth 4 (four) times a day for 5 days Max Daily Amount: 2,000 mg 20 capsule 0 <br/>• fluticasone (FLONASE) 50 MCG/ACT nasal spray 1 spray into each nostril daily Max Daily Amount: 1 spray 90 Act 1 <br/>• HYDROmorphone (DILAUDID) 4 MG tablet Take 4 mg by mouth every 4 (four) hours as needed for pain <br/>• ipratropium (ATROVENT) 0.02 % nebulizer solution Take 2.5 mL (0.5 mg total) by nebulization 4 (four) times a day Max Daily Amount: 2 mg 900 mL 1 <br/>• loratadine (CLARITIN) 10 MG tablet Take 10 mg by mouth daily as needed <br/>• losartan (COZAAR) 100 MG tablet Take 1 tablet (100 mg total) by mouth daily Max Daily Amount: 100 mg 90 tablet 1 <br/>• metFORMIN (GLUCOPHAGE) 500 MG tablet TAKE 1 TABLET(500 MG) BY MOUTH TWICE DAILY WITH MEALS. MAX DAILY AMOUNT: 1000 MG 180 tablet 2 <br/>• montelukast (SINGULAIR) 10 MG tablet Take one daily 30 tablet 5 <br/>• [EXPIRED] predniSONE (DELTASONE) 20 MG tablet Take 2 tablets (40 mg total) by mouth daily for 5 days Max Daily Amount: 40 mg 10 tablet 0 <br/>• Respiratory Therapy Supplies (NEBULIZER COMPRESSOR) KIT For nebulizer treatments every 6 hrs as needed for SOB, cough, wheezing. 1 each 0 <br/>• Respiratory Therapy Supplies (NEBULIZER) DEVI Take nebulizer tx every 6 hours if need it 1 each 0 <br/>• [EXPIRED] sertraline (ZOLOFT) 50 MG tablet Take 1 tablet (50 mg total) by mouth daily for 14 days Max Daily Amount: 50 mg 14 tablet 0 <br/> <br/>No current facility-administered medications on file prior to visit. <br/> <br/> <br/> Allegies: <br/> <br/>Allergies <br/>Allergen Reactions <br/>• Codeine Itching <br/> Pt received hydromorphone and morphine in the past.<br/>Other reaction(s): Hives/Skin Rash<br/>Pt received hydromorphone and morphine in the past. <br/>• Ibuprofen Shortness Of Breath <br/>• Milk-Related Compounds Other (See Comments) <br/> SOB <br/>• Peanut Oil Other (See Comments) and Shortness Of Breath <br/> Shortness of breath<br/>Other reaction(s): Other (See Comments)<br/>Shortness of breath<br/>Shortness of breath<br/>Other reaction(s): Other (See Comments)<br/>Shortness of breath<br/> <br/>• Soybean Oil Other (See Comments) <br/> Pt reports soy exacerbates asthma <br/>Pt reports soy exacerbates asthma <br/>• Tomato Other (See Comments) <br/> Other reaction(s): Other (See Comments)<br/>Shortness of breath<br/>Other reaction(s): Other (See Comments)<br/>Shortness of breath<br/>Shortness of breath <br/>• Lactose <br/>• Ascorbate Rash <br/> <br/> <br/>ROS: <br/>Review of Systems - Negative except as stated in HPI<br/> <br/>PHYSICAL EXAM: <br/>Constitutional: middle age man, sitting on a sofa, well-appearing <br/>Pulmonary/Chest:speaking full sentences in NAD<br/>Neurological: He is alert and oriented to person, place, and time<br/>Skin: left pinky finger appears at baseline; no erythema, edema, or discoloration.<br/> <br/>Assessment/Plan: <br/>1. Cellulitis of finger of left hand<br/>- Day 10/10 of abx course; resolved<br/>- Take last dose of Cephalexin (KEFLEX) 500 MG orally this evening <br/>- No need to cont. abx ointment<br/><br/>2. COPD/ ASTHMA<br/>- Stable<br/>- Cont. Albuterol/atrovent nebs Q4-6 hrs PRN<br/>- Continue Advair<br/>- Cont. Singulair<br/>- Cont. Claritin to avoid allergy-related exacerbations<br/>- Avoid triggers<br/>- Pulm consult still pending since 9/2019; patient reminded and encouraged to f/u<br/><br/> </paragraph><paragraph styleCode=\"label\">Electronically signed by Sanza Stark, NP at 04/05/2020 3:25 PM EDT</paragraph></item></list><footnote ID=\"subTitle17\" styleCode=\"xSectionSubTitle\">documented in this encounter</footnote>",
+  "EncountersText": "",
+  "Encounters": [
+    {
+      "ReasonForVisit": [],
+      "Diagnosis": [
+        {
+          "CodeSystemName": "SNOMED CT",
+          "CodeSystem": "2.16.840.1.113883.6.96",
+          "Name": "Cellulitis of finger of left hand",
+          "Code": "10633671000119105"
+        },
+        {
+          "CodeSystemName": "SNOMED CT",
+          "CodeSystem": "2.16.840.1.113883.6.96",
+          "Name": "Chronic obstructive pulmonary disease, unspecified COPD type (HCC)",
+          "Code": "13645005"
+        }
+      ],
+      "Locations": [
+        {
+          "Type": {
+            "CodeSystemName": "Epic.DepartmentSpecialty",
+            "CodeSystem": "1.2.840.114350.1.72.1.7.7.10.99999.4150",
+            "Name": "Internal Medicine",
+            "Code": "32"
+          },
+          "Address": {
+            "County": "",
+            "ZIP": "11111",
+            "Country": "USA",
+            "State": "NY",
+            "City": "KINGDOM OF THE NORTH",
+            "StreetAddress": "1 SANZA PALACE"
+          }
+        }
+      ],
+      "Identifiers": [
+        {
+          "IDType": "1.2.840.114350.1.13.400.2.7.3.111111.8",
+          "ID": "99999999"
+        }
+      ],
+      "Providers": [
+        {
+          "Role": {
+            "CodeSystemName": "",
+            "CodeSystem": "",
+            "Name": "Nurse Practitioner",
+            "Code": ""
+          },
+          "Address": {
+            "County": "",
+            "ZIP": "11111",
+            "Country": "USA",
+            "State": "NY",
+            "City": "KINGDOM OF THE NORTH",
+            "StreetAddress": "1 SANZA PALACE"
+          },
+          "PhoneNumber": {
+            "Office": "+17778889999"
+          },
+          "LastName": "Snow",
+          "FirstName": "John"
+        }
+      ],
+      "EndDateTime": "2020-03-26T18:31:44.000Z",
+      "DateTime": "2020-03-26T16:56:02.000Z",
+      "Type": {
+        "CodeSystemName": "CPT-4",
+        "CodeSystem": "2.16.840.1.113883.6.12",
+        "Name": "Office Visit",
+        "Code": "99999"
+      }
+    }
+  ],
+  "FamilyHistoryText": "",
+  "FamilyHistory": [],
+  "ReasonForVisitText": "<list><item><table><colgroup><col width=\\\"25%\\\"/><col width=\\\"75%\\\"/></colgroup><thead><tr><th>Reason</th><th>Comments</th></tr></thead><tbody><tr ID=\\\"rfv2\\\"><td ID=\\\"reasonrfv2\\\">MedicationRefill</td><td/></tr></tbody></table></item></list>",
+  "ChiefComplaintText": "",
+  "AssessmentText": "<table><colgroup><col width=\"100%\"/></colgroup><thead><tr><th>Diagnosis</th></tr></thead><tbody><tr ID=\"vdx2\" styleCode=\"normRow\"><td><paragraph><content ID=\"vdx2Name\">Cellulitis of finger of left hand</content></paragraph></td></tr><tr ID=\"vdx3\" styleCode=\"altRow\"><td><paragraph><content ID=\"vdx3Name\">Chronic obstructive pulmonary disease, unspecified COPD type (HCC)</content></paragraph></td></tr></tbody></table><footnote ID=\"subTitle31\" styleCode=\"xSectionSubTitle\">documented in this encounter</footnote>",
+  "AllergyText": "",
+  "Allergies": [],
+  "AdvanceDirectivesText": "",
+  "AdvanceDirectives": [],
+  "Meta": {
+    "DataModel": "Clinical Summary",
+    "EventType": "VisitQuery",
+    "Message": {
+      "ID": 3845168311
+    },
+    "Source": {
+      "ID": "eb3dbd62-fac4-43a8-b61e-4d452b6c3874"
+    },
+    "Destinations": [
+      {
+        "ID": "72686302-c8f7-41ae-a8ff-643213c8d983",
+        "Name": "ACPNY Epic CCD Query Destination (p)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+
+version: 2
+
+models:
+
+  - name: cf_acs_bh_or_unplanned_admits_three
+    description: Three or more ACS inpatient, BH inpatient, or unplanned admissions
+    columns:
+      - name: patientId
+        tests:
+          - unique
+      - name: fieldSlug
+        tests:
+          - accepted_values:
+              values: ['acs-bh-or-unplanned-admits-three']
+          - not_null
+      - name: fieldType
+        tests:
+          - accepted_values:
+              values: ['encounter_boolean']
+          - not_null
+      - name: fieldValue
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+          - dbt_utils.not_constant
+          - not_null
+
+  - name: cf_advanced_illness_severe
+    description: "\n
+    Identifies members with a diagnosis from a subset of advanced illness codes:\n
+    https://docs.google.com/spreadsheets/d/1y32b6TVt_9afM5r1op0StTN2mNeNCQxTl_N5YoMHmik\n
+    "
+
+  - name: cf_age_55_or_older
+    description: Identifies members age 55 or older, based on their date of birth in the Commons `patient` table
+
+  - name: cf_ckd_assessment
+    description: "\n
+    {{ doc('ckd_assessment') }}"
+
+  - name: cf_ckd_esrd_assessment
+    description: "\n
+    {{ doc('ckd_esrd_assessment') }}"
+
+  - name: cf_cmm_risk_factors
+    description: "\n
+    Identifies number of CMM risk factors for which members meet criteria\n
+    https://docs.google.com/document/d/1XwwrpAzMPnPsowr6JjxXSSQllTBkZhMzXHWTQ0gEExM\n
+    "
+
+  - name: cf_comprehensive_medication_management
+    description: "\n
+    Identifies members with at least three CMM risk factors and minimum acute utilization required for palliative pathway\n
+    https://docs.google.com/document/d/1rNKByNl8dLosPWDOYIM021bX3JEY7WLeXDLkfJ15HZ8\n
+    "
+
+  - name: cf_current_alcohol_abuse
+    description: "\n
+    {{ doc('current_alcohol_abuse') }}
+    "
+
+  - name: cf_esrd_assessment
+    description: "\n
+    {{ doc('esrd_assessment') }}"
+
+  - name: cf_ed_visits_four
+    description: Identifies members with four or more ED visits over the past thirteen months.
+
+  - name: cf_ed_visits_five
+    description: Five or more ED visits
+    columns:
+      - name: patientId
+        tests:
+          - unique
+      - name: fieldSlug
+        tests:
+          - accepted_values:
+              values: ['ed-visits-five']
+          - not_null
+      - name: fieldType
+        tests:
+          - accepted_values:
+              values: ['encounter_boolean']
+          - not_null
+      - name: fieldValue
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+          - dbt_utils.not_constant
+          - not_null
+
+  - name: cf_has_diabetes
+    description: >
+      This is a field that uses HIE information and patients who:
+      - had diabetes in the past two years,
+      - on diabetes medication
+      - lab results show high-hemoglobin-a1c.
+      Also, includes all ICD diagnosis codes related to diabetes: E08%, E09%, E10%, E11%, E13%.
+
+  - name: cf_has_diabetes_type_1
+    description: >
+      Includes all criteria in 'cf_has_diabetes' except
+      - ICD diagnosis code E10%,
+      - on diabetes medication,
+      - lab results show high-hemoglobin-a1c
+
+  - name: cf_has_diabetes_type_2
+    description: >
+      Includes all criteria in 'cf_has_diabetes' except:
+      - ICD diagnosis code E11%
+      - on diabetes medication
+      - lab results show high-hemoglobin-a1c
+
+  - name: cf_has_pre_diabetes
+    description: "\n
+    This includes all of the criteria in 'cf_has_pre_diabetes_all' and any one criteria in 'cf_has_pre_diabetes_any'
+    :\n https://jira.cityblock.com/browse/DO-549\n
+    "
+  - name: cf_has_pre_diabetes_all
+    description: "\n
+    This includes all of the following: at least 18 years old,
+    not currently pregnant, overweight in the last 24 months,
+    AND no previous dx of type 1 or 2 diabetes in the last 24 months. Part one of Jira ticket DO-549 :\n
+    https://jira.cityblock.com/browse/DO-549\n
+    "
+  - name: cf_has_pre_diabetes_any
+    description: "\n
+    This includes any of the following: a A1c of 5.7 - 6.4, Glucose level 100 - 125 mg/dL, previously dx with gestational diabetes (ever) OR
+    having a dx of prediabetes in the last 12 months (code R73.03). Part two of Jira ticket DO-549 :\n
+    https://jira.cityblock.com/browse/DO-549\n
+    "
+  - name: cf_history_of_alcohol
+    description: "\n
+    {{ doc('history_of_alcohol') }}
+    "
+
+  - name: cf_housing
+    description: "\n
+    Identifies members eligible for housing pathway:\n
+    https://jira.cityblock.com/browse/DO-305\n
+    "
+
+  - name: cf_hypoglycemia
+    description: "\n
+    Identifies members with diagnosis code beginning with ‘E160’, ‘E161’, or ‘E162’ in current or prior calendar year\n
+    https://docs.google.com/document/d/1owyLtQ1T9sDLRa7tAyPVYJheZZdbJKP27c06HbZ8vB0\n
+    "
+
+  - name: cf_mood_stabilizers
+    description: "\n
+    {{ doc('mood_stabilizers') }}"
+
+  - name: cf_mood_stabilizers_not_seizure_medication
+    description: "\n
+    {{ doc('mood_stabilizers_not_seizure_medication') }}"
+
+  - name: cf_on_psychiatric_medication
+    description: "\n
+    {{ doc('on_psychiatric_medication') }}"
+
+  - name: cf_on_psychiatric_medication_high_strength
+    description: "\n
+    {{ doc('on_psychiatric_medication_high_strength') }}"
+
+  - name: cf_on_psychiatric_medication_smi
+    description: "\n
+    {{ doc('on_psychiatric_medication_smi') }}"
+
+  - name: cf_palliative
+    description: "\n
+    Identifies members eligible for palliative pathway:\n
+    https://jira.cityblock.com/browse/DO-213\n
+    "
+
+  - name: cf_pregnancy_9_mo_or_assessment_under_55
+    description: >
+      Identifies female members under age 55 with:
+      1. at least one diagnosis from the HEDIS 'Pregnancy' value set OR
+      2. an answer of 'yes' to the assessment question, 'Are you currently pregnant?'
+      The timeframe for both criteria is the past nine months.
+
+  - name: cf_qualifies_for_financial_assistance_program
+    description: Identifies members eligible for financial assistance
+
+    columns:
+      - name: patientId
+        description: Field values are generated for all valid members
+        tests:
+          - not_null
+          - unique
+
+      - name: fieldValue
+        description: May be "true" or "false"
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+
+
+  - name: cf_seizure_disorders
+    description: "\n
+    {{ doc('seizure_disorders') }}
+    "
+
+  - name: cf_seizure_medication
+    description: "\n
+    {{ doc('seizure_medication') }}
+    "
+
+  - name: cf_seizure_medication_not_seizure_disorder
+    description: "\n
+    {{ doc('seizure_medication_not_seizure_disorder') }}
+    "
+
+  - name: cf_substance_assessment_scores
+    description: "\n
+    {{ doc('substance_assessment_scores') }}
+    "
+
+  - name: cf_substance_use_disorder
+    description: "\n
+    {{ doc('substance_use_disorder') }}
+    "
+
+  - name: cf_super_utilizer
+    description: "\n
+    Identifies members meeting partner-specific criteria for acute utilization over the past year.\n
+    For ConnectiCare members, see `cf_super_utilizer_ct`. For all other members, see `cf_super_utilizer_default`.\n
+    "
+
+  - name: cf_super_utilizer_ct
+    description: "\n
+    Identifies ConnectiCare members with three or more ACS inpatient, behavioral health, or unplanned admissions OR\n
+    four or more emergency department visits. For both criteria, the timeframe is the past year.\n
+    "
+
+  - name: cf_super_utilizer_default
+    description: "\n
+    1. Three or more ACS inpatient, behavioral health, or unplanned admissions OR\n
+    2. Five or more ED visits\n
+    "
+    columns:
+      - name: patientId
+        tests:
+          - unique
+      - name: fieldSlug
+        tests:
+          - accepted_values:
+              values: ['super-utilizer-default']
+          - not_null
+      - name: fieldType
+        tests:
+          - accepted_values:
+              values: ['boolean_fields']
+          - not_null
+      - name: fieldValue
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+          - dbt_utils.not_constant
+          - not_null

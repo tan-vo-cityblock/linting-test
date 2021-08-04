@@ -1,0 +1,461 @@
+apiVersion: v1
+data:
+  cityblock_prod.pub: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDM9mhkNtQx90trInTTpkbOjXt7uHLT2snUx8wDvBZhLz1OUsz/LCGzMxX25YTTTCgZ9Rv9D9Wgtfx2tIcZnCCiLW/6hCk6wt7+Q153fLZe1LQNyHrmoS0Exfhe3fOccvMNi4qvAJDS/ndRfQYEh4IlQmWhu1mrJ61p+ajR8HLD3xvz6t6JWOGRgQlBRF50/M2CQyxVDRNwkr8lv32pfSkd+/EFiQ+SU7ykfEpgbndD7j0keGuk/CUay44Fv7N1wfLScn58oAd2kvrsRg7eQKnw4JIMaWIWpaI7pGhlAB3HJV8my5G9F6RUOjlm3xb+kAbsa03SU6k8Q6G4Eh2jxKSa1r8+y7PL5u+itJlLRKSHqcapnv3sdpXReK+oRBD5D5FBwF8HSOl3Bf5K50U8SJ1CFXsO+5Knj4kC9GDhmsWSAN6/Wje8bgCWnCohomlHxApcV1oLIUA1j9T/nYI5y9gdyvTZEoVEBPax/VvCAu81qRAbqZOzqJMWqNI1QKDiaLc=
+
+kind: ConfigMap
+metadata:
+  name: cityblock-prod-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  logantest.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbELIlE2iXS3YghgPIGU0+ldfI0OhFhGkljJhsONFuB00WAjl/9L4qhycJJ4c+SMNDsLe1JkT6InsOYoYsY2PRDCVSShAbTbJxAD6XJQfDKzIPRkJgRPvsjd72JtLxGHrD7606PeRbW6K4LIT2lCJRxa07Aazaj3WASxpbPeT9L79ePMFx/HimObjUNK45EGSdJQA3cn5+d9ddEdKGyTaPxyejSy4z71clllyfeqgeK40JPIt/z58+O8RVegpNc+ADf3CV0KsSLwirlsHwlxEcynkTSVGJrWg/4Va2FNwD+cLLkjw1YgnL3keph01dNZjiL8UdhTYf1oojxDxifVWj loganhasson@ixnusers-MacBook-Pro.local\n"
+
+kind: ConfigMap
+metadata:
+  name: logantest-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  emblem.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAtWDweXJ9uvnW2hFMncbELWSaNZYDRxFxgOGOWnm693MaGbbbHMOESesLHPbo9oAbBJDiA38GdeHYwZqgMLaIl/K52fHIbcIe5OOBrnFhUSeP5nia9m1J6Q5QKysMinIYKgMnWVCBxGII2LNZPzPLSh4cvQBOIgHSM9Js9+Q+Ay9loCvgmYY2byblpyNpTaD8HAmgInw1QVei8fil3/muZQzf201fqk1Uicfh1jyvtBnGkyK9P6T6BdA658Pf9IayTI40OJHu8eiGaA0I7fFdHVleRa+JLEbs+kOygUgmbIGYHsv84Ccgxbqs1QqpK398L+NpoAQbcSnVQuU20Dt4TQ== emblem@emblemhealth.com\n"
+
+kind: ConfigMap
+metadata:
+  name: emblem-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  acpny_test.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0t9plQyQKlF3PKDZZWH4mbwQMZWT9BJMgvnYP0JXEfQw8Wwc1ApnlTKhpgRPc53M/kz8fsQdojlG0RiPmMQpzSVhI/IHJIx8Az0RbME8oZh3qvLwDCgy8tjNzwqUkxszGieHG/Eq4NIzcebeWh0i4jEoZ6mvoMfpeAlxxSZfDYAVIeUF76SpSHw8Vz+2/VeBWL+nlmFy27VbAjfQgJjs8afeSHY5qOn2bhzbqQiw+7SHziBp2bN0dI5dg3dxMP9pLEX8jGrUc5lmQNhHaH9NB/YGIvoDJeGXmOM3mzaYBHzMF1JDMLeaIFOzXwVabGgSC+OqOqoZBOCWGxzaLXzTz hsusr@ACPINTERSYS\n"
+
+kind: ConfigMap
+metadata:
+  name: acpny-test-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  acpny_production.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGI3Gv/2bwmCa1dUNf1TNRnu4DIr+CNxstlnFCGMZ2YCLHa+/+qMacE+zdf0f7e1euuGR+bQRA/uYG7XTHHe+IVBx9aKgd31mmOxuUJynkaV1UI8un4qK5VRU585OwoEMShZgjSQY16S3cJdxXYD6Npx2MK064z2AXSre7On9OHEfjODevHZQDbCYB2VM+IRNogUVcLbS0/hxycguBRePyA3wfNEExve1OKvhyhu1A+4pwdE29g1RVe34ftaax9pfgLEMusQUxfdrDQbSJOQyKjOy2RE5DAuHFtdqwhML+0Ar+CZFiSKFKuMkDbrajHCBweKhoAcTlftlPHMAqrfJ7 hsusr@ACPINSYSPRD\n"
+
+kind: ConfigMap
+metadata:
+  name: acpny-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  carefirst_test.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6E2wxBNY2jvRpdFpwjbs4eL76Ougnscr7WSl/sKrnqk0RYpYaa0fRBhsPwdlUEUz9OJ95TTKBr1+nuV7pHdHP+EtQT436y09Cejr7u5L8y+4m0ZwO8d+Zua2buSJ3a++qcT2pEFxRlUfQjxI7Xgk7lsa2k74Yave5twFKE50B5IyYfjTBF1HJbkWpaMFJ/OZPm8/FnULDOEpSrH6idb053pTkoTCIZyqmrZprk4EUPqsJRE8xwYVneIm9jUMZ7LpoTdVRWDLZ6QTDB/7NsrUFbhMMfgN0kDNN+58hrPcgqohMsNDhz/QEw8rZxGV3NYuDTlzqNqhcPr35YJWqSjaI+BeKjIcI23O7V6TtOUbJlESL0myrmf8mlNTt1IRfEFq/AS6VCX1dVCjEJm/EpGoEd5KyTNOuHYmg5b2wugyPs7ST0NM1QD0L5cMDTFolNwx348QJS+1bS/aPLVcbNQNIPSrB8Fy8izTIZN6zFUBA7EEeFsBjWXFyCa/2jY8bJY/pwUC0DCxan4Bj/e1iLT7/6VuGMO0HlaM3xmrzoxBfaqDIyGXcBah51tSnEvKCr0QUuOqZcqGMKzQQwQ1SWI0YX6WFB+HmojVn8KNpo78oDIkbD6scd+pmKxi2pFTIbGaK8mFSG/4/cUIctgiaGUGjfk/6DWFV228ywKFX+NsxPQ== danny.dvinov@cityblock.com\n"
+
+kind: ConfigMap
+metadata:
+  name: carefirst-test-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  carefirst_production.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrSM1lUFKrkciJPec1G1mTEbd9fM3xlUHa3dJdJfyCv5Q/Vy+af+m11rawJ5a5mKqZluuWxV45NAclqqEVjGgfV6ujdep+ZoDveaz/syIO1+f3t/BOTOJHMiTUTObN/7Sc5Wic1GccUigHgU692epd0rsfiM3i1SlAZaL+ECB0lgwsADaLNFtybiKnsJzkuqDtRwKV9XPDKBsPKJ4xSm4nvNDowNXjj/lFGnYAf5L94YO0id+Tb3gqy6rCCWfmyphJO3Q2cViSdnVXTOeGQySea1xldwwzJQ8xtS2k4lnUOWACP/+74rMrV66uzdUlTG828IHP94issPGOkjMY6dJh\n"
+
+kind: ConfigMap
+metadata:
+  name: carefirst-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  chpw_production.pub: "ssh-dss AAAAB3NzaC1kc3MAAACBAOldJWkEZ9XLchP0mt7GPAtJO5OzYTlwZ3+yrbT0rpoICBMqfVyu/DRHUFs82Ee7stXFYT+HPB9h5Pn8MN7MyOH7XLey6hBVYpJusJnlloAWP1gjCYIlQ7Q6DfznJUbWecWTKsRVN2T/ui/8GbnXSaQcqKMUU8uvxGWqKWk67MDTAAAAFQCRZBFtfYXCqiWOZLJNuE3IzbZ5QwAAAIEA5wcwkuqFkGoVOOtASc+OQ8gZrV7JBfyWGxu/s0eBTjvMrwxKYkAE4NBd7lqc/TelRLOGDY/hbEta34jPSO/+0uUQc6D5FXLr8lOpnwB8zo/Tg9vuOfpjjtA/KJEb9WUOSd2pVX5reo7J2K8DMwXk0dV6+mXSrTXStD1z4F+AbuAAAACBALlqdtv+Pf9lfIwUKW+crAfruW2J65iViUq4zmxDC01+5yFrsQYOTnWzol7NggpO3GY1/a1CRD6v0ga8FksvwDyvBgh18umxvs1NIr2NTeMRbE81/4Gc0bub2qrtzVjSO36nYjRwnv5ii0OamQlwrwAG8N/KuaOUAqAW20mAZuK7 openpgp:0xD1BAFEA5\n"
+
+kind: ConfigMap
+metadata:
+  name: chpw-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  tufts_production.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAoS18WGUd/c4lHQykMf/HIMD4LOqi3iroZpqY5mtTb8CRd2ryQXddOxhaj7RJwgY1b8/1jXjeiEdIgv2rQFMzyfaO26FjZsjjWNIf3txJUM37IkcILQ4nrkCxAAymuoL400jhJ1hk4fduS6tov6N8bz6p0YfrXUzF9zcRvKfkRtq3pAdpkSx3PzZVJ4c6ZvnwxhjT+jTreR2AoAidELVFMJoncnFgi4d61/7svjKRPkAs32ZWk/tqH6YhyIyY/3koNctMABncPBatpeeotI5I+7h7rgxASwUsCfuwxoQ9Q6eTufMXeiKon3u/RzHz2FDWvYlMMH510LkTKqgXJnqM6Q== tibprod@eai7\n"
+
+kind: ConfigMap
+metadata:
+  name: tufts-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  # The first key is from the CCI facets system, and the second is from the legacy system
+  connecticare_production.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAtWDweXJ9uvnW2hFMncbELWSaNZYDRxFxgOGOWnm693MaGbbbHMOESesLHPbo9oAbBJDiA38GdeHYwZqgMLaIl/K52fHIbcIe5OOBrnFhUSeP5nia9m1J6Q5QKysMinIYKgMnWVCBxGII2LNZPzPLSh4cvQBOIgHSM9Js9+Q+Ay9loCvgmYY2byblpyNpTaD8HAmgInw1QVei8fil3/muZQzf201fqk1Uicfh1jyvtBnGkyK9P6T6BdA658Pf9IayTI40OJHu8eiGaA0I7fFdHVleRa+JLEbs+kOygUgmbIGYHsv84Ccgxbqs1QqpK398L+NpoAQbcSnVQuU20Dt4TQ==\nAAAAB3NzaC1yc2EAAAABJQAAAQEAi2wRSlF3yrWD70FIIQzPeJcLJzG56o3ca6hiFik45SrySjXJvVUlvlS3Im6t0ho0eVDEp2StnvMZkrYaIEPTpvz+Xl2xvwkjlj+qsWl9LayVKj6pAnTi2Xtx9DJRRt3QPo+SyDZxUiZnTGTMgKdoFc/bwj84NmObKCHy81PvPDH/oWZbQxWLGybuHLX3AZRBQTBRAAUBW4UmSofNYlHYv1+/ArCGm8sKYo0HJENcI9QSLezRD6MI3P/QMHELrh0k8rSMsKFsYzBvczZHFDJrtT3GoHzrTLBtQgcPVzXyRM1fIy0OcBx3FTrRGAELB7sM7mUCnwhkxLPYEMyRlXDc4Q==\n"
+
+kind: ConfigMap
+metadata:
+  name: connecticare-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  healthyblue_production.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaez33JTktbgUBUeDkXmk/f2CIrb9OZpLzNet5XE0LoI9DnVUDvXQDxR6EO3J5n5x15jl/phDaNUoNYFIrDWM4xGSomDqYgvCbObZw4PvEAvVDyutEcu7lq8WcnZYyiukYSq6IonCIwLuRn4XYDK3mu3+473JvXsX5p3pZt5MAdnOIpgL3ABATSHc3OIMIM8ANvyJD/yQgesa88Osvld55+W/8mYtrzfykRH865DD+9dkGLPMFIK6+E9MUFFRFhbVcGOz2KmzWH5dAk40y7xAMMVphIzlpUOEUCoy5Pu87GobH4Jd0x/c27lTTcIoGplahbcHcj1P923DL/hRLfxnT\n"
+
+kind: ConfigMap
+metadata:
+  name: healthyblue-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  healthyblue.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaez33JTktbgUBUeDkXmk/f2CIrb9OZpLzNet5XE0LoI9DnVUDvXQDxR6EO3J5n5x15jl/phDaNUoNYFIrDWM4xGSomDqYgvCbObZw4PvEAvVDyutEcu7lq8WcnZYyiukYSq6IonCIwLuRn4XYDK3mu3+473JvXsX5p3pZt5MAdnOIpgL3ABATSHc3OIMIM8ANvyJD/yQgesa88Osvld55+W/8mYtrzfykRH865DD+9dkGLPMFIK6+E9MUFFRFhbVcGOz2KmzWH5dAk40y7xAMMVphIzlpUOEUCoy5Pu87GobH4Jd0x/c27lTTcIoGplahbcHcj1P923DL/hRLfxnT\n"
+
+kind: ConfigMap
+metadata:
+  name: healthyblue-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  nc_bcbs_production.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCK9XJ/d4bblX8PSMZiz/zAWsckdQtSng8oObne4l1LRcmX44naJGO/uZHx+EbwaYg2cyqdEV0HGCczCOBkZEGLzH0aizSB05w3lvj86ILWdFcSF7IiK3M0n6oMOjRd6ku5opxS1d4evHCFl/3IcC1XfnyDpVXJOK1J1v2c2YVWcoNVE1NIJd8F0twMP9qws2yRdREYjMVD09/dc/XPZQw1WOIO8E/ya1QC61FEUHL33awFRzhN76qwzqyF1873jAHm/ZUjik/C3vOOtQ+5mT7vne77bvUgFjtm1r9OGPUDEhU58qS5hJrCLPH5O+SLMMZH2iidfv2ElJySVJsCskFv default\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkQsBthvWgxjoUpr+TfPncsr4gVvK+0sY9TmIrq0i3XkL7lhwL9axHLAF6RjS7smI9FUClV5CfJQQ6KYa9WRrRhEub0tAIer6P93Tojmjx8tV9A8l2bmExo99POG6Au0dipK7ovFtkjz7bQUs0ZXvTbOH3VJXdvPqCoG2oifpBHItBQeGQBFwbqUlImW18BntxOeFJu6x7Biodju+XpV3A80PjxrwlZ9TA+nxP4/Ikxm9dJg4rpSWbEoJLamRGkdcLpu7UiQ11LslpuX7Euhvd54aGRJ8mtwlMXISFuBEJp2r6dWcD5qUxjzzsVowYhI3O6aNnoNGZCNOiDU0CrMLT\n"
+
+kind: ConfigMap
+metadata:
+  name: nc-bcbs-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  ucare_production.pub: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDjkIXqo7JyehFRZ3ep2dTMXUETLTqNh0bY+Tf7wZneTvQqtCrzxxsRrR//bNAiI5fGXgzExOiJJMp8tZT/wPV1qc1plJi2UU4diBMNbs6nXiKsdsUfDALVHP2nFARrCz951YELTi1sW6rFEfC9KbqCGQtRKKehGUv6CZxw4Ckv2ipjpobVol3V4A2Ch3yIt5oJfMDGbAS7VwNXjMXq0L1NCl/zpPxXdNIvkLOOFxUiHyeV5ljyZMTKLF856y9GBqwCiYRfs2HeZHMVLaOQpc2k2Xo4oMugOF4xiuYh7lsAVLTRFosQBThP/ItxUwoWiFzUwDAMpPB7u1VT9YUbIP0emKARlJxbfo97+DsIANDwtta8VnqZHf1NBv4vw+ujHmUZNr9oCkYpN56oprUxCcc9xxBd2TrJepFmD+JE7ndpFdgRVI36Xnbzs2pMS4vqhHzH7VSuCzeASY+JU4vyKHSiRfi1hsZbys1lzpNUiyOX6LuEhxm253/IxM5Mevwbrgs= uafp_domain\saucareft@UCPGPAPP01D-V
+
+kind: ConfigMap
+metadata:
+  name: ucare-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  optum_production.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA3se+8O9jluwEiq4c/4AQjKtYJ0IO8UdznzcI4XQR4shyyg/C7FzMmjlFAMHIR59V43sQ1gD3Kdg5WEhBDydCjkO/aYkg3Zq2EXGr0vlXhP3HM28s6VXqeqWVVnzB2eKPScDFBM2RaqW/Neq+EFE2fPLkoCzMG5SHk96VlN8wXsCd8TTSAtcyUGG7O3kv4hHxK+6hm+/77+nW19egt2oDaxJ/cCENqvajEF67CrU0EPyFcC3t3lkGe3tdjb2I5k/uE9GTeb94Z9Z7Z1c9xIdyouzne+00X6RBynbh2MxV5qWzXvr/5GCFHvsl7h7wddTSYI/mWfRLgNLLx3UwXrn/HQ== xwystg@apsrs3765\n"
+
+kind: ConfigMap
+metadata:
+  name: optum-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  optum.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAtYhI+q5eCm1H0w/9IyZ15ZA7EoIfvqPfKEWv7Nrbn3b5wcke3tzx2+IsgpJETZgeoESUGTavDnMJMWfgTUoGNoKZke4sFy8FHwXTStD5VAhVWj6Mg5yeTsCe0yA2/2OsLuAdeFE7NE0f9RwAXGYQmDC2gyB5c2GU45Y77HkceBs= xwyprd@ecgp0005\n"
+
+kind: ConfigMap
+metadata:
+  name: optum-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  cardinal.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKRrTCYPTGvlgJPZuY25Kjbab04FQfvHSTrImbgx6FqvEGg+RrlVyd6eJ4vnlwooKDtNMSxJpMEnSQxnRq6bbqLL1qdwFTa7CeFyW8vFtYo2bmZIq8Aw5c4T2fKfcvjJx+5mFoeuo6Z+pfpqvaWgg/18+pqUNPf/fuWxtBnqvVQPI+u82sKUBavlP7VaOKnK/uNTwaAS6uaqUgYcASZnBzoYrxqWBDkSHsRyVyU/vJDqywDNPsyWCq4nJW5KBUxb3DXjHfU5xDBgZCPwEUJGWzkTFbV6pmP1rd7eH66I9W7iHwIneUPfwILzNddFCwpwZ+oFXL0/NrwzB16lSnh6RR pbhchristopher.race@L-PC0YVWNL\n"
+
+kind: ConfigMap
+metadata:
+  name: cardinal-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  traumasoft.pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDO1jhH498Z2wZHrcRJK76oTBPXQOuFbeZZx4mU7PSrM4m1yMkS2kKiTOZfQ2lbPrfY1VHIthMforqCF17zEIvqL2VQC2YD1bxvI1pl59xkQhVGgFr3T8xMKewXpMvFqouEon+zx9zQVnLgL+5s7ElBzLqSTlArVLdp6AH0F0dHcj761CeqPu4aSfa0QM7Vb0NKxTCwBFQ0kEKalzSi0NYMPD3Bqq6BmmKo1T1fWK0wa1fTsCJs7+b5ByANWF2c4SlLDeoAMYh76Jluh/cLPaL4bY94t7oIUvj09YLsuIvCEOO4mMx9z7a0nr0dIrNp3Bl+bLpODF1buGTRfCeiUfDP traumasoft@1118623-host8.traumasoft.com\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9MnMmAmMnqtarxYzg2ZIFT/nA9JYmb+fRZ2b10lPUj2d6jnwMINCWRocd8vzDdjI2s/jWaRFefFbSC2W13yL7e2E1ABEc4i1mbBOTWNoIETl0Or/Y0OaXOi+ECFw4KFNUsRT89MBkYVCvHgtJHNaq5dGobUEz3mWF6gQBX900yNFq5GKvul1ctQs80m6dolPy3tnzjL8J4uHYrzKC8g0YfZPQE4UTpGe3hNbOe+V1CCVyoA+kA66Mg/PJ3nWIxgSRsahMrbdbZ9E8xDstFrdZEBSGkmQnk33dcVvvgHdPxUV5/tF37A9hALF7A6H6q7Od/Yz3+Oi/BiPoW6RcmWuRVDfIQa94KIM8e2md6B58YBsvx4fZgyxpGkna7hbetYKN80joEQQhUPHo2W/zbT9+R+vgxY2xeKZbttwlO5OmGZxhSGtO4fZu6IKelyS9Ujd2Zxv8rBEQ3JVoUPhauzgn/M2q1vN6xty0zpSieEEK7OkHPXPLlB8NcZmvIuPfCEqWFGumzf5Cit47NFjiSX6WzQrxPu5gGHic9T5owORrz23pT7bsFjKQoZG5LPr9uVNCl86AuonMbbZmbMxWLjfuvQZe36znq2Wrm7JWYHdziwgebiaaK2RY0sWvL205UvWxstzPY8NIrQGkxFpX0sgeNmgXkM74Cg/Lm9zP3T7lWw== traumasoft@1118625-host9.traumasoft.com\n"
+
+kind: ConfigMap
+metadata:
+  name: traumasoft-prod-sftp-pubkeys
+  namespace: default
+---
+apiVersion: v1
+data:
+  anthem_production.pub: "ssh-dss AAAAB3NzaC1kc3MAAACBALKaZRTXe1ug+athEHS6Lyo7o5EiVepptiySr2QVnabx1HQ6Lq3SyY5ecoRMCOQDyRTRjiM2LJLHKtcfEN2Dcd2U7+ZnyBUI8zSqzAuovWwQlu4cQNc21oxNn491r0ZPBPJbFxiRu/ezMNiGC83rfkaRls3ji0Vp7dsstzAEdxCZAAAAFQDSGiw8de3A3Iot0/Xwolg4TGzPiwAAAIEAjctkrvmQlKr5Gl87CT8YUBlLDvnKsWDsYmhLzKXbyBZEHNfbQX2WlW7hqg9AcJmafsQhDQKq/FLZDrN/xBk3KOJFVvJYU5Imc1ZgqK+i47P9SJsvISYFDMPgn6qgveoXIUHX8sdWFggU3AgMtyTaXsu7pS0W5z+l/SbExonY48wAAACAJ970qplSv6xrSNcENyqgqkKIrCHQECHPocyvLQsRO35Ar1ZDf3OQ1PNfqjHmrkjbTF83ntaWqC2uYpZ3EptTQ5NiKZYRwI7KGjEEOSIzopEhAKn8v7Yn4ted8KNT+K98z1tRgSs33aBKu8gRoUNgImBQP5v71jAVkBGKTDVtdDY=\n"
+
+kind: ConfigMap
+metadata:
+  name: anthem-production-sftp-pubkeys
+  namespace: default
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.beta.kubernetes.io/is-default-class: "true"
+  labels:
+    addonmanager.kubernetes.io/mode: EnsureExists
+    kubernetes.io/cluster-service: "true"
+  name: standard
+parameters:
+  type: pd-standard
+provisioner: kubernetes.io/gce-pd
+allowVolumeExpansion: true
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: sftp-drop
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3000Gi
+  storageClassName: standard
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sftp-drop
+  namespace: default
+  labels:
+    app: sftp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sftp
+  template:
+    metadata:
+      labels:
+        app: sftp
+    spec:
+      containers:
+        - name: gsutil-sync
+          # TODO update to latest version once it contains fix here: https://github.com/GoogleCloudPlatform/gsutil/pull/835
+          image: "gcr.io/cloud-builders/gcloud-slim@sha256:864721410fbd4cd921dd012e9d9acdd246b631b23382c5c87ccd0f9d26ab88de"
+          command:
+            [
+              "bash",
+              "-c",
+              "while true; do gcloud auth activate-service-account --key-file=/var/secrets/credentials.json && gsutil -m rsync -r /sftp_homes gs://cbh_sftp_drop; sleep 300; done;",
+            ]
+          volumeMounts:
+            - mountPath: "/sftp_homes"
+              name: sftp-drop
+            - mountPath: "/var/secrets"
+              name: sftp-gcs-sync-svc-account
+        - name: sftp
+          env:
+            - name: SFTP_USERS
+              valueFrom:
+                secretKeyRef:
+                  name: sftp-users
+                  key: SFTP_USERS
+          image: gcr.io/cityblock-data/sftp:debian-jessie
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 22
+          volumeMounts:
+            - mountPath: "/home"
+              name: sftp-drop
+            - mountPath: "/etc/ssh/keys"
+              name: sftp-drop-keys
+              readOnly: true
+            - name: cityblock-prod-sftp-pubkeys
+              mountPath: "/home/cityblock_prod/.ssh/keys"
+            - name: emblem-sftp-pubkeys
+              mountPath: "/home/emblem/.ssh/keys"
+            - name: acpny-test-sftp-pubkeys
+              mountPath: "/home/acpny_test/.ssh/keys"
+            - name: acpny-production-sftp-pubkeys
+              mountPath: "/home/acpny_production/.ssh/keys"
+            - name: chpw-production-sftp-pubkeys
+              mountPath: "/home/chpw_production/.ssh/keys"
+            - name: tufts-production-sftp-pubkeys
+              mountPath: "/home/tufts_production/.ssh/keys"
+            - name: connecticare-production-sftp-pubkeys
+              mountPath: "/home/connecticare_production/.ssh/keys"
+            - name: healthyblue-production-sftp-pubkeys
+              mountPath: "/home/healthyblue_production/.ssh/keys"
+            - name: healthyblue-sftp-pubkeys
+              mountPath: "/home/healthyblue/.ssh/keys"
+            - name: nc-bcbs-production-sftp-pubkeys
+              mountPath: "/home/nc_bcbs_production/.ssh/keys"
+            - name: ucare-production-sftp-pubkeys
+              mountPath: "/home/ucare_production/.ssh/keys"
+            - name: carefirst-test-sftp-pubkeys
+              mountPath: "/home/carefirst_test/.ssh/keys"
+            - name: carefirst-production-sftp-pubkeys
+              mountPath: "/home/carefirst/.ssh/keys"
+            - name: optum-production-sftp-pubkeys
+              mountPath: "/home/optum_production/.ssh/keys"
+            - name: optum-sftp-pubkeys
+              mountPath: "/home/optum/.ssh/keys"
+            - name: cardinal-sftp-pubkeys
+              mountPath: "/home/cardinal/.ssh/keys"
+            - name: traumasoft-prod-sftp-pubkeys
+              mountPath: "/home/traumasoft/.ssh/keys"
+            - name: logantest-sftp-pubkeys
+              mountPath: "/home/logantest/.ssh/keys"
+            - name: anthem-production-sftp-pubkeys
+              mountPath: "/home/anthem/.ssh/keys"
+
+      volumes:
+        - name: sftp-drop
+          persistentVolumeClaim:
+            claimName: sftp-drop
+        - name: sftp-drop-keys
+          secret:
+            secretName: sftp-drop-keys
+            defaultMode: 0400
+        - name: sftp-gcs-sync-svc-account
+          secret:
+            secretName: sftp-gcs-sync-svc-account
+            defaultMode: 0400
+        - name: cityblock-prod-sftp-pubkeys
+          configMap:
+            name: cityblock-prod-sftp-pubkeys
+        - name: emblem-sftp-pubkeys
+          configMap:
+            name: emblem-sftp-pubkeys
+        - name: acpny-test-sftp-pubkeys
+          configMap:
+            name: acpny-test-sftp-pubkeys
+        - name: acpny-production-sftp-pubkeys
+          configMap:
+            name: acpny-production-sftp-pubkeys
+        - name: chpw-production-sftp-pubkeys
+          configMap:
+            name: chpw-production-sftp-pubkeys
+        - name: tufts-production-sftp-pubkeys
+          configMap:
+            name: tufts-production-sftp-pubkeys
+        - name: connecticare-production-sftp-pubkeys
+          configMap:
+            name: connecticare-production-sftp-pubkeys
+        - name: connecticare-facets-production-sftp-pubkeys
+          configMap:
+            name: connecticare-facets-production-sftp-pubkeys
+        - name: healthyblue-production-sftp-pubkeys
+          configMap:
+            name: healthyblue-production-sftp-pubkeys
+        - name: healthyblue-sftp-pubkeys
+          configMap:
+            name: healthyblue-sftp-pubkeys
+        - name: nc-bcbs-production-sftp-pubkeys
+          configMap:
+            name: nc-bcbs-production-sftp-pubkeys
+        - name: ucare-production-sftp-pubkeys
+          configMap:
+            name: ucare-production-sftp-pubkeys
+        - name: carefirst-test-sftp-pubkeys
+          configMap:
+            name: carefirst-test-sftp-pubkeys
+        - name: carefirst-production-sftp-pubkeys
+          configMap:
+            name: carefirst-production-sftp-pubkeys
+        - name: optum-production-sftp-pubkeys
+          configMap:
+            name: optum-production-sftp-pubkeys
+        - name: optum-sftp-pubkeys
+          configMap:
+            name: optum-sftp-pubkeys
+        - name: cardinal-sftp-pubkeys
+          configMap:
+            name: cardinal-sftp-pubkeys
+        - name: traumasoft-prod-sftp-pubkeys
+          configMap:
+            name: traumasoft-prod-sftp-pubkeys
+        - name: logantest-sftp-pubkeys
+          configMap:
+            name: logantest-sftp-pubkeys
+        - name: anthem-sftp-pubkeys
+          configMap:
+            name: anthem-sftp-pubkeys
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sftp
+spec:
+  ports:
+    - port: 22
+      targetPort: 22
+  selector:
+    app: sftp
+  type: LoadBalancer
+  loadBalancerIP: 35.229.110.246
+  loadBalancerSourceRanges:
+    - 204.76.167.1/24 # Emblem
+    - 138.69.194.128/32 # ACPNY
+    - 12.180.115.240/32 # ACPNY
+    ## BEGIN CHPW ##
+    - 64.16.5.202/32
+    - 50.228.242.234/32
+    ## END CHPW ##
+    - 162.135.0.56/32 # Dignity
+    - 192.31.188.252/32 # UCare
+    ## BEGIN TUFTS ##
+    - 12.41.40.70/32
+    - 12.41.40.20/32
+    - 12.41.40.21/32
+    - 131.239.18.4/32
+    ## END TUFTS ##
+    ## BEGIN Connecticare ##
+    - 63.158.246.1/32
+    - 204.60.67.237/32
+    - 204.76.167.185/32
+    - 204.76.169.231/32
+    ## END Connecticare ##
+    ## BEGIN CareSource ##
+    - 208.90.150.16/32
+    - 208.90.148.16/32
+    ## END CareSource ##
+    ## BEGIN HEALTHY BLUE ##
+    - 162.95.216.224/32
+    - 162.95.216.225/32
+    - 162.95.216.222/32
+    - 162.95.216.223/32
+    - 162.95.148.249/32
+    - 162.95.148.250/32
+    - 162.95.148.251/32
+    - 162.95.148.252/32
+    ## END HEALTHY BLUE ##
+    ## BEGIN NC BCBCS ##
+    - 170.69.188.139/32
+    - 170.69.174.139/32
+    ## END NC BCBCS ##
+    ## BEGIN OPTUM ##
+    - 168.183.167.30/32
+    - 168.183.167.31/32
+    - 149.111.205.44/32
+    - 149.111.205.45/32
+    - 149.111.141.221/32
+    - 149.111.141.222/32
+    - 149.111.143.30/32
+    - 149.111.143.31/32
+    - 149.111.141.208/32
+    - 149.111.205.39/32
+    - 149.111.144.178/32
+    - 168.183.64.208/32
+    - 149.111.141.223/32
+    - 149.111.141.224/32
+    - 168.183.167.36/32
+    - 168.183.167.37/32
+    ## END OPTUM ##
+    ## BEGIN CAREFIRST ##
+    - 170.22.76.10/32
+    - 170.22.76.15/32
+    - 170.22.76.16/32
+    - 170.22.76.131/32
+    - 170.22.76.132/32
+    ## END CAREFIRST ##
+    - 40.88.245.17/32 # CARDINAL
+    ## BEGIN TRAUMASOFT
+    - 184.106.63.236/32
+    - 184.106.63.237/32
+    ## END TRAUMASOFT
+    ## BEGIN LOGANTEST ##
+    - 67.85.62.55/32
+    ## END LOGANTEST ##
+    ## BEGIN CMT ##
+    - 204.246.143.6/32
+    - 204.246.143.12/32
+    - 204.98.164.50/32
+    - 204.146.143.12/32
+    - 65.155.248.242/32
+    ## END CMT ##
+    ## BEGIN CODYTEST ##
+    - 24.39.77.218/32
+    ## END CODYTEST
+    ## BEGIN ANTHEM ##
+    - 162.95.216.224/32
+    - 162.95.216.225/32
+    - 162.95.216.222/32
+    - 162.95.216.223/32
+    - 162.95.148.249/32
+    ## END ANTHEM

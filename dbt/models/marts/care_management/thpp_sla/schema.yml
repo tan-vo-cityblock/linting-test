@@ -1,0 +1,88 @@
+
+version: 2
+
+models:
+  - name: thpp_kpi_master
+    description: "title: tufts kpi report master |
+    author: nabig chaudhry |
+    runtime: daily"
+
+  - name: thpp_sla_admits
+    description: "title: tufts sla report facility admits info |
+    author: nabig chaudhry |
+    runtime: daily"
+    
+  - name: thpp_sla_discharges
+    description: "title: tufts sla report facility discharges info |
+    author: nabig chaudhry |
+    runtime: daily"
+
+  - name: thpp_sla_hard_to_reach
+    description: "\n
+    Classifies member status based on post-enrollment outreach and interactions:\n
+    https://docs.google.com/document/d/1p2UYk5SQrA2i6_kpukj1TaMAC-Q58_HTSac9eQo_IJw\n
+    "
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "date_diff(enrollmentPeriodEndDate, tuftsEnrollmentDate, day) = 90"
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique  
+      - name: isHardToReachAssessment
+        tests:
+          - not_null
+      - name: isHardToReachCarePlanning
+        tests:
+          - not_null
+      - name: tuftsEnrollmentDate
+        tests:
+          - not_null
+      - name: enrollmentPeriodEndDate
+        tests:
+          - not_null
+      - name: consentDate
+      - name: minComprehensiveAssessmentDate
+      - name: numOutreachSuccesses
+      - name: numOutreachAttempts
+      - name: numInteractionAttempts
+
+  - name: thpp_sla_mailers
+    description: "title: tufts sla report facility mailers info |
+    author: nabig chaudhry |
+    runtime: daily"
+    
+  - name: thpp_sla_master
+    description: "title: tufts sla report master |
+    author: nabig chaudhry |
+    runtime: daily"
+
+  - name: thpp_sla_master_details
+    description: "title: tufts sla report at member level detail |
+    author: alankrita ghosh |
+    runtime: daily"
+
+    
+  - name: thpp_sla_member_info
+    description: Required member information for Tufts service level agreement (SLA) reporting
+    columns:
+      - name: patientId
+        tests:
+          - not_null
+          - unique
+
+  - name: thpp_sla_outreach
+    description: "title: tufts sla report facility outreach attempts info |
+    author: nabig chaudhry |
+    runtime: daily"
+
+  - name: thpp_sla_reporting_month
+    description: "title: tufts sla prior reporting month start and end dates |
+    author : alankrita ghosh |
+    runtime : daily"
+
+  - name: member_disenrolled_member_states
+    description: "title: tufts sla historical member states for disenrolled cases |
+    author : alankrita ghosh |
+    runtime : daily"

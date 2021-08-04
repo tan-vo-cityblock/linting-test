@@ -1,0 +1,62 @@
+steps:
+  - name: 'node:14.15.1'
+    id: install-node-dependencies
+    entrypoint: npm
+    args:
+      - 'install'
+    dir: ${_SERVICE_DIR}
+
+  - name: 'node:14.15.1'
+    id: build-service
+    entrypoint: npm
+    args: ['run', 'build']
+    waitFor: ['install-node-dependencies']
+    dir: ${_SERVICE_DIR}
+
+  - name: 'node:14.15.1'
+    id: lint-service
+    entrypoint: npm
+    args: ['run', 'lint']
+    waitFor: ['install-node-dependencies']
+    dir: ${_SERVICE_DIR}
+
+  - name: 'gcr.io/cloudsql-docker/gce-proxy:1.15'
+    id: cloud-sql-proxy
+    entrypoint: sh
+    args:
+      - '-c'
+      - >-
+        /cloud_sql_proxy -dir=/cloudsql -instances=cbh-services-staging:us-east1:services & while [ ! -f /cloudsql/stop ]; do sleep 2; done
+    timeout: 600s
+    waitFor: ['-']
+    volumes:
+      - name: 'db'
+        path: '/cloudsql'
+
+  - name: 'node:14.15.1'
+    id: run-tests
+    entrypoint: 'sh'
+    secretEnv: [DB_USER, DB_PASSWORD]
+    args:
+      - '-c'
+      - >-
+        export DB_USER=$$DB_USER && DB_PASSWORD=$$DB_PASSWORD && npm run test && touch /cloudsql/stop
+    env:
+      ['NODE_ENV=test', 'DB_HOST=/cloudsql/cbh-services-staging:us-east1:services', 'DB_NAME=health_events_service_test']
+    volumes:
+      - name: 'db'
+        path: '/cloudsql'
+    dir: ${_SERVICE_DIR}
+    waitFor: 
+        - install-node-dependencies
+  
+substitutions:
+  _SERVICE_DIR: services/health_events_service
+availableSecrets:
+  secretManager:
+    - versionName: 'projects/cbh-secrets/secrets/staging-health-events-service-db-user-name/versions/latest'
+      env: DB_USER
+    - versionName: 'projects/cbh-secrets/secrets/staging-health-events-service-db-user-password/versions/latest'
+      env: DB_PASSWORD
+timeout: 1200s
+logsBucket: gs://cbh-cloud-build-logs/build-${_DEPLOY_ENV}-health-events-service

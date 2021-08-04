@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: A_360viewTab
+    description: "Includes acuity, need to know text and consent"
+
+  - name: B_patientSummary
+    description: "Includes baseline completed within 45 days and member impressions"
+
+  - name: C_consentToMap
+    description: "Consented date, first task date, difference between the two"
+
+  - name: C_MAP
+    description: "MAP - completed and in progress"
+
+  - name: D_memberInfoTab
+    description: "marital status, gender, race, etc"
+
+  - name: F_ncqaRequirements
+    description: "Questions and answers to a set of questions required by NCQA"
+
+  - name: F16_referrals
+    description: "does member have cbo referral tasks"
+
+  - name: F18_selfManagedTasks
+    description: "does member have self-managed tasks"
+  
+  - name: F8_lifePlanning
+    description: "if member reports having a molst, the document has been uploaded"
+
+  - name: G3_dsnpRncm
+    description: "DSNP members and presence or absence of an rncm"

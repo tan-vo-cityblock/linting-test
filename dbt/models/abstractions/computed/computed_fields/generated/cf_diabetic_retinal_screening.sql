@@ -1,0 +1,2 @@
+
+{{ diagnoses_and_procedures(slug="diabetic-retinal-screening", value_set_name="Diabetic Retinal Screening", value_set_join_column="procedureCode", calendar_year=True, use_any=True, provider_specialty_codes=['18', '41']) }}

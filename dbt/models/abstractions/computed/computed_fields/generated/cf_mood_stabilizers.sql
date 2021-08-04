@@ -1,0 +1,2 @@
+
+{{ medication_evidence(slug="mood-stabilizers", ingredients=['carbamazepine%', 'biston%', 'calepsin%', 'carbatrol%', 'epitol%', 'equetro%', 'finlepsin%', 'sirtal%', 'stazepine%', 'tegretol%', 'telesmin%', 'timonil%', 'lamotrigine%', 'lamictal%', 'lithium%', 'camcolit%', 'eskalith%', 'lithobid%', 'sedalit%', 'oxcarbazepine%', 'trileptal%', 'topiramate%', 'topamax%', 'sodium valproate%', 'convulex%', 'depakene%', 'depakine enteric%', 'orfiril%', 'stavzor%', 'divalproex sodium%', 'depakote%', 'epival%', 'ergenyl chrono%', 'valproic acid%', 'valproate sodium%']) }}

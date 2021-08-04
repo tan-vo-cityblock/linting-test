@@ -1,0 +1,374 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh-raw-transforms",
+  "prefixDir": "connecticare_facets/split_facets_files",
+  "fileNamePattern": "FacetsMember_med_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "Member_Facets_med",
+  "delimiter": "|",
+  "indexJoinField": "Member_ID",
+  "header": "RecordType|Source_System_ID|Group_Level_1_ID|Group_Level_2_ID|Group_Level_3_ID|Subscriber_ID|Member_ID|Member_Suffix|Type|Relationship|Last_Name|First_Name|Middle_Initial|Name_Suffix|Original_Effective_Date|Termination_Date|Gender|Birth_Date|Language|Past_Member_ID|Exchange_Member_ID|Event_Type_Indicator|COB_Indicator|Group_Name|Group_State|Parent_Group|Client_ID|Date_of_death|Subscriber_Employment_type|Subgroup_Name|Union_Welfare_Fund|Health_Code|Division_Code|Opt_Out_Indicator|Preferred_Contact_Indicator|Member_Handicap_Effective_Date|Member_Handicap_Termination_Date|Member_Handicap_Type|Handicap_Indicator|Student_Effective_Date|Student_Termination_Date|School_Name|Student_Type|Responsible_key_person|Responsible_Person_ID|Responsible_Person_Last_Name|Responsible_Person_First_Name|Responsible_Person_Middle_Initial|Responsible_Person_Address_Line_1|Responsible_Person_Address_Line_2|Responsible_Person_Address_Line_3|Responsible_Person_City|Responsible_Person_State|Responsible_Person_Zip_Code|Responsible_Person_County|Responsible_Person_Country|Residential_Address_Type|Residential_Address_Line_1|Residential_Address_Line_2|Residential_Address_Line_3|Residential_City|Residential_State|Residential_Zip|Residential_Country|Residential_Phone|Residential_Phone_Extension|Fax|Residential_Fax_Extension|Residential_Email|Cell_Phone_Number|Mail_Address_Type|Mail_Address_Line_1|Mail_Address_Line_2|Mail_Address_Line_3|Mail_City|Mail_State|Mail_Zip|Mail_Country|Billing_Address_Line_1|Billing_Address_Line_2|Billing_Address_Line_3|Billing_City|Billing_State|Billing_Zip|Billing_Country|Confidential_indicator|Confidential_Address_Line_1|Confidential_Address_Line_2|Confidential_Address_Line_3|Confidential_City|Confidential_County|Confidential_Country_Code|Confidential_State|Confidential_Zip|Social_Security_Number|Custom_ID_1|Custom_Val_1|Custom_Desc_1|Custom_ID_2|Custom_Val_2|Custom_Desc_2|Custom_ID_3|Custom_Val_3|Custom_Desc_3|Custom_ID_4|Custom_Val_4|Custom_Desc_4|Custom_ID_5|Custom_Val_5|Custom_Desc_5|Custom_ID_6|Custom_Val_6|Custom_Desc_6|Custom_ID_7|Custom_Val_7|Custom_Desc_7|Custom_ID_8|Custom_Val_8|Custom_Desc_8|Additional_1",
+  "fields": [
+    {
+      "name": "RecordType"
+    },
+    {
+      "name": "Source_System_ID"
+    },
+    {
+      "name": "Group_Level_1_ID"
+    },
+    {
+      "name": "Group_Level_2_ID"  
+    },
+    {
+      "name": "Group_Level_3_ID"  
+    },
+    {
+      "name": "Subscriber_ID"
+    },
+    {
+      "name": "Member_ID",
+      "required": true
+    },
+    {
+      "name": "Member_Suffix"
+    },    
+    {
+      "name": "Type"
+    },
+    {
+      "name": "Relationship"
+    },
+    {
+      "name": "Last_Name"
+    },
+    {
+      "name": "First_Name"
+    },
+    {
+      "name": "Middle_Initial"  
+    },
+    {
+      "name": "Name_Suffix"  
+    },
+    {
+      "name": "Original_Effective_Date"
+    },
+    {
+      "name": "Termination_Date"
+    },
+    {
+      "name": "Gender"
+    },    
+    {
+      "name": "Birth_Date"
+    },
+    {
+      "name": "Language"
+    },
+    {
+      "name": "Past_Member_ID"
+    },
+    {
+      "name": "Exchange_Member_ID"
+    },
+    {
+      "name": "Event_Type_Indicator"  
+    },
+    {
+      "name": "COB_Indicator"  
+    },
+    {
+      "name": "Group_Name"
+    },
+    {
+      "name": "Group_State"
+    },
+    {
+      "name": "Parent_Group"
+    },    
+    {
+      "name": "Client_ID"
+    },
+    {
+      "name": "Date_of_death"
+    },
+    {
+      "name": "Subscriber_Employment_type"
+    },
+    {
+      "name": "Subgroup_Name"
+    },
+    {
+      "name": "Union_Welfare_Fund"  
+    },
+    {
+      "name": "Health_Code"  
+    },
+    {
+      "name": "Division_Code"
+    },
+    {
+      "name": "Opt_Out_Indicator"
+    },
+    {
+      "name": "Preferred_Contact_Indicator"
+    },    
+    {
+      "name": "Member_Handicap_Effective_Date"
+    }, 
+    {
+      "name": "Member_Handicap_Termination_Date"
+    },
+    {
+      "name": "Member_Handicap_Type"
+    },
+    {
+      "name": "Handicap_Indicator"
+    },
+    {
+      "name": "Student_Effective_Date"  
+    },
+    {
+      "name": "Student_Termination_Date"  
+    },
+    {
+      "name": "School_Name"
+    },
+    {
+      "name": "Student_Type"
+    },
+    {
+      "name": "Responsible_key_person"
+    },    
+    {
+      "name": "Responsible_Person_ID"
+    },
+    {
+      "name": "Responsible_Person_Last_Name"
+    },
+    {
+      "name": "Responsible_Person_First_Name"
+    },
+    {
+      "name": "Responsible_Person_Middle_Initial"
+    },
+    {
+      "name": "Responsible_Person_Address_Line_1"  
+    },
+    {
+      "name": "Responsible_Person_Address_Line_2"  
+    },
+    {
+      "name": "Responsible_Person_Address_Line_3"
+    },
+    {
+      "name": "Responsible_Person_City"
+    },
+    {
+      "name": "Responsible_Person_State"
+    },    
+    {
+      "name": "Responsible_Person_Zip_Code"
+    },
+    {
+      "name": "Responsible_Person_County"
+    },
+    {
+      "name": "Responsible_Person_Country"
+    },
+    {
+      "name": "Residential_Address_Type"
+    },
+    {
+      "name": "Residential_Address_Line_1"  
+    },
+    {
+      "name": "Residential_Address_Line_2"  
+    },
+    {
+      "name": "Residential_Address_Line_3"
+    },
+    {
+      "name": "Residential_City"
+    },
+    {
+      "name": "Residential_State"
+    },
+    {
+      "name": "Residential_Zip"
+    },    
+    {
+      "name": "Residential_Country"
+    },
+    {
+      "name": "Residential_Phone"
+    },
+    {
+      "name": "Residential_Phone_Extension"
+    },
+    {
+      "name": "Fax"
+    },
+    {
+      "name": "Residential_Fax_Extension"  
+    },
+    {
+      "name": "Residential_Email"  
+    },
+    {
+      "name": "Cell_Phone_Number"
+    },
+    {
+      "name": "Mail_Address_Type"
+    },    
+    {
+      "name": "Mail_Address_Line_1"
+    },
+    {
+      "name": "Mail_Address_Line_2"
+    },
+    {
+      "name": "Mail_Address_Line_3"
+    },
+    {
+      "name": "Mail_City"
+    },    
+    {
+      "name": "Mail_State"
+    },
+    {
+      "name": "Mail_Zip"
+    },
+    {
+      "name": "Mail_Country"
+    },
+    {
+      "name": "Billing_Address_Line_1"
+    },
+    {
+      "name": "Billing_Address_Line_2"  
+    },
+    {
+      "name": "Billing_Address_Line_3"  
+    },
+    {
+      "name": "Billing_City"
+    },
+    {
+      "name": "Billing_State"
+    },
+    {
+      "name": "Billing_Zip"
+    },    
+    {
+      "name": "Billing_Country"
+    },
+    {
+      "name": "Confidential_indicator"
+    },
+    {
+      "name": "Confidential_Address_Line_1"
+    },
+    {
+      "name": "Confidential_Address_Line_2"
+    },
+    {
+      "name": "Confidential_Address_Line_3"  
+    },
+    {
+      "name": "Confidential_City"  
+    },
+    {
+      "name": "Confidential_County"
+    },
+    {
+      "name": "Confidential_Country_Code"
+    },
+    {
+      "name": "Confidential_State"
+    },    
+    {
+      "name": "Confidential_Zip"
+    },      
+    {
+      "name": "Social_Security_Number"
+    },
+    {
+      "name": "Custom_ID_1"
+    },    
+    {
+      "name": "Custom_Val_1"
+    },   
+    {
+      "name": "Custom_Desc_1"
+    },
+    {
+      "name": "Custom_ID_2"
+    },
+    {
+      "name": "Custom_Val_2"
+    },
+    {
+      "name": "Custom_Desc_2"  
+    },
+    {
+      "name": "Custom_ID_3"  
+    },
+    {
+      "name": "Custom_Val_3"
+    },
+    {
+      "name": "Custom_Desc_3"
+    },
+    {
+      "name": "Custom_ID_4"  
+    },
+    {
+      "name": "Custom_Val_4"
+    },
+    {
+      "name": "Custom_Desc_4"
+    },
+    {
+      "name": "Custom_ID_5"
+    },
+    {
+      "name": "Custom_Val_5"  
+    },
+    {
+      "name": "Custom_Desc_5"  
+    },
+    {
+      "name": "Custom_ID_6"
+    },
+    {
+      "name": "Custom_Val_6"
+    },
+    {
+      "name": "Custom_Desc_6"
+    },    
+    {
+      "name": "Custom_ID_7"
+    },
+    {
+      "name": "Custom_Val_7"
+    },
+    {
+      "name": "Custom_Desc_7"  
+    },
+    {
+      "name": "Custom_ID_8"  
+    },
+    {
+      "name": "Custom_Val_8"
+    },
+    {
+      "name": "Custom_Desc_8"
+    },
+    {
+      "name": "Additional_1"
+    }
+  ]
+}

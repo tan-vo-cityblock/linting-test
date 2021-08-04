@@ -1,0 +1,94 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "EH_DxSuspect_MR_%s_PROCESSED.csv",
+  "delimiter": ",",
+  "partnerName": "emblem",
+  "tableName": "SuspectCodes",
+  "header": "nmi,firstName,lastName,dateOfBirth,conditionType,confidenceLevel,riskScoreImpact,conditionCategoryCode,conditionCategoryDescription,underlyingDxCode,underlyingDxLastCodedDate,underlyingDxLastCodedProvider,underlyingDxLastCodedProviderNpi,riskAdjustmentModel,dateUploaded",
+  "fields": [
+    {
+      "description": "NMI [NMI]",
+      "required": true,
+      "name": "nmi",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member First Name [MBR FIRST NAME]",
+      "name": "firstName",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member Last Name [MBR LAST NAME]",
+      "name": "lastName",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member Date of Birth [DOB]",
+      "name": "dateOfBirth",
+      "fieldType": "DATE"
+    },
+    {
+      "description": "Member Condition Type [ConditionType]",
+      "required": true,
+      "name": "conditionType",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member confidence level [ConfidenceLevel]",
+      "required": true,
+      "name": "confidenceLevel",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Member risk score (0-1) [Risk Score Impact]",
+      "required": true,
+      "name": "riskScoreImpact",
+      "fieldType": "FLOAT64"
+    },
+    {
+      "description": "Condition Code [Condition]",
+      "required": true,
+      "name": "conditionCategoryCode",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Condition Code Description [Condition Desc]",
+      "name": "conditionCategoryDescription",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Underlying Diagnosis Code [Underlying_Cd]",
+      "name": "underlyingDxCode",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Last Coded Condition Date [Last Coded]",
+      "name": "underlyingDxLastCodedDate",
+      "fieldType": "DATE"
+    },
+    {
+      "description": "Provider ID for Last Coded Condition [Provider]",
+      "name": "underlyingDxLastCodedProvider",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "NPI for Last Coded Condition [NPI]",
+      "name": "underlyingDxLastCodedProviderNpi",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "Risk adjustment model backfilled from filename",
+      "required": true,
+      "name": "riskAdjustmentModel",
+      "fieldType": "STRING"
+    },
+    {
+      "description": "File name timestamp from partner",
+      "required": true,
+      "name": "dateUploaded",
+      "fieldType": "STRING"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "connecticare_production/drop",
+  "fileNamePattern": "ProviderDetail_%s.txt",
+  "partnerName": "connecticare",
+  "tableName": "ProviderDetail",
+  "delimiter": "|",
+  "dataFieldName": "detail",
+  "header": "LOB|ProvNum|ProvNPI|ProvFirstName|ProvLastName|ProvTIN|ProvTINName|HATCd|HATCd_Desc|ProvClass|ProvClass_Desc|ProvCat|ProvCat_Desc|ProvSpec1|ProvSpec1_Desc|ProvStatus|ProvStatus_Desc|DateEnd",
+  "fields": [
+    {
+      "name": "LOB"
+    },
+    {
+      "name": "ProvNum",
+      "required": true
+    },
+    {
+      "name": "ProvNPI"
+    },
+    {
+      "name": "ProvFirstName"
+    },
+    {
+      "name": "ProvLastName"
+    },
+    {
+      "name": "ProvTIN"
+    },
+    {
+      "name": "ProvTINName"
+    },
+    {
+      "name": "HATCd"
+    },
+    {
+      "name": "HATCd_Desc"
+    },
+    {
+      "name": "ProvClass"
+    },
+    {
+      "name": "ProvClass_Desc"
+    },
+    {
+      "name": "ProvCat"
+    },
+    {
+      "name": "ProvCat_Desc"
+    },
+    {
+      "name": "ProvSpec1"
+    },
+    {
+      "name": "ProvSpec1_Desc"
+    },
+    {
+      "name": "ProvStatus"
+    },
+    {
+      "name": "ProvStatus_Desc"
+    },
+    {
+      "name": "DateEnd",
+      "fieldType": "DATE"
+    }
+  ]
+}

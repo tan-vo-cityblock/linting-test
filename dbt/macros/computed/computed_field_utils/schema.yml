@@ -1,0 +1,22 @@
+version: 2
+
+macros:
+  - name: aggregate_computed_field_resources
+    description: Aggregates `id`, `key`, and `model` fields into member-level `evaluatedResource` record
+    arguments:
+      - name: table
+        type: string
+        description: Required; name of CTE from which macro should select
+      - name: min_field
+        type: string
+        description: Optional; field name requiring minimum unique values by member
+      - name: min_value
+        type: integer
+        description: Optional; minimum unique `min_field` values required to include member in aggregation
+
+  - name: derive_computed_field_values
+    description: Derives computed field values based on join between member table and aggregated resources CTE
+    arguments:
+      - name: table
+        type: string
+        description: Required; name of CTE containing aggregated field resources

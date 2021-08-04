@@ -1,0 +1,38 @@
+version: 2
+
+macros:
+  - name: test_accepted_length
+    description: Tests whether column values match accepted character length
+    arguments:
+      - name: column_length
+        type: integer
+        description: Required; expected character length of column values
+
+  - name: test_maximum_accepted_values
+    description: Tests whether a column contains more than a given number of unique values
+    arguments:
+      - name: column_to_count
+        type: string
+        description: Required; column whose unique values should be counted
+      - name: max_values
+        type: integer
+        description: Required; maximum number of unique values column should contain
+
+  - name: test_record_difference_percentage_within_range
+    description: Tests whether table row count is within acceptable range of control total
+    arguments:
+      - name: has_line_of_business_totals
+        description: Indicates whether table has control totals specific to line of business
+        type: boolean
+      - name: control_total_source
+        description: Sharded tables containing control totals
+        type: relation
+      - name: control_total_file_name_root
+        description: File name substring corresponding to table in control total source
+        type: string
+      - name: minimum_allowed_difference_percentage
+        description: Minimum acceptable percentage difference between actual and expected row counts
+        type: number
+      - name: maximum_allowed_difference_percentage
+        description: Maximum acceptable percentage difference between actual and expected row counts
+        type: number

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+gsutil -m rsync \
+     -d \
+     -r \
+     -x ".*__pycache__/.*" \
+     "./dags/" gs://us-east4-cityblock-composer-cdc9ecc8-bucket/dags

@@ -1,0 +1,207 @@
+{
+  "fileType": "csv",
+  "sourceBucket": "cbh_sftp_drop",
+  "prefixDir": "emblem/drop",
+  "fileNamePattern": "CORP_CITYBLOCK_MULTI_PROV_EDL_FM01_TEST_20210305082741.txt",
+  "partnerName": "emblem",
+  "tableName": "providers_v2",
+  "delimiter": "|",
+  "header": "FACETS_PRPR_ID|PRVD_MDM_ID|EFFV_DT|TERM_DT|TIN|PROVIDERDEA|NATL_PRVD_ID|PROVIDERMEDICAIDLICENSE|PROVIDERSTATELICENSE|TYP_CD|TYP_CD_LBL|ENTY_SUB_TYP_CD|ENTY_SUB_TYP_CD_LBL|ORG_TYP_CD|ORG_TYP_CD_LBL|TXNMY_CD|TXNMY_DESC|PRV_STATUS_CD|PRV_STATUS_CD_LBL|LOCN_STAT_CD|LOCN_STAT_CD_LBL|FACY_TYP_CD|FACY_TYP_CD_LBL|LST_NM|FRST_NM|MIDL_NM|GNDR_CD|GNDR_CD_LBL|BRTH_DT|TTL|TTL_CD_LBL|PRIMARY_SPECIALTY_CODE|PRIMARY_SPECIALTY_LABEL|SECONDARY_SPECIALTY_CODE|SECONDARY_SPECIALTY_LABEL|TERTIERY_SPECIALTY_CODE|TERTIERY_SPECIALTY_LABEL|SVC_ADR_LN_1|SVC_ADR_LN_2|SVC_CITY|SVC_ST_CD|SVC_ST_CD_LBL|SVC_CNTY|SVC_ZIP_CD|SVC_CTRY_CD|SVC_CTRY_CD_LBL|SVC_PRIM_WRK_PHON_NBR|SVC_PRIM_WRK_PHON_EXTN_NBR|SVC_FAX_NBR|TAX_NM|TAX_EFFV_DT|TAX_TERM_DT|BILLING_ADR_LN_1|BILLING_ADR_LN_2|BILLING_ADR_CITY|BILLING_ST_CD|BILLING_ST_CD_LBL|BILLING_CNTY|BILLING_CTRY_CD|BILLING_CTRY_CD_LBL|BILLING_PHON_NBR|LANG_CD|LANG_CD_LBL",
+  "fields": [
+    {
+      "name": "FACETS_PRPR_ID",
+      "required": true
+    },
+    {
+      "name": "PRVD_MDM_ID"
+    },
+    {
+      "name": "EFFV_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "TERM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "TIN"
+    },
+    {
+      "name": "PROVIDERDEA"
+    },
+    {
+      "name": "NATL_PRVD_ID"
+    },
+    {
+      "name": "PROVIDERMEDICAIDLICENSE"
+    },
+    {
+      "name": "PROVIDERSTATELICENSE"
+    },
+    {
+      "name": "TYP_CD"
+    },
+    {
+      "name": "TYP_CD_LBL"
+    },
+    {
+      "name": "ENTY_SUB_TYP_CD"
+    },
+    {
+      "name": "ENTY_SUB_TYP_CD_LBL"
+    },
+    {
+      "name": "ORG_TYP_CD"
+    },
+    {
+      "name": "ORG_TYP_CD_LBL"
+    },
+    {
+      "name": "TXNMY_CD"
+    },
+    {
+      "name": "TXNMY_DESC"
+    },
+    {
+      "name": "PRV_STATUS_CD"
+    },
+    {
+      "name": "PRV_STATUS_CD_LBL"
+    },
+    {
+      "name": "LOCN_STAT_CD"
+    },
+    {
+      "name": "LOCN_STAT_CD_LBL"
+    },
+    {
+      "name": "FACY_TYP_CD"
+    },
+    {
+      "name": "FACY_TYP_CD_LBL"
+    },
+    {
+      "name": "LST_NM"
+    },
+    {
+      "name": "FRST_NM"
+    },
+    {
+      "name": "MIDL_NM"
+    },
+    {
+      "name": "GNDR_CD"
+    },
+    {
+      "name": "GNDR_CD_LBL"
+    },
+    {
+      "name": "BRTH_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "TTL"
+    },
+    {
+      "name": "TTL_CD_LBL"
+    },
+    {
+      "name": "PRIMARY_SPECIALTY_CODE"
+    },
+    {
+      "name": "PRIMARY_SPECIALTY_LABEL"
+    },
+    {
+      "name": "SECONDARY_SPECIALTY_CODE"
+    },
+    {
+      "name": "SECONDARY_SPECIALTY_LABEL"
+    },
+    {
+      "name": "TERTIERY_SPECIALTY_CODE"
+    },
+    {
+      "name": "TERTIERY_SPECIALTY_LABEL"
+    },
+    {
+      "name": "SVC_ADR_LN_1"
+    },
+    {
+      "name": "SVC_ADR_LN_2"
+    },
+    {
+      "name": "SVC_CITY"
+    },
+    {
+      "name": "SVC_ST_CD"
+    },
+    {
+      "name": "SVC_ST_CD_LBL"
+    },
+    {
+      "name": "SVC_CNTY"
+    },
+    {
+      "name": "SVC_ZIP_CD"
+    },
+    {
+      "name": "SVC_CTRY_CD"
+    },
+    {
+      "name": "SVC_CTRY_CD_LBL"
+    },
+    {
+      "name": "SVC_PRIM_WRK_PHON_NBR"
+    },
+    {
+      "name": "SVC_PRIM_WRK_PHON_EXTN_NBR"
+    },
+    {
+      "name": "SVC_FAX_NBR"
+    },
+    {
+      "name": "TAX_NM"
+    },
+    {
+      "name": "TAX_EFFV_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "TAX_TERM_DT",
+      "fieldType": "DATE"
+    },
+    {
+      "name": "BILLING_ADR_LN_1"
+    },
+    {
+      "name": "BILLING_ADR_LN_2"
+    },
+    {
+      "name": "BILLING_ADR_CITY"
+    },
+    {
+      "name": "BILLING_ST_CD"
+    },
+    {
+      "name": "BILLING_ST_CD_LBL"
+    },
+    {
+      "name": "BILLING_CNTY"
+    },
+    {
+      "name": "BILLING_CTRY_CD"
+    },
+    {
+      "name": "BILLING_CTRY_CD_LBL"
+    },
+    {
+      "name": "BILLING_PHON_NBR"
+    },
+    {
+      "name": "LANG_CD"
+    },
+    {
+      "name": "LANG_CD_LBL"
+    }
+  ]
+}

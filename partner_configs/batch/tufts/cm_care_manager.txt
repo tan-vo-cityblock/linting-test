@@ -1,0 +1,45 @@
+{
+    "fileType": "csv",
+    "sourceBucket": "cbh_sftp_drop",
+    "prefixDir": "tufts_production/drop",
+    "fileNamePattern": "CITYBLOCK_CM_CARE_MANAGER_2021-06-01T10-08-59-073.txt",
+    "partnerName": "tufts",
+    "tableName": "cm_care_manager",
+    "datasource": "tufts",
+    "delimiter": "~",
+    "header":"TRANS_TYPE~CARE_MANAGER_ID~NAME~CONTACT_TYPE~CONTACT_INFORMATION~ACTIVE~CREATE_DATE~CREATE_BY~UPDATE_DATE~UPDATE_BY",
+    "fields": [
+        {
+		"name": "TRANS_TYPE"
+	},
+        {
+		"name": "CARE_MANAGER_ID"
+	},
+        {
+		"name": "NAME"
+	},
+        {
+		"name": "CONTACT_TYPE"
+	},
+        {
+		"name": "CONTACT_INFORMATION"
+	},
+        {
+		"name": "ACTIVE"		
+	},
+        {
+		"name": "CREATE_DATE",
+		"fieldType": "DATE"
+	},
+        {
+		"name": "CREATE_BY"
+	},
+        {
+		"name": "UPDATE_DATE",
+		"fieldType": "DATE"
+	},
+        {
+		"name": "UPDATE_BY"
+	}
+    ]
+}

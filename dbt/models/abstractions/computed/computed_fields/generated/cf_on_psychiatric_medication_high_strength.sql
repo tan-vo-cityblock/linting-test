@@ -1,0 +1,2 @@
+
+{{ medication_presence(slug="on-psychiatric-medication-high-strength", excluded_generic_product_list=['quetiapine 50 mg%', 'quetiapine 25 mg%'], hedis_medication_list=['Antipsychotic Combination Medications', 'Antipsychotic Medications', 'Long-Acting Injections 14 Days Supply Medications', 'Long-Acting Injections 28 Days Supply Medications', 'Oral Antipsychotic Medications']) }}

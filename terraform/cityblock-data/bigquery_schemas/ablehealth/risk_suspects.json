@@ -1,0 +1,152 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "customer",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sex",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "race",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ethnicity",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "language",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "insured",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "smoker",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "city",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "state",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "program",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "riskModel",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hccs",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "status",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "externalId",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "externalIdAliases",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "familyName",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "givenName",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "dateOfBirth",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "phoneNumber",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pcpId",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pcpFullName",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "specialAccommodations",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "streetAddress",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "zipCode",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "codingPeriodStartDate",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "codingPeriodStopDate",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "codeType",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "codeValue",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "codeDescription",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "createdAt",
+    "type": "TIMESTAMP"
+  }
+]
