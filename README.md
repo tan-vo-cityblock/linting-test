@@ -1,3 +1,6 @@
+[![GitHub Super-Linter](https://github.com/tan-vo-cityblock/linting-test.git/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
+
 # Mixer
 
 ## Entry-point to all things data

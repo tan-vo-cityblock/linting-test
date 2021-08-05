@@ -33,5 +33,3 @@ jobs:
 
       - name: Run linters
         uses: github/super-linter@v4
-        with:
-          sql-lint: true
