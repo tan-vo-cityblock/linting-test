@@ -32,6 +32,6 @@ jobs:
         run: pip install sqlfluff
 
       - name: Run linters
-        uses: wearerequired/lint-action@v1
+        # uses: wearerequired/lint-action@v1
         with:
           sqlfluff: true
