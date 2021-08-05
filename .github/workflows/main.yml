@@ -4,9 +4,12 @@ on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
   push:
-    branches:
-      - main
-      - Tan
+    # branches:
+    #   - main
+    #   - Tan
+    paths:
+      - '**.py'
+
   pull_request:
     branches:
       - main
