@@ -32,6 +32,6 @@ jobs:
         run: pip install sqlfluff
 
       - name: Run linters
-        uses: sqlfluff/sqlfluff@v0.6
+        uses: sqlfluff/sqlfluff
         with:
           sqlfluff: true
