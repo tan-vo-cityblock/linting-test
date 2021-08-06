@@ -47,7 +47,7 @@ with open('something.txt', 'a') as file:
 # In[18]:
 
 
-with open('social.txt', 'r') as fd:
+with open('social1.txt', 'r') as fd:
     data = fd.read(6)   # how many bytes or characters you have to read
     
 print(data)
