@@ -55,6 +55,8 @@ name: Lint Code Base
 #############################
 on:
   push:
+    branches:
+      - Tan
     branches-ignore: [master]
     # Remove the line above to run when pushing to master
   pull_request:
